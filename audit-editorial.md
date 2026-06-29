@@ -6,8 +6,10 @@
 - Domaine a utiliser : `https://zzzbre.com`.
 - CTA principal : `Creer un compte`, vers `https://zzzbre.com/login`.
 - Cible prioritaire : dirigeants de PME qui veulent clarifier la strategie, coordonner les equipes et suivre l'execution.
+- Positionnement long terme : plateforme generale de data driven management qui transforme les grands concepts et methodes etudies en MBA en outils operationnels, utilisables par les dirigeants et leurs equipes.
 - Ton : accessible startup, direct, clair, moderne, credible.
-- Maturite produit : beta/lancement. Les fonctionnalites disponibles doivent etre separees clairement des fonctionnalites en cours de developpement.
+- Maturite produit : beta/lancement. Les modules disponibles aujourd'hui doivent etre presentes comme les premiers points d'entree de la plateforme, sans reduire zzzbre a ces seuls usages.
+- Equilibre editorial : parler clairement de ce qui existe, mais toujours garder la vision generale en fil rouge : strategie, finance, RH, operations, innovation, gouvernance, data, IA et pilotage de la performance.
 
 ## Priorites de contenu
 
@@ -25,6 +27,8 @@
 - [ ] Harmoniser le CTA principal : `Creer un compte`.
 - [ ] Corriger les fautes visibles avant integration dans Astro.
 - [ ] Distinguer partout `Disponible en beta` et `En developpement`.
+- [ ] Presenter les modules beta comme des premiers outils, pas comme le perimetre complet de zzzbre.
+- [ ] Relier les contenus aux grands domaines du management enseignes en MBA : strategie, finance, marketing, RH, operations, gouvernance, innovation, data et IA.
 - [ ] Ajouter une intention claire a chaque page.
 - [ ] Ajouter au moins une preuve, un exemple ou un cas concret sur les pages principales.
 - [ ] Ajouter une FAQ sur les pages Tarifs, Sécurité et Contact.
@@ -46,7 +50,7 @@ Fichier : `contenu/index.md`
 ### Manques
 
 - La page ne dit pas clairement a qui s'adresse zzzbre.
-- La promesse doit etre clarifiee sans transformer l'accueil en page longue.
+- La promesse doit etre clarifiee sans transformer l'accueil en page longue : zzzbre doit etre compris comme une plateforme de data driven management, pas seulement comme un outil de coordination.
 - Il manque 3 benefices tres synthetiques : clarifier les priorites, aligner l'equipe, suivre les decisions/actions.
 - Il manque des liens de suite vers les pages dediees : Produit, Cas d'usage, Tarifs, Securite.
 - Le CTA principal doit etre simplifie.
@@ -54,7 +58,7 @@ Fichier : `contenu/index.md`
 ### Sections a ajouter
 
 - Hero court : titre, sous-titre, CTA principal, visuel produit.
-- Accroche : une phrase sur la cible PME et le statut beta.
+- Accroche : une phrase sur la cible PME, le statut beta et la vision data driven management.
 - Benefices courts : 3 points maximum.
 - Liens de suite :
   - Decouvrir les fonctionnalites ;
@@ -90,41 +94,47 @@ Fichier : `contenu/Produit/1 Fonctionnalités.md`
 
 - Deux familles produit sont deja identifiees : `Innovation & Creativite` et `Motivation`.
 - La matiere roadmap est tres riche.
-- Le contenu montre une ambition large autour du pilotage, de la strategie, des RH, de la finance, de la data et de la transformation.
+- Le contenu montre l'ambition reelle du produit : couvrir progressivement les grands domaines du management, de la strategie et de la performance d'entreprise.
+- La liste existante donne une base pour presenter zzzbre comme une plateforme generale de data driven management, pas comme un simple outil d'ateliers ou de questionnaires.
 
 ### Manques
 
 - Le sous-titre et l'accroche sont vides.
-- Les fonctionnalites disponibles ne sont pas assez detaillees.
-- La roadmap est trop longue et ressemble a une liste interne.
-- Il manque une lecture dirigeant PME : pourquoi ces fonctionnalites aident a piloter.
+- Les modules disponibles ne sont pas assez positionnes comme les premiers outils de la plateforme.
+- La roadmap est trop longue et ressemble a une liste interne, alors qu'elle devrait exprimer une vision produit structuree.
+- Il manque une lecture dirigeant PME : comment les concepts MBA deviennent des outils concrets de pilotage.
 - Il manque des exemples d'usage concrets.
 - Il manque un CTA.
-- Il manque une separation nette entre beta disponible, prochainement, et vision long terme.
+- Il manque une separation nette entre modules beta, domaines en construction et vision long terme.
 
 ### Sections a ajouter
 
-- Introduction : ce que permet la plateforme aujourd'hui.
-- Disponible en beta :
+- Introduction : zzzbre comme plateforme de data driven management qui transforme les methodes de management, strategie, finance, RH, operations et data en outils actionnables.
+- Modules disponibles en beta :
   - ateliers d'innovation et de creativite ;
   - questionnaires motivation/cohesion ;
   - espace collaborateur ;
   - suivi d'actions ou decisions si deja present dans le produit.
-- Pour le dirigeant : mieux cadrer, mieux animer, mieux suivre.
+- Vision fonctionnelle : reprendre les grands concepts etudies en MBA et les convertir en parcours, diagnostics, tableaux de bord, plans d'action et outils d'aide a la decision.
+- Pour le dirigeant : mieux comprendre, mieux decider, mieux aligner, mieux suivre.
 - Exemples d'utilisation : atelier d'ideation, diagnostic equipe, suivi d'un plan d'action.
-- Roadmap organisee en 4 familles lisibles :
+- Domaines de la plateforme a organiser en familles lisibles :
   - Strategie et pilotage ;
   - Finance et performance ;
-  - Equipes et RH ;
-  - Data, IA et transformation.
+  - Equipes, RH et conduite du changement ;
+  - Marketing, commercial et relation client ;
+  - Operations, achats et supply chain ;
+  - Gouvernance, juridique et risques ;
+  - Data, BI, IA et transformation digitale.
 - CTA : `Creer un compte`.
 
 ### Incoherences
 
 - Orthographe a corriger : `9 type`, `connaitre`, `cohesion`, `Diagnostique`, `Mis en oeuvre`, `Manageriale`, `Methodologie`, etc.
-- La roadmap contient des termes tres academiques. Il faudra les traduire en benefices business.
+- La roadmap contient des termes academiques. Il ne faut pas les supprimer : il faut les traduire en outils concrets et en benefices business.
 - Certaines entrees sont entre parentheses, ce qui donne un effet brouillon.
 - `AI` devrait etre harmonise avec `IA`.
+- Attention : ne pas presenter les ateliers et questionnaires comme la totalite du produit. Ce sont les premiers modules d'une plateforme plus large.
 
 ### Priorite de redaction
 
@@ -830,7 +840,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 ## Synthese des manques critiques
 
 - Accueil a clarifier : il doit rester court et orienter vers les pages dediees.
-- Fonctionnalités trop brutes : il faut transformer la liste interne en benefices lisibles.
+- Fonctionnalités trop brutes : il faut transformer la liste interne en vision plateforme, avec des modules beta et des domaines MBA clairement organises.
 - Tarifs incomplets : frequence, CTA, inclusions et FAQ manquent.
 - Sécurité trop courte : il faut rassurer sur les donnees et acces.
 - Contact, Support, Légal et Presse sont des placeholders.
@@ -840,7 +850,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 ## Ordre recommande pour la suite
 
 1. Calibrer `contenu/index.md` comme accueil court : promesse, CTA, 3 benefices et liens vers les pages dediees.
-2. Restructurer `contenu/Produit/1 Fonctionnalités.md`.
+2. Restructurer `contenu/Produit/1 Fonctionnalités.md` pour presenter zzzbre comme une plateforme generale de data driven management, pas seulement comme les modules deja disponibles.
 3. Completer `contenu/Cas d'usage/1 PME.md`.
 4. Clarifier `contenu/Tarifs/Tarifs.md`.
 5. Renforcer `contenu/Produit/4 Sécurité.md`.
