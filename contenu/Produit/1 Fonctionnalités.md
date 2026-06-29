@@ -1,0 +1,149 @@
+### Fonctionnalités
+
+- Titre : Fonctionnalités
+- Sous-titre : 
+- Accroche :
+- cards :
+  - Innovation & Créativité
+    - 9 type d'ateliers pour réfléchir, concevoir, et résoudre les problèmes avec vos équipes. 
+  - Motivation
+    - 8 questionnaires pour mieux connaitre vos équipes, les motiver et booster la cohesion.
+    - Une application rien que pour les collaborateurs.
+- Sous-titre : Nos développements en cours :
+- liste :
+  - Partie 1
+    - Leadership
+      - Tenue de Réunion
+    - Analyse stratégique
+      - Méthodologie
+      - Business Model Canvas
+    - Analyse Financière
+      - Compte de résultat
+      - Bilan
+      - Comptabilité générale
+      - Comptabilité analytique
+    - Méthodologie stratégique
+      - Diagnostique Stratégique
+      - Scénario Stratégique
+      - Mise en oeuvre
+    - Finance d'entreprise
+      - (Finance)
+      - (Comptabilité générale)
+      - (Diagnostique financier)
+      - (Performance économique)
+      - Ensembles des KPIs
+    - Gouvernance & Juridique
+      - Système de gouvernance
+      - Structure des instance de gouvernance
+      - Décisions
+      - Identification des risques
+      - Adoption de statut légal
+    - Environnement économique
+      - Croissance économique
+      - Relations interorganisationnelles
+    - Introduction à la RSE
+      - Mis en oeuvre, actions et indicateurs
+      - Moyens de communications
+  - Partie 2
+    - Contrôle de gestion
+      - Outils de Ctrl
+      - Analyse de Performance
+      - Tableau de bord
+    - Innovation et créativité
+      - Méthodologie de l’innovation
+      - Outils de créativité
+    - Management des Achats
+      - Stratégie d’achat
+      - Pilotage de la performance
+      - Gérer la relation fournisseur appel d’offre
+    - Management de l'innovation
+      - Approches disruptives d'innovation
+      - Innovation orientée utilisateur
+    - Management et gestion des ressources humaines
+      - Déploiement de la fonction RH
+        - Droit
+        - Dialogue social
+        - Outils de pilotage
+      - Gestion des compétences
+      - Motivantes pour les salariés
+    - Conduite du changement
+      - Les Fondamentaux d’un "Langage Managérial Commun"
+      - Positionnement Manageriale
+      - Methodologie de mise en place du changement
+      - (Structurer et planifier)
+      - (Mobiliser et accompagner les acteurs)
+      - (Piloter et ancrer durablement)
+    - Management et performance RH
+      - Vision fonction et métier
+      - Cartographie des activités, risques et contrôles
+      - Mise en place des objectifs et mesures des actions
+      - MPMO
+    - Management des opérations et de la chaîne logistique globale
+      - Supply chain
+      - Pilotage des flux adaptés
+      - Planification des achats et fournisseurs
+      - Gestion de stock
+      - Management Lean
+      - Optimisation des processus, amélioration continue
+  - Partie 3
+    - Marketing remix
+      - Comportements consommateurs
+      - Marketing mix à l’ère digitale
+      - Marque, valeur et distribution
+    - Pilotage et tableaux de bord
+      - Pilotage stratégique et opérationnel
+      - Indicateurs KPI
+      - Tableaux de bord et plans d’action
+    - Transformation digitale
+      - Enjeux de la digitalisation
+      - Business models digitaux
+      - Culture de l’innovation
+      - Data et nouveaux usages
+    - Data Management
+      - Collecte et structuration des données
+      - Qualité et exploitation des données
+      - Pilotage par la donnée
+    - Marketing opérationnel et digital
+      - Démarche marketing client
+      - Marketing opérationnel
+      - Communication digitale
+      - Indicateurs de performance marketing
+    - Développement commercial
+      - Stratégie de développement commercial
+      - Organisation commerciale
+      - Plan d’activité commerciale
+      - Suivi de la performance commerciale
+    - Tableau de bord et pilotage
+      - Déclinaison des objectifs stratégiques
+      - Construction du système de pilotage
+      - Animation et ajustement des plans d’action
+    - Jeu de Simulation Stratégique
+      - Diagnostic stratégique
+      - Prise de décision en environnement concurrentiel
+      - Validation financière des choix
+      - Mise en œuvre stratégique
+    - AI
+      - Fondamentaux de l’intelligence artificielle
+      - IA générative et usages professionnels
+      - Éthique, biais et fiabilité
+      - Utilisation responsable de l’IA
+    - Business Intelligence
+      - Principes de la Business Intelligence
+      - Analyse et visualisation des données
+      - Création de dashboards
+      - Outils BI
+    - Plan d'action commercial
+      - Diagnostic commercial
+      - Élaboration du PAC
+      - Animation commerciale
+      - Suivi et évaluation des actions
+    - Entrepreneuriat
+      - Création d’entreprise
+      - Business model et business plan
+      - Innovation et Design Thinking
+      - Intrapreneuriat et repreneuriat
+    - Blockchain
+      - Principes de la blockchain
+      - Cryptomonnaies et tokens
+      - Finance décentralisée
+      - Usages, risques et perspectives

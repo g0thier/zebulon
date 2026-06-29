@@ -1,0 +1,3 @@
+## Légal
+
+- Texte : CGV
