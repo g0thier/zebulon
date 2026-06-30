@@ -141,51 +141,24 @@ Valide apres ajustement. La page presente le cas PME comme une explication concr
 
 Fichier : `contenu/Tarifs/Tarifs.md`
 
-### Deja exploitable
+### Statut
 
-- Trois offres sont deja posees.
-- Le sous-titre est clair.
-- Les quotas administrateur/leader/collaborateur donnent une base concrete.
-- L'offre de lancement est coherente avec le positionnement beta.
+Valide. La page clarifie l'acces libre owner, les offres mensuelles beta, les quotas utilisateurs, les CTA et une FAQ tarifaire.
 
-### Manques
+### Points valides
 
-- Il manque la periode de facturation : mensuel, annuel, paiement unique ou lancement.
-- Les prix `99€` et `299€` n'indiquent pas leur frequence.
-- L'offre Startup n'a pas de CTA.
-- Il manque les fonctionnalites incluses par plan.
-- Il manque les limites d'usage.
-- Il manque une FAQ tarifaire.
-- Il manque un message rassurant sur beta/lancement.
-- Il manque une offre `sur mesure` si les grandes entreprises restent dans l'arborescence.
+- L'acces libre avec 1 owner est presente separement comme une option pour explorer zzzbre.
+- Les offres payantes sont affichees en prix mensuels : 24,99€ / mois, 99€ / mois et 299€ / mois.
+- La reference au `0€` de l'ancienne offre de lancement est supprimee.
+- Les quotas existants sont conserves pour chaque plan.
+- Tous les plans ont un CTA vers `https://zzzbre.com/login`.
+- La page contient une FAQ sur l'acces libre, deploiement equipe, prix mensuels, changement de plan, roles inclus, accompagnement et evolution des tarifs.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Introduction : prix de lancement pour tester zzzbre avec son equipe.
-- Cartes tarifs completes :
-  - prix ;
-  - frequence ;
-  - utilisateurs inclus ;
-  - fonctionnalites incluses ;
-  - CTA.
-- FAQ :
-  - peut-on changer de plan ;
-  - que se passe-t-il apres l'offre de lancement ;
-  - quelles donnees sont conservees ;
-  - comment inviter son equipe ;
-  - existe-t-il un accompagnement.
-- Mention beta : les prix peuvent evoluer, les premiers clients beneficient d'un acces privilegie.
-
-### Incoherences
-
-- `Offre de lancement` a `Prix : 0€` et `Prix mensuel : 24,99€`, mais la relation entre les deux n'est pas expliquee.
-- `Freelance` semble moins coherent avec la cible dirigeants PME ; peut-etre renommer en `Solo`, `Independant` ou `Equipe`.
-- `Startup` peut etre confondu avec la cible du site. Si la cible est PME, une offre `Equipe` ou `PME` serait plus claire.
-- Les CTA disent `Choisir ce plan`, alors que le CTA global est `Creer un compte`.
-
-### Priorite de redaction
-
-Tres haute. Les tarifs doivent etre comprehensibles sans explication orale.
+- Ne pas inventer d'engagement annuel, de duree d'essai ou de remise tant que ces conditions ne sont pas definies.
+- Garder la mention beta : les tarifs peuvent evoluer avec la plateforme.
+- Les besoins particuliers doivent continuer a renvoyer vers `contact@zzzbre.com`.
 
 ---
 
@@ -798,7 +771,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Accueil a clarifier : il doit rester court et orienter vers les pages dediees.
 - Fonctionnalités validee : la page sert maintenant de reference pour la vision plateforme, les modules beta et `Notre Roadmap`.
 - Cas d'usage PME valide : la page traduit la vision zzzbre en fonctionnement data driven, humain et collectif pour PME.
-- Tarifs incomplets : frequence, CTA, inclusions et FAQ manquent.
+- Tarifs validee : la page clarifie l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
 - Sécurité trop courte : il faut rassurer sur les donnees et acces.
 - Contact, Support, Légal et Presse sont des placeholders.
 - La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
@@ -809,7 +782,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 1. Calibrer `contenu/index.md` comme accueil court : promesse, CTA, 3 benefices et liens vers les pages dediees.
 2. Valide : `contenu/Produit/1 Fonctionnalités.md` presente la vision plateforme, les modules beta et `Notre Roadmap`.
 3. Valide : `contenu/Cas d'usage/1 PME.md` presente le fonctionnement d'une PME data driven fondee sur motivation, bien-etre et leadership contemporain.
-4. Priorite active : clarifier `contenu/Tarifs/Tarifs.md`.
-5. Renforcer `contenu/Produit/4 Sécurité.md`.
+4. Valide : `contenu/Tarifs/Tarifs.md` presente l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
+5. Priorite active : renforcer `contenu/Produit/4 Sécurité.md`.
 6. Completer `contenu/Contact/Contact.md`.
 7. Nettoyer les pages secondaires avant integration Astro.
