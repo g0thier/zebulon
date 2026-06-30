@@ -534,40 +534,25 @@ Valide. La page Presse est courte, propre et directement affichable cote client.
 
 Fichier : `contenu/Support/Support.md`
 
-### Deja exploitable
+### Statut
 
-- L'email support existe.
+Valide. La page Support est simple, claire et adaptee a une beta.
 
-### Manques
+### Points valides
 
-- Il manque une structure d'aide.
-- Il manque les motifs de support.
-- Il manque les delais de reponse.
-- Il manque une FAQ courte.
-- Il manque le lien vers la documentation.
+- `contactez nous` est corrige en `contactez-nous`.
+- Le titre `Besoin d'aide sur zzzbre ?` est present.
+- Les motifs de support sont explicites : connexion, invitations, configuration, questionnaires, ateliers, donnees, roles et securite.
+- L'email `support@zzzbre.com` est present.
+- Le lien vers la documentation est present.
+- Une FAQ courte est ajoutee.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Titre : `Besoin d'aide sur zzzbre ?`
-- Motifs :
-  - connexion ;
-  - invitation equipe ;
-  - configuration ;
-  - questionnaire ;
-  - atelier ;
-  - donnees/securite.
-- Email : `support@zzzbre.com`.
-- Documentation : lien vers la page documentation.
-- FAQ support.
-
-### Incoherences
-
-- `contactez nous` doit devenir `contactez-nous`.
-- Page trop courte pour rassurer un client beta.
-
-### Priorite de redaction
-
-Moyenne. Important pour une beta, meme si la page reste simple.
+- Ne pas promettre de delai de reponse ou de SLA tant qu'ils ne sont pas definis.
+- Garder l'email comme canal support principal pour le moment.
+- La prochaine priorite est `Légal`.
 
 ---
 
