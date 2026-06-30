@@ -10,6 +10,7 @@
 - Ton : accessible startup, direct, clair, moderne, credible.
 - Maturite produit : beta/lancement. Les modules disponibles aujourd'hui doivent etre presentes comme les premiers points d'entree de la plateforme, sans reduire zzzbre a ces seuls usages.
 - Equilibre editorial : parler clairement de ce qui existe, mais toujours garder la vision generale en fil rouge : strategie, finance, RH, operations, innovation, gouvernance, data, IA et pilotage de la performance.
+- Contrainte de redaction : rediger du contenu editorial directement affichable cote client. Eviter les notes d'intention, consignes internes ou formulations de conception comme `cette page doit`, `cette categorie rassemblera`, `a venir`, `nous voulons expliquer`. Les titres, accroches, textes, listes et CTA doivent pouvoir etre repris tels quels dans le futur site Astro.
 
 ## Priorites de contenu
 
@@ -33,6 +34,7 @@
 - [ ] Ajouter au moins une preuve, un exemple ou un cas concret sur les pages principales.
 - [ ] Ajouter une FAQ sur les pages Tarifs, Sécurité et Contact.
 - [ ] Eviter les formulations trop vagues comme `Nos developpements en cours` lorsqu'une explication produit est necessaire.
+- [ ] Verifier que chaque page contient du texte final pour les visiteurs, pas des notes editoriales internes ou des intentions de redaction.
 
 ---
 
@@ -379,15 +381,20 @@ Valide. La page Blog pose une ligne editoriale claire pour les futurs contenus z
 - Le statut `En preparation` est explicite.
 - La promesse editoriale est clarifiee : aider les dirigeants, leaders et equipes a mieux piloter sans jargon.
 - Les categories sont reformulees autour de sujets accessibles : pilotage PME, leadership et engagement, ateliers et decision, indicateurs, IA appliquee au management.
+- Les categories disposent maintenant de pages dediees dans `contenu/Ressources/Blog/Categories/`.
 - La categorie brute `deep learning` est remplacee par un angle business plus coherent avec la cible.
-- Six idees d'articles sont ajoutees pour donner de la matiere editoriale sans pretendre que les articles existent deja.
+- Les pages categories listent les sujets a venir sans les presenter comme des articles deja publies.
+- Les blocs `Sujets a venir` ont ete retires des pages categories pour garder des textes directement affichables cote client.
+- Les formulations de l'index Blog ont ete ajustees pour eviter les notes d'intention visibles cote client.
 - La premiere serie d'articles est creee dans `contenu/Ressources/Blog/Motivation/`, avec un article par quiz Motivation.
-- La page Blog renvoie vers les articles : Theorie X-Y, Identite Pro, Besoins de Maslow, Autodetermination, Attentes, Equite, Besoins acquis et Mimetisme.
+- La page Blog renvoie vers les pages categories, pas directement vers les articles.
+- La serie Motivation est rangee dans la categorie `Leadership et engagement`.
 - Le CTA vers `https://zzzbre.com/login` et le contact editorial `contact@zzzbre.com` sont presents.
 
 ### Attention pour la suite
 
 - Continuer a separer les pages d'index du blog et les articles par series.
+- Garder la logique hub > categories > series > articles pour la future integration Astro.
 - Ne pas promettre de resultats scientifiques ou RH non prouves dans les articles de quiz.
 - Garder le blog accessible, pas academique ni trop technique.
 - La prochaine priorite est `Ressources / Webinaires`.
