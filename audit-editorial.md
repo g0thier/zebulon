@@ -509,31 +509,24 @@ Valide. La page clarifie qu'aucun poste n'est ouvert actuellement, tout en prese
 
 Fichier : `contenu/À propos/3 Presse.md`
 
-### Deja exploitable
+### Statut
 
-- L'email presse existe.
+Valide. La page Presse est courte, propre et directement affichable cote client.
 
-### Manques
+### Points valides
 
-- Il manque une presentation courte de zzzbre.
-- Il manque un kit presse ou une liste de ressources.
-- Il manque un contact clair.
-- Il manque des elements reutilisables : boilerplate, logo, captures.
+- `contactez nous` est corrige en `contactez-nous`.
+- La page presente zzzbre comme un SaaS de pilotage strategique par la donnee, destine aux dirigeants et membres de direction.
+- Le boilerplate est present et reutilisable.
+- Les ressources presse sont mentionnees sans pretendre qu'un kit complet est deja disponible.
+- Le contact presse `press@zzzbre.com` est present.
+- Les demandes generales renvoient vers `contact@zzzbre.com`.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Boilerplate : description de zzzbre en 2 ou 3 phrases.
-- Contact presse : `press@zzzbre.com`.
-- Ressources a venir : logo, captures, dossier presse.
-- CTA : contacter l'equipe.
-
-### Incoherences
-
-- `contactez nous` doit devenir `contactez-nous`.
-
-### Priorite de redaction
-
-Basse. Peut rester minimal, mais propre.
+- Ne pas promettre de kit presse complet tant que les logos, captures, visuels et dossier presse ne sont pas finalises.
+- Garder cette page courte et factuelle.
+- La prochaine priorite est `Support`.
 
 ---
 
