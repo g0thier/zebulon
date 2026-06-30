@@ -431,39 +431,24 @@ Valide. La page presente les webinaires comme des sessions video a venir autour 
 
 Fichier : `contenu/Ressources/4 Documentation.md`
 
-### Deja exploitable
+### Statut
 
-- Deux axes existent : plateforme et application.
+Valide. La page Documentation devient une page d'orientation directement affichable cote client, centree sur les usages plateforme et collaborateur.
 
-### Manques
+### Points valides
 
-- Il manque la structure documentaire.
-- Il manque le statut de disponibilite.
-- Il manque les rubriques d'aide essentielles.
+- La formule `Nos developpements en cours` est supprimee.
+- Les deux axes sont conserves et clarifies : documentation plateforme et documentation collaborateur.
+- Les rubriques plateforme couvrent demarrage, roles et permissions, questionnaires, ateliers, plans d'action, securite et acces.
+- Les rubriques collaborateur couvrent connexion, questionnaire, atelier, actions et acces.
+- Le support `support@zzzbre.com` est present.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Documentation plateforme :
-  - demarrage ;
-  - roles et permissions ;
-  - ateliers ;
-  - questionnaires ;
-  - plans d'action ;
-  - securite.
-- Documentation application collaborateur :
-  - connexion ;
-  - repondre aux questionnaires ;
-  - participer aux ateliers ;
-  - suivre ses actions.
-- CTA : contacter le support.
-
-### Incoherences
-
-- La page est presentee comme `Nos developpements en cours`, ce qui ne suffit pas pour une documentation.
-
-### Priorite de redaction
-
-Moyenne basse. Utile pour rassurer, mais peut etre minimale au lancement.
+- La page reste une entree documentaire, pas encore une documentation detaillee article par article.
+- Ne pas ajouter de procedures techniques non confirmees.
+- La prochaine priorite est `À propos / Équipe`.
 
 ---
 
