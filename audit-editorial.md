@@ -560,36 +560,23 @@ Valide. La page Support est simple, claire et adaptee a une beta.
 
 Fichier : `contenu/Légal/Légal.md`
 
-### Deja exploitable
+### Statut
 
-- La page existe.
-- Le besoin CGV est identifie.
+Structuree, editorialisee cote client, a valider juridiquement. La page remplace le placeholder `CGV` par une structure legale prudente et directement affichable cote client.
 
-### Manques
+### Points valides
 
-- Il manque les CGV.
-- Il manque les mentions legales.
-- Il manque la politique de confidentialite.
-- Il manque la politique cookies si necessaire.
-- Il manque les informations societe.
-- Il manque les contacts legaux.
+- `CGV` seul disparait.
+- Les sections principales sont presentes : mentions legales, conditions d'utilisation et de vente, confidentialite, cookies, contact legal.
+- Le contact `contact@zzzbre.com` est present.
+- La page n'invente pas de numero d'entreprise, forme juridique, representant legal detaille, hebergeur, adresse legale complete ou clauses de CGV definitives.
+- Le texte reste prudent : il explique le cadre general sans inventer de clauses juridiques definitives.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Mentions legales.
-- Conditions generales de vente ou d'utilisation.
-- Politique de confidentialite.
-- Gestion des cookies si le futur site en utilise.
-- Contact : `contact@zzzbre.com`.
-
-### Incoherences
-
-- `CGV` seul ne suffit pas pour une page legale publiable.
-- Le contenu legal devra etre valide avec une source juridique adaptee avant publication.
-
-### Priorite de redaction
-
-Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
+- Faire valider les mentions legales, CGV/CGU, confidentialite et cookies par une source juridique adaptee avant mise en ligne publique.
+- Completer les informations societe uniquement lorsqu'elles sont confirmees.
+- La prochaine priorite est le retour sur `Accueil`, qui contient encore `zzzebre` et doit etre recalibre.
 
 ---
 
@@ -604,8 +591,8 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Intégrations validee : la page presente les integrations comme une roadmap en developpement pour connecter donnees, collaborateurs et outils BI.
 - API validee : la page presente l'exploitation future des donnees de pilotage via tokens, permissions et outils internes.
 - Grandes entreprises validee : la page presente une approche pilote pour harmoniser pilotage, acces et donnees dans les organisations multi-equipes.
-- Support, Légal et Presse restent des placeholders.
-- La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
+- Support et Presse sont valides. Légal est structure et editorialise, mais doit etre valide juridiquement avant publication publique.
+- `Études de cas` est repositionnee comme appel a retours d'experience reels, sans preuve client inventee.
 - Le nom de marque doit etre harmonise partout en `zzzbre`.
 
 ## Ordre recommande pour la suite
@@ -619,4 +606,10 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 7. Valide : `contenu/Produit/2 Intégrations.md` presente les integrations en developpement et leurs cas d'usage.
 8. Valide : `contenu/Produit/3 API.md` presente l'API en developpement et ses usages data/reporting.
 9. Valide : `contenu/Cas d'usage/2 Grandes entreprises.md` presente une approche pilote pour organisations multi-equipes.
-10. Priorite active : completer `contenu/Cas d'usage/3 Secteurs.md`.
+10. Valide : `contenu/Cas d'usage/3 Secteurs.md` presente des adaptations par secteur sans promettre de modules verticaux dedies.
+11. Valide : `contenu/Clients/Études de cas.md` invite les entreprises utilisatrices a partager une experience reelle.
+12. Valide : les pages Ressources sont structurees : Blog, Guides, Webinaires et Documentation.
+13. Valide : les pages À propos sont structurees : Équipe, Carrières et Presse.
+14. Valide : `contenu/Support/Support.md` presente les motifs d'aide, la FAQ, la documentation et le support.
+15. Structure : `contenu/Légal/Légal.md` pose les bases legales en contenu client, a valider juridiquement.
+16. Priorite active : revenir sur `contenu/index.md` pour corriger `zzzebre`, renforcer le positionnement business plan et garder un accueil court.
