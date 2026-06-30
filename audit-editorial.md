@@ -405,36 +405,25 @@ Valide. La page Blog pose une ligne editoriale claire pour les futurs contenus z
 
 Fichier : `contenu/Ressources/3 Webinaires.md`
 
-### Deja exploitable
+### Statut
 
-- La page existe avec l'intention d'evenements.
+Valide. La page presente les webinaires comme des sessions video a venir autour des quiz et ateliers zzzbre, sans inventer d'agenda, de dates ou d'archives.
 
-### Manques
+### Points valides
 
-- Il n'y a pas de webinaire concret.
-- `Evenements passe` est seul et incomplet.
-- Il manque une proposition de valeur.
-- Il manque un CTA.
+- Les placeholders `Nos prochains evenements` et `Evenements passe` sont supprimes.
+- La page est directement affichable cote client.
+- Les videos sont presentees comme `A venir`, avec un bouton `Demander en priorite`.
+- Une session video est prevue pour expliquer les quiz Motivation.
+- Les autres sessions couvrent les ateliers visibles dans le produit : Paper Brain, On continue arrete tente, Defectuologie, Speed Boat, Matrice croisee, Mind Mapping, Six chapeaux de Bono, Design Thinking et World Cafe.
+- Le contact `contact@zzzbre.com` est present pour demander une video en priorite.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Introduction : sessions courtes pour apprendre a piloter avec zzzbre.
-- Prochains sujets possibles :
-  - lancer un atelier utile ;
-  - structurer ses objectifs ;
-  - suivre la motivation d'equipe ;
-  - passer de la reunion au plan d'action.
-- Archives : evenements passes.
-- CTA : etre prevenu ou creer un compte.
-
-### Incoherences
-
-- Orthographe : `evenements`, `passe`.
-- A ne pas afficher comme page riche si aucun evenement n'existe encore.
-
-### Priorite de redaction
-
-Basse. Peut rester une page `a venir`.
+- Ne pas ajouter de dates, archives ou inscriptions a des evenements tant qu'ils ne sont pas confirmes.
+- Garder cette page orientee videos explicatives a venir, pas webinaires live confirmes.
+- La prochaine priorite est `Ressources / Documentation`.
 
 ---
 
