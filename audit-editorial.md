@@ -320,39 +320,24 @@ Valide. La page presente les secteurs comme des exemples d'adaptation de zzzbre 
 
 Fichier : `contenu/Clients/Études de cas.md`
 
-### Deja exploitable
+### Statut
 
-- Un cas client existe : Nomades Advanced Technologies.
-- Le cas contient objectif SMART, resultats chiffres et benefice.
-- C'est une tres bonne base de preuve pour la landing page.
+Valide apres repositionnement. La page ne presente plus de cas client invente : elle devient un appel a retours d'experience pour les entreprises qui utilisent zzzbre et souhaitent valoriser leur usage.
 
-### Manques
+### Points valides
 
-- Il manque un titre global et une introduction.
-- Il manque le contexte de depart.
-- Il manque les fonctionnalites utilisees.
-- Il manque une citation client si possible.
-- Il manque un CTA de fin.
+- Le cas type Nomades Advanced Technologies et les chiffres associes sont supprimes.
+- La page explique clairement que seuls des retours reels, assumes et utiles doivent etre publies.
+- Le contenu invite les entreprises utilisatrices a partager leur contexte, leur usage, leurs apprentissages et leur progression.
+- La page valorise la promotion des entreprises : initiatives de leadership, transformation, bien-etre, engagement et data driven management.
+- Le CTA renvoie vers `contact@zzzbre.com` pour proposer un retour d'experience.
+- `zzzebre` ne doit plus apparaitre dans cette page.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Introduction : comment zzzbre aide les premieres equipes beta.
-- Cas Nomades :
-  - contexte ;
-  - objectif ;
-  - usage de la plateforme ;
-  - resultats ;
-  - apprentissages.
-- CTA : `Creer un compte` ou `Decouvrir zzzbre`.
-
-### Incoherences
-
-- `zzzebre` doit devenir `zzzbre`.
-- Les resultats sont forts ; il faut s'assurer qu'ils sont assumables publiquement.
-
-### Priorite de redaction
-
-Haute. Cette page peut fournir la preuve manquante de l'accueil.
+- Ne pas publier de chiffres, citations ou noms d'entreprise sans validation explicite.
+- Cette page ne remplace pas encore une preuve client : elle prepare la collecte de vrais temoignages.
+- La prochaine priorite est `Ressources / Guides`.
 
 ---
 
