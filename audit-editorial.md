@@ -345,33 +345,24 @@ Valide apres repositionnement. La page ne presente plus de cas client invente : 
 
 Fichier : `contenu/Ressources/2 Guides.md`
 
-### Deja exploitable
+### Statut
 
-- C'est une des pages secondaires les plus solides.
-- Les guides sont coherents avec le produit et la cible.
-- Les titres couvrent onboarding, ateliers, engagement, KPI, pilotage et securite.
+Valide. La page Guides devient une page d'appui editoriale pour aider les dirigeants, leaders et equipes a demarrer avec zzzbre et a installer progressivement de meilleures pratiques de pilotage.
 
-### Manques
+### Points valides
 
-- Il manque une introduction qui explique pourquoi ces guides existent.
-- Il manque un statut : disponibles maintenant ou a venir.
-- Il manque un CTA vers la creation de compte.
-- Il manque peut-etre un guide special dirigeant PME.
+- L'introduction explique que les guides servent a rendre les methodes de management et le data driven management plus concrets.
+- `zzzebre` est corrige en `zzzbre`.
+- Le guide prioritaire `Lancer son premier cycle de pilotage en 30 jours` est ajoute.
+- Les guides existants sont conserves et reorganises.
+- Les statuts `Beta`, `En preparation` et `A venir` evitent de faire croire que tous les guides complets sont deja publies.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Introduction : apprendre a piloter plus simplement avec zzzbre.
-- Badges par guide : `Disponible`, `Bientot`, `Beta`.
-- Guide prioritaire : `Lancer son premier cycle de pilotage en 30 jours`.
-- CTA : `Creer un compte`.
-
-### Incoherences
-
-- `zzzebre` doit devenir `zzzbre`.
-
-### Priorite de redaction
-
-Moyenne. Bonne page d'appui, pas prioritaire avant Accueil/Produit/Tarifs.
+- Garder cette page comme page ressource, pas comme documentation technique complete.
+- Les guides pourront devenir des articles dedies plus tard.
+- La prochaine priorite est `Ressources / Blog`.
 
 ---
 
