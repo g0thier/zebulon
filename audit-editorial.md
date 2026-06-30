@@ -481,42 +481,27 @@ Valide. La page presente la mission de zzzbre, le fondateur et la vision produit
 
 Fichier : `contenu/À propos/2 Carrières.md`
 
-### Deja exploitable
+### Statut
 
-- Beaucoup de roles futurs sont listes.
-- Le ton startup est present et vivant.
-- La page donne une image d'ambition produit.
+Valide. La page clarifie qu'aucun poste n'est ouvert actuellement, tout en presentant les futures familles de metiers qui pourraient accompagner la croissance de zzzbre.
 
-### Manques
+### Points valides
 
-- La page doit clarifier qu'il n'y a pas encore de recrutements ouverts.
-- L'accroche actuelle peut sembler maladroite pour des candidats ou clients.
-- Il manque une intro plus professionnelle.
-- Il manque un CTA de candidature spontanee.
-- Les postes doivent etre classes par famille.
+- Le statut `Aucun poste ouvert pour le moment` est explicite.
+- L'accroche maladroite sur les salaires est supprimee.
+- La page relie zzzbre au business plan : SaaS de pilotage strategique par la donnee, concepts MBA, recherche academique et methodes de management.
+- Les roles futurs sont regroupes par familles : produit/design/contenu, engineering/plateforme, data/IA/securite, go-to-market, support/customer success.
+- Les roles existants sont conserves avec des descriptions plus vivantes, tout en restant publiables.
+- Les liens vides `[Marcel]()` et `[Astro]()` sont retires.
+- Les fautes visibles et le caractere grec dans `n'αvons` sont supprimes.
+- La notion de candidature spontanee est retiree.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Statut : pas de poste ouvert pour le moment, mais candidatures spontanees possibles.
-- Pourquoi rejoindre zzzbre.
-- Familles de futurs roles :
-  - produit/design ;
-  - engineering ;
-  - data/IA ;
-  - go-to-market ;
-  - support/customer success.
-- CTA : envoyer une candidature.
-
-### Incoherences
-
-- Nombreuses fautes a corriger avant publication.
-- Certains passages sont tres familiers ; a garder seulement si ce ton est assume.
-- Les liens vides `[Marcel]()` et `[Astro]()` doivent etre corriges ou retires.
-- Un caractere grec apparait dans `n'αvons`.
-
-### Priorite de redaction
-
-Basse pour la conversion client. A nettoyer avant mise en ligne.
+- Ne pas transformer les roles futurs en offres ouvertes tant que le recrutement n'est pas actif.
+- Garder cette page sobre et credible.
+- La prochaine priorite est `À propos / Presse`.
 
 ---
 
