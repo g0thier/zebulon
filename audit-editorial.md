@@ -370,36 +370,27 @@ Valide. La page Guides devient une page d'appui editoriale pour aider les dirige
 
 Fichier : `contenu/Ressources/1 Blog.md`
 
-### Deja exploitable
+### Statut
 
-- Les categories de sujets existent : business, framework, modeles, deep learning.
+Valide. La page Blog pose une ligne editoriale claire pour les futurs contenus zzzbre, sans faire croire qu'une bibliotheque d'articles est deja publiee.
 
-### Manques
+### Points valides
 
-- La page est encore un placeholder.
-- Il manque une ligne editoriale.
-- Il manque des idees d'articles.
-- Il manque le lien avec les dirigeants de PME.
-- Il manque un statut : blog ouvert ou a venir.
+- Le statut `En preparation` est explicite.
+- La promesse editoriale est clarifiee : aider les dirigeants, leaders et equipes a mieux piloter sans jargon.
+- Les categories sont reformulees autour de sujets accessibles : pilotage PME, leadership et engagement, ateliers et decision, indicateurs, IA appliquee au management.
+- La categorie brute `deep learning` est remplacee par un angle business plus coherent avec la cible.
+- Six idees d'articles sont ajoutees pour donner de la matiere editoriale sans pretendre que les articles existent deja.
+- La premiere serie d'articles est creee dans `contenu/Ressources/Blog/Motivation/`, avec un article par quiz Motivation.
+- La page Blog renvoie vers les articles : Theorie X-Y, Identite Pro, Besoins de Maslow, Autodetermination, Attentes, Equite, Besoins acquis et Mimetisme.
+- Le CTA vers `https://zzzbre.com/login` et le contact editorial `contact@zzzbre.com` sont presents.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Promesse editoriale : aider les dirigeants a mieux piloter sans jargon.
-- Categories :
-  - pilotage PME ;
-  - ateliers et decision ;
-  - indicateurs et tableaux de bord ;
-  - IA appliquee au management.
-- 5 a 8 idees d'articles.
-- CTA : s'inscrire ou creer un compte.
-
-### Incoherences
-
-- `deep learning` est probablement trop technique pour la cible principale s'il n'est pas relie a un usage business.
-
-### Priorite de redaction
-
-Basse pour la landing page initiale. A garder simple.
+- Continuer a separer les pages d'index du blog et les articles par series.
+- Ne pas promettre de resultats scientifiques ou RH non prouves dans les articles de quiz.
+- Garder le blog accessible, pas academique ni trop technique.
+- La prochaine priorite est `Ressources / Webinaires`.
 
 ---
 
