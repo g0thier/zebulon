@@ -456,32 +456,24 @@ Valide. La page Documentation devient une page d'orientation directement afficha
 
 Fichier : `contenu/À propos/1 Équipe.md`
 
-### Deja exploitable
+### Statut
 
-- Le fondateur est identifie.
-- Le role produit, technique et operationnel est clair.
+Valide. La page presente la mission de zzzbre, le fondateur et la vision produit sans surjouer la taille de l'equipe.
 
-### Manques
+### Points valides
 
-- Il manque une introduction sur la mission.
-- Il manque une bio plus humaine et credible.
-- Il manque le lien avec la vision zzzbre.
-- Il manque potentiellement photo, LinkedIn ou contact.
+- `zzzebre` est corrige en `zzzbre`.
+- Gauthier Rammault est presente comme fondateur.
+- Son role est clarifie : vision produit, conception de la plateforme, pilotage technique, premiers usages beta et relation avec les utilisateurs.
+- La page explique pourquoi zzzbre existe : simplifier le pilotage, rendre les methodes de management plus concretes, relier donnees, decisions et actions.
+- Les principes du projet sont poses : clarte, simplicite, confiance, execution et leadership contemporain.
+- Le CTA vers `https://zzzbre.com/login` et le contact `contact@zzzbre.com` sont presents.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Mission : aider les PME a mieux piloter sans empiler les outils.
-- Fondateur : parcours, role, pourquoi zzzbre.
-- Valeurs : simplicite, clarte, execution, confiance.
-- CTA : contacter ou creer un compte.
-
-### Incoherences
-
-- `zzzebre` doit devenir `zzzbre`.
-
-### Priorite de redaction
-
-Moyenne. Important pour une beta, car les premiers clients achetent aussi une relation de confiance.
+- Ne pas inventer d'autres membres d'equipe, de photo, de LinkedIn ou de parcours non fourni.
+- Garder la page sobre et credible pour une beta.
+- La prochaine priorite est `À propos / Carrières`.
 
 ---
 
