@@ -295,34 +295,24 @@ Valide. La page presente zzzbre comme une solution a tester progressivement sur 
 
 Fichier : `contenu/Cas d'usage/3 Secteurs.md`
 
-### Deja exploitable
+### Statut
 
-- Plusieurs secteurs sont listes.
-- Le sous-titre est adaptable.
+Valide. La page presente les secteurs comme des exemples d'adaptation de zzzbre a differents contextes metier, sans transformer la plateforme en solution verticale par secteur.
 
-### Manques
+### Points valides
 
-- Les secteurs ne sont pas developpes.
-- Il manque des exemples par secteur.
-- Il manque un lien avec les fonctionnalites disponibles.
-- Il manque un CTA.
+- La page explique que les secteurs ont des realites differentes, mais des besoins communs : comprendre les equipes, structurer les decisions, faire remonter les signaux et suivre les actions.
+- Les secteurs existants sont conserves : services et conseil, retail et reseaux multi-sites, industrie et operations, startups et scale-ups, associations et organismes de formation.
+- Chaque secteur dispose d'exemples d'usages concrets sans faire croire a des modules sectoriels dedies.
+- La page reste coherente avec le data driven management : retours collaborateurs, motivation, bien-etre, leadership, donnees de pilotage, decisions et plans d'action.
+- La section `Ce que les secteurs ont en commun` clarifie les fondations transversales.
+- Le CTA renvoie vers `contact@zzzbre.com` pour discuter d'un contexte metier.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Services et conseil : ateliers, plans d'action, suivi client.
-- Retail et multi-sites : alignement, priorites, indicateurs.
-- Industrie et operations : performance, amelioration continue.
-- Startups et scale-ups : rythme, objectifs, execution.
-- Associations et formation : animation, questionnaire, suivi.
-
-### Incoherences
-
-- Trop generique pour le moment.
-- Certains secteurs peuvent elargir le message avant que la cible PME soit solide.
-
-### Priorite de redaction
-
-Moyenne basse. A enrichir apres la page PME.
+- Ne pas ajouter de promesses verticales ou de fonctionnalites specialisees par secteur sans preuve produit.
+- Garder cette page comme page d'adaptation, pas comme catalogue d'offres sectorielles.
+- La prochaine priorite est `Clients / Études de cas`.
 
 ---
 
