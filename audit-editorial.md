@@ -166,45 +166,26 @@ Valide. La page clarifie l'acces libre owner, les offres mensuelles beta, les qu
 
 Fichier : `contenu/Produit/4 Sécurité.md`
 
-### Deja exploitable
+### Statut
 
-- La page existe et pose le sujet de la securite.
-- Trois garanties sont mentionnees : authentification, roles/permissions, sauvegardes, tests.
-- La roadmap securite mentionne MFA et detection de connexions suspectes.
+Valide. La page rassure sur les acces granulaires, roles, donnees de pilotage et usages beta sans promettre une securite absolue.
 
-### Manques
+### Points valides
 
-- Le discours est trop court pour inspirer confiance.
-- Il manque une section sur les donnees client.
-- Il manque une section sur les acces et permissions.
-- Il manque une section sur les sauvegardes.
-- Il manque une section sur la beta : quelles garanties sont deja en place.
-- Il manque une FAQ securite.
-- Il manque un point de contact pour les questions securite.
+- La page separe clairement `Disponible aujourd'hui` et `En developpement`.
+- Les garanties existantes sont conservees : authentification, roles et permissions, sauvegardes regulieres, tests couvrant 90 % de la codebase.
+- La gestion granulaire des acces est documentee : owner/administrateur, leaders, collaborateurs, capacite d'abonnement, secteurs et pages.
+- Un encart visuel est prevu pour la capture `Zzzbre.png`, montrant les droits d'acces managers et la selection de pages/secteurs.
+- La page explique pourquoi les donnees de data driven management meritent une attention particuliere : retours d'equipe, decisions, actions, priorites et donnees de pilotage.
+- Les bonnes pratiques cote client sont ajoutees : invitations, roles, retrait des acces, sensibilisation et verification reguliere.
+- La roadmap securite est formulee prudemment : MFA, surveillance renforcee des connexions suspectes, detection de signaux inhabituels.
+- Une FAQ securite et un contact `support@zzzbre.com` sont presents.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Promesse : vos donnees de pilotage doivent rester accessibles aux bonnes personnes.
-- Disponible aujourd'hui :
-  - authentification ;
-  - roles et permissions ;
-  - sauvegardes ;
-  - tests automatises.
-- En developpement :
-  - MFA ;
-  - surveillance des connexions suspectes.
-- Bonnes pratiques cote client : gestion des acces, invitations, retrait d'un collaborateur.
-- FAQ : hebergement, acces, sauvegardes, beta, incident, confidentialite.
-
-### Incoherences
-
-- Orthographe : `rôle`, `permissions strict`, `sauvegardes régulier`, `convrant`.
-- `Le risque 0 n'existe pas` est honnete mais trop defensif en accroche principale.
-- `machine learning` peut paraitre flou ou survendu si la fonctionnalite n'existe pas encore.
-
-### Priorite de redaction
-
-Haute. Cette page est importante pour rassurer des dirigeants avant creation de compte.
+- Ne pas ajouter de certifications, normes, hebergeur, chiffrement, SLA ou conformite detaillee sans source dediee.
+- Garder une separation claire entre garanties disponibles et ameliorations en cours.
+- Utiliser cette page comme reference de ton pour les autres contenus de confiance.
 
 ---
 
@@ -772,7 +753,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Fonctionnalités validee : la page sert maintenant de reference pour la vision plateforme, les modules beta et `Notre Roadmap`.
 - Cas d'usage PME valide : la page traduit la vision zzzbre en fonctionnement data driven, humain et collectif pour PME.
 - Tarifs validee : la page clarifie l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
-- Sécurité trop courte : il faut rassurer sur les donnees et acces.
+- Sécurité validee : la page rassure sur acces, roles, donnees de pilotage, beta et ameliorations en cours.
 - Contact, Support, Légal et Presse sont des placeholders.
 - La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
 - Le nom de marque doit etre harmonise partout en `zzzbre`.
@@ -783,6 +764,6 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 2. Valide : `contenu/Produit/1 Fonctionnalités.md` presente la vision plateforme, les modules beta et `Notre Roadmap`.
 3. Valide : `contenu/Cas d'usage/1 PME.md` presente le fonctionnement d'une PME data driven fondee sur motivation, bien-etre et leadership contemporain.
 4. Valide : `contenu/Tarifs/Tarifs.md` presente l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
-5. Priorite active : renforcer `contenu/Produit/4 Sécurité.md`.
-6. Completer `contenu/Contact/Contact.md`.
+5. Valide : `contenu/Produit/4 Sécurité.md` rassure sur les acces, roles, donnees et garanties beta.
+6. Priorite active : completer `contenu/Contact/Contact.md`.
 7. Nettoyer les pages secondaires avant integration Astro.
