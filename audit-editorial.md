@@ -243,37 +243,25 @@ Valide. La page presente les integrations comme une roadmap produit en developpe
 
 Fichier : `contenu/Produit/3 API.md`
 
-### Deja exploitable
+### Statut
 
-- La page identifie une future API avec tokens.
-- L'intention d'acces aux donnees est presente.
+Valide. La page presente l'API comme une roadmap en developpement pour exploiter les donnees de pilotage dans des dashboards, analyses, automatisations et outils internes.
 
-### Manques
+### Points valides
 
-- Il manque une cible : developpeurs, equipes data, partenaires.
-- Il manque des exemples d'usage.
-- Il manque le statut beta/roadmap.
-- Il manque un message sur la securite des tokens.
-- Il manque un CTA pour etre prevenu ou contacter l'equipe.
+- Le statut `En developpement` est explicite.
+- La page cible les equipes data, developpeurs, partenaires et outils internes.
+- La promesse est coherente avec la vision data driven management : reporting, BI, analyses croisees, automatisations.
+- Les elements initiaux sont conserves : connexion avec tokens et acces aux donnees pour analyse.
+- L'acces aux donnees est formule prudemment : donnees accessibles selon droits, roles et perimetres configures.
+- La securite API est reliee aux permissions et a la page Securite.
+- Le CTA renvoie vers `contact@zzzbre.com` pour exprimer un besoin API.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Promesse : recuperer et exploiter ses donnees de pilotage.
-- En developpement :
-  - acces par tokens ;
-  - endpoints de donnees ;
-  - export analytique.
-- Exemples : reporting interne, dashboard BI, automatisation.
-- CTA : `Nous contacter pour l'API`.
-
-### Incoherences
-
-- Orthographe : `Access` doit devenir `Acces`; `souhaiter` doit s'accorder.
-- La formulation `toutes vos donnees` doit etre precisee pour eviter une promesse trop large.
-
-### Priorite de redaction
-
-Moyenne basse. Important pour la vision, secondaire pour dirigeants PME.
+- Ne pas faire croire que l'API est deja disponible.
+- Ne pas promettre de details techniques non confirmes.
+- Les prochains cas d'usage doivent rester coherents avec cette logique d'exploitation progressive des donnees.
 
 ---
 
@@ -728,6 +716,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Sécurité validee : la page rassure sur acces, roles, donnees de pilotage, beta et ameliorations en cours.
 - Contact validee : la page donne les motifs de contact, les contacts utiles, l'adresse et le CTA.
 - Intégrations validee : la page presente les integrations comme une roadmap en developpement pour connecter donnees, collaborateurs et outils BI.
+- API validee : la page presente l'exploitation future des donnees de pilotage via tokens, permissions et outils internes.
 - Support, Légal et Presse restent des placeholders.
 - La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
 - Le nom de marque doit etre harmonise partout en `zzzbre`.
@@ -741,4 +730,5 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 5. Valide : `contenu/Produit/4 Sécurité.md` rassure sur les acces, roles, donnees et garanties beta.
 6. Valide : `contenu/Contact/Contact.md` presente les contacts utiles, l'adresse et le CTA.
 7. Valide : `contenu/Produit/2 Intégrations.md` presente les integrations en developpement et leurs cas d'usage.
-8. Priorite active : completer `contenu/Produit/3 API.md`.
+8. Valide : `contenu/Produit/3 API.md` presente l'API en developpement et ses usages data/reporting.
+9. Priorite active : completer `contenu/Cas d'usage/2 Grandes entreprises.md`.
