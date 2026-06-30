@@ -218,36 +218,24 @@ Valide. La page Contact est structuree, courte et exploitable comme page de conf
 
 Fichier : `contenu/Produit/2 Intégrations.md`
 
-### Deja exploitable
+### Statut
 
-- Les integrations ciblees sont identifiees : Excel, Tableau, Alteryx, Power BI.
-- La page assume que ces integrations sont en developpement.
+Valide. La page presente les integrations comme une roadmap produit en developpement, utile pour connecter zzzbre aux donnees et outils deja utilises par les entreprises.
 
-### Manques
+### Points valides
 
-- Il manque une promesse : eviter de ressaisir, connecter les donnees existantes.
-- Il manque une distinction entre import simple et integration complete.
-- Il manque des cas d'usage.
-- Il manque un CTA ou une invitation a demander une integration.
+- Le statut `En developpement` est explicite.
+- La page explique l'objectif : limiter la double saisie, importer les collaborateurs, preparer les usages BI, reporting et analyse.
+- Les integrations ciblees sont conservees : Excel, Tableau, Alteryx, Power BI et autres outils d'analyse.
+- La distinction est claire entre import simple, connexions BI et synchronisations futures.
+- Les cas d'usage prevus sont ajoutes : import collaborateurs, dashboard, exploitation des donnees de pilotage, analyses croisees.
+- Le CTA renvoie vers `contact@zzzbre.com` pour demander une integration.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Pourquoi les integrations comptent pour les PME.
-- En developpement :
-  - import Excel ;
-  - connexion BI ;
-  - synchronisation des listes collaborateurs.
-- Cas d'usage : importer une liste d'equipe, relier un dashboard, exporter des donnees.
-- CTA secondaire : `Demander une integration`.
-
-### Incoherences
-
-- Orthographe : `employées` devrait etre `employes` ou `collaborateurs`.
-- `Connecter à` doit etre reformule.
-
-### Priorite de redaction
-
-Moyenne. Utile, mais pas bloquant pour une premiere landing page.
+- Ne pas faire croire que les integrations sont deja disponibles.
+- Garder la page coherente avec le statut beta.
+- La page API doit prolonger cette logique d'exploitation des donnees.
 
 ---
 
@@ -739,6 +727,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Tarifs validee : la page clarifie l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
 - Sécurité validee : la page rassure sur acces, roles, donnees de pilotage, beta et ameliorations en cours.
 - Contact validee : la page donne les motifs de contact, les contacts utiles, l'adresse et le CTA.
+- Intégrations validee : la page presente les integrations comme une roadmap en developpement pour connecter donnees, collaborateurs et outils BI.
 - Support, Légal et Presse restent des placeholders.
 - La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
 - Le nom de marque doit etre harmonise partout en `zzzbre`.
@@ -751,4 +740,5 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 4. Valide : `contenu/Tarifs/Tarifs.md` presente l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
 5. Valide : `contenu/Produit/4 Sécurité.md` rassure sur les acces, roles, donnees et garanties beta.
 6. Valide : `contenu/Contact/Contact.md` presente les contacts utiles, l'adresse et le CTA.
-7. Priorite active : nettoyer les pages secondaires avant integration Astro.
+7. Valide : `contenu/Produit/2 Intégrations.md` presente les integrations en developpement et leurs cas d'usage.
+8. Priorite active : completer `contenu/Produit/3 API.md`.
