@@ -269,32 +269,25 @@ Valide. La page presente l'API comme une roadmap en developpement pour exploiter
 
 Fichier : `contenu/Cas d'usage/2 Grandes entreprises.md`
 
-### Deja exploitable
+### Statut
 
-- Le titre et le sous-titre sont coherents.
-- Les benefices sont pertinents pour une cible multi-equipes.
+Valide. La page presente zzzbre comme une solution a tester progressivement sur une equipe, direction, site ou perimetre pilote dans une organisation multi-equipes.
 
-### Manques
+### Points valides
 
-- La cible prioritaire etant PME, cette page doit etre presentee comme un prolongement, pas comme le coeur du site.
-- Il manque une section deploiement progressif.
-- Il manque un angle securite/gouvernance.
-- Il manque un CTA adapte : contact ou demo.
+- La page garde l'idee d'alignement a grande echelle sans promettre un deploiement enterprise complet.
+- Le statut `Approche pilote recommandee` est explicite.
+- Les defis sont poses : pratiques heterogenes, indicateurs disperses, silos, remontee terrain, gouvernance.
+- La page met en avant un cadre commun de pilotage et une logique de leadership distribue.
+- La gouvernance des acces, roles, pages, secteurs et donnees est mentionnee.
+- Les premiers cas d'usage sont ajoutes : barometre motivation, leadership distribue, ateliers multi-equipes, pilotage des actions, donnees de pilotage.
+- Le CTA renvoie vers `contact@zzzbre.com`.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Probleme : pratiques heterogenes, indicateurs disperses, coordination complexe.
-- Reponse zzzbre : cadre commun de pilotage, roles, donnees partagees.
-- Deploiement : commencer par une equipe pilote.
-- CTA : `Nous contacter`.
-
-### Incoherences
-
-- Pas de mention beta : pour les grandes entreprises, il faut etre prudent et parler de pilote.
-
-### Priorite de redaction
-
-Moyenne. Utile pour ne pas fermer la porte, mais a traiter apres les pages PME.
+- Ne pas promettre SLA, SSO, conformite ou deploiement grand compte non documente.
+- Garder cette page comme prolongement secondaire par rapport a la cible PME.
+- La page Secteurs devra rester plus transversale et ne pas repeter toute la logique grandes entreprises.
 
 ---
 
@@ -717,6 +710,7 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Contact validee : la page donne les motifs de contact, les contacts utiles, l'adresse et le CTA.
 - Intégrations validee : la page presente les integrations comme une roadmap en developpement pour connecter donnees, collaborateurs et outils BI.
 - API validee : la page presente l'exploitation future des donnees de pilotage via tokens, permissions et outils internes.
+- Grandes entreprises validee : la page presente une approche pilote pour harmoniser pilotage, acces et donnees dans les organisations multi-equipes.
 - Support, Légal et Presse restent des placeholders.
 - La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
 - Le nom de marque doit etre harmonise partout en `zzzbre`.
@@ -731,4 +725,5 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 6. Valide : `contenu/Contact/Contact.md` presente les contacts utiles, l'adresse et le CTA.
 7. Valide : `contenu/Produit/2 Intégrations.md` presente les integrations en developpement et leurs cas d'usage.
 8. Valide : `contenu/Produit/3 API.md` presente l'API en developpement et ses usages data/reporting.
-9. Priorite active : completer `contenu/Cas d'usage/2 Grandes entreprises.md`.
+9. Valide : `contenu/Cas d'usage/2 Grandes entreprises.md` presente une approche pilote pour organisations multi-equipes.
+10. Priorite active : completer `contenu/Cas d'usage/3 Secteurs.md`.
