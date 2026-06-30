@@ -42,31 +42,17 @@
 
 Fichier : `contenu/index.md`
 
-### Deja exploitable
+### Statut
 
-- Le positionnement general est present : outil de pilotage avec la donnee.
-- La promesse mentionne strategie, coordination et suivi des equipes.
-- Le CTA existe deja et pointe vers `https://zzzbre.com/login`.
-- Un visuel produit est prevu.
+Valide. L'accueil reste court, conserve le bloc hero et les benefices tels quels, puis oriente vers les pages de fond.
 
-### Manques
+### Points valides
 
-- La page ne dit pas clairement a qui s'adresse zzzbre.
-- La promesse doit etre clarifiee sans transformer l'accueil en page longue : zzzbre doit etre compris comme une plateforme de data driven management, pas seulement comme un outil de coordination.
-- Il manque 3 benefices tres synthetiques : clarifier les priorites, aligner l'equipe, suivre les decisions/actions.
-- Il manque des liens de suite vers les pages dediees : Produit, Cas d'usage, Tarifs, Securite.
-- Le CTA principal doit etre simplifie.
-
-### Sections a ajouter
-
-- Hero court : titre, sous-titre, CTA principal, visuel produit.
-- Accroche : une phrase sur la cible PME, le statut beta et la vision data driven management.
-- Benefices courts : 3 points maximum.
-- Liens de suite :
-  - Decouvrir les fonctionnalites ;
-  - Voir les cas d'usage ;
-  - Consulter les tarifs ;
-  - Lire la page securite si necessaire.
+- Le titre, le sous-titre, l'accroche, le CTA, le visuel principal et les 3 benefices sont conserves tels quels a la demande editoriale.
+- Le nom de marque est harmonise en `zzzbre`.
+- Le CTA principal `Creer un compte` pointe vers `https://zzzbre.com/login`.
+- Les benefices restent synthetiques : clarifier les priorites, aligner les equipes, suivre les decisions et les actions.
+- Les liens de suite orientent vers les pages dediees : Fonctionnalites, Cas d'usage, Tarifs et Securite.
 
 ### A ne pas faire
 
@@ -75,16 +61,10 @@ Fichier : `contenu/index.md`
 - Ne pas detailler la roadmap, les tarifs, la securite ou le cas client ici : ces contenus doivent rester dans leurs pages dediees.
 - Ne pas transformer l'accueil en page narrative principale.
 
-### Incoherences
+### Attention pour la suite
 
-- `zzzebre` doit devenir `zzzbre`.
-- `Creer` est sans accent dans le fichier actuel ; choisir une convention et l'appliquer partout.
-- Le libelle actuel du CTA melange plusieurs intentions : creer un compte, acceder au produit, lancez-vous.
-- Le visuel principal n'a pas de source.
-
-### Priorite de redaction
-
-Tres haute. L'accueil doit etre calibre comme une porte d'entree concise, puis renvoyer vers les pages de fond.
+- Ne pas allonger l'accueil avec une FAQ, une roadmap ou des details deja traites dans les pages dediees.
+- Le visuel principal reste sans source tant qu'aucun asset produit confirme n'est fourni.
 
 ---
 
@@ -576,13 +556,13 @@ Structuree, editorialisee cote client, a valider juridiquement. La page remplace
 
 - Faire valider les mentions legales, CGV/CGU, confidentialite et cookies par une source juridique adaptee avant mise en ligne publique.
 - Completer les informations societe uniquement lorsqu'elles sont confirmees.
-- La prochaine priorite est le retour sur `Accueil`, qui contient encore `zzzebre` et doit etre recalibre.
+- L'accueil est maintenant valide dans sa version courte.
 
 ---
 
 ## Synthese des manques critiques
 
-- Accueil a clarifier : il doit rester court et orienter vers les pages dediees.
+- Accueil valide : il reste court et oriente vers les pages dediees.
 - Fonctionnalités validee : la page sert maintenant de reference pour la vision plateforme, les modules beta et `Notre Roadmap`.
 - Cas d'usage PME valide : la page traduit la vision zzzbre en fonctionnement data driven, humain et collectif pour PME.
 - Tarifs validee : la page clarifie l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
@@ -597,7 +577,7 @@ Structuree, editorialisee cote client, a valider juridiquement. La page remplace
 
 ## Ordre recommande pour la suite
 
-1. Calibrer `contenu/index.md` comme accueil court : promesse, CTA, 3 benefices et liens vers les pages dediees.
+1. Valide : `contenu/index.md` presente un accueil court avec promesse, CTA, 3 benefices et liens vers les pages dediees.
 2. Valide : `contenu/Produit/1 Fonctionnalités.md` presente la vision plateforme, les modules beta et `Notre Roadmap`.
 3. Valide : `contenu/Cas d'usage/1 PME.md` presente le fonctionnement d'une PME data driven fondee sur motivation, bien-etre et leadership contemporain.
 4. Valide : `contenu/Tarifs/Tarifs.md` presente l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
@@ -612,4 +592,4 @@ Structuree, editorialisee cote client, a valider juridiquement. La page remplace
 13. Valide : les pages À propos sont structurees : Équipe, Carrières et Presse.
 14. Valide : `contenu/Support/Support.md` presente les motifs d'aide, la FAQ, la documentation et le support.
 15. Structure : `contenu/Légal/Légal.md` pose les bases legales en contenu client, a valider juridiquement.
-16. Priorite active : revenir sur `contenu/index.md` pour corriger `zzzebre`, renforcer le positionnement business plan et garder un accueil court.
+16. Valide : `contenu/index.md` est calibre comme accueil court, sans FAQ ni roadmap detaillee.
