@@ -90,55 +90,23 @@ Tres haute. L'accueil doit etre calibre comme une porte d'entree concise, puis r
 
 Fichier : `contenu/Produit/1 Fonctionnalités.md`
 
-### Deja exploitable
+### Statut
 
-- Deux familles produit sont deja identifiees : `Innovation & Creativite` et `Motivation`.
-- La matiere roadmap est tres riche.
-- Le contenu montre l'ambition reelle du produit : couvrir progressivement les grands domaines du management, de la strategie et de la performance d'entreprise.
-- La liste existante donne une base pour presenter zzzbre comme une plateforme generale de data driven management, pas comme un simple outil d'ateliers ou de questionnaires.
+Valide. La page a ete restructuree pour separer les modules disponibles en beta, la valeur pour les dirigeants, `Notre Roadmap` et le CTA final.
 
-### Manques
+### Points valides
 
-- Le sous-titre et l'accroche sont vides.
-- Les modules disponibles ne sont pas assez positionnes comme les premiers outils de la plateforme.
-- La roadmap est trop longue et ressemble a une liste interne, alors qu'elle devrait exprimer une vision produit structuree.
-- Il manque une lecture dirigeant PME : comment les concepts MBA deviennent des outils concrets de pilotage.
-- Il manque des exemples d'usage concrets.
-- Il manque un CTA.
-- Il manque une separation nette entre modules beta, domaines en construction et vision long terme.
+- La page presente zzzbre comme une plateforme generale de data driven management.
+- Les modules beta sont presentes comme les premiers points d'entree, pas comme le perimetre complet du produit.
+- Les intitules academiques et MBA sont conserves et reorganises sans etre transformes en slogans marketing.
+- `Notre Roadmap` remplace l'ancienne liste brute `Nos developpements en cours`.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Introduction : zzzbre comme plateforme de data driven management qui transforme les methodes de management, strategie, finance, RH, operations et data en outils actionnables.
-- Modules disponibles en beta :
-  - ateliers d'innovation et de creativite ;
-  - questionnaires motivation/cohesion ;
-  - espace collaborateur ;
-  - suivi d'actions ou decisions si deja present dans le produit.
-- Vision fonctionnelle : reprendre les grands concepts etudies en MBA et les convertir en parcours, diagnostics, tableaux de bord, plans d'action et outils d'aide a la decision.
-- Pour le dirigeant : mieux comprendre, mieux decider, mieux aligner, mieux suivre.
-- Exemples d'utilisation : atelier d'ideation, diagnostic equipe, suivi d'un plan d'action.
-- Domaines de la plateforme a organiser en familles lisibles :
-  - Strategie et pilotage ;
-  - Finance et performance ;
-  - Equipes, RH et conduite du changement ;
-  - Marketing, commercial et relation client ;
-  - Operations, achats et supply chain ;
-  - Gouvernance, juridique et risques ;
-  - Data, BI, IA et transformation digitale.
-- CTA : `Creer un compte`.
-
-### Incoherences
-
-- Orthographe a corriger : `9 type`, `connaitre`, `cohesion`, `Diagnostique`, `Mis en oeuvre`, `Manageriale`, `Methodologie`, etc.
-- La roadmap contient des termes academiques. Il ne faut pas les supprimer : il faut les traduire en outils concrets et en benefices business.
-- Certaines entrees sont entre parentheses, ce qui donne un effet brouillon.
-- `AI` devrait etre harmonise avec `IA`.
-- Attention : ne pas presenter les ateliers et questionnaires comme la totalite du produit. Ce sont les premiers modules d'une plateforme plus large.
-
-### Priorite de redaction
-
-Tres haute. C'est la page qui doit transformer la matiere brute en proposition produit claire.
+- Garder cette page comme reference pour la vision plateforme.
+- Ne pas repeter toute la roadmap dans les pages de cas d'usage.
+- Les pages suivantes doivent traduire cette vision en situations client concretes.
 
 ---
 
@@ -146,38 +114,26 @@ Tres haute. C'est la page qui doit transformer la matiere brute en proposition p
 
 Fichier : `contenu/Cas d'usage/1 PME.md`
 
-### Deja exploitable
+### Statut
 
-- Le titre est bon et adapte a la cible.
-- Le sous-titre est clair.
-- Les benefices principaux sont deja presents.
+Valide apres ajustement. La page presente le cas PME comme une explication concrete du data driven management applique a une entreprise humaine, collective, orientee bien-etre collaborateur et leadership contemporain.
 
-### Manques
+### Points valides
 
-- La page reste trop courte pour une page de conversion.
-- Il manque une situation de depart typique.
-- Il manque un scenario d'utilisation.
-- Il manque des resultats attendus.
-- Il manque un CTA.
-- Il manque une preuve ou un exemple.
+- La page explique que le pilotage data driven ne se limite pas aux indicateurs financiers ou operationnels.
+- Les collaborateurs sont presentes comme la base de l'entreprise : motivation, bien-etre, cohesion, engagement et envie de faire reussir le projet.
+- La page met en avant l'adoption de bonnes pratiques de leadership contemporain : ecoute du terrain, partage de l'information, responsabilisation et decision methodique.
+- Les questionnaires sont clarifies comme des outils pour comprendre la motivation, le bien-etre et la cohesion des equipes.
+- La page explique le fonctionnement general d'une plateforme de data driven management : ecouter, comprendre, structurer, decider, agir et apprendre.
+- Les premiers usages beta sont cites : questionnaires motivation et bien-etre, questionnaires cohesion, ateliers, application collaborateur.
+- Le CTA vers `https://zzzbre.com/login` est present.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Probleme : priorites dispersees, reunions peu suivies, decisions mal tracees.
-- Reponse zzzbre : centraliser objectifs, ateliers, questionnaires et plans d'action.
-- Cas concret : `En 6 semaines, une PME peut...`.
-- Benefices : visibilite, rythme de pilotage, engagement, decisions plus rapides.
-- Pour qui : fondateur, dirigeant, responsable operationnel, manager.
-- CTA : `Creer un compte`.
-
-### Incoherences
-
-- Aucun nom de marque n'est present, donc la page pourrait parler de n'importe quel outil.
-- Pas de mention beta/lancement.
-
-### Priorite de redaction
-
-Tres haute. Cette page doit devenir la page cible principale.
+- Garder cette page centree sur le fonctionnement general d'une PME data driven et humaine.
+- Eviter de la ramener a une simple logique de suivi manageriale ou de reporting descendant.
+- Ne pas y ajouter la roadmap MBA complete.
+- Utiliser cette page comme reference pour les autres pages de cas d'usage.
 
 ---
 
@@ -840,7 +796,8 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 ## Synthese des manques critiques
 
 - Accueil a clarifier : il doit rester court et orienter vers les pages dediees.
-- Fonctionnalités trop brutes : il faut transformer la liste interne en vision plateforme, avec des modules beta et des domaines MBA clairement organises.
+- Fonctionnalités validee : la page sert maintenant de reference pour la vision plateforme, les modules beta et `Notre Roadmap`.
+- Cas d'usage PME valide : la page traduit la vision zzzbre en fonctionnement data driven, humain et collectif pour PME.
 - Tarifs incomplets : frequence, CTA, inclusions et FAQ manquent.
 - Sécurité trop courte : il faut rassurer sur les donnees et acces.
 - Contact, Support, Légal et Presse sont des placeholders.
@@ -850,9 +807,9 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 ## Ordre recommande pour la suite
 
 1. Calibrer `contenu/index.md` comme accueil court : promesse, CTA, 3 benefices et liens vers les pages dediees.
-2. Restructurer `contenu/Produit/1 Fonctionnalités.md` pour presenter zzzbre comme une plateforme generale de data driven management, pas seulement comme les modules deja disponibles.
-3. Completer `contenu/Cas d'usage/1 PME.md`.
-4. Clarifier `contenu/Tarifs/Tarifs.md`.
+2. Valide : `contenu/Produit/1 Fonctionnalités.md` presente la vision plateforme, les modules beta et `Notre Roadmap`.
+3. Valide : `contenu/Cas d'usage/1 PME.md` presente le fonctionnement d'une PME data driven fondee sur motivation, bien-etre et leadership contemporain.
+4. Priorite active : clarifier `contenu/Tarifs/Tarifs.md`.
 5. Renforcer `contenu/Produit/4 Sécurité.md`.
 6. Completer `contenu/Contact/Contact.md`.
 7. Nettoyer les pages secondaires avant integration Astro.
