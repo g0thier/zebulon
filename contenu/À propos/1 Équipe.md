@@ -4,7 +4,7 @@
 - Sous-titre : zzzbre est construit pour aider les entreprises à mieux piloter avec plus de clarté, des données utiles et des pratiques de leadership plus partagées.
 - Accroche : Le projet avance avec une conviction simple : les méthodes de management doivent devenir plus concrètes, plus accessibles et plus faciles à relier aux décisions du quotidien.
 
-### Gauthier Rammault
+### L'Équipe
 
 - Rôle : Fondateur
 - Texte : Gauthier Rammault porte la vision produit, la conception de la plateforme, le pilotage technique et le développement des premiers usages de zzzbre.
