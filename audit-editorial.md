@@ -193,40 +193,24 @@ Valide. La page rassure sur les acces granulaires, roles, donnees de pilotage et
 
 Fichier : `contenu/Contact/Contact.md`
 
-### Deja exploitable
+### Statut
 
-- L'email de contact existe.
-- L'adresse physique a Geneve est presente.
+Valide. La page Contact est structuree, courte et exploitable comme page de confiance.
 
-### Manques
+### Points valides
 
-- Il manque un titre marketing.
-- Il manque des motifs de contact.
-- Il manque une alternative au contact email : creation de compte, demo, support.
-- Il manque une phrase rassurante sur les delais de reponse.
-- Il manque une separation entre contact commercial, support et presse.
+- Le titre `Parlons de votre pilotage` est present.
+- Le CTA vers `https://zzzbre.com/login` est present au debut et en fin de page.
+- L'email principal `contact@zzzbre.com` est conserve.
+- Les motifs de contact sont explicites : beta, accompagnement, demande entreprise, partenariat, data driven management.
+- L'adresse de l'incubateur Nomades Advanced Technologies a Geneve est conservee.
+- Les contacts utiles sont separes : contact, support, presse.
 
-### Sections a ajouter
+### Attention pour la suite
 
-- Titre : `Parlons de votre pilotage`.
-- Sous-titre : invitation simple pour dirigeants de PME.
-- CTA principal : `Creer un compte`.
-- Contact direct : `contact@zzzbre.com`.
-- Cas de contact :
-  - question sur la beta ;
-  - besoin d'accompagnement ;
-  - demande entreprise ;
-  - partenariat.
-- Adresse : incubateur de Nomades Advanced Technologies, Geneve.
-
-### Incoherences
-
-- Orthographe : `contactez nous` doit devenir `contactez-nous`.
-- Le texte est une seule ligne, pas encore exploitable comme page.
-
-### Priorite de redaction
-
-Haute. Page simple mais essentielle pour la confiance.
+- Ne pas transformer cette page en page commerciale longue.
+- Garder l'approche sans formulaire tant que le site Astro n'est pas construit.
+- Utiliser cette page comme reference pour completer les pages Support et Presse.
 
 ---
 
@@ -754,7 +738,8 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 - Cas d'usage PME valide : la page traduit la vision zzzbre en fonctionnement data driven, humain et collectif pour PME.
 - Tarifs validee : la page clarifie l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
 - Sécurité validee : la page rassure sur acces, roles, donnees de pilotage, beta et ameliorations en cours.
-- Contact, Support, Légal et Presse sont des placeholders.
+- Contact validee : la page donne les motifs de contact, les contacts utiles, l'adresse et le CTA.
+- Support, Légal et Presse restent des placeholders.
 - La preuve client existe dans `Études de cas` et doit rester prioritairement sur la page client, avec un renvoi possible depuis l'accueil.
 - Le nom de marque doit etre harmonise partout en `zzzbre`.
 
@@ -765,5 +750,5 @@ Moyenne. Obligatoire avant publication publique, mais a traiter avec prudence.
 3. Valide : `contenu/Cas d'usage/1 PME.md` presente le fonctionnement d'une PME data driven fondee sur motivation, bien-etre et leadership contemporain.
 4. Valide : `contenu/Tarifs/Tarifs.md` presente l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
 5. Valide : `contenu/Produit/4 Sécurité.md` rassure sur les acces, roles, donnees et garanties beta.
-6. Priorite active : completer `contenu/Contact/Contact.md`.
-7. Nettoyer les pages secondaires avant integration Astro.
+6. Valide : `contenu/Contact/Contact.md` presente les contacts utiles, l'adresse et le CTA.
+7. Priorite active : nettoyer les pages secondaires avant integration Astro.
