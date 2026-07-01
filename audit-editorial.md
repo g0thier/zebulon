@@ -1,595 +1,134 @@
-# Audit editorial des contenus zzzbre
-
-## Direction generale
-
-- Marque a harmoniser : `zzzbre`.
-- Domaine a utiliser : `https://zzzbre.com`.
-- CTA principal : `Creer un compte`, vers `https://zzzbre.com/login`.
-- Cible prioritaire : dirigeants de PME qui veulent clarifier la strategie, coordonner les equipes et suivre l'execution.
-- Positionnement long terme : plateforme generale de data driven management qui transforme les grands concepts et methodes etudies en MBA en outils operationnels, utilisables par les dirigeants et leurs equipes.
-- Ton : accessible startup, direct, clair, moderne, credible.
-- Maturite produit : beta/lancement. Les modules disponibles aujourd'hui doivent etre presentes comme les premiers points d'entree de la plateforme, sans reduire zzzbre a ces seuls usages.
-- Equilibre editorial : parler clairement de ce qui existe, mais toujours garder la vision generale en fil rouge : strategie, finance, RH, operations, innovation, gouvernance, data, IA et pilotage de la performance.
-- Contrainte de redaction : rediger du contenu editorial directement affichable cote client. Eviter les notes d'intention, consignes internes ou formulations de conception comme `cette page doit`, `cette categorie rassemblera`, `a venir`, `nous voulons expliquer`. Les titres, accroches, textes, listes et CTA doivent pouvoir etre repris tels quels dans le futur site Astro.
-
-## Priorites de contenu
-
-1. Accueil
-2. Produit / Fonctionnalités
-3. Cas d'usage / PME
-4. Tarifs
-5. Sécurité
-6. Contact
-7. Pages secondaires : ressources, equipe, presse, support, legal, API, intégrations, documentation
-
-## Checklist globale
-
-- [ ] Remplacer les occurrences `zzzebre` par `zzzbre`.
-- [ ] Harmoniser le CTA principal : `Creer un compte`.
-- [ ] Corriger les fautes visibles avant integration dans Astro.
-- [ ] Distinguer partout `Disponible en beta` et `En developpement`.
-- [ ] Presenter les modules beta comme des premiers outils, pas comme le perimetre complet de zzzbre.
-- [ ] Relier les contenus aux grands domaines du management enseignes en MBA : strategie, finance, marketing, RH, operations, gouvernance, innovation, data et IA.
-- [ ] Ajouter une intention claire a chaque page.
-- [ ] Ajouter au moins une preuve, un exemple ou un cas concret sur les pages principales.
-- [ ] Ajouter une FAQ sur les pages Tarifs, Sécurité et Contact.
-- [ ] Eviter les formulations trop vagues comme `Nos developpements en cours` lorsqu'une explication produit est necessaire.
-- [ ] Verifier que chaque page contient du texte final pour les visiteurs, pas des notes editoriales internes ou des intentions de redaction.
-
----
-
-## 1. Accueil
-
-Fichier : `contenu/index.md`
-
-### Statut
-
-Valide. L'accueil reste court, conserve le bloc hero et les benefices tels quels, puis oriente vers les pages de fond.
-
-### Points valides
-
-- Le titre, le sous-titre, l'accroche, le CTA, le visuel principal et les 3 benefices sont conserves tels quels a la demande editoriale.
-- Le nom de marque est harmonise en `zzzbre`.
-- Le CTA principal `Creer un compte` pointe vers `https://zzzbre.com/login`.
-- Les benefices restent synthetiques : clarifier les priorites, aligner les equipes, suivre les decisions et les actions.
-- Les liens de suite orientent vers les pages dediees : Fonctionnalites, Cas d'usage, Tarifs et Securite.
-
-### A ne pas faire
-
-- Ne pas recapituler toutes les pages du site dans l'accueil.
-- Ne pas ajouter de FAQ dans l'accueil pour le moment.
-- Ne pas detailler la roadmap, les tarifs, la securite ou le cas client ici : ces contenus doivent rester dans leurs pages dediees.
-- Ne pas transformer l'accueil en page narrative principale.
-
-### Attention pour la suite
-
-- Ne pas allonger l'accueil avec une FAQ, une roadmap ou des details deja traites dans les pages dediees.
-- Le visuel principal reste sans source tant qu'aucun asset produit confirme n'est fourni.
-
----
-
-## 2. Produit / Fonctionnalités
-
-Fichier : `contenu/Produit/1 Fonctionnalités.md`
-
-### Statut
-
-Valide. La page a ete restructuree pour separer les modules disponibles en beta, la valeur pour les dirigeants, `Notre Roadmap` et le CTA final.
-
-### Points valides
-
-- La page presente zzzbre comme une plateforme generale de data driven management.
-- Les modules beta sont presentes comme les premiers points d'entree, pas comme le perimetre complet du produit.
-- Les intitules academiques et MBA sont conserves et reorganises sans etre transformes en slogans marketing.
-- `Notre Roadmap` remplace l'ancienne liste brute `Nos developpements en cours`.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- Garder cette page comme reference pour la vision plateforme.
-- Ne pas repeter toute la roadmap dans les pages de cas d'usage.
-- Les pages suivantes doivent traduire cette vision en situations client concretes.
-
----
-
-## 3. Cas d'usage / PME
-
-Fichier : `contenu/Cas d'usage/1 PME.md`
-
-### Statut
-
-Valide apres ajustement. La page presente le cas PME comme une explication concrete du data driven management applique a une entreprise humaine, collective, orientee bien-etre collaborateur et leadership contemporain.
-
-### Points valides
-
-- La page explique que le pilotage data driven ne se limite pas aux indicateurs financiers ou operationnels.
-- Les collaborateurs sont presentes comme la base de l'entreprise : motivation, bien-etre, cohesion, engagement et envie de faire reussir le projet.
-- La page met en avant l'adoption de bonnes pratiques de leadership contemporain : ecoute du terrain, partage de l'information, responsabilisation et decision methodique.
-- Les questionnaires sont clarifies comme des outils pour comprendre la motivation, le bien-etre et la cohesion des equipes.
-- La page explique le fonctionnement general d'une plateforme de data driven management : ecouter, comprendre, structurer, decider, agir et apprendre.
-- Les premiers usages beta sont cites : questionnaires motivation et bien-etre, questionnaires cohesion, ateliers, application collaborateur.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- Garder cette page centree sur le fonctionnement general d'une PME data driven et humaine.
-- Eviter de la ramener a une simple logique de suivi manageriale ou de reporting descendant.
-- Ne pas y ajouter la roadmap MBA complete.
-- Utiliser cette page comme reference pour les autres pages de cas d'usage.
-
----
-
-## 4. Tarifs
-
-Fichier : `contenu/Tarifs/Tarifs.md`
-
-### Statut
-
-Valide. La page clarifie l'acces libre owner, les offres mensuelles beta, les quotas utilisateurs, les CTA et une FAQ tarifaire.
-
-### Points valides
-
-- L'acces libre avec 1 owner est presente separement comme une option pour explorer zzzbre.
-- Les offres payantes sont affichees en prix mensuels : 24,99€ / mois, 99€ / mois et 299€ / mois.
-- La reference au `0€` de l'ancienne offre de lancement est supprimee.
-- Les quotas existants sont conserves pour chaque plan.
-- Tous les plans ont un CTA vers `https://zzzbre.com/login`.
-- La page contient une FAQ sur l'acces libre, deploiement equipe, prix mensuels, changement de plan, roles inclus, accompagnement et evolution des tarifs.
-
-### Attention pour la suite
-
-- Ne pas inventer d'engagement annuel, de duree d'essai ou de remise tant que ces conditions ne sont pas definies.
-- Garder la mention beta : les tarifs peuvent evoluer avec la plateforme.
-- Les besoins particuliers doivent continuer a renvoyer vers `contact@zzzbre.com`.
-
----
-
-## 5. Sécurité
-
-Fichier : `contenu/Produit/4 Sécurité.md`
-
-### Statut
-
-Valide. La page rassure sur les acces granulaires, roles, donnees de pilotage et usages beta sans promettre une securite absolue.
-
-### Points valides
-
-- La page separe clairement `Disponible aujourd'hui` et `En developpement`.
-- Les garanties existantes sont conservees : authentification, roles et permissions, sauvegardes regulieres, tests couvrant 90 % de la codebase.
-- La gestion granulaire des acces est documentee : owner/administrateur, leaders, collaborateurs, capacite d'abonnement, secteurs et pages.
-- Un encart visuel est prevu pour la capture `Zzzbre.png`, montrant les droits d'acces managers et la selection de pages/secteurs.
-- La page explique pourquoi les donnees de data driven management meritent une attention particuliere : retours d'equipe, decisions, actions, priorites et donnees de pilotage.
-- Les bonnes pratiques cote client sont ajoutees : invitations, roles, retrait des acces, sensibilisation et verification reguliere.
-- La roadmap securite est formulee prudemment : MFA, surveillance renforcee des connexions suspectes, detection de signaux inhabituels.
-- Une FAQ securite et un contact `support@zzzbre.com` sont presents.
-
-### Attention pour la suite
-
-- Ne pas ajouter de certifications, normes, hebergeur, chiffrement, SLA ou conformite detaillee sans source dediee.
-- Garder une separation claire entre garanties disponibles et ameliorations en cours.
-- Utiliser cette page comme reference de ton pour les autres contenus de confiance.
-
----
-
-## 6. Contact
-
-Fichier : `contenu/Contact/Contact.md`
-
-### Statut
-
-Valide. La page Contact est structuree, courte et exploitable comme page de confiance.
-
-### Points valides
-
-- Le titre `Parlons de votre pilotage` est present.
-- Le CTA vers `https://zzzbre.com/login` est present au debut et en fin de page.
-- L'email principal `contact@zzzbre.com` est conserve.
-- Les motifs de contact sont explicites : beta, accompagnement, demande entreprise, partenariat, data driven management.
-- L'adresse de l'incubateur Nomades Advanced Technologies a Geneve est conservee.
-- Les contacts utiles sont separes : contact, support, presse.
-
-### Attention pour la suite
-
-- Ne pas transformer cette page en page commerciale longue.
-- Garder l'approche sans formulaire tant que le site Astro n'est pas construit.
-- Utiliser cette page comme reference pour completer les pages Support et Presse.
-
----
-
-## 7. Produit / Intégrations
-
-Fichier : `contenu/Produit/2 Intégrations.md`
-
-### Statut
-
-Valide. La page presente les integrations comme une roadmap produit en developpement, utile pour connecter zzzbre aux donnees et outils deja utilises par les entreprises.
-
-### Points valides
-
-- Le statut `En developpement` est explicite.
-- La page explique l'objectif : limiter la double saisie, importer les collaborateurs, preparer les usages BI, reporting et analyse.
-- Les integrations ciblees sont conservees : Excel, Tableau, Alteryx, Power BI et autres outils d'analyse.
-- La distinction est claire entre import simple, connexions BI et synchronisations futures.
-- Les cas d'usage prevus sont ajoutes : import collaborateurs, dashboard, exploitation des donnees de pilotage, analyses croisees.
-- Le CTA renvoie vers `contact@zzzbre.com` pour demander une integration.
-
-### Attention pour la suite
-
-- Ne pas faire croire que les integrations sont deja disponibles.
-- Garder la page coherente avec le statut beta.
-- La page API doit prolonger cette logique d'exploitation des donnees.
-
----
-
-## 8. Produit / API
-
-Fichier : `contenu/Produit/3 API.md`
-
-### Statut
-
-Valide. La page presente l'API comme une roadmap en developpement pour exploiter les donnees de pilotage dans des dashboards, analyses, automatisations et outils internes.
-
-### Points valides
-
-- Le statut `En developpement` est explicite.
-- La page cible les equipes data, developpeurs, partenaires et outils internes.
-- La promesse est coherente avec la vision data driven management : reporting, BI, analyses croisees, automatisations.
-- Les elements initiaux sont conserves : connexion avec tokens et acces aux donnees pour analyse.
-- L'acces aux donnees est formule prudemment : donnees accessibles selon droits, roles et perimetres configures.
-- La securite API est reliee aux permissions et a la page Securite.
-- Le CTA renvoie vers `contact@zzzbre.com` pour exprimer un besoin API.
-
-### Attention pour la suite
-
-- Ne pas faire croire que l'API est deja disponible.
-- Ne pas promettre de details techniques non confirmes.
-- Les prochains cas d'usage doivent rester coherents avec cette logique d'exploitation progressive des donnees.
-
----
-
-## 9. Cas d'usage / Grandes entreprises
-
-Fichier : `contenu/Cas d'usage/2 Grandes entreprises.md`
-
-### Statut
-
-Valide. La page presente zzzbre comme une solution a tester progressivement sur une equipe, direction, site ou perimetre pilote dans une organisation multi-equipes.
-
-### Points valides
-
-- La page garde l'idee d'alignement a grande echelle sans promettre un deploiement enterprise complet.
-- Le statut `Approche pilote recommandee` est explicite.
-- Les defis sont poses : pratiques heterogenes, indicateurs disperses, silos, remontee terrain, gouvernance.
-- La page met en avant un cadre commun de pilotage et une logique de leadership distribue.
-- La gouvernance des acces, roles, pages, secteurs et donnees est mentionnee.
-- Les premiers cas d'usage sont ajoutes : barometre motivation, leadership distribue, ateliers multi-equipes, pilotage des actions, donnees de pilotage.
-- Le CTA renvoie vers `contact@zzzbre.com`.
-
-### Attention pour la suite
-
-- Ne pas promettre SLA, SSO, conformite ou deploiement grand compte non documente.
-- Garder cette page comme prolongement secondaire par rapport a la cible PME.
-- La page Secteurs devra rester plus transversale et ne pas repeter toute la logique grandes entreprises.
-
----
-
-## 10. Cas d'usage / Secteurs
-
-Fichier : `contenu/Cas d'usage/3 Secteurs.md`
-
-### Statut
-
-Valide. La page presente les secteurs comme des exemples d'adaptation de zzzbre a differents contextes metier, sans transformer la plateforme en solution verticale par secteur.
-
-### Points valides
-
-- La page explique que les secteurs ont des realites differentes, mais des besoins communs : comprendre les equipes, structurer les decisions, faire remonter les signaux et suivre les actions.
-- Les secteurs existants sont conserves : services et conseil, retail et reseaux multi-sites, industrie et operations, startups et scale-ups, associations et organismes de formation.
-- Chaque secteur dispose d'exemples d'usages concrets sans faire croire a des modules sectoriels dedies.
-- La page reste coherente avec le data driven management : retours collaborateurs, motivation, bien-etre, leadership, donnees de pilotage, decisions et plans d'action.
-- La section `Ce que les secteurs ont en commun` clarifie les fondations transversales.
-- Le CTA renvoie vers `contact@zzzbre.com` pour discuter d'un contexte metier.
-
-### Attention pour la suite
-
-- Ne pas ajouter de promesses verticales ou de fonctionnalites specialisees par secteur sans preuve produit.
-- Garder cette page comme page d'adaptation, pas comme catalogue d'offres sectorielles.
-- La prochaine priorite est `Clients / Études de cas`.
-
----
-
-## 11. Clients / Études de cas
-
-Fichier : `contenu/Clients/Études de cas.md`
-
-### Statut
-
-Valide apres repositionnement. La page ne presente plus de cas client invente : elle devient un appel a retours d'experience pour les entreprises qui utilisent zzzbre et souhaitent valoriser leur usage.
-
-### Points valides
-
-- Le cas type Nomades Advanced Technologies et les chiffres associes sont supprimes.
-- La page explique clairement que seuls des retours reels, assumes et utiles doivent etre publies.
-- Le contenu invite les entreprises utilisatrices a partager leur contexte, leur usage, leurs apprentissages et leur progression.
-- La page valorise la promotion des entreprises : initiatives de leadership, transformation, bien-etre, engagement et data driven management.
-- Le CTA renvoie vers `contact@zzzbre.com` pour proposer un retour d'experience.
-- `zzzebre` ne doit plus apparaitre dans cette page.
-
-### Attention pour la suite
-
-- Ne pas publier de chiffres, citations ou noms d'entreprise sans validation explicite.
-- Cette page ne remplace pas encore une preuve client : elle prepare la collecte de vrais temoignages.
-- La prochaine priorite est `Ressources / Guides`.
-
----
-
-## 12. Ressources / Guides
-
-Fichier : `contenu/Ressources/2 Guides.md`
-
-### Statut
-
-Valide. La page Guides devient une page d'appui editoriale pour aider les dirigeants, leaders et equipes a demarrer avec zzzbre et a installer progressivement de meilleures pratiques de pilotage.
-
-### Points valides
-
-- L'introduction explique que les guides servent a rendre les methodes de management et le data driven management plus concrets.
-- `zzzebre` est corrige en `zzzbre`.
-- Le guide prioritaire `Lancer son premier cycle de pilotage en 30 jours` est ajoute.
-- Les guides existants sont conserves et reorganises.
-- Les statuts `Beta`, `En preparation` et `A venir` evitent de faire croire que tous les guides complets sont deja publies.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- Garder cette page comme page ressource, pas comme documentation technique complete.
-- Les guides pourront devenir des articles dedies plus tard.
-- La prochaine priorite est `Ressources / Blog`.
-
----
-
-## 13. Ressources / Blog
-
-Fichier : `contenu/Ressources/1 Blog.md`
-
-### Statut
-
-Valide. La page Blog pose une ligne editoriale claire pour les futurs contenus zzzbre, sans faire croire qu'une bibliotheque d'articles est deja publiee.
-
-### Points valides
-
-- Le statut `En preparation` est explicite.
-- La promesse editoriale est clarifiee : aider les dirigeants, leaders et equipes a mieux piloter sans jargon.
-- Les categories sont reformulees autour de sujets accessibles : pilotage PME, leadership et engagement, ateliers et decision, indicateurs, IA appliquee au management.
-- Les categories disposent maintenant de pages dediees dans `contenu/Ressources/Blog/Categories/`.
-- La categorie brute `deep learning` est remplacee par un angle business plus coherent avec la cible.
-- Les pages categories listent les sujets a venir sans les presenter comme des articles deja publies.
-- Les blocs `Sujets a venir` ont ete retires des pages categories pour garder des textes directement affichables cote client.
-- Les formulations de l'index Blog ont ete ajustees pour eviter les notes d'intention visibles cote client.
-- La premiere serie d'articles est creee dans `contenu/Ressources/Blog/Motivation/`, avec un article par quiz Motivation.
-- La page Blog renvoie vers les pages categories, pas directement vers les articles.
-- La serie Motivation est rangee dans la categorie `Leadership et engagement`.
-- Le CTA vers `https://zzzbre.com/login` et le contact editorial `contact@zzzbre.com` sont presents.
-
-### Attention pour la suite
-
-- Continuer a separer les pages d'index du blog et les articles par series.
-- Garder la logique hub > categories > series > articles pour la future integration Astro.
-- Ne pas promettre de resultats scientifiques ou RH non prouves dans les articles de quiz.
-- Garder le blog accessible, pas academique ni trop technique.
-- La prochaine priorite est `Ressources / Webinaires`.
-
----
-
-## 14. Ressources / Webinaires
-
-Fichier : `contenu/Ressources/3 Webinaires.md`
-
-### Statut
-
-Valide. La page presente les webinaires comme des sessions video a venir autour des quiz et ateliers zzzbre, sans inventer d'agenda, de dates ou d'archives.
-
-### Points valides
-
-- Les placeholders `Nos prochains evenements` et `Evenements passe` sont supprimes.
-- La page est directement affichable cote client.
-- Les videos sont presentees comme `A venir`, avec un bouton `Demander en priorite`.
-- Une session video est prevue pour expliquer les quiz Motivation.
-- Les autres sessions couvrent les ateliers visibles dans le produit : Paper Brain, On continue arrete tente, Defectuologie, Speed Boat, Matrice croisee, Mind Mapping, Six chapeaux de Bono, Design Thinking et World Cafe.
-- Le contact `contact@zzzbre.com` est present pour demander une video en priorite.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- Ne pas ajouter de dates, archives ou inscriptions a des evenements tant qu'ils ne sont pas confirmes.
-- Garder cette page orientee videos explicatives a venir, pas webinaires live confirmes.
-- La prochaine priorite est `Ressources / Documentation`.
-
----
-
-## 15. Ressources / Documentation
-
-Fichier : `contenu/Ressources/4 Documentation.md`
-
-### Statut
-
-Valide. La page Documentation devient une page d'orientation directement affichable cote client, centree sur les usages plateforme et collaborateur.
-
-### Points valides
-
-- La formule `Nos developpements en cours` est supprimee.
-- Les deux axes sont conserves et clarifies : documentation plateforme et documentation collaborateur.
-- Les rubriques plateforme couvrent demarrage, roles et permissions, questionnaires, ateliers, plans d'action, securite et acces.
-- Les rubriques collaborateur couvrent connexion, questionnaire, atelier, actions et acces.
-- Le support `support@zzzbre.com` est present.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- La page reste une entree documentaire, pas encore une documentation detaillee article par article.
-- Ne pas ajouter de procedures techniques non confirmees.
-- La prochaine priorite est `À propos / Équipe`.
-
----
-
-## 16. À propos / Équipe
-
-Fichier : `contenu/À propos/1 Équipe.md`
-
-### Statut
-
-Valide. La page presente la mission de zzzbre, le fondateur et la vision produit sans surjouer la taille de l'equipe.
-
-### Points valides
-
-- `zzzebre` est corrige en `zzzbre`.
-- Gauthier Rammault est presente comme fondateur.
-- Son role est clarifie : vision produit, conception de la plateforme, pilotage technique, premiers usages beta et relation avec les utilisateurs.
-- La page explique pourquoi zzzbre existe : simplifier le pilotage, rendre les methodes de management plus concretes, relier donnees, decisions et actions.
-- Les principes du projet sont poses : clarte, simplicite, confiance, execution et leadership contemporain.
-- Le CTA vers `https://zzzbre.com/login` et le contact `contact@zzzbre.com` sont presents.
-
-### Attention pour la suite
-
-- Ne pas inventer d'autres membres d'equipe, de photo, de LinkedIn ou de parcours non fourni.
-- Garder la page sobre et credible pour une beta.
-- La prochaine priorite est `À propos / Carrières`.
-
----
-
-## 17. À propos / Carrières
-
-Fichier : `contenu/À propos/2 Carrières.md`
-
-### Statut
-
-Valide. La page clarifie qu'aucun poste n'est ouvert actuellement, tout en presentant les futures familles de metiers qui pourraient accompagner la croissance de zzzbre.
-
-### Points valides
-
-- Le statut `Aucun poste ouvert pour le moment` est explicite.
-- L'accroche maladroite sur les salaires est supprimee.
-- La page relie zzzbre au business plan : SaaS de pilotage strategique par la donnee, concepts MBA, recherche academique et methodes de management.
-- Les roles futurs sont regroupes par familles : produit/design/contenu, engineering/plateforme, data/IA/securite, go-to-market, support/customer success.
-- Les roles existants sont conserves avec des descriptions plus vivantes, tout en restant publiables.
-- Les liens vides `[Marcel]()` et `[Astro]()` sont retires.
-- Les fautes visibles et le caractere grec dans `n'αvons` sont supprimes.
-- La notion de candidature spontanee est retiree.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- Ne pas transformer les roles futurs en offres ouvertes tant que le recrutement n'est pas actif.
-- Garder cette page sobre et credible.
-- La prochaine priorite est `À propos / Presse`.
-
----
-
-## 18. À propos / Presse
-
-Fichier : `contenu/À propos/3 Presse.md`
-
-### Statut
-
-Valide. La page Presse est courte, propre et directement affichable cote client.
-
-### Points valides
-
-- `contactez nous` est corrige en `contactez-nous`.
-- La page presente zzzbre comme un SaaS de pilotage strategique par la donnee, destine aux dirigeants et membres de direction.
-- Le boilerplate est present et reutilisable.
-- Les ressources presse sont mentionnees sans pretendre qu'un kit complet est deja disponible.
-- Le contact presse `press@zzzbre.com` est present.
-- Les demandes generales renvoient vers `contact@zzzbre.com`.
-
-### Attention pour la suite
-
-- Ne pas promettre de kit presse complet tant que les logos, captures, visuels et dossier presse ne sont pas finalises.
-- Garder cette page courte et factuelle.
-- La prochaine priorite est `Support`.
-
----
-
-## 19. Support
-
-Fichier : `contenu/Support/Support.md`
-
-### Statut
-
-Valide. La page Support est simple, claire et adaptee a une beta.
-
-### Points valides
-
-- `contactez nous` est corrige en `contactez-nous`.
-- Le titre `Besoin d'aide sur zzzbre ?` est present.
-- Les motifs de support sont explicites : connexion, invitations, configuration, questionnaires, ateliers, donnees, roles et securite.
-- L'email `support@zzzbre.com` est present.
-- Le lien vers la documentation est present.
-- Une FAQ courte est ajoutee.
-- Le CTA vers `https://zzzbre.com/login` est present.
-
-### Attention pour la suite
-
-- Ne pas promettre de delai de reponse ou de SLA tant qu'ils ne sont pas definis.
-- Garder l'email comme canal support principal pour le moment.
-- La prochaine priorite est `Légal`.
-
----
-
-## 20. Légal
-
-Fichier : `contenu/Légal/Légal.md`
-
-### Statut
-
-Structuree, editorialisee cote client, a valider juridiquement. La page remplace le placeholder `CGV` par une structure legale prudente et directement affichable cote client.
-
-### Points valides
-
-- `CGV` seul disparait.
-- Les sections principales sont presentes : mentions legales, conditions d'utilisation et de vente, confidentialite, cookies, contact legal.
-- Le contact `contact@zzzbre.com` est present.
-- La page n'invente pas de numero d'entreprise, forme juridique, representant legal detaille, hebergeur, adresse legale complete ou clauses de CGV definitives.
-- Le texte reste prudent : il explique le cadre general sans inventer de clauses juridiques definitives.
-
-### Attention pour la suite
-
-- Faire valider les mentions legales, CGV/CGU, confidentialite et cookies par une source juridique adaptee avant mise en ligne publique.
-- Completer les informations societe uniquement lorsqu'elles sont confirmees.
-- L'accueil est maintenant valide dans sa version courte.
-
----
-
-## Synthese des manques critiques
-
-- Accueil valide : il reste court et oriente vers les pages dediees.
-- Fonctionnalités validee : la page sert maintenant de reference pour la vision plateforme, les modules beta et `Notre Roadmap`.
-- Cas d'usage PME valide : la page traduit la vision zzzbre en fonctionnement data driven, humain et collectif pour PME.
-- Tarifs validee : la page clarifie l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
-- Sécurité validee : la page rassure sur acces, roles, donnees de pilotage, beta et ameliorations en cours.
-- Contact validee : la page donne les motifs de contact, les contacts utiles, l'adresse et le CTA.
-- Intégrations validee : la page presente les integrations comme une roadmap en developpement pour connecter donnees, collaborateurs et outils BI.
-- API validee : la page presente l'exploitation future des donnees de pilotage via tokens, permissions et outils internes.
-- Grandes entreprises validee : la page presente une approche pilote pour harmoniser pilotage, acces et donnees dans les organisations multi-equipes.
-- Support et Presse sont valides. Légal est structure et editorialise, mais doit etre valide juridiquement avant publication publique.
-- `Études de cas` est repositionnee comme appel a retours d'experience reels, sans preuve client inventee.
-- Le nom de marque doit etre harmonise partout en `zzzbre`.
-
-## Ordre recommande pour la suite
-
-1. Valide : `contenu/index.md` presente un accueil court avec promesse, CTA, 3 benefices et liens vers les pages dediees.
-2. Valide : `contenu/Produit/1 Fonctionnalités.md` presente la vision plateforme, les modules beta et `Notre Roadmap`.
-3. Valide : `contenu/Cas d'usage/1 PME.md` presente le fonctionnement d'une PME data driven fondee sur motivation, bien-etre et leadership contemporain.
-4. Valide : `contenu/Tarifs/Tarifs.md` presente l'acces libre owner, les offres mensuelles beta et la FAQ tarifaire.
-5. Valide : `contenu/Produit/4 Sécurité.md` rassure sur les acces, roles, donnees et garanties beta.
-6. Valide : `contenu/Contact/Contact.md` presente les contacts utiles, l'adresse et le CTA.
-7. Valide : `contenu/Produit/2 Intégrations.md` presente les integrations en developpement et leurs cas d'usage.
-8. Valide : `contenu/Produit/3 API.md` presente l'API en developpement et ses usages data/reporting.
-9. Valide : `contenu/Cas d'usage/2 Grandes entreprises.md` presente une approche pilote pour organisations multi-equipes.
-10. Valide : `contenu/Cas d'usage/3 Secteurs.md` presente des adaptations par secteur sans promettre de modules verticaux dedies.
-11. Valide : `contenu/Clients/Études de cas.md` invite les entreprises utilisatrices a partager une experience reelle.
-12. Valide : les pages Ressources sont structurees : Blog, Guides, Webinaires et Documentation.
-13. Valide : les pages À propos sont structurees : Équipe, Carrières et Presse.
-14. Valide : `contenu/Support/Support.md` presente les motifs d'aide, la FAQ, la documentation et le support.
-15. Structure : `contenu/Légal/Légal.md` pose les bases legales en contenu client, a valider juridiquement.
-16. Valide : `contenu/index.md` est calibre comme accueil court, sans FAQ ni roadmap detaillee.
+# Audit contenu site vitrine Astro zzzbre
+
+## Verdict global
+
+Statut : **majoritairement prêt pour construire un site vitrine Astro multi-pages**.
+
+Le corpus éditorial contient déjà les pages front nécessaires : accueil, produit, cas d'usage, tarifs, sécurité, ressources, contact, support, à propos, clients et légal.
+
+La bonne approche n'est pas de tout ramener dans `contenu/index.md`. L'accueil doit servir de porte d'entrée courte : il présente la promesse de zzzbre, le CTA principal, quelques bénéfices, puis oriente vers les pages dédiées. Les autres fichiers Markdown restent des pages front complètes, avec leur propre rôle éditorial.
+
+Point important : aucun projet Astro n'est présent dans le repo à ce stade. Cet audit évalue donc la préparation éditoriale du site vitrine Astro, pas l'implémentation technique.
+
+## Modèle éditorial recommandé
+
+- `contenu/index.md` : page d'accueil et hub de navigation.
+- Pages Produit : expliquer les fonctionnalités, la sécurité, les intégrations et l'API.
+- Pages Cas d'usage : adapter la promesse à des contextes distincts.
+- Page Tarifs : présenter les offres beta, les prix, les quotas et la FAQ.
+- Pages Ressources : organiser blog, guides, documentation et webinaires.
+- Pages À propos, Presse, Clients : ajouter du contexte et de la confiance sans inventer de preuve.
+- Pages Contact, Support, Légal : rassurer, orienter et couvrir les besoins pratiques.
+
+## Rôle précis de l'accueil
+
+`index.md` ne doit pas devenir une page longue qui absorbe les contenus des autres pages. Il doit rester lisible en première intention et faire pointer vers les bonnes destinations.
+
+Sections recommandées pour `index.md` :
+
+1. Hero
+   - Titre, sous-titre, accroche, CTA `Créer un compte`, visuel produit.
+   - Source actuelle : déjà présent dans `contenu/index.md`.
+
+2. Bénéfices
+   - Clarifier les priorités.
+   - Aligner les équipes.
+   - Suivre les décisions et les actions.
+   - Source actuelle : déjà présent dans `contenu/index.md`.
+
+3. Produit
+   - Texte court pour orienter vers Fonctionnalités, Sécurité, Intégrations et API.
+   - Objectif : aider le visiteur à comprendre ce que zzzbre permet aujourd'hui et ce qui est en développement.
+
+4. Cas d'usage
+   - Texte court : découvrir comment zzzbre aide selon le contexte d'entreprise.
+   - Cards vers PME, Grandes entreprises et Secteurs.
+   - Objectif : ne pas tout expliquer sur l'accueil, mais envoyer vers les pages dédiées.
+
+5. Tarifs
+   - Résumé court ou lien vers la page Tarifs.
+   - Objectif : rendre l'accès aux offres visible sans répéter toute la FAQ.
+
+6. Ressources
+   - Liens vers Blog, Guides, Webinaires et Documentation.
+   - Objectif : montrer que le site a une profondeur éditoriale.
+
+7. Contact et réassurance
+   - CTA final `Créer un compte`.
+   - Contact alternatif pour les besoins spécifiques.
+   - Liens Support, Sécurité et Légal.
+
+## Pages front déjà prêtes
+
+- Accueil : promesse courte, CTA principal, bénéfices et premiers liens de suite.
+- Produit / Fonctionnalités : vision plateforme, modules disponibles en beta, roadmap générale.
+- Produit / Sécurité : accès, rôles, permissions, bonnes pratiques et FAQ.
+- Produit / Intégrations : page en développement, utile pour la vision data et BI.
+- Produit / API : page en développement, utile pour les équipes data et outils internes.
+- Cas d'usage / PME : page prioritaire pour la cible principale.
+- Cas d'usage / Grandes entreprises : page adaptée à une approche pilote.
+- Cas d'usage / Secteurs : page transversale par contexte métier.
+- Tarifs : accès libre, offres beta mensuelles, quotas et FAQ.
+- Ressources : blog, guides, webinaires, documentation et articles Motivation.
+- Clients : appel à retours d'expérience réels, sans preuve inventée.
+- À propos : équipe, carrières et presse.
+- Contact et Support : contacts utiles et orientation simple.
+- Légal : base éditoriale prudente à faire valider juridiquement.
+
+## Contenus à créer ou compléter dans l'accueil
+
+- Section Produit avec cards ou liens vers :
+  - Fonctionnalités ;
+  - Sécurité ;
+  - Intégrations ;
+  - API.
+- Section Cas d'usage avec cards vers :
+  - PME ;
+  - Grandes entreprises ;
+  - Secteurs.
+- Section Ressources avec liens vers :
+  - Blog ;
+  - Guides ;
+  - Webinaires ;
+  - Documentation.
+- CTA final qui répète `Créer un compte` et propose `contact@zzzbre.com` pour les besoins spécifiques.
+
+## Manques ou confirmations nécessaires
+
+- Visuel hero : `contenu/index.md` contient un emplacement `![Capture d'écran du produit]()` sans source confirmée.
+- Capture sécurité : `Capture-droit-access.png` est mentionnée dans la page Sécurité, mais le fichier doit être vérifié avant intégration.
+- Preuves client : aucun témoignage, chiffre, logo client ou cas validé n'est disponible. Ne pas inventer de preuve.
+- Légal : `contenu/Légal/Légal.md` doit être validé juridiquement avant usage comme document contractuel définitif.
+- Astro : aucun `package.json`, `astro.config.*` ou dossier `src/` n'a été trouvé dans le repo. La future intégration devra créer la structure technique.
+- Navigation : il faut décider quels liens apparaissent dans le header, le footer et les sections de l'accueil.
+
+## Risques éditoriaux
+
+- Risque de confusion : parler de landing sans préciser la logique multi-pages peut laisser penser que tout doit être concentré dans une seule page.
+- Risque de dilution : l'accueil peut devenir trop long si toutes les pages sont résumées avec trop de détails.
+- Risque de surpromesse : la roadmap Produit couvre beaucoup de domaines, mais seuls certains modules sont disponibles en beta.
+- Risque de preuve faible : la page Études de cas prépare la collecte de retours, mais ne fournit pas encore de preuve commerciale.
+- Risque juridique : les mentions légales sont prudentes, mais non validées juridiquement.
+- Risque visuel : sans capture produit confirmée, l'accueil peut manquer de matérialité.
+
+## Recommandations d'intégration Astro
+
+- Construire le site comme un ensemble de pages front, pas comme une page unique.
+- Garder `index.md` court et orienté navigation.
+- Transformer les sections de l'accueil en composants Astro simples : Hero, Benefits, ProductLinks, UseCaseCards, PricingLink, ResourceLinks, FinalCTA, Footer.
+- Garder les pages longues pour les routes dédiées : Produit, Cas d'usage, Tarifs, Sécurité, Ressources, Contact, Support et Légal.
+- Utiliser les fichiers Markdown comme source éditoriale, puis définir une convention de liens et d'assets pour Astro.
+- Prévoir un lien clair vers la page Légal, avec mention interne que la validation juridique reste nécessaire.
+
+## Conclusion actionnable
+
+Le contenu éditorial est suffisant pour démarrer un site vitrine Astro multi-pages. La priorité est maintenant de renforcer `contenu/index.md` comme hub d'accueil, en ajoutant progressivement des sections de navigation vers les pages existantes.
+
+Ordre recommandé :
+
+1. Ajouter une section Cas d'usage sur `index.md`.
+2. Ajouter une section Produit sur `index.md`.
+3. Ajouter une section Ressources sur `index.md`.
+4. Ajouter un CTA final et des liens pratiques vers Contact, Support, Sécurité et Légal.
+5. Valider ou produire le visuel hero.
+6. Vérifier les assets produit avant intégration Astro.
