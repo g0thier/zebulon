@@ -1,0 +1,65 @@
+---
+import {
+  renderInlineMarkdown,
+  type ContentBlock as ContentBlockType,
+} from "../../data/source-map";
+import CtaLink from "../ui/CtaLink.astro";
+import EditorialCard from "./EditorialCard.astro";
+import DataList from "./DataList.astro";
+
+type Props = {
+  block: ContentBlockType;
+};
+
+const { block } = Astro.props;
+const hasContent =
+  block.heading ||
+  block.text.length ||
+  block.fields.length ||
+  block.lists.some((list) => list.items.length) ||
+  block.cards.length ||
+  block.ctas.length;
+---
+
+{
+  hasContent && (
+    <section class:list={["content-block", `content-block--${block.kind}`]}>
+      {block.heading && <h2>{block.heading}</h2>}
+
+      {block.text.map((text) => (
+        <p set:html={renderInlineMarkdown(text)} />
+      ))}
+
+      {
+        block.fields.length > 0 && (
+          <dl>
+            {block.fields.map((field) => (
+              <>
+                <dt>{field.label}</dt>
+                <dd set:html={renderInlineMarkdown(field.value)} />
+              </>
+            ))}
+          </dl>
+        )
+      }
+
+      {block.lists.map((list) => <DataList list={list} />)}
+
+      {
+        block.cards.length > 0 && (
+          <div class="card-grid">
+            {block.cards.map((card) => <EditorialCard card={card} />)}
+          </div>
+        )
+      }
+
+      {
+        block.ctas.length > 0 && (
+          <div class="cta-row">
+            {block.ctas.map((cta) => <CtaLink cta={cta} variant="secondary" />)}
+          </div>
+        )
+      }
+    </section>
+  )
+}

@@ -1,11 +1,26 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import ContentBlock from "../components/content/ContentBlock.astro";
+import CtaLink from "../components/ui/CtaLink.astro";
+import StatusBadge from "../components/ui/StatusBadge.astro";
+import { homePage } from "../data/editorial-pages";
+import { renderInlineMarkdown } from "../data/source-map";
+import SiteLayout from "../layouts/SiteLayout.astro";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<SiteLayout title={homePage.title} description={homePage.intro}>
+  <section class="hero">
+    <StatusBadge label={homePage.status} />
+    <h1>{homePage.title}</h1>
+    {homePage.subtitle && <p class="hero__intro">{homePage.subtitle}</p>}
+    {homePage.intro && <p set:html={renderInlineMarkdown(homePage.intro)} />}
+    {
+      homePage.ctas.length > 0 && (
+        <div class="hero__actions">
+          {homePage.ctas.map((cta) => <CtaLink cta={cta} />)}
+        </div>
+      )
+    }
+  </section>
+
+  {homePage.blocks.map((block) => <ContentBlock block={block} />)}
+</SiteLayout>

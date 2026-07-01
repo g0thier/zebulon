@@ -1,0 +1,14 @@
+---
+import type { Cta, LinkItem } from "../../data/source-map";
+
+type Props = {
+  cta: Cta | LinkItem;
+  variant?: "primary" | "secondary" | "plain";
+};
+
+const { cta, variant = "primary" } = Astro.props;
+---
+
+<a class:list={["cta-link", `cta-link--${variant}`]} href={cta.href}>
+  {cta.label}
+</a>

@@ -1,0 +1,37 @@
+---
+import { accountCta, footerColumns, footerContact, footerText } from "../../data/navigation";
+import CtaLink from "../ui/CtaLink.astro";
+---
+
+<footer class="site-footer">
+  <div class="site-footer__intro">
+    <a class="brand" href="/">zzzbre</a>
+    <p>{footerText}</p>
+    <CtaLink cta={accountCta} />
+  </div>
+
+  <div class="site-footer__columns">
+    {footerColumns.map((column) => (
+      <section>
+        <h2>{column.label}</h2>
+        <ul>
+          {column.items?.map((item) => (
+            <li><a href={item.href}>{item.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    ))}
+
+    <section>
+      <h2>Contact</h2>
+      <address>
+        {footerContact.address.map((line) => <span>{line}</span>)}
+      </address>
+      <ul>
+        {footerContact.emails.map((email) => (
+          <li><a href={email.href}>{email.label}</a></li>
+        ))}
+      </ul>
+    </section>
+  </div>
+</footer>

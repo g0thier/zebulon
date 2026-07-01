@@ -1,0 +1,33 @@
+---
+import { renderInlineMarkdown, type DataList, type LinkItem } from "../../data/source-map";
+
+type Props = {
+  list: DataList;
+};
+
+const { list } = Astro.props;
+const showHeading = !["liste", "articles"].includes(list.label.toLowerCase());
+
+function isLink(item: string | LinkItem): item is LinkItem {
+  return typeof item !== "string";
+}
+---
+
+{
+  list.items.length > 0 && (
+    <div class="data-list">
+      {showHeading && <h3>{list.label}</h3>}
+      <ul>
+        {list.items.map((item) => (
+          <li>
+            {isLink(item) ? (
+              <a href={item.href}>{item.label}</a>
+            ) : (
+              <span set:html={renderInlineMarkdown(item)} />
+            )}
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}

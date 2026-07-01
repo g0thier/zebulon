@@ -1,0 +1,25 @@
+---
+import { accountCta, brandLink, headerNavigation } from "../../data/navigation";
+import CtaLink from "../ui/CtaLink.astro";
+---
+
+<header class="site-header">
+  <a class="brand" href={brandLink.href}>{brandLink.label}</a>
+
+  <nav class="primary-nav" aria-label="Navigation principale">
+    {headerNavigation.map((group) => (
+      group.type === "link" ? (
+        <a href={group.href}>{group.label}</a>
+      ) : (
+        <details>
+          <summary>{group.label}</summary>
+          <div class="nav-menu">
+            {group.items?.map((item) => <a href={item.href}>{item.label}</a>)}
+          </div>
+        </details>
+      )
+    ))}
+  </nav>
+
+  <CtaLink cta={accountCta} />
+</header>

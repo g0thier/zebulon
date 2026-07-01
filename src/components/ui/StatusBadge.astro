@@ -1,0 +1,9 @@
+---
+type Props = {
+  label?: string;
+};
+
+const { label } = Astro.props;
+---
+
+{label && <span class="status-badge">{label}</span>}

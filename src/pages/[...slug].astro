@@ -1,0 +1,56 @@
+---
+import ContentBlock from "../components/content/ContentBlock.astro";
+import CtaLink from "../components/ui/CtaLink.astro";
+import StatusBadge from "../components/ui/StatusBadge.astro";
+import { editorialPages, motivationArticleLinks } from "../data/editorial-pages";
+import { renderInlineMarkdown, type EditorialPage } from "../data/source-map";
+import SiteLayout from "../layouts/SiteLayout.astro";
+
+export function getStaticPaths() {
+  return editorialPages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+type Props = {
+  page: EditorialPage;
+};
+
+const { page } = Astro.props;
+const isLeadershipCategory = page.slug === "ressources/blog/categories/leadership-et-engagement";
+---
+
+<SiteLayout title={page.title} description={page.intro}>
+  <section class="hero">
+    <p class="eyebrow">{page.section}</p>
+    <StatusBadge label={page.status} />
+    <h1>{page.title}</h1>
+    {page.subtitle && <p class="hero__intro">{page.subtitle}</p>}
+    {page.intro && <p set:html={renderInlineMarkdown(page.intro)} />}
+    {
+      page.ctas.length > 0 && (
+        <div class="hero__actions">
+          {page.ctas.map((cta) => <CtaLink cta={cta} />)}
+        </div>
+      )
+    }
+  </section>
+
+  {page.blocks.map((block) => <ContentBlock block={block} />)}
+
+  {
+    isLeadershipCategory && motivationArticleLinks.length > 0 && (
+      <section class="content-block">
+        <h2>Série Motivation</h2>
+        <div class="card-grid">
+          {motivationArticleLinks.map((article) => (
+            <a class="editorial-card" href={article.href}>
+              <h3>{article.label}</h3>
+            </a>
+          ))}
+        </div>
+      </section>
+    )
+  }
+</SiteLayout>

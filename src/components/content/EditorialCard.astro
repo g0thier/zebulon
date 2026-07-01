@@ -1,0 +1,39 @@
+---
+import { renderInlineMarkdown, type Card } from "../../data/source-map";
+import CtaLink from "../ui/CtaLink.astro";
+import DataList from "./DataList.astro";
+
+type Props = {
+  card: Card;
+};
+
+const { card } = Astro.props;
+const Wrapper = card.href ? "a" : "article";
+---
+
+<Wrapper class="editorial-card" href={card.href}>
+  <div class="editorial-card__header">
+    {card.badge && <span class="editorial-card__badge">{card.badge}</span>}
+    <h3>{card.title}</h3>
+    {card.price && <p class="editorial-card__price">{card.price}</p>}
+  </div>
+
+  {card.text && <p set:html={renderInlineMarkdown(card.text)} />}
+
+  {
+    card.fields.length > 0 && (
+      <dl>
+        {card.fields.map((field) => (
+          <>
+            <dt>{field.label}</dt>
+            <dd set:html={renderInlineMarkdown(field.value)} />
+          </>
+        ))}
+      </dl>
+    )
+  }
+
+  {card.lists.map((list) => <DataList list={list} />)}
+
+  {card.cta && <CtaLink cta={card.cta} variant="secondary" />}
+</Wrapper>

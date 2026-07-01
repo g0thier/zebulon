@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import ContentBlock from "../../../../components/content/ContentBlock.astro";
+import CtaLink from "../../../../components/ui/CtaLink.astro";
+import StatusBadge from "../../../../components/ui/StatusBadge.astro";
+import { renderInlineMarkdown, type Article } from "../../../../data/source-map";
+import SiteLayout from "../../../../layouts/SiteLayout.astro";
+
+export async function getStaticPaths() {
+  const articles = await getCollection("articles");
+  return articles.map((entry) => ({
+    params: { slug: entry.data.slug },
+    props: { article: entry.data as Article },
+  }));
+}
+
+type Props = {
+  article: Article;
+};
+
+const { article } = Astro.props;
+---
+
+<SiteLayout title={article.title} description={article.subtitle}>
+  <article>
+    <section class="hero">
+      <p class="eyebrow">{article.category}</p>
+      <StatusBadge label={article.status} />
+      <h1>{article.title}</h1>
+      {article.subtitle && <p class="hero__intro">{article.subtitle}</p>}
+      {article.questionCount > 0 && <p>{article.questionCount} questions</p>}
+      {article.cta && <CtaLink cta={article.cta} />}
+    </section>
+
+    {article.sections.map((block) => <ContentBlock block={block} />)}
+
+    {
+      article.cta && (
+        <section class="content-block">
+          <h2>Commencer</h2>
+          <CtaLink cta={article.cta} />
+        </section>
+      )
+    }
+  </article>
+</SiteLayout>
