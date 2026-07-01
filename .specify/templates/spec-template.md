@@ -92,11 +92,15 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
+- **FR-006**: Editorial changes MUST identify the authoritative `edito/` source
+  files and keep public copy directly publishable without internal notes.
+- **FR-007**: Website changes MUST state the Astro pages, layouts, components,
+  assets, or content collections affected.
 
 *Example of marking unclear requirements:*
 
-- **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
-- **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
+- **FR-008**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
+- **FR-009**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
 ### Key Entities *(include if feature involves data)*
 
@@ -116,6 +120,13 @@
 - **SC-002**: [Measurable metric, e.g., "System handles 1000 concurrent users without degradation"]
 - **SC-003**: [User satisfaction metric, e.g., "90% of users successfully complete primary task on first attempt"]
 - **SC-004**: [Business metric, e.g., "Reduce support tickets related to [X] by 50%"]
+
+## Constitution Alignment *(mandatory)*
+
+- **Editorial source**: [Which `edito/` files, if any, are authoritative for this change?]
+- **Astro scope**: [Which Astro routes/components/assets are affected, or N/A]
+- **Quality gates**: [Content review, astro build, tests, quickstart/manual verification]
+- **Security/privacy**: [Secrets, user data, dependencies, third-party scripts, or N/A]
 
 ## Assumptions
 

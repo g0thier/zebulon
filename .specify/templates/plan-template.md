@@ -40,7 +40,18 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+Document evidence for each Zebulon Constitution principle:
+
+- **Editorial source of truth**: Identify affected `edito/` files and explain
+  how final user-facing copy, navigation, and layout content stay consistent.
+- **Astro-first implementation**: Confirm the feature follows current Astro
+  structure and relevant Astro docs, or justify any new framework/dependency.
+- **Independent story traceability**: Map each user story to acceptance
+  scenarios, design artifacts, and planned validation.
+- **Quality gates**: List required content review, `astro build`, targeted tests,
+  quickstart checks, or manual verification. Record any gate that cannot run.
+- **Security/privacy impact**: Note secrets, user data, dependency, third-party
+  script, or vulnerability disclosure considerations.
 
 ## Project Structure
 
