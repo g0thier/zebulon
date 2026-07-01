@@ -2,6 +2,7 @@
 import ContentBlock from "../components/content/ContentBlock.astro";
 import CtaLink from "../components/ui/CtaLink.astro";
 import StatusBadge from "../components/ui/StatusBadge.astro";
+import productScreenshot from "../assets/Capture.png";
 import { homePage } from "../data/editorial-pages";
 import { renderInlineMarkdown } from "../data/source-map";
 import SiteLayout from "../layouts/SiteLayout.astro";
@@ -28,6 +29,10 @@ import SiteLayout from "../layouts/SiteLayout.astro";
       )
     }
   </section>
+
+  <figure class="product-screenshot product-screenshot--home">
+    <img src={productScreenshot.src} alt="Capture d'écran du produit zzzbre" />
+  </figure>
 
   {homePage.blocks.map((block, index) => <ContentBlock block={block} pageSlug="" blockIndex={index} />)}
 </SiteLayout>

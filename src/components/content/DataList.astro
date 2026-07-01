@@ -12,6 +12,8 @@ type Props = {
 
 const { list } = Astro.props;
 const showHeading = !["liste", "articles"].includes(list.label.toLowerCase());
+const isBenefitsList = list.label.toLowerCase() === "bénéfices" || list.label.toLowerCase() === "benefices";
+const isActionList = list.label.toLowerCase() === "site";
 const labelClass = `data-list--${list.label
   .toLowerCase()
   .normalize("NFD")
@@ -39,7 +41,7 @@ function isLink(item: string | LinkItem): item is LinkItem {
 {
   list.items.length > 0 && (
     <div class:list={["data-list", labelClass]}>
-      {showHeading && <h3>{list.label}</h3>}
+      {showHeading && (isBenefitsList || isActionList ? <h2>{list.label}</h2> : <h3>{list.label}</h3>)}
       <ul>
         {list.items.map((item) => {
           const value = entryValue(item);
@@ -47,7 +49,7 @@ function isLink(item: string | LinkItem): item is LinkItem {
           return (
           <li class:list={[depth > 0 && `data-list__item--depth-${Math.min(depth, 3)}`]}>
             {isLink(value) ? (
-              <a href={value.href}>{value.label}</a>
+              <a class:list={[isActionList && "cta-link", isActionList && "cta-link--secondary", isActionList && "legal-action-link"]} href={value.href}>{value.label}</a>
             ) : (
               <span set:html={renderInlineMarkdown(value)} />
             )}

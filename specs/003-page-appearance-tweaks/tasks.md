@@ -18,10 +18,10 @@
 
 **Purpose**: Confirm the active feature, existing rendering surface, and quality gates before editing code.
 
-- [ ] T001 Review correction scope and quality gates in specs/003-page-appearance-tweaks/plan.md and specs/003-page-appearance-tweaks/quickstart.md
-- [ ] T002 [P] Verify source screenshots exist at src/assets/Capture.png and src/assets/Comptes.png
-- [ ] T003 [P] Review current homepage rendering in src/pages/index.astro and current benefit list styling in src/styles/global.css
-- [ ] T004 [P] Review current dynamic-page grouping rules in src/pages/[...slug].astro and content rendering branches in src/components/content/ContentBlock.astro
+- [X] T001 Review correction scope and quality gates in specs/003-page-appearance-tweaks/plan.md and specs/003-page-appearance-tweaks/quickstart.md
+- [X] T002 [P] Verify source screenshots exist at src/assets/Capture.png and src/assets/Comptes.png
+- [X] T003 [P] Review current homepage rendering in src/pages/index.astro and current benefit list styling in src/styles/global.css
+- [X] T004 [P] Review current dynamic-page grouping rules in src/pages/[...slug].astro and content rendering branches in src/components/content/ContentBlock.astro
 
 ---
 
@@ -31,11 +31,11 @@
 
 **Critical**: No user story work should begin until this phase is complete.
 
-- [ ] T005 Confirm no new dependency is needed by checking package.json against specs/003-page-appearance-tweaks/research.md
-- [ ] T006 Define the local screenshot rendering approach for Astro asset imports in src/pages/index.astro and src/components/content/ContentBlock.astro
-- [ ] T007 Define the single-FAQ-heading grouping approach for `/produit/securite` and `/tarifs` in src/pages/[...slug].astro
-- [ ] T008 Define the extracted-heading/card-detail rendering approach for `/a-propos/equipe` and `/contact` in src/components/content/ContentBlock.astro
-- [ ] T009 Define shared CSS classes for normal benefits, local screenshots, extracted sections, address lines, and framed legal links in src/styles/global.css
+- [X] T005 Confirm no new dependency is needed by checking package.json against specs/003-page-appearance-tweaks/research.md
+- [X] T006 Define the local screenshot rendering approach for Astro asset imports in src/pages/index.astro and src/components/content/ContentBlock.astro
+- [X] T007 Define the single-FAQ-heading grouping approach for `/produit/securite` and `/tarifs` in src/pages/[...slug].astro
+- [X] T008 Define the extracted-heading/card-detail rendering approach for `/a-propos/equipe` and `/contact` in src/components/content/ContentBlock.astro
+- [X] T009 Define shared CSS classes for normal benefits, local screenshots, extracted sections, address lines, and framed legal links in src/styles/global.css
 
 **Checkpoint**: Foundation ready; user story implementation can now begin.
 
@@ -49,14 +49,14 @@
 
 ### Implementation for User Story 1
 
-- [ ] T010 [US1] Import src/assets/Capture.png and render it before the Bénéfices block in src/pages/index.astro
-- [ ] T011 [US1] Remove the special card/grid treatment from homepage Bénéfices while keeping normal list rendering in src/styles/global.css
-- [ ] T012 [US1] Ensure "Bénéfices" uses the same section-heading treatment as "Produit" and "Cas d'usage" in src/components/content/DataList.astro and src/styles/global.css
-- [ ] T013 [US1] Update FAQ grouping so `/produit/securite` and `/tarifs` keep only one visible "FAQ" heading in src/pages/[...slug].astro
-- [ ] T014 [US1] Move "L'Équipe" outside the founder card while keeping the founder details carded in src/components/content/ContentBlock.astro
-- [ ] T015 [US1] Move "Nous contacter" and its introductory paragraph outside the contact card in src/pages/[...slug].astro and src/components/content/ContentBlock.astro
-- [ ] T016 [US1] Add extracted-section heading and paragraph spacing for team/contact sections in src/styles/global.css
-- [ ] T017 [US1] Validate US1 routes `/`, `/produit/securite`, `/tarifs`, `/a-propos/equipe`, and `/contact` against specs/003-page-appearance-tweaks/quickstart.md
+- [X] T010 [US1] Import src/assets/Capture.png and render it before the Bénéfices block in src/pages/index.astro
+- [X] T011 [US1] Remove the special card/grid treatment from homepage Bénéfices while keeping normal list rendering in src/styles/global.css
+- [X] T012 [US1] Ensure "Bénéfices" uses the same section-heading treatment as "Produit" and "Cas d'usage" in src/components/content/DataList.astro and src/styles/global.css
+- [X] T013 [US1] Update FAQ grouping so `/produit/securite` and `/tarifs` keep only one visible "FAQ" heading in src/pages/[...slug].astro
+- [X] T014 [US1] Move "L'Équipe" outside the founder card while keeping the founder details carded in src/components/content/ContentBlock.astro
+- [X] T015 [US1] Move "Nous contacter" and its introductory paragraph outside the contact card in src/pages/[...slug].astro and src/components/content/ContentBlock.astro
+- [X] T016 [US1] Add extracted-section heading and paragraph spacing for team/contact sections in src/styles/global.css
+- [X] T017 [US1] Validate US1 routes `/`, `/produit/securite`, `/tarifs`, `/a-propos/equipe`, and `/contact` against specs/003-page-appearance-tweaks/quickstart.md
 
 **Checkpoint**: User Story 1 is independently shippable as the MVP visual-irritant correction pass.
 
@@ -70,15 +70,15 @@
 
 ### Implementation for User Story 2
 
-- [ ] T018 [US2] Import src/assets/Comptes.png and render it for the security access/account visual in src/components/content/ContentBlock.astro
-- [ ] T019 [US2] Suppress the old security visual placeholder title and description when Comptes.png is displayed in src/components/content/ContentBlock.astro
-- [ ] T020 [US2] Preserve all security FAQ question and answer cards after the single-heading grouping change in src/pages/[...slug].astro
-- [ ] T021 [US2] Preserve all pricing FAQ question and answer cards plus existing offer values after the single-heading grouping change in src/pages/[...slug].astro
-- [ ] T022 [US2] Render the contact address as separate visible lines for `/contact` in src/pages/[...slug].astro and src/components/content/ContentBlock.astro
-- [ ] T023 [US2] Render "Site" as a peer section heading on `/legal` in src/components/content/ContentBlock.astro
-- [ ] T024 [US2] Render legal `contact@zzzbre.com`, `support@zzzbre.com`, and `https://zzzbre.com` as button-like framed links in src/components/content/ContentBlock.astro
-- [ ] T025 [US2] Add legal framed-link and address-line styles matching the requested contact CTA treatment in src/styles/global.css
-- [ ] T026 [US2] Validate US2 routes `/produit/securite`, `/tarifs`, `/contact`, and `/legal` against specs/003-page-appearance-tweaks/quickstart.md
+- [X] T018 [US2] Import src/assets/Comptes.png and render it for the security access/account visual in src/components/content/ContentBlock.astro
+- [X] T019 [US2] Suppress the old security visual placeholder title and description when Comptes.png is displayed in src/components/content/ContentBlock.astro
+- [X] T020 [US2] Preserve all security FAQ question and answer cards after the single-heading grouping change in src/pages/[...slug].astro
+- [X] T021 [US2] Preserve all pricing FAQ question and answer cards plus existing offer values after the single-heading grouping change in src/pages/[...slug].astro
+- [X] T022 [US2] Render the contact address as separate visible lines for `/contact` in src/pages/[...slug].astro and src/components/content/ContentBlock.astro
+- [X] T023 [US2] Render "Site" as a peer section heading on `/legal` in src/components/content/ContentBlock.astro
+- [X] T024 [US2] Render legal `contact@zzzbre.com`, `support@zzzbre.com`, and `https://zzzbre.com` as button-like framed links in src/components/content/ContentBlock.astro
+- [X] T025 [US2] Add legal framed-link and address-line styles matching the requested contact CTA treatment in src/styles/global.css
+- [X] T026 [US2] Validate US2 routes `/produit/securite`, `/tarifs`, `/contact`, and `/legal` against specs/003-page-appearance-tweaks/quickstart.md
 
 **Checkpoint**: User Story 2 is independently testable on dense and sensitive pages.
 
@@ -92,11 +92,11 @@
 
 ### Implementation for User Story 3
 
-- [ ] T027 [US3] Add responsive constraints for homepage screenshot, security screenshot, extracted headings, contact cards, and legal framed links in src/styles/global.css
-- [ ] T028 [US3] Add wrapping rules for legal emails, URLs, contact address lines, and CTA-like framed links in src/styles/global.css
-- [ ] T029 [US3] Verify small-screen card and list stacking for `/`, `/a-propos/equipe`, and `/contact` against specs/003-page-appearance-tweaks/quickstart.md
-- [ ] T030 [US3] Verify small-screen sensitive-content readability for `/produit/securite`, `/tarifs`, and `/legal` against specs/003-page-appearance-tweaks/quickstart.md
-- [ ] T031 [US3] Confirm no nested cards, duplicate consecutive headings, broken screenshots, or overflowing links remain using specs/003-page-appearance-tweaks/contracts/ui-rendering-contract.md
+- [X] T027 [US3] Add responsive constraints for homepage screenshot, security screenshot, extracted headings, contact cards, and legal framed links in src/styles/global.css
+- [X] T028 [US3] Add wrapping rules for legal emails, URLs, contact address lines, and CTA-like framed links in src/styles/global.css
+- [X] T029 [US3] Verify small-screen card and list stacking for `/`, `/a-propos/equipe`, and `/contact` against specs/003-page-appearance-tweaks/quickstart.md
+- [X] T030 [US3] Verify small-screen sensitive-content readability for `/produit/securite`, `/tarifs`, and `/legal` against specs/003-page-appearance-tweaks/quickstart.md
+- [X] T031 [US3] Confirm no nested cards, duplicate consecutive headings, broken screenshots, or overflowing links remain using specs/003-page-appearance-tweaks/contracts/ui-rendering-contract.md
 
 **Checkpoint**: User Story 3 completes responsive confidence for the minor appearance pass.
 
@@ -106,13 +106,13 @@
 
 **Purpose**: Final validation and cleanup across the feature.
 
-- [ ] T032 [P] Run screenshot reference checks from specs/003-page-appearance-tweaks/quickstart.md with `rg -n "Capture.png|Comptes.png" src`
-- [ ] T033 [P] Run old-placeholder checks from specs/003-page-appearance-tweaks/quickstart.md with `rg -n "Capture-droit-access|Exemple de gestion des droits" src edito`
-- [ ] T034 Run `npm run build` using package.json
-- [ ] T035 Run desktop manual route validation for `/`, `/produit/securite`, `/tarifs`, `/a-propos/equipe`, `/contact`, and `/legal` using specs/003-page-appearance-tweaks/quickstart.md
-- [ ] T036 Run tablet and mobile manual route validation for `/`, `/produit/securite`, `/tarifs`, `/a-propos/equipe`, `/contact`, and `/legal` using specs/003-page-appearance-tweaks/quickstart.md
-- [ ] T037 Review changed `edito/` files, if any, against edito/AGENTS.md for directly publishable public copy
-- [ ] T038 Review changed Astro and CSS files against specs/003-page-appearance-tweaks/plan.md for no new dependency, no secret, no third-party script, and source-traceability impact
+- [X] T032 [P] Run screenshot reference checks from specs/003-page-appearance-tweaks/quickstart.md with `rg -n "Capture.png|Comptes.png" src`
+- [X] T033 [P] Run old-placeholder checks from specs/003-page-appearance-tweaks/quickstart.md with `rg -n "Capture-droit-access|Exemple de gestion des droits" src edito`
+- [X] T034 Run `npm run build` using package.json
+- [X] T035 Run desktop manual route validation for `/`, `/produit/securite`, `/tarifs`, `/a-propos/equipe`, `/contact`, and `/legal` using specs/003-page-appearance-tweaks/quickstart.md
+- [X] T036 Run tablet and mobile manual route validation for `/`, `/produit/securite`, `/tarifs`, `/a-propos/equipe`, `/contact`, and `/legal` using specs/003-page-appearance-tweaks/quickstart.md
+- [X] T037 Review changed `edito/` files, if any, against edito/AGENTS.md for directly publishable public copy
+- [X] T038 Review changed Astro and CSS files against specs/003-page-appearance-tweaks/plan.md for no new dependency, no secret, no third-party script, and source-traceability impact
 
 ---
 

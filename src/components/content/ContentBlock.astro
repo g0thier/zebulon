@@ -1,5 +1,6 @@
 ---
 import { existsSync } from "node:fs";
+import accountScreenshot from "../../assets/Comptes.png";
 import {
   renderInlineMarkdown,
   type Card,
@@ -24,7 +25,8 @@ const isFeatureIntro = pageSlug === "produit/fonctionnalites" && blockIndex === 
 const isPricingFreeAccess = pageSlug === "tarifs" && block.heading === "Accès libre";
 const isSupportDocumentation = pageSlug === "support" && block.heading === "Documentation";
 const isFounderBlock = pageSlug === "a-propos/equipe" && block.heading === "L'Équipe";
-const visualPanel = block.visual ?? visualFromList(block.lists);
+const isSecurityAccessVisual = pageSlug === "produit/securite" && block.heading === "Gestion granulaire des accès";
+const visualPanel = isSecurityAccessVisual ? { label: "Capture d'écran du compte zzzbre", src: accountScreenshot.src } : block.visual ?? visualFromList(block.lists);
 const listsToRender = visualPanel ? block.lists.filter((list) => list.label !== "Encadré visuel") : block.lists;
 const supportDocumentationLink = isSupportDocumentation ? firstListLink(block.lists) : undefined;
 const homeShortcutList = pageSlug === "" ? block.lists.find((list) => list.label === "Liste") : undefined;
@@ -124,15 +126,28 @@ function isFramedField(field: TextField): boolean {
 
 function renderFieldValue(field: TextField): string {
   if (!isFramedField(field)) return renderInlineMarkdown(field.value, block.sourcePath);
-  if (field.value.includes("](")) return renderInlineMarkdown(field.value, block.sourcePath);
 
   const email = field.value.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0];
-  if (email) return renderInlineMarkdown(`[${email}](mailto:${email})`, block.sourcePath);
+  if (email) return legalActionLink(email, `mailto:${email}`);
 
   const url = field.value.match(/https?:\/\/\S+/i)?.[0];
-  if (url) return renderInlineMarkdown(`[${url}](${url})`, block.sourcePath);
+  if (url) return legalActionLink(url, url);
 
   return renderInlineMarkdown(field.value, block.sourcePath);
+}
+
+function legalActionLink(label: string, href: string): string {
+  return `<a class="cta-link cta-link--secondary legal-action-link" href="${href}">${label}</a>`;
+}
+
+function renderBlockText(text: string): string {
+  const html = renderInlineMarkdown(text, block.sourcePath);
+  if (pageSlug !== "legal") return html;
+
+  return html.replace(
+    /(^|[\s(>])([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})(?=($|[\s).,<]))/gi,
+    (_match, prefix, email) => `${prefix}${legalActionLink(email, `mailto:${email}`)}`,
+  );
 }
 
 function freeAccessCards(): Card[] {
@@ -171,10 +186,10 @@ function freeAccessCards(): Card[] {
 {
   hasContent && isFounderBlock && (
     <section class="content-block">
+      <h2>{block.heading}</h2>
       <article class="editorial-card editorial-card--feature">
         <div class="editorial-card__header">
           {fieldValue("Rôle") && <span class="editorial-card__badge">{fieldValue("Rôle")}</span>}
-          <h2>{block.heading}</h2>
         </div>
         {block.text.map((text) => <p set:html={renderInlineMarkdown(text, block.sourcePath)} />)}
         {block.lists.map((list) => <DataListComponent list={list} />)}
@@ -197,7 +212,7 @@ function freeAccessCards(): Card[] {
       {block.heading && <h2>{block.heading}</h2>}
 
       {block.text.map((text) => (
-        <p set:html={renderInlineMarkdown(text, block.sourcePath)} />
+        <p set:html={renderBlockText(text)} />
       ))}
 
       {
@@ -205,8 +220,8 @@ function freeAccessCards(): Card[] {
           <dl>
             {block.fields.map((field) => (
               <>
-                <dt>{field.label}</dt>
-                <dd class:list={[isFramedField(field) && "framed-link"]} set:html={renderFieldValue(field)} />
+                {pageSlug === "legal" && field.label === "Site" ? <dt class="field-heading">{field.label}</dt> : <dt>{field.label}</dt>}
+                <dd class:list={[isFramedField(field) && "framed-link", pageSlug === "legal" && "framed-link--action"]} set:html={renderFieldValue(field)} />
               </>
             ))}
           </dl>
@@ -234,9 +249,9 @@ function freeAccessCards(): Card[] {
       {
         visualPanel && (
           <article class="visual-panel">
-            <h3>{visualPanel.label}</h3>
-            {canRenderAsset(visualPanel.src) && <img src={visualPanel.src} alt={visualPanel.label} />}
-            {visualPanel.description && <p>{visualPanel.description}</p>}
+            {!isSecurityAccessVisual && <h3>{visualPanel.label}</h3>}
+            {(isSecurityAccessVisual || canRenderAsset(visualPanel.src)) && <img src={visualPanel.src} alt={visualPanel.label} />}
+            {!isSecurityAccessVisual && visualPanel.description && <p>{visualPanel.description}</p>}
           </article>
         )
       }

@@ -56,6 +56,10 @@ function groupFaqBlocks(blocks: ContentBlockType[], page: EditorialPage): Conten
   };
 
   for (const block of blocks) {
+    if (block.heading === "FAQ" && !block.text.length && !block.fields.length && !block.lists.length && !block.cards.length && !block.ctas.length) {
+      continue;
+    }
+
     if (block.kind === "faq" && block.heading) {
       faqCards.push({
         title: block.heading,
@@ -94,15 +98,15 @@ function groupContactBlocks(blocks: ContentBlockType[], page: EditorialPage): Co
   };
 
   for (const block of blocks) {
-    if (block.heading === "Nous contacter" || block.heading === "Adresse") {
-      pendingCards.push({
-        title: block.heading,
-        text: block.text.join(" "),
-        fields: block.fields,
-        lists: block.lists,
-        cta: block.ctas[0],
-        sourcePath: block.sourcePath,
-      });
+    if (block.heading === "Nous contacter") {
+      flushCards();
+      grouped.push(block);
+      continue;
+    }
+
+    if (block.heading === "Adresse") {
+      flushCards();
+      grouped.push(block);
       continue;
     }
 

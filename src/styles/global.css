@@ -301,6 +301,33 @@ h3 {
   margin: 0;
 }
 
+.product-screenshot {
+  margin: 0;
+}
+
+.product-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.product-screenshot--home {
+  max-width: 58rem;
+}
+
+.content-block--nous-contacter,
+.content-block--adresse {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.content-block--adresse p {
+  margin-bottom: 0;
+  overflow-wrap: anywhere;
+}
+
 .editorial-card__price {
   font-size: 1.4rem;
   font-weight: 800;
@@ -332,17 +359,17 @@ dd {
 
 .data-list--benefices ul {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  padding-left: 0;
-  list-style: none;
+  gap: 0.4rem;
+  max-width: 68ch;
+  padding-left: 1.1rem;
+  list-style: disc;
 }
 
 .data-list--benefices li {
-  padding: 1rem;
-  border: 1px solid var(--line);
-  background: var(--panel);
-  font-weight: 750;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: 400;
 }
 
 .data-list--liste li,
@@ -381,8 +408,15 @@ dd {
   margin-left: 3rem;
 }
 
+.data-list--site ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding-left: 0;
+  list-style: none;
+}
+
 .framed-link,
-.data-list--site a,
 .cta-row--framed .cta-link {
   display: inline-flex;
   width: fit-content;
@@ -391,6 +425,27 @@ dd {
   padding: 0.45rem 0.65rem;
   background: var(--panel);
   overflow-wrap: anywhere;
+}
+
+.framed-link--action {
+  display: block;
+  width: auto;
+  border: 0;
+  padding: 0;
+  background: transparent;
+}
+
+.legal-action-link {
+  margin: 0.15rem 0.2rem 0.15rem 0;
+  vertical-align: middle;
+}
+
+.field-heading {
+  margin: clamp(1.5rem, 4vw, 3rem) 0 0.5rem;
+  color: var(--ink);
+  font-size: clamp(1.6rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.12;
 }
 
 .data-list ul,
@@ -471,13 +526,18 @@ dd {
     position: static;
   }
 
-  .card-grid--three,
-  .data-list--benefices ul {
+  .card-grid--three {
     grid-template-columns: 1fr;
   }
 
   .cta-link,
-  .framed-link {
+  .framed-link,
+  .legal-action-link {
     width: 100%;
+  }
+
+  .product-screenshot,
+  .visual-panel {
+    max-width: 100%;
   }
 }
