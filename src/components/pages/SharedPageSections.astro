@@ -1,0 +1,15 @@
+---
+type Props = {
+  html: string;
+  replacements?: Record<string, string>;
+};
+
+const { html, replacements = {} } = Astro.props;
+
+let rendered = html;
+for (const [token, value] of Object.entries(replacements)) {
+  rendered = rendered.replaceAll(token, value);
+}
+---
+
+<Fragment set:html={rendered} />

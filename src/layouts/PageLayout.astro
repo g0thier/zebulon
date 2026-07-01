@@ -1,0 +1,15 @@
+---
+import SiteLayout from "./SiteLayout.astro";
+
+type Props = {
+  title?: string;
+  description?: string;
+  showSidebar?: boolean;
+};
+
+const { title, description, showSidebar = true } = Astro.props;
+---
+
+<SiteLayout title={title} description={description} showSidebar={showSidebar}>
+  <slot />
+</SiteLayout>

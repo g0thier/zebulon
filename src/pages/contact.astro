@@ -3,9 +3,9 @@ import HeroSection from "../components/pages/HeroSection.astro";
 import SharedPageSections from "../components/pages/SharedPageSections.astro";
 import { getStaticPage } from "../data/site-pages";
 import PageLayout from "../layouts/PageLayout.astro";
-import productScreenshot from "../assets/Capture.png";
-const page = getStaticPage("/");
-const replacements = { "__PRODUCT_SCREENSHOT__": productScreenshot.src };
+
+const page = getStaticPage("/contact");
+const replacements = {};
 ---
 
 <PageLayout title={page.title} description={page.description}>

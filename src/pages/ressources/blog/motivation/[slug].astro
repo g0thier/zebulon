@@ -1,16 +1,12 @@
 ---
-import { getCollection } from "astro:content";
 import ContentBlock from "../../../../components/content/ContentBlock.astro";
-import CtaLink from "../../../../components/ui/CtaLink.astro";
-import { getPageBySlug } from "../../../../data/editorial-pages";
-import type { Article } from "../../../../data/source-map";
+import { articleEntries, type Article } from "../../../../data/blog-articles";
 import BlogArticleLayout from "../../../../layouts/BlogArticleLayout.astro";
 
 export async function getStaticPaths() {
-  const articles = await getCollection("articles");
-  return articles.map((entry) => ({
-    params: { slug: entry.data.slug },
-    props: { article: entry.data as Article },
+  return articleEntries.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
   }));
 }
 
@@ -19,24 +15,14 @@ type Props = {
 };
 
 const { article } = Astro.props;
-const parentCategory = getPageBySlug(article.parentCategorySlug);
 ---
 
 <BlogArticleLayout article={article}>
-  {parentCategory && (
+  {article.parentCategoryPath && (
     <section class="content-block">
-      <p><a href={`/${parentCategory.slug}`}>Retour à {parentCategory.title}</a></p>
+      <p><a href={article.parentCategoryPath}>Retour à la catégorie</a></p>
     </section>
   )}
 
   {article.sections.map((block) => <ContentBlock block={block} pageSlug={`ressources/blog/motivation/${article.slug}`} />)}
-
-  {
-    article.cta && (
-      <section class="content-block">
-        <h2>Commencer</h2>
-        <CtaLink cta={article.cta} />
-      </section>
-    )
-  }
 </BlogArticleLayout>

@@ -1,0 +1,58 @@
+---
+import ArticleSummaryCard from "../../../../components/pages/ArticleSummaryCard.astro";
+import { getArticleSummaries } from "../../../../data/blog-articles";
+import PageLayout from "../../../../layouts/PageLayout.astro";
+
+const articles = getArticleSummaries();
+---
+
+<PageLayout
+  title="Leadership et engagement"
+  description="Des contenus pour mieux comprendre la motivation, le bien-être, la cohésion et les pratiques de leadership contemporain."
+>
+  <section class="hero">
+    <div class="hero__badges">
+      <span class="status-badge status-badge--section">Ressources</span>
+      <span class="status-badge status-badge--status">Beta</span>
+    </div>
+    <h1>Leadership et engagement</h1>
+    <p class="hero__intro">
+      Des contenus pour mieux comprendre la motivation, le bien-être, la cohésion et les pratiques de leadership
+      contemporain.
+    </p>
+  </section>
+
+  <section class="content-block">
+    <h2>Comprendre ce qui fait avancer les équipes</h2>
+    <p>
+      Le leadership ne repose pas seulement sur la décision ou l'organisation du travail. Il dépend aussi de la
+      motivation, de la confiance, de la reconnaissance, du sentiment d'équité et de la capacité des collaborateurs à
+      se projeter dans l'entreprise.
+    </p>
+    <p>
+      Les contenus de cette catégorie aident les dirigeants, leaders et équipes à mieux comprendre les dynamiques
+      humaines qui soutiennent l'engagement.
+    </p>
+  </section>
+
+  <section class="content-block">
+    <h2>Série Motivation</h2>
+    <p>
+      La première série d'articles est consacrée aux quiz Motivation disponibles dans zzzbre. Chaque article explique
+      à quoi sert le quiz, quand l'utiliser et comment exploiter les résultats pour mieux comprendre les équipes.
+    </p>
+    <div class="card-grid">
+      {articles.map((article) => (
+        <ArticleSummaryCard href={article.href} title={article.title} description={article.subtitle} />
+      ))}
+    </div>
+  </section>
+
+  <section class="content-block">
+    <h2>Commencer avec zzzbre</h2>
+    <p>zzzbre aide à comprendre les équipes à partir de questionnaires, d'ateliers et de données de pilotage exploitables.</p>
+    <div class="cta-row">
+      <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+  </section>
+</PageLayout>

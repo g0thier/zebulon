@@ -1,0 +1,104 @@
+---
+import ArticleSummaryCard from "../../../components/pages/ArticleSummaryCard.astro";
+import { getArticleSummaries } from "../../../data/blog-articles";
+import PageLayout from "../../../layouts/PageLayout.astro";
+
+const categories = [
+  {
+    href: "/ressources/blog/categories/pilotage-pme",
+    title: "Pilotage PME",
+    description:
+      "Structurer les priorités, organiser les premiers cycles de pilotage et suivre les décisions importantes.",
+  },
+  {
+    href: "/ressources/blog/categories/leadership-et-engagement",
+    title: "Leadership et engagement",
+    description:
+      "Comprendre la motivation, le bien-être, la cohésion et les pratiques de leadership contemporain.",
+  },
+  {
+    href: "/ressources/blog/categories/ateliers-et-decision",
+    title: "Ateliers et décision",
+    description:
+      "Préparer des ateliers utiles, faire émerger des idées et transformer les échanges en plans d'action.",
+  },
+  {
+    href: "/ressources/blog/categories/indicateurs-et-tableaux-de-bord",
+    title: "Indicateurs et tableaux de bord",
+    description:
+      "Choisir les bons indicateurs, éviter la surcharge de reporting et relier les KPI aux priorités réelles.",
+  },
+  {
+    href: "/ressources/blog/categories/ia-appliquee-au-management",
+    title: "IA appliquée au management",
+    description:
+      "Explorer ce que l'IA peut apporter au pilotage d'entreprise, sans remplacer le jugement humain.",
+  },
+] as const;
+
+const motivationArticles = getArticleSummaries();
+---
+
+<PageLayout
+  title="Blog"
+  description="Des contenus pratiques pour aider les dirigeants, leaders et équipes à mieux piloter sans jargon."
+>
+  <section class="hero">
+    <div class="hero__badges">
+      <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Blog</h1>
+    <p class="hero__intro">
+      Des contenus pratiques pour aider les dirigeants, leaders et équipes à mieux piloter sans jargon.
+    </p>
+    <p>
+      Le blog zzzbre relie management, leadership, data et exécution pour rendre les concepts de pilotage plus
+      accessibles, plus concrets et plus utiles aux entreprises qui veulent progresser avec leurs équipes.
+    </p>
+  </section>
+
+  <section class="content-block">
+    <h2>Mieux piloter, simplement</h2>
+    <p>
+      Retrouvez des contenus courts et pratiques pour mieux décider, mieux aligner vos équipes et mieux suivre vos
+      actions.
+    </p>
+    <p>
+      Chaque article aide les dirigeants, leaders et équipes à transformer les méthodes de management en pratiques
+      concrètes, avec une approche data driven accessible et directement applicable.
+    </p>
+  </section>
+
+  <section class="content-block">
+    <h2>Catégories du blog</h2>
+    <div class="card-grid">
+      {categories.map((category) => (
+        <ArticleSummaryCard href={category.href} title={category.title} description={category.description} />
+      ))}
+    </div>
+  </section>
+
+  <section class="content-block">
+    <h2>Première série disponible</h2>
+    <p>
+      La première série disponible concerne la motivation et se trouve dans la catégorie Leadership et engagement.
+    </p>
+    <div class="card-grid">
+      {motivationArticles.map((article) => (
+        <ArticleSummaryCard href={article.href} title={article.title} description={article.subtitle} />
+      ))}
+    </div>
+  </section>
+
+  <section class="content-block">
+    <h2>Commencer avec zzzbre</h2>
+    <p>Vous pouvez explorer zzzbre et tester les premiers usages de pilotage pendant la beta.</p>
+    <dl>
+      <dt>Contact éditorial</dt>
+      <dd>contact@zzzbre.com</dd>
+    </dl>
+    <div class="cta-row">
+      <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+  </section>
+</PageLayout>

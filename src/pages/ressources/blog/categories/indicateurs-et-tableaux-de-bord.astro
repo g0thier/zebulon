@@ -1,0 +1,14 @@
+---
+import HeroSection from "../../../../components/pages/HeroSection.astro";
+import SharedPageSections from "../../../../components/pages/SharedPageSections.astro";
+import { getStaticPage } from "../../../../data/site-pages";
+import PageLayout from "../../../../layouts/PageLayout.astro";
+
+const page = getStaticPage("/ressources/blog/categories/indicateurs-et-tableaux-de-bord");
+const replacements = {};
+---
+
+<PageLayout title={page.title} description={page.description}>
+  <HeroSection html={page.heroHtml} />
+  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+</PageLayout>

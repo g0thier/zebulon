@@ -1,21 +1,21 @@
-# zzzbre Editorial Content
+# zzzbre Website Content
 
-This repository contains the editorial content layer for zzzbre:
+This repository contains the Astro website and public content sources for zzzbre:
 - [zzzbre.com](https://zzzbre.com)
 
 ## Description
 
-This repository represents the editorial foundation and Astro implementation of
+This repository represents the public content foundation and Astro implementation of
 zzzbre, a SaaS product dedicated to data-driven management for companies,
 executives, leaders, and teams.
 
-It centralizes the website structure, public content, layout content, and
+It centralizes the website structure, public content, shared shell content, and
 editorial rules used to keep navigation, contact flows, and product messaging
-consistent across the zzzbre ecosystem.
+consistent across the zzzbre website.
 
 ## Table of Contents
 
-- [zzzbre Editorial Content](#zzzbre-editorial-content)
+- [zzzbre Website Content](#zzzbre-website-content)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Objective](#objective)
@@ -46,12 +46,10 @@ content, and contact-oriented layout blocks.
 
 ## Current Content
 
-- `Structure`: the website information architecture and page hierarchy
-- `Content`: editorial pages for product, use cases, pricing, resources,
-  clients, company, support, contact, and legal information
-- `Layout`: header, footer, and sidebar content used across the website
-- `Astro`: pages, layouts, and components that can render or directly host
-  public-facing copy
+- `Astro pages`: explicit public routes under `src/pages/`
+- `Shared shell`: header, footer, and sidebar content in app-native modules
+- `Article content`: Markdown retained only for dynamic Motivation articles
+- `Astro`: layouts and components that can render or directly host public-facing copy
 - `Agent Instructions`: editorial rules for producing directly publishable content
 
 ## Repository Structure
@@ -61,7 +59,9 @@ zebulon/
 ├── src/
 │   ├── components/
 │   ├── content/
-│   │   └── editorial/
+│   │   └── blog/
+│   │       └── motivation/
+│   ├── data/
 │   ├── layouts/
 │   ├── pages/
 │   └── assets/
@@ -77,13 +77,21 @@ zebulon/
 
 ## Usage
 
-No installation is required to edit content or Astro templates.
+Install dependencies, then use Astro locally when needed:
+
+```bash
+npm install
+astro dev --background
+astro dev status
+```
 
 Update the authoritative source for the affected public surface. Depending on
-the feature, that source can be Markdown under `src/content/editorial/` or an
-Astro file under `src/pages/`, `src/layouts/`, or `src/components/`.
-When transferring content between Markdown and Astro files, preserve direct
-publishability and keep related links, navigation, and shared copy consistent.
+the feature, that source is usually an Astro file under `src/pages/`,
+`src/layouts/`, `src/components/`, or a typed module under `src/data/`.
+Markdown is retained only for the dynamic Motivation article entries in
+`src/content/blog/motivation/`. When transferring content between Markdown and
+Astro files, preserve direct publishability and keep related links, navigation,
+and shared copy consistent.
 
 ## Editorial Guidelines
 
