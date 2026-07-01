@@ -12,7 +12,14 @@ import SiteLayout from "../layouts/SiteLayout.astro";
     <StatusBadge label={homePage.status} />
     <h1>{homePage.title}</h1>
     {homePage.subtitle && <p class="hero__intro">{homePage.subtitle}</p>}
-    {homePage.intro && <p set:html={renderInlineMarkdown(homePage.intro)} />}
+    {homePage.intro && <p set:html={renderInlineMarkdown(homePage.intro, homePage.sourcePath)} />}
+    {
+      homePage.visual && (
+        <figure class="hero__visual">
+          <img src={homePage.visual.src} alt={homePage.visual.label} />
+        </figure>
+      )
+    }
     {
       homePage.ctas.length > 0 && (
         <div class="hero__actions">
@@ -22,5 +29,5 @@ import SiteLayout from "../layouts/SiteLayout.astro";
     }
   </section>
 
-  {homePage.blocks.map((block) => <ContentBlock block={block} />)}
+  {homePage.blocks.map((block, index) => <ContentBlock block={block} pageSlug="" blockIndex={index} />)}
 </SiteLayout>

@@ -12,10 +12,10 @@
   - Suivre les décisions et les actions
 
 - Liste :
-  - Lien : Découvrir les fonctionnalités
-  - Lien : Voir les cas d’usage
-  - Lien : Consulter les tarifs
-  - Lien : Lire la page sécurité
+  - Lien : [Découvrir les fonctionnalités](Produit/1%20Fonctionnalités.md)
+  - Lien : [Voir les cas d’usage](Cas%20d'usage/1%20PME.md)
+  - Lien : [Consulter les tarifs](Tarifs/Tarifs.md)
+  - Lien : [Lire la page sécurité](Produit/4%20Sécurité.md)
 
 ### Produit
 

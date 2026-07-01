@@ -159,7 +159,7 @@ export const footerColumns: NavigationGroup[] = [
 ];
 
 export const footerContact = {
-  address: ["Zzzbre, Incubateur Nomades", "Rte des Acacias 24", "1227 Genève", "Suisse"],
+  address: ["Zzzbre, Pépinière Nomades", "Rte des Acacias 24", "1227 Genève", "Suisse"],
   emails: [
     { label: "Contact général", href: "mailto:contact@zzzbre.com" },
     { label: "Support", href: "mailto:support@zzzbre.com" },

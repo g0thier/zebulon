@@ -3,7 +3,7 @@ import ContentBlock from "../components/content/ContentBlock.astro";
 import CtaLink from "../components/ui/CtaLink.astro";
 import StatusBadge from "../components/ui/StatusBadge.astro";
 import { editorialPages, motivationArticleLinks } from "../data/editorial-pages";
-import { renderInlineMarkdown, type EditorialPage } from "../data/source-map";
+import { renderInlineMarkdown, type Card, type ContentBlock as ContentBlockType, type EditorialPage } from "../data/source-map";
 import SiteLayout from "../layouts/SiteLayout.astro";
 
 export function getStaticPaths() {
@@ -19,15 +19,111 @@ type Props = {
 
 const { page } = Astro.props;
 const isLeadershipCategory = page.slug === "ressources/blog/categories/leadership-et-engagement";
+const heroSectionLabel = page.slug === "clients/etudes-de-cas" ? "Étude de cas" : page.section;
+const renderedBlocks = prepareBlocks(page);
+
+function prepareBlocks(page: EditorialPage): ContentBlockType[] {
+  const blocks = page.blocks.filter((block) => !(page.slug === "contact" && block.heading === "Créer un compte"));
+
+  if (page.slug === "contact") {
+    return groupContactBlocks(blocks, page);
+  }
+
+  if (page.slug === "produit/securite" || page.slug === "tarifs") {
+    return groupFaqBlocks(blocks, page);
+  }
+
+  return blocks;
+}
+
+function groupFaqBlocks(blocks: ContentBlockType[], page: EditorialPage): ContentBlockType[] {
+  const grouped: ContentBlockType[] = [];
+  let faqCards: Card[] = [];
+
+  const flushFaq = () => {
+    if (!faqCards.length) return;
+    grouped.push({
+      heading: "FAQ",
+      kind: "cards",
+      text: [],
+      fields: [],
+      lists: [],
+      cards: faqCards,
+      ctas: [],
+      sourcePath: page.sourcePath,
+    });
+    faqCards = [];
+  };
+
+  for (const block of blocks) {
+    if (block.kind === "faq" && block.heading) {
+      faqCards.push({
+        title: block.heading,
+        text: block.text.join(" "),
+        fields: [],
+        lists: [],
+        sourcePath: block.sourcePath,
+      });
+      continue;
+    }
+
+    flushFaq();
+    grouped.push(block);
+  }
+
+  flushFaq();
+  return grouped;
+}
+
+function groupContactBlocks(blocks: ContentBlockType[], page: EditorialPage): ContentBlockType[] {
+  const grouped: ContentBlockType[] = [];
+  let pendingCards: Card[] = [];
+
+  const flushCards = () => {
+    if (!pendingCards.length) return;
+    grouped.push({
+      kind: "cards",
+      text: [],
+      fields: [],
+      lists: [],
+      cards: pendingCards,
+      ctas: [],
+      sourcePath: page.sourcePath,
+    });
+    pendingCards = [];
+  };
+
+  for (const block of blocks) {
+    if (block.heading === "Nous contacter" || block.heading === "Adresse") {
+      pendingCards.push({
+        title: block.heading,
+        text: block.text.join(" "),
+        fields: block.fields,
+        lists: block.lists,
+        cta: block.ctas[0],
+        sourcePath: block.sourcePath,
+      });
+      continue;
+    }
+
+    flushCards();
+    grouped.push(block);
+  }
+
+  flushCards();
+  return grouped;
+}
 ---
 
 <SiteLayout title={page.title} description={page.intro}>
   <section class="hero">
-    <p class="eyebrow">{page.section}</p>
-    <StatusBadge label={page.status} />
+    <div class="hero__badges">
+      <StatusBadge label={heroSectionLabel} variant="section" />
+      <StatusBadge label={page.status} />
+    </div>
     <h1>{page.title}</h1>
     {page.subtitle && <p class="hero__intro">{page.subtitle}</p>}
-    {page.intro && <p set:html={renderInlineMarkdown(page.intro)} />}
+    {page.intro && <p set:html={renderInlineMarkdown(page.intro, page.sourcePath)} />}
     {
       page.ctas.length > 0 && (
         <div class="hero__actions">
@@ -37,7 +133,7 @@ const isLeadershipCategory = page.slug === "ressources/blog/categories/leadershi
     }
   </section>
 
-  {page.blocks.map((block) => <ContentBlock block={block} />)}
+  {renderedBlocks.map((block, index) => <ContentBlock block={block} pageSlug={page.slug} blockIndex={index} />)}
 
   {
     isLeadershipCategory && motivationArticleLinks.length > 0 && (

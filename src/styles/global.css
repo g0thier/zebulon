@@ -7,6 +7,8 @@
   --panel: #ffffff;
   --accent: #0f766e;
   --accent-strong: #0b4f49;
+  --blue: #1d4ed8;
+  --blue-soft: #eff6ff;
   --signal: #b45309;
   --soft: #eef5f2;
   font-family:
@@ -88,6 +90,9 @@ h3 {
 
 .primary-nav a,
 .primary-nav summary {
+  display: inline-flex;
+  min-height: 2.5rem;
+  align-items: center;
   cursor: pointer;
   padding: 0.45rem 0.2rem;
   text-decoration: none;
@@ -151,7 +156,8 @@ h3 {
 }
 
 .hero__actions,
-.cta-row {
+.cta-row,
+.hero__badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -170,14 +176,23 @@ h3 {
   font-weight: 700;
 }
 
+.status-badge--section {
+  border-color: color-mix(in srgb, var(--blue) 40%, transparent);
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+
 .cta-link {
   display: inline-flex;
   min-height: 2.55rem;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--accent);
   padding: 0.6rem 0.9rem;
   font-weight: 750;
+  overflow-wrap: anywhere;
+  text-align: center;
   text-decoration: none;
 }
 
@@ -202,6 +217,12 @@ h3 {
   border-top: 1px solid var(--line);
 }
 
+.content-block--intro-continuation {
+  margin-top: calc(clamp(1.5rem, 4vw, 3rem) * -1);
+  padding-top: 0;
+  border-top: 0;
+}
+
 .content-block > p,
 .section > p,
 .hero > p {
@@ -215,15 +236,69 @@ h3 {
   margin-top: 1rem;
 }
 
+.card-grid > *,
+.cta-row > *,
+.hero__actions > *,
+.hero__badges > * {
+  min-width: 0;
+}
+
+.card-grid--three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card-grid--shortcuts {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+}
+
 .editorial-card {
   display: grid;
   gap: 0.8rem;
   align-content: start;
+  min-width: 0;
   min-height: 100%;
   padding: 1rem;
   border: 1px solid var(--line);
   background: var(--panel);
   text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.editorial-card--feature,
+.feature-panel,
+.visual-panel {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.editorial-card--feature {
+  gap: 1rem;
+}
+
+.feature-panel {
+  background: var(--soft);
+}
+
+.visual-panel {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.visual-panel img,
+.hero__visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.hero__visual {
+  max-width: 58rem;
+  margin: 0;
 }
 
 .editorial-card__price {
@@ -244,10 +319,78 @@ dt {
 
 dd {
   margin: 0 0 0.75rem;
+  overflow-wrap: anywhere;
 }
 
 .data-list {
   margin-top: 1rem;
+}
+
+.data-list li {
+  min-width: 0;
+}
+
+.data-list--benefices ul {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.data-list--benefices li {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  font-weight: 750;
+}
+
+.data-list--liste li,
+.data-list--notre-roadmap li {
+  overflow-wrap: anywhere;
+}
+
+.content-block--notre-roadmap .data-list--liste > ul {
+  display: grid;
+  gap: 0.45rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.content-block--notre-roadmap .data-list--liste > ul > li:not([class]) {
+  margin-top: 1rem;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.data-list__item--depth-1,
+.data-list__item--depth-2,
+.data-list__item--depth-3 {
+  list-style: circle;
+}
+
+.data-list__item--depth-1 {
+  margin-left: 1rem;
+}
+
+.data-list__item--depth-2 {
+  margin-left: 2rem;
+}
+
+.data-list__item--depth-3 {
+  margin-left: 3rem;
+}
+
+.framed-link,
+.data-list--site a,
+.cta-row--framed .cta-link {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.65rem;
+  background: var(--panel);
+  overflow-wrap: anywhere;
 }
 
 .data-list ul,
@@ -310,6 +453,11 @@ dd {
     justify-content: flex-start;
   }
 
+  .primary-nav a,
+  .primary-nav summary {
+    min-height: 2.75rem;
+  }
+
   .nav-menu {
     position: static;
     box-shadow: none;
@@ -321,5 +469,15 @@ dd {
 
   .sidebar {
     position: static;
+  }
+
+  .card-grid--three,
+  .data-list--benefices ul {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-link,
+  .framed-link {
+    width: 100%;
   }
 }

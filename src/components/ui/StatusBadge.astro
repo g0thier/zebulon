@@ -1,9 +1,10 @@
 ---
 type Props = {
   label?: string;
+  variant?: "status" | "section";
 };
 
-const { label } = Astro.props;
+const { label, variant = "status" } = Astro.props;
 ---
 
-{label && <span class="status-badge">{label}</span>}
+{label && <span class:list={["status-badge", `status-badge--${variant}`]}>{label}</span>}

@@ -73,7 +73,7 @@
   - Des décisions plus connectées au terrain.
   - Une culture de pilotage plus collective, plus humaine et plus data driven.
 
-### Call to action
+### Commencer avec zzzbre
 
 - Texte : Commencez par comprendre vos équipes, puis construisez progressivement une entreprise mieux pilotée, avec plus de leaders et moins de management à l'ancienne.
 - Call to action : [Créer un compte](https://zzzbre.com/login)

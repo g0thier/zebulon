@@ -18,10 +18,10 @@
 
 **Purpose**: Confirm the implementation surface and avoid scope drift before editing code or content.
 
-- [ ] T001 Review the rendering contract and current parser surface in specs/002-page-appearance-polish/contracts/ui-rendering-contract.md and src/data/source-map.ts
-- [ ] T002 [P] Confirm that no new dependencies are required by checking package.json against specs/002-page-appearance-polish/research.md
-- [ ] T003 [P] Inventory the requested editorial source edits in specs/002-page-appearance-polish/plan.md and edito/contenu/index.md
-- [ ] T004 [P] Check current screenshot asset availability under public/ for Capture-droit-access.png and the homepage product screenshot
+- [X] T001 Review the rendering contract and current parser surface in specs/002-page-appearance-polish/contracts/ui-rendering-contract.md and src/data/source-map.ts
+- [X] T002 [P] Confirm that no new dependencies are required by checking package.json against specs/002-page-appearance-polish/research.md
+- [X] T003 [P] Inventory the requested editorial source edits in specs/002-page-appearance-polish/plan.md and edito/contenu/index.md
+- [X] T004 [P] Check current screenshot asset availability under public/ for Capture-droit-access.png and the homepage product screenshot
 
 ---
 
@@ -31,11 +31,11 @@
 
 **Critical**: No user story work should begin until this phase is complete.
 
-- [ ] T005 Extend source data types for nested list depth, visual assets, and display variants in src/data/source-map.ts
-- [ ] T006 Implement Markdown parser handling for nested list depth, image labels, visual asset metadata, and empty image suppression in src/data/source-map.ts
-- [ ] T007 Pass page slug and section context from src/pages/[...slug].astro into src/components/content/ContentBlock.astro
-- [ ] T008 Add reusable CSS primitives for section badges, full-width cards, visual panels, framed links, responsive grids, and nested roadmap lists in src/styles/global.css
-- [ ] T009 Update badge rendering variants for section and status labels in src/components/ui/StatusBadge.astro
+- [X] T005 Extend source data types for nested list depth, visual assets, and display variants in src/data/source-map.ts
+- [X] T006 Implement Markdown parser handling for nested list depth, image labels, visual asset metadata, and empty image suppression in src/data/source-map.ts
+- [X] T007 Pass page slug and section context from src/pages/[...slug].astro into src/components/content/ContentBlock.astro
+- [X] T008 Add reusable CSS primitives for section badges, full-width cards, visual panels, framed links, responsive grids, and nested roadmap lists in src/styles/global.css
+- [X] T009 Update badge rendering variants for section and status labels in src/components/ui/StatusBadge.astro
 
 **Checkpoint**: Foundation ready; user story implementation can now begin.
 
@@ -49,16 +49,16 @@
 
 ### Implementation for User Story 1
 
-- [ ] T010 [P] [US1] Update homepage shortcut entries to use Markdown links for `/produit/fonctionnalites`, `/cas-d-usage/pme`, `/tarifs`, and `/produit/securite` in edito/contenu/index.md
-- [ ] T011 [P] [US1] Rename the visible product feature CTA heading to "Demander une fonctionnalité" in edito/contenu/Produit/1 Fonctionnalités.md
-- [ ] T012 [P] [US1] Rename the visible PME CTA heading to "Commencer avec zzzbre" in edito/contenu/Cas d'usage/1 PME.md
-- [ ] T013 [US1] Render homepage Bénéfices as a three-item grid and homepage shortcuts as cards in src/pages/index.astro
-- [ ] T014 [US1] Add homepage grid, shortcut-card, and safe empty-image styles in src/styles/global.css
-- [ ] T015 [US1] Render page section surtitles as blue badges beside status badges in src/pages/[...slug].astro
-- [ ] T016 [US1] Apply section-badge and inline hero badge styling in src/styles/global.css
-- [ ] T017 [US1] Remove the visual separator between the feature page intro and first descriptive text block in src/components/content/ContentBlock.astro
-- [ ] T018 [US1] Render the clients study page hero label as "Étude de cas" for `/clients/etudes-de-cas` in src/pages/[...slug].astro
-- [ ] T019 [US1] Validate `/`, `/produit/fonctionnalites`, `/clients/etudes-de-cas`, `/produit/integrations`, and `/produit/api` against specs/002-page-appearance-polish/quickstart.md
+- [X] T010 [P] [US1] Update homepage shortcut entries to use Markdown links for `/produit/fonctionnalites`, `/cas-d-usage/pme`, `/tarifs`, and `/produit/securite` in edito/contenu/index.md
+- [X] T011 [P] [US1] Rename the visible product feature CTA heading to "Demander une fonctionnalité" in edito/contenu/Produit/1 Fonctionnalités.md
+- [X] T012 [P] [US1] Rename the visible PME CTA heading to "Commencer avec zzzbre" in edito/contenu/Cas d'usage/1 PME.md
+- [X] T013 [US1] Render homepage Bénéfices as a three-item grid and homepage shortcuts as cards in src/pages/index.astro
+- [X] T014 [US1] Add homepage grid, shortcut-card, and safe empty-image styles in src/styles/global.css
+- [X] T015 [US1] Render page section surtitles as blue badges beside status badges in src/pages/[...slug].astro
+- [X] T016 [US1] Apply section-badge and inline hero badge styling in src/styles/global.css
+- [X] T017 [US1] Remove the visual separator between the feature page intro and first descriptive text block in src/components/content/ContentBlock.astro
+- [X] T018 [US1] Render the clients study page hero label as "Étude de cas" for `/clients/etudes-de-cas` in src/pages/[...slug].astro
+- [X] T019 [US1] Validate `/`, `/produit/fonctionnalites`, `/clients/etudes-de-cas`, `/produit/integrations`, and `/produit/api` against specs/002-page-appearance-polish/quickstart.md
 
 **Checkpoint**: User Story 1 is independently shippable as the MVP visual coherence pass.
 
@@ -72,19 +72,19 @@
 
 ### Implementation for User Story 2
 
-- [ ] T020 [P] [US2] Replace "Incubateur Nomades" with "Pépinière Nomades" in edito/contenu/Légal/Légal.md
-- [ ] T021 [P] [US2] Replace "Incubateur Nomades" with "Pépinière Nomades" in edito/contenu/Contact/Contact.md
-- [ ] T022 [US2] Replace "Incubateur Nomades" with "Pépinière Nomades" in edito/layout/2 Footer.md and src/data/navigation.ts
-- [ ] T023 [US2] Render nested roadmap levels with top-level domains, empty round markers, and child indentation in src/components/content/DataList.astro
-- [ ] T024 [US2] Add roadmap hierarchy and empty-marker styles in src/styles/global.css
-- [ ] T025 [US2] Render the security "Encadré visuel" as a full-width card with title, optional image, and description in src/components/content/ContentBlock.astro
-- [ ] T026 [US2] Group FAQ blocks as card grids on `/produit/securite` and `/tarifs` in src/pages/[...slug].astro
-- [ ] T027 [US2] Render the Tarifs "Accès libre" section as one explanatory panel plus three detail cards in src/components/content/ContentBlock.astro
-- [ ] T028 [US2] Render the Support documentation link as a button-style CTA in src/components/content/ContentBlock.astro
-- [ ] T029 [US2] Hide the duplicated Contact create-account block and render "Nous contacter" plus "Adresse" as cards in src/pages/[...slug].astro
-- [ ] T030 [US2] Render legal email and site values as framed links in src/components/content/ContentBlock.astro
-- [ ] T031 [US2] Render the À propos Équipe founder section as one card with "Fondateur" as a badge in src/pages/[...slug].astro
-- [ ] T032 [US2] Validate `/produit/securite`, `/tarifs`, `/support`, `/contact`, `/legal`, and `/a-propos/equipe` against specs/002-page-appearance-polish/quickstart.md
+- [X] T020 [P] [US2] Replace "Incubateur Nomades" with "Pépinière Nomades" in edito/contenu/Légal/Légal.md
+- [X] T021 [P] [US2] Replace "Incubateur Nomades" with "Pépinière Nomades" in edito/contenu/Contact/Contact.md
+- [X] T022 [US2] Replace "Incubateur Nomades" with "Pépinière Nomades" in edito/layout/2 Footer.md and src/data/navigation.ts
+- [X] T023 [US2] Render nested roadmap levels with top-level domains, empty round markers, and child indentation in src/components/content/DataList.astro
+- [X] T024 [US2] Add roadmap hierarchy and empty-marker styles in src/styles/global.css
+- [X] T025 [US2] Render the security "Encadré visuel" as a full-width card with title, optional image, and description in src/components/content/ContentBlock.astro
+- [X] T026 [US2] Group FAQ blocks as card grids on `/produit/securite` and `/tarifs` in src/pages/[...slug].astro
+- [X] T027 [US2] Render the Tarifs "Accès libre" section as one explanatory panel plus three detail cards in src/components/content/ContentBlock.astro
+- [X] T028 [US2] Render the Support documentation link as a button-style CTA in src/components/content/ContentBlock.astro
+- [X] T029 [US2] Hide the duplicated Contact create-account block and render "Nous contacter" plus "Adresse" as cards in src/pages/[...slug].astro
+- [X] T030 [US2] Render legal email and site values as framed links in src/components/content/ContentBlock.astro
+- [X] T031 [US2] Render the À propos Équipe founder section as one card with "Fondateur" as a badge in src/pages/[...slug].astro
+- [X] T032 [US2] Validate `/produit/securite`, `/tarifs`, `/support`, `/contact`, `/legal`, and `/a-propos/equipe` against specs/002-page-appearance-polish/quickstart.md
 
 **Checkpoint**: User Story 2 is independently testable on dense content pages.
 
@@ -98,11 +98,11 @@
 
 ### Implementation for User Story 3
 
-- [ ] T033 [US3] Add responsive constraints for cards, panels, benefits, FAQ grids, and contact cards in src/styles/global.css
-- [ ] T034 [US3] Add long email, URL, title, and price wrapping rules for cards, framed links, and CTA containers in src/styles/global.css
-- [ ] T035 [US3] Ensure mobile CTA and navigation affordances remain visibly tappable in src/styles/global.css
-- [ ] T036 [US3] Verify mobile behavior for `/`, `/produit/securite`, `/tarifs`, `/contact`, and `/legal` against specs/002-page-appearance-polish/quickstart.md
-- [ ] T037 [US3] Confirm small-screen layouts do not hide source-critical statuses, prices, legal contacts, or security text using specs/002-page-appearance-polish/quickstart.md
+- [X] T033 [US3] Add responsive constraints for cards, panels, benefits, FAQ grids, and contact cards in src/styles/global.css
+- [X] T034 [US3] Add long email, URL, title, and price wrapping rules for cards, framed links, and CTA containers in src/styles/global.css
+- [X] T035 [US3] Ensure mobile CTA and navigation affordances remain visibly tappable in src/styles/global.css
+- [X] T036 [US3] Verify mobile behavior for `/`, `/produit/securite`, `/tarifs`, `/contact`, and `/legal` against specs/002-page-appearance-polish/quickstart.md
+- [X] T037 [US3] Confirm small-screen layouts do not hide source-critical statuses, prices, legal contacts, or security text using specs/002-page-appearance-polish/quickstart.md
 
 **Checkpoint**: User Story 3 completes the responsive polish.
 
@@ -112,13 +112,13 @@
 
 **Purpose**: Final validation and cleanup across the feature.
 
-- [ ] T038 [P] Run the source consistency searches documented in specs/002-page-appearance-polish/quickstart.md for "Incubateur Nomades", "Pépinière Nomades", and "Call to action"
-- [ ] T039 [P] Verify public asset paths and missing-image behavior for public/Capture-droit-access.png against specs/002-page-appearance-polish/quickstart.md
-- [ ] T040 Run `npm run build` using package.json
-- [ ] T041 Run desktop manual route validation for all routes listed in specs/002-page-appearance-polish/quickstart.md
-- [ ] T042 Run mobile manual route validation for all routes listed in specs/002-page-appearance-polish/quickstart.md
-- [ ] T043 Review changed editorial files for publishable public copy using edito/AGENTS.md
-- [ ] T044 Review changed Astro files for no new dependency, no secret, and no third-party script impact using specs/002-page-appearance-polish/plan.md
+- [X] T038 [P] Run the source consistency searches documented in specs/002-page-appearance-polish/quickstart.md for "Incubateur Nomades", "Pépinière Nomades", and "Call to action"
+- [X] T039 [P] Verify public asset paths and missing-image behavior for public/Capture-droit-access.png against specs/002-page-appearance-polish/quickstart.md
+- [X] T040 Run `npm run build` using package.json
+- [X] T041 Run desktop manual route validation for all routes listed in specs/002-page-appearance-polish/quickstart.md
+- [X] T042 Run mobile manual route validation for all routes listed in specs/002-page-appearance-polish/quickstart.md
+- [X] T043 Review changed editorial files for publishable public copy using edito/AGENTS.md
+- [X] T044 Review changed Astro files for no new dependency, no secret, and no third-party script impact using specs/002-page-appearance-polish/plan.md
 
 ---
 

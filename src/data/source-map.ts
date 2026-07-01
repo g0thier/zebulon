@@ -31,9 +31,20 @@ export type TextField = {
   value: string;
 };
 
+export type VisualAsset = {
+  label: string;
+  src: string;
+  description?: string;
+};
+
+export type DataListEntry = {
+  value: string | LinkItem;
+  depth: number;
+};
+
 export type DataList = {
   label: string;
-  items: Array<string | LinkItem>;
+  items: Array<string | LinkItem | DataListEntry>;
 };
 
 export type Card = {
@@ -56,6 +67,7 @@ export type ContentBlock = {
   lists: DataList[];
   cards: Card[];
   ctas: Cta[];
+  visual?: VisualAsset;
   sourceLabel?: string;
   sourcePath: string;
 };
@@ -71,6 +83,7 @@ export type EditorialPage = {
   blocks: ContentBlock[];
   ctas: Cta[];
   relatedLinks: LinkItem[];
+  visual?: VisualAsset;
 };
 
 export type Article = {
@@ -114,6 +127,7 @@ type ParsedMarkdown = {
   blocks: ContentBlock[];
   ctas: Cta[];
   relatedLinks: LinkItem[];
+  visual?: VisualAsset;
 };
 
 type RouteSource = {
@@ -253,14 +267,18 @@ export function cleanValue(value: string): string {
   return value.trim().replaceAll("`", "").replaceAll("\\'", "'");
 }
 
-export function renderInlineMarkdown(value: string): string {
+export function renderInlineMarkdown(value: string, sourcePath?: string): string {
   const escaped = escapeHtml(cleanValue(value));
   return escaped
     .replace(/!\[([^\]]*)\]\(([^)]*)\)/g, (_full, alt, href) => {
       if (!href) return "";
-      return `<img src="${escapeAttribute(href)}" alt="${escapeAttribute(alt)}" />`;
+      const src = sourcePath ? resolveAssetHref(href, sourcePath) : href;
+      return `<img src="${escapeAttribute(src)}" alt="${escapeAttribute(alt)}" />`;
     })
-    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_full, label, href) => {
+      const resolved = sourcePath ? resolveEditorialHref(href, sourcePath) : href;
+      return `<a href="${escapeAttribute(resolved)}">${label}</a>`;
+    })
     .replace(/`([^`]+)`/g, "<strong>$1</strong>");
 }
 
@@ -277,6 +295,7 @@ export function parseEditorialPage(sourcePath: string, slug: string, section: st
     blocks: parsed.blocks,
     ctas: parsed.ctas,
     relatedLinks: parsed.relatedLinks,
+    visual: parsed.visual,
   };
 }
 
@@ -410,7 +429,7 @@ function parseEditorialMarkdown(sourcePath: string): ParsedMarkdown {
           applyCardLabel(currentCard, parsedLabel.label, parsedLabel.value, sourcePath);
           currentCardList = !parsedLabel.value ? last(currentCard.lists) : undefined;
         } else if (currentCardList) {
-          currentCardList.items.push(cleanValue(content));
+          currentCardList.items.push(parseListValue(content, sourcePath, listDepth(indent - 2)));
         } else {
           currentCard.text = appendSentence(currentCard.text, cleanValue(content));
         }
@@ -418,7 +437,7 @@ function parseEditorialMarkdown(sourcePath: string): ParsedMarkdown {
       }
 
       if (currentList && indent >= 2) {
-        currentList.items.push(parseListValue(content, sourcePath));
+        currentList.items.push(parseListValue(content, sourcePath, listDepth(indent)));
         continue;
       }
 
@@ -488,6 +507,8 @@ function applyPageField(parsed: ParsedMarkdown, label: string, value: string, so
     return true;
   }
   if (normalized === "visuel principal" || normalized === "image à intégrer") {
+    const visual = visualFromValue(label, value, sourcePath);
+    if (visual) parsed.visual = visual;
     return true;
   }
   return false;
@@ -508,6 +529,8 @@ function applyBlockLabel(block: ContentBlock, label: string, value: string, sour
     return;
   }
   if (normalized === "visuel principal" || normalized === "image à intégrer") {
+    const visual = visualFromValue(label, value, sourcePath);
+    if (visual) block.visual = visual;
     return;
   }
   if (normalized.includes("call to action")) {
@@ -564,18 +587,55 @@ function applyCardLabel(card: Card, label: string, value: string, sourcePath: st
   card.fields.push({ label, value });
 }
 
-function parseListValue(value: string, sourcePath: string): string | LinkItem {
+function parseListValue(value: string, sourcePath: string, depth = 0): string | LinkItem | DataListEntry {
   const parsedLabel = splitKnownLabel(value);
+  let parsedValue: string | LinkItem;
+
   if (parsedLabel && ["titre", "texte", "image à intégrer", "description"].includes(parsedLabel.label.toLowerCase())) {
     const nestedLink = parseMarkdownLink(parsedLabel.value, sourcePath);
-    return nestedLink ?? cleanValue(parsedLabel.value);
+    parsedValue = nestedLink ?? cleanValue(`${parsedLabel.label} : ${parsedLabel.value}`);
+    return depth > 0 ? { value: parsedValue, depth } : parsedValue;
   }
 
   const link = parseMarkdownLink(value, sourcePath);
-  if (link) return link;
-  const labelLink = value.match(/^Lien\s+:\s+(.+)$/);
-  if (labelLink) return cleanValue(labelLink[1]);
-  return cleanValue(value);
+  if (link) parsedValue = link;
+  else {
+    const labelLink = value.match(/^Lien\s+:\s+(.+)$/);
+    parsedValue = labelLink ? cleanValue(labelLink[1]) : cleanValue(value);
+  }
+
+  return depth > 0 ? { value: parsedValue, depth } : parsedValue;
+}
+
+function visualFromValue(label: string, value: string, sourcePath: string): VisualAsset | undefined {
+  const image = value.match(/!\[([^\]]*)\]\(([^)]*)\)/);
+  if (image) {
+    const src = cleanValue(image[2]);
+    if (!src) return undefined;
+    return {
+      label: cleanValue(image[1]) || label,
+      src: resolveAssetHref(src, sourcePath),
+    };
+  }
+
+  const cleaned = cleanValue(value);
+  if (!cleaned) return undefined;
+  return {
+    label,
+    src: resolveAssetHref(cleaned, sourcePath),
+  };
+}
+
+function resolveAssetHref(rawHref: string, sourcePath: string): string {
+  if (/^(https?:|\/)/.test(rawHref)) return rawHref;
+  if (!rawHref.includes("/")) return `/${rawHref}`;
+
+  const baseDir = path.dirname(sourcePath);
+  return `/${path.normalize(path.join(baseDir, rawHref)).replaceAll("\\", "/")}`;
+}
+
+function listDepth(indent: number): number {
+  return Math.max(0, Math.floor((indent - 2) / 2));
 }
 
 function inferCtaKind(label: string, href: string): Cta["kind"] {

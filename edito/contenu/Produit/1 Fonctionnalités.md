@@ -174,7 +174,7 @@
       - Finance décentralisée
       - Usages, risques et perspectives
 
-### Call to action
+### Demander une fonctionnalité
 
 - Texte : zzzbre est en beta. Les premiers modules sont disponibles, et la roadmap s'enrichit progressivement autour du data driven management.
 - Call to action : [Créer un compte](https://zzzbre.com/login)

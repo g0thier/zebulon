@@ -8,7 +8,7 @@
 
 - Éditeur : zzzbre
 - Site : [https://zzzbre.com](https://zzzbre.com)
-- Adresse : Zzzbre, Incubateur Nomades, Rte des Acacias 24, 1227 Genève, Suisse
+- Adresse : Zzzbre, Pépinière Nomades, Rte des Acacias 24, 1227 Genève, Suisse
 - Contact légal : contact@zzzbre.com
 
 - Texte : Les informations administratives détaillées de zzzbre, notamment la forme juridique, le numéro d'identification d'entreprise ou toute autre information légale complémentaire, seront indiquées lorsque leur publication sera confirmée. Aucune information juridique non vérifiée n'est affichée sur cette page.
@@ -101,7 +101,7 @@
 
 - Contact légal : contact@zzzbre.com
 - Support : support@zzzbre.com
-- Adresse : Zzzbre, Incubateur Nomades, Rte des Acacias 24, 1227 Genève, Suisse
+- Adresse : Zzzbre, Pépinière Nomades, Rte des Acacias 24, 1227 Genève, Suisse
 
 ### Mise à jour des informations
 

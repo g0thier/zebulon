@@ -18,7 +18,7 @@ const Wrapper = card.href ? "a" : "article";
     {card.price && <p class="editorial-card__price">{card.price}</p>}
   </div>
 
-  {card.text && <p set:html={renderInlineMarkdown(card.text)} />}
+  {card.text && <p set:html={renderInlineMarkdown(card.text, card.sourcePath)} />}
 
   {
     card.fields.length > 0 && (
@@ -26,7 +26,7 @@ const Wrapper = card.href ? "a" : "article";
         {card.fields.map((field) => (
           <>
             <dt>{field.label}</dt>
-            <dd set:html={renderInlineMarkdown(field.value)} />
+            <dd set:html={renderInlineMarkdown(field.value, card.sourcePath)} />
           </>
         ))}
       </dl>

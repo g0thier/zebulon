@@ -1,33 +1,203 @@
 ---
+import { existsSync } from "node:fs";
 import {
   renderInlineMarkdown,
+  type Card,
   type ContentBlock as ContentBlockType,
+  type DataList,
+  type LinkItem,
+  type TextField,
+  type VisualAsset,
 } from "../../data/source-map";
 import CtaLink from "../ui/CtaLink.astro";
 import EditorialCard from "./EditorialCard.astro";
-import DataList from "./DataList.astro";
+import DataListComponent from "./DataList.astro";
 
 type Props = {
   block: ContentBlockType;
+  pageSlug?: string;
+  blockIndex?: number;
 };
 
-const { block } = Astro.props;
+const { block, pageSlug = "", blockIndex = 0 } = Astro.props;
+const isFeatureIntro = pageSlug === "produit/fonctionnalites" && blockIndex === 0 && !block.heading;
+const isPricingFreeAccess = pageSlug === "tarifs" && block.heading === "Accès libre";
+const isSupportDocumentation = pageSlug === "support" && block.heading === "Documentation";
+const isFounderBlock = pageSlug === "a-propos/equipe" && block.heading === "L'Équipe";
+const visualPanel = block.visual ?? visualFromList(block.lists);
+const listsToRender = visualPanel ? block.lists.filter((list) => list.label !== "Encadré visuel") : block.lists;
+const supportDocumentationLink = isSupportDocumentation ? firstListLink(block.lists) : undefined;
+const homeShortcutList = pageSlug === "" ? block.lists.find((list) => list.label === "Liste") : undefined;
+const regularLists = homeShortcutList ? listsToRender.filter((list) => list !== homeShortcutList) : listsToRender;
+const headingClass = block.heading
+  ? `content-block--${block.heading
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "")}`
+  : undefined;
+
 const hasContent =
   block.heading ||
   block.text.length ||
   block.fields.length ||
-  block.lists.some((list) => list.items.length) ||
+  listsToRender.some((list) => list.items.length) ||
   block.cards.length ||
-  block.ctas.length;
+  block.ctas.length ||
+  visualPanel;
+
+function fieldValue(label: string): string | undefined {
+  return block.fields.find((field) => field.label === label)?.value;
+}
+
+function firstListText(label: string): string | undefined {
+  const list = block.lists.find((item) => item.label === label);
+  const first = list?.items[0];
+  if (!first) return undefined;
+  if (typeof first === "string") return first;
+  if ("value" in first) return typeof first.value === "string" ? first.value : first.value.label;
+  return first.label;
+}
+
+function firstListLink(lists: DataList[]): LinkItem | undefined {
+  for (const list of lists) {
+    for (const item of list.items) {
+      const value = typeof item === "object" && "value" in item ? item.value : item;
+      if (typeof value === "object") return value;
+    }
+  }
+  return undefined;
+}
+
+function linkCards(list: DataList): Card[] {
+  return list.items
+    .map((item) => {
+      const value = typeof item === "object" && "value" in item ? item.value : item;
+      if (typeof value !== "object") return undefined;
+      return {
+        title: value.label,
+        href: value.href,
+        fields: [],
+        lists: [],
+        sourcePath: value.sourcePath,
+      };
+    })
+    .filter(Boolean) as Card[];
+}
+
+function visualFromList(lists: DataList[]): VisualAsset | undefined {
+  const list = lists.find((item) => item.label === "Encadré visuel");
+  if (!list) return undefined;
+
+  let title = list.label;
+  let src = "";
+  let description = "";
+
+  for (const item of list.items) {
+    const value = typeof item === "object" && "value" in item ? item.value : item;
+    const text = typeof value === "string" ? value : value.label;
+    const [rawLabel, ...rawRest] = text.split(":");
+    const label = rawLabel.trim().toLowerCase();
+    const rest = rawRest.join(":").trim();
+
+    if (label === "titre" && rest) title = rest;
+    if (label === "image à intégrer" && rest) src = rest.startsWith("/") ? rest : `/${rest}`;
+    if (label === "description" && rest) description = rest;
+  }
+
+  if (!src && !description) return undefined;
+  return { label: title, src, description };
+}
+
+function canRenderAsset(src: string): boolean {
+  if (!src) return false;
+  if (/^https?:/.test(src)) return true;
+  return existsSync(`${process.cwd()}/public/${src.replace(/^\//, "")}`);
+}
+
+function isFramedField(field: TextField): boolean {
+  const value = field.value.toLowerCase();
+  const label = field.label.toLowerCase();
+  return pageSlug === "legal" && (label.includes("site") || label.includes("contact") || value.includes("@") || value.includes("http"));
+}
+
+function renderFieldValue(field: TextField): string {
+  if (!isFramedField(field)) return renderInlineMarkdown(field.value, block.sourcePath);
+  if (field.value.includes("](")) return renderInlineMarkdown(field.value, block.sourcePath);
+
+  const email = field.value.match(/[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}/i)?.[0];
+  if (email) return renderInlineMarkdown(`[${email}](mailto:${email})`, block.sourcePath);
+
+  const url = field.value.match(/https?:\/\/\S+/i)?.[0];
+  if (url) return renderInlineMarkdown(`[${url}](${url})`, block.sourcePath);
+
+  return renderInlineMarkdown(field.value, block.sourcePath);
+}
+
+function freeAccessCards(): Card[] {
+  const price = fieldValue("Prix");
+  const limit = fieldValue("Limite");
+  const user = firstListText("Utilisateurs inclus");
+  return [
+    price && { title: "Prix", text: price, fields: [], lists: [], sourcePath: block.sourcePath },
+    limit && { title: "Limite", text: limit, fields: [], lists: [], sourcePath: block.sourcePath },
+    user && { title: "Utilisateurs inclus", text: user, fields: [], lists: [], sourcePath: block.sourcePath },
+  ].filter(Boolean) as Card[];
+}
 ---
 
 {
-  hasContent && (
-    <section class:list={["content-block", `content-block--${block.kind}`]}>
+  hasContent && isPricingFreeAccess && (
+    <section class="content-block content-block--panel">
+      <div class="feature-panel">
+        <h2>{fieldValue("Titre") ?? block.heading}</h2>
+        {block.text.map((text) => <p set:html={renderInlineMarkdown(text, block.sourcePath)} />)}
+      </div>
+      <div class="card-grid card-grid--three">
+        {freeAccessCards().map((card) => <EditorialCard card={card} />)}
+      </div>
+      {
+        block.ctas.length > 0 && (
+          <div class="cta-row">
+            {block.ctas.map((cta) => <CtaLink cta={cta} variant="secondary" />)}
+          </div>
+        )
+      }
+    </section>
+  )
+}
+
+{
+  hasContent && isFounderBlock && (
+    <section class="content-block">
+      <article class="editorial-card editorial-card--feature">
+        <div class="editorial-card__header">
+          {fieldValue("Rôle") && <span class="editorial-card__badge">{fieldValue("Rôle")}</span>}
+          <h2>{block.heading}</h2>
+        </div>
+        {block.text.map((text) => <p set:html={renderInlineMarkdown(text, block.sourcePath)} />)}
+        {block.lists.map((list) => <DataListComponent list={list} />)}
+      </article>
+    </section>
+  )
+}
+
+{
+  hasContent && !isPricingFreeAccess && !isFounderBlock && (
+    <section
+      class:list={[
+        "content-block",
+        `content-block--${block.kind}`,
+        headingClass,
+        isFeatureIntro && "content-block--intro-continuation",
+        visualPanel && "content-block--has-visual",
+      ]}
+    >
       {block.heading && <h2>{block.heading}</h2>}
 
       {block.text.map((text) => (
-        <p set:html={renderInlineMarkdown(text)} />
+        <p set:html={renderInlineMarkdown(text, block.sourcePath)} />
       ))}
 
       {
@@ -36,14 +206,40 @@ const hasContent =
             {block.fields.map((field) => (
               <>
                 <dt>{field.label}</dt>
-                <dd set:html={renderInlineMarkdown(field.value)} />
+                <dd class:list={[isFramedField(field) && "framed-link"]} set:html={renderFieldValue(field)} />
               </>
             ))}
           </dl>
         )
       }
 
-      {block.lists.map((list) => <DataList list={list} />)}
+      {
+        supportDocumentationLink ? (
+          <div class="cta-row">
+            <CtaLink cta={{ ...supportDocumentationLink, kind: "documentation" }} variant="secondary" />
+          </div>
+        ) : (
+          regularLists.map((list) => <DataListComponent list={list} />)
+        )
+      }
+
+      {
+        homeShortcutList && (
+          <div class="card-grid card-grid--shortcuts">
+            {linkCards(homeShortcutList).map((card) => <EditorialCard card={card} />)}
+          </div>
+        )
+      }
+
+      {
+        visualPanel && (
+          <article class="visual-panel">
+            <h3>{visualPanel.label}</h3>
+            {canRenderAsset(visualPanel.src) && <img src={visualPanel.src} alt={visualPanel.label} />}
+            {visualPanel.description && <p>{visualPanel.description}</p>}
+          </article>
+        )
+      }
 
       {
         block.cards.length > 0 && (
@@ -55,8 +251,8 @@ const hasContent =
 
       {
         block.ctas.length > 0 && (
-          <div class="cta-row">
-            {block.ctas.map((cta) => <CtaLink cta={cta} variant="secondary" />)}
+          <div class:list={["cta-row", pageSlug === "legal" && "cta-row--framed"]}>
+            {block.ctas.map((cta) => <CtaLink cta={cta} variant={pageSlug === "legal" ? "secondary" : "secondary"} />)}
           </div>
         )
       }

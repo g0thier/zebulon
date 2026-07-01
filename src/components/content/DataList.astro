@@ -1,5 +1,10 @@
 ---
-import { renderInlineMarkdown, type DataList, type LinkItem } from "../../data/source-map";
+import {
+  renderInlineMarkdown,
+  type DataList,
+  type DataListEntry,
+  type LinkItem,
+} from "../../data/source-map";
 
 type Props = {
   list: DataList;
@@ -7,6 +12,24 @@ type Props = {
 
 const { list } = Astro.props;
 const showHeading = !["liste", "articles"].includes(list.label.toLowerCase());
+const labelClass = `data-list--${list.label
+  .toLowerCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .replace(/[^a-z0-9]+/g, "-")
+  .replace(/^-|-$/g, "")}`;
+
+function isEntry(item: string | LinkItem | DataListEntry): item is DataListEntry {
+  return typeof item === "object" && "value" in item && "depth" in item;
+}
+
+function entryValue(item: string | LinkItem | DataListEntry): string | LinkItem {
+  return isEntry(item) ? item.value : item;
+}
+
+function entryDepth(item: string | LinkItem | DataListEntry): number {
+  return isEntry(item) ? item.depth : 0;
+}
 
 function isLink(item: string | LinkItem): item is LinkItem {
   return typeof item !== "string";
@@ -15,18 +38,22 @@ function isLink(item: string | LinkItem): item is LinkItem {
 
 {
   list.items.length > 0 && (
-    <div class="data-list">
+    <div class:list={["data-list", labelClass]}>
       {showHeading && <h3>{list.label}</h3>}
       <ul>
-        {list.items.map((item) => (
-          <li>
-            {isLink(item) ? (
-              <a href={item.href}>{item.label}</a>
+        {list.items.map((item) => {
+          const value = entryValue(item);
+          const depth = entryDepth(item);
+          return (
+          <li class:list={[depth > 0 && `data-list__item--depth-${Math.min(depth, 3)}`]}>
+            {isLink(value) ? (
+              <a href={value.href}>{value.label}</a>
             ) : (
-              <span set:html={renderInlineMarkdown(item)} />
+              <span set:html={renderInlineMarkdown(value)} />
             )}
           </li>
-        ))}
+          );
+        })}
       </ul>
     </div>
   )

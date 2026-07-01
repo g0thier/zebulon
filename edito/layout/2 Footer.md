@@ -52,7 +52,7 @@
 ### Colonne 4 - Contact
 
 - Adresse :
-  - Zzzbre, Incubateur Nomades
+  - Zzzbre, Pépinière Nomades
   - Rte des Acacias 24
   - 1227 Genève
   - Suisse
