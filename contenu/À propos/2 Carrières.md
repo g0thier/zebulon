@@ -16,9 +16,9 @@
   - Illustrateur
     - Que ce soit pour réaliser des variantes de `Marcel`, notre mascotte présente sur la boutique, dans le site et l'application ; ou pour réaliser des images pour alimenter nos modules. Vous aurez besoin de maitriser la suite [Adobe](https://www.adobe.com) ou [Affinity](https://affinity.serif.com), avoir un bon coup de crayon et un grain de folie pour donner vie à notre concept.
   - UI/UX Designer
-    - Si vous avez toujours rêvé de créer le plus gros design system de la planète, vous avez tapé à la bonne porte. Notre plateforme est déclinée en 3 parties imbriquées : landing, plateforme et mobile, avec une interface commune. Nous avons besoin que vous sachiez décliner vos créations [Figma](https://www.figma.com) en [Storybook](https://storybook.js.org) avec [Stencil](https://stenciljs.com) et [Tailwind](https://tailwindcss.com).
+    - Si vous avez toujours rêvé de créer le plus gros design system de la planète, vous avez tapé à la bonne porte. Notre plateforme est déclinée en 3 parties imbriquées : site vitrine, plateforme et mobile, avec une interface commune. Nous avons besoin que vous sachiez décliner vos créations [Figma](https://www.figma.com) en [Storybook](https://storybook.js.org) avec [Stencil](https://stenciljs.com) et [Tailwind](https://tailwindcss.com).
   - Webmaster rédacteur
-    - Pour attirer le chaland et les agents, nous avons besoin de vos qualités rédactionnelles sur notre landing page et notre futur blog. À l'aise avec [Astro](https://astro.build) pour rédiger un texte compatible SEO, vous pourriez exercer votre art entre quelques balises [HTML](https://developer.mozilla.org/fr/docs/Web/HTML) ou autre formatage [Markdown](https://www.markdownguide.org) pour parler de business, de framework, de modèles et de deep learning.
+    - Pour attirer le chaland et les agents, nous avons besoin de vos qualités rédactionnelles sur notre site vitrine et notre futur blog. À l'aise avec [Astro](https://astro.build) pour rédiger un texte compatible SEO, vous pourriez exercer votre art entre quelques balises [HTML](https://developer.mozilla.org/fr/docs/Web/HTML) ou autre formatage [Markdown](https://www.markdownguide.org) pour parler de business, de framework, de modèles et de deep learning.
 
 ### Engineering et plateforme
 
