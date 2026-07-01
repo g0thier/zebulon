@@ -75,7 +75,7 @@ Sections actuelles et recommandées pour `index.md` :
 10. CTA final
    - CTA final `Créer un compte`.
    - Contact alternatif pour les besoins spécifiques.
-   - Statut : à ajouter.
+   - Statut : ajouté.
 
 ## Pages front déjà prêtes
 
@@ -119,8 +119,7 @@ Sections actuelles et recommandées pour `index.md` :
   - Carrières ;
   - Presse.
 - Sections Support, Contact et Légal avec liens vers les pages dédiées.
-
-À finaliser ensuite : CTA final qui répète `Créer un compte` et propose `contact@zzzbre.com` pour les besoins spécifiques.
+- CTA final avec `Créer un compte` et `contact@zzzbre.com`.
 
 ## Manques ou confirmations nécessaires
 
@@ -151,12 +150,11 @@ Sections actuelles et recommandées pour `index.md` :
 
 ## Conclusion actionnable
 
-Le contenu éditorial est suffisant pour démarrer un site vitrine Astro multi-pages. `contenu/index.md` joue maintenant le rôle de hub d'accueil et oriente vers les principales pages front existantes.
+Le contenu éditorial est suffisant pour démarrer un site vitrine Astro multi-pages. `contenu/index.md` joue maintenant le rôle de hub d'accueil, oriente vers les principales pages front existantes et se termine par un CTA final.
 
 Ordre recommandé :
 
-1. Ajouter un CTA final clair avec `Créer un compte` et `contact@zzzbre.com`.
-2. Décider les liens du header et du footer Astro.
-3. Valider ou produire le visuel hero.
-4. Vérifier les assets produit avant intégration Astro.
-5. Relire les textes de cards au moment de la création des composants Astro.
+1. Décider les liens du header et du footer Astro.
+2. Valider ou produire le visuel hero.
+3. Vérifier les assets produit avant intégration Astro.
+4. Relire les textes de cards au moment de la création des composants Astro.
