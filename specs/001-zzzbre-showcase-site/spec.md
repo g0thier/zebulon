@@ -177,6 +177,9 @@ navigation, le footer ou la sidebar.
   files and keep public copy directly publishable without internal notes.
 - **FR-021**: Website changes MUST state the Astro pages, layouts, components,
   assets, or content collections affected.
+- **FR-022**: Les articles editoriaux issus des dossiers de ressources MUST
+  suivre un modele reutilisable nomme `Article`, afin que la serie Motivation
+  soit le premier usage d'une formule extensible a de futurs dossiers.
 
 ### Key Entities *(include if feature involves data)*
 
@@ -193,6 +196,9 @@ navigation, le footer ou la sidebar.
   inclus, usage recommande, limites et possibilite de contact.
 - **Ressource**: Contenu d'approfondissement tel que blog, guide, webinaire,
   documentation ou categorie editoriale.
+- **Article**: Contenu editorial reutilisable issu d'un dossier d'articles, avec
+  titre, sous-titre, statut, categorie, sections, listes, CTA et source
+  tracable.
 - **Contact**: Information utile pour joindre Zzzbre selon le besoin general,
   support, presse, securite ou legal.
 

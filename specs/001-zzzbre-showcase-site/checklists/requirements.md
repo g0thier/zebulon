@@ -23,6 +23,7 @@
 - [x] Scope is clearly bounded
 - [x] Dependencies and assumptions identified
 - [x] Source fidelity and no-invention rules are explicit
+- [x] Reusable article model is named `Article` with collection `articles`
 
 ## Feature Readiness
 
@@ -37,6 +38,8 @@
 - No clarification markers remain.
 - Updated on 2026-07-01 to include the user's strict no-invention constraint:
   all visible site content must be traceable to `edito/`.
+- Updated on 2026-07-01 to rename the planned Motivation-specific collection to
+  reusable `articles` / `Article` terminology for future article folders.
 - The Constitution Alignment section references project governance terms required
   by the active spec template while keeping requirements focused on visitor and
   business outcomes.
