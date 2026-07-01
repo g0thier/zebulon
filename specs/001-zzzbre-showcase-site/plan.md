@@ -9,10 +9,9 @@
 Build a real public showcase site for Zzzbre with Astro.js by transposing the
 existing `edito/` tree into pages, layouts, reusable components, dynamic routes,
 and a typed `articles` content collection whose first entries are the Motivation
-articles. The implementation
-must not invent public copy: every visible text, link, status, price, contact,
-card, and CTA must be traceable to `edito/structure.md`, `edito/contenu/`, or
-`edito/layout/`.
+articles. The implementation must not invent public copy: every visible text,
+link, status, price, contact, card, and CTA must be traceable to
+`edito/structure.md`, `edito/contenu/`, or `edito/layout/`.
 
 ## Technical Context
 

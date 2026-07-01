@@ -21,7 +21,7 @@ npm run build
 Expected outcome:
 - Build completes successfully.
 - No content collection schema errors remain.
-- No route generation error occurs for editorial or Motivation pages.
+- No route generation error occurs for editorial pages or article pages.
 
 ## Local Review
 
@@ -68,7 +68,7 @@ Expected outcome:
 - Pricing cards show only source prices and source user counts.
 - Security claims match `edito/contenu/Produit/4 Sécurité.md`.
 
-## Scenario 3: Motivation Collection Routes
+## Scenario 3: Article Collection Routes
 
 Visit:
 - `/ressources/blog/motivation/theorie-x-y`

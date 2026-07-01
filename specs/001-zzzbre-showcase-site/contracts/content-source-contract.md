@@ -27,7 +27,7 @@ Non-authoritative sources:
 Every visible value in the rendered site MUST have a source record:
 - page title
 - section heading
-- subtitle/acccroche/paragraph
+- subtitle/accroche/paragraph
 - list item
 - card title/body/badge/price/meta
 - status such as beta or en developpement
@@ -72,6 +72,6 @@ required for auditability.
 - Pick at least one page from each top-level section and compare visible values
   to its `edito/contenu/` file.
 - Compare header/footer/sidebar labels and links to `edito/layout/`.
-- Verify Motivation article titles, statuses, question counts, categories,
-  section headings, list items, and CTAs against source files.
+- Verify article titles, statuses, question counts, categories, section
+  headings, list items, and CTAs against source files.
 - Verify no placeholder copy is visible on public pages.

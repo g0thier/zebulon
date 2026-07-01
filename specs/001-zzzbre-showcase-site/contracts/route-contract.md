@@ -59,7 +59,7 @@ Expected route families:
 - `/contact`
 - `/legal`
 
-## Dynamic Motivation Article Route
+## Dynamic Article Route
 
 Route pattern:
 
@@ -73,8 +73,10 @@ Astro page:
 src/pages/ressources/blog/motivation/[slug].astro
 ```
 
-`getStaticPaths()` MUST generate one route for each collection entry from
-`edito/contenu/Ressources/Blog/Motivation/*.md`.
+`getStaticPaths()` MUST generate one route for each `articles` collection entry
+from the initial source folder `edito/contenu/Ressources/Blog/Motivation/*.md`.
+Future article folders may reuse the same `articles` model with additional route
+families.
 
 Expected slugs:
 - `theorie-x-y`
@@ -98,6 +100,6 @@ Expected slugs:
 
 - Every generated route returns a public page.
 - Every top-level route is reachable from header or footer.
-- Every Motivation article route is reachable from the Leadership et engagement
-  category page or resource index.
+- Every initial Motivation article route is reachable from the Leadership et
+  engagement category page or resource index.
 - Missing source entries do not generate routes.
