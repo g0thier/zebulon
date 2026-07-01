@@ -92,8 +92,8 @@
 - **FR-003**: Users MUST be able to [key interaction, e.g., "reset their password"]
 - **FR-004**: System MUST [data requirement, e.g., "persist user preferences"]
 - **FR-005**: System MUST [behavior, e.g., "log all security events"]
-- **FR-006**: Editorial changes MUST identify the authoritative `edito/` source
-  files and keep public copy directly publishable without internal notes.
+- **FR-006**: Editorial changes MUST identify the authoritative public content
+  sources and keep public copy directly publishable without internal notes.
 - **FR-007**: Website changes MUST state the Astro pages, layouts, components,
   assets, or content collections affected.
 
@@ -123,7 +123,8 @@
 
 ## Constitution Alignment *(mandatory)*
 
-- **Editorial source**: [Which `edito/` files, if any, are authoritative for this change?]
+- **Authoritative public content sources**: [Which Markdown, Astro, or other
+  repository files are authoritative for this change?]
 - **Astro scope**: [Which Astro routes/components/assets are affected, or N/A]
 - **Quality gates**: [Content review, astro build, tests, quickstart/manual verification]
 - **Security/privacy**: [Secrets, user data, dependencies, third-party scripts, or N/A]

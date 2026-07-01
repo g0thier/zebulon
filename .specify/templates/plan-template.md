@@ -42,8 +42,9 @@
 
 Document evidence for each Zebulon Constitution principle:
 
-- **Editorial source of truth**: Identify affected `edito/` files and explain
-  how final user-facing copy, navigation, and layout content stay consistent.
+- **Authoritative public content sources**: Identify the affected Markdown,
+  Astro, content collection, or other repository files and explain how final
+  user-facing copy, navigation, and layout content stay consistent.
 - **Astro-first implementation**: Confirm the feature follows current Astro
   structure and relevant Astro docs, or justify any new framework/dependency.
 - **Independent story traceability**: Map each user story to acceptance

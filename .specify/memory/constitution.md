@@ -1,15 +1,10 @@
 <!--
 Sync Impact Report
-Version change: template -> 1.0.0
+Version change: 1.0.0 -> 2.0.0
 Modified principles:
-- Template principle 1 -> I. Publishable Editorial Source of Truth
-- Template principle 2 -> II. Astro-First Website Implementation
-- Template principle 3 -> III. Spec-Driven, Independently Testable Work
-- Template principle 4 -> IV. Quality Gates Before Delivery
-- Template principle 5 -> V. Security, Privacy, and Dependency Hygiene
+- I. Publishable Editorial Source of Truth -> I. Publishable Public Content Sources
 Added sections:
-- Editorial and Technical Constraints
-- Development Workflow
+- None
 Removed sections:
 - None
 Templates requiring updates:
@@ -19,7 +14,6 @@ Templates requiring updates:
 - ✅ .specify/templates/commands/*.md (directory absent; no command templates to update)
 Runtime guidance reviewed:
 - ✅ README.md
-- ✅ AGENTS.md
 - ✅ AGENTS.md
 - ✅ CONTRIBUTING.md
 - ✅ SECURITY.md
@@ -31,15 +25,16 @@ Follow-up TODOs:
 
 ## Core Principles
 
-### I. Publishable Editorial Source of Truth
-All content under `src/content/editorial/` MUST be final, user-facing, and
-directly publishable on zzzbre surfaces. Contributors MUST preserve the website
-structure documented in `src/content/editorial/structure/site-structure.md`,
-keep navigation and layout copy consistent with
-`src/content/editorial/layout/`, and avoid internal notes, positioning labels,
-meta commentary, or placeholder copy in publishable content. Rationale: this
-repository stores the public editorial source of truth for zzzbre.com, so
-ambiguity here becomes ambiguity in the product experience.
+### I. Publishable Public Content Sources
+Public-facing content MUST remain final, user-facing, and directly publishable
+wherever it is authored, including `src/content/`, Astro pages, layouts,
+components, or other implementation files explicitly documented by the active
+spec or plan. Contributors MUST preserve the intended website structure,
+navigation, and shared layout copy across those sources and MUST avoid internal
+notes, positioning labels, meta commentary, or placeholder copy in any
+authoritative public content source. Rationale: zzzbre's product experience
+depends on clear ownership of public copy, but that ownership MUST not be tied
+to a single file format.
 
 ### II. Astro-First Website Implementation
 Website behavior MUST be implemented with Astro project conventions before adding
@@ -79,11 +74,14 @@ real trust and privacy risk.
 
 ## Editorial and Technical Constraints
 
-Content changes MUST update the authoritative Markdown files in
-`src/content/editorial/` before or alongside generated website changes.
-French-language editorial content MUST remain consistent in tone, terminology,
-and link targets across related pages. Public-facing copy MUST use final
-titles, paragraphs, labels, CTAs, and links, not implementation notes.
+Content changes MUST identify their authoritative public content source in the
+spec, plan, or task set, whether that source is Markdown, Astro, or another
+repository file type. Moving content between Markdown files and Astro files MUST
+preserve titles, paragraphs, labels, CTAs, links, and other user-visible
+meaning unless the change explicitly intends to edit that copy. French-language
+editorial content MUST remain consistent in tone, terminology, and link targets
+across related pages. Public-facing copy MUST use final text, not
+implementation notes.
 
 Astro changes MUST fit the current source layout (`src/pages`, `src/layouts`,
 `src/components`, `src/assets`, and `public`) unless the implementation plan
@@ -94,10 +92,10 @@ impact, and validation approach.
 ## Development Workflow
 
 Specs MUST capture user value and acceptance criteria before implementation
-planning. Plans MUST include a Constitution Check covering editorial source of
-truth, Astro fit, story traceability, quality gates, and security/privacy impact.
-Tasks MUST be grouped by independently testable user story and include explicit
-validation steps before a story is marked complete.
+planning. Plans MUST include a Constitution Check covering authoritative public
+content sources, Astro fit, story traceability, quality gates, and
+security/privacy impact. Tasks MUST be grouped by independently testable user
+story and include explicit validation steps before a story is marked complete.
 
 Pull requests and agent deliveries MUST summarize changed files, quality gates
 run, gates not run, and any follow-up risk. Contributors MUST keep unrelated
@@ -123,4 +121,4 @@ tasks, and final delivery notes provide evidence for every applicable principle.
 When compliance is intentionally deferred, the responsible contributor MUST
 record the reason, owner, and follow-up trigger.
 
-**Version**: 1.0.0 | **Ratified**: 2026-07-01 | **Last Amended**: 2026-07-01
+**Version**: 2.0.0 | **Ratified**: 2026-07-01 | **Last Amended**: 2026-07-02

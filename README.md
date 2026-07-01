@@ -5,9 +5,13 @@ This repository contains the editorial content layer for zzzbre:
 
 ## Description
 
-This repository represents the Markdown-based editorial foundation of zzzbre, a SaaS product dedicated to data-driven management for companies, executives, leaders, and teams.
+This repository represents the editorial foundation and Astro implementation of
+zzzbre, a SaaS product dedicated to data-driven management for companies,
+executives, leaders, and teams.
 
-It centralizes the website structure, page content, layout content, and editorial rules used to keep navigation, contact flows, and product messaging consistent across the zzzbre ecosystem.
+It centralizes the website structure, public content, layout content, and
+editorial rules used to keep navigation, contact flows, and product messaging
+consistent across the zzzbre ecosystem.
 
 ## Table of Contents
 
@@ -29,45 +33,40 @@ It centralizes the website structure, page content, layout content, and editoria
 
 ## Objective
 
-Provide a clear editorial source of truth for the zzzbre website, including page hierarchy, product content, resource content, navigation content, and contact-oriented layout blocks.
+Provide clear authoritative public content sources for the zzzbre website,
+including page hierarchy, product content, resource content, navigation
+content, and contact-oriented layout blocks.
 
 ## Target Audience
 
 - Editors working on zzzbre website content
 - Product and marketing contributors maintaining public messaging
 - Designers and developers integrating editorial content into layouts
-- Agents generating or updating Markdown content for zzzbre
+- Agents generating or updating public content for zzzbre
 
 ## Current Content
 
 - `Structure`: the website information architecture and page hierarchy
-- `Content`: editorial pages for product, use cases, pricing, resources, clients, company, support, contact, and legal information
+- `Content`: editorial pages for product, use cases, pricing, resources,
+  clients, company, support, contact, and legal information
 - `Layout`: header, footer, and sidebar content used across the website
+- `Astro`: pages, layouts, and components that can render or directly host
+  public-facing copy
 - `Agent Instructions`: editorial rules for producing directly publishable content
 
 ## Repository Structure
 
 ```text
 zebulon/
-├── edito/
-│   ├── contenu/
-│   │   ├── Cas d'usage/
-│   │   ├── Clients/
-│   │   ├── Contact/
-│   │   ├── Légal/
-│   │   ├── Produit/
-│   │   ├── Ressources/
-│   │   ├── Support/
-│   │   ├── Tarifs/
-│   │   ├── À propos/
-│   │   └── index.md
-│   ├── layout/
-│   │   ├── 1 Header.md
-│   │   ├── 2 Footer.md
-│   │   └── 3 Sidebar.md
-│   ├── AGENTS.md
-│   └── structure.md
+├── src/
+│   ├── components/
+│   ├── content/
+│   │   └── editorial/
+│   ├── layouts/
+│   ├── pages/
+│   └── assets/
 ├── ACKNOWLEDGEMENTS.md
+├── AGENTS.md
 ├── CHANGELOG.md
 ├── CODE_OF_CONDUCT.md
 ├── CONTRIBUTING.md
@@ -78,13 +77,17 @@ zebulon/
 
 ## Usage
 
-No installation is required. This repository contains editorial Markdown files.
+No installation is required to edit content or Astro templates.
 
-Use `edito/structure.md` as the reference for the website hierarchy, then update the corresponding files in `edito/contenu/` and `edito/layout/`.
+Update the authoritative source for the affected public surface. Depending on
+the feature, that source can be Markdown under `src/content/editorial/` or an
+Astro file under `src/pages/`, `src/layouts/`, or `src/components/`.
+When transferring content between Markdown and Astro files, preserve direct
+publishability and keep related links, navigation, and shared copy consistent.
 
 ## Editorial Guidelines
 
-Editorial rules are documented in [edito/AGENTS.md](edito/AGENTS.md).
+Editorial rules are documented in [AGENTS.md](AGENTS.md).
 
 Write final content that can be published directly. Avoid intent notes, design comments, internal explanations, and meta fields such as `Objective:`, `Positioning:`, `Text:`, or `Call to action:`.
 

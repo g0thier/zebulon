@@ -52,7 +52,7 @@ description: "Task list template for feature implementation"
 - [ ] T001 Create project structure per implementation plan
 - [ ] T002 Initialize [language] project with [framework] dependencies
 - [ ] T003 [P] Configure linting and formatting tools
-- [ ] T004 Identify authoritative `edito/` files and Astro paths from the plan
+- [ ] T004 Identify authoritative public content sources and Astro paths from the plan
 - [ ] T005 Document required quality gates from the Constitution Check
 
 ---
@@ -164,7 +164,7 @@ Examples of foundational tasks (adjust based on your project):
 - [ ] TXXX Security hardening
 - [ ] TXXX Run quickstart.md validation
 - [ ] TXXX Run `astro build` for website changes
-- [ ] TXXX Complete editorial review for changed `edito/` files
+- [ ] TXXX Complete editorial review for changed public content sources
 - [ ] TXXX Record any skipped quality gate with reason and residual risk
 
 ---
@@ -258,7 +258,7 @@ With multiple developers:
 - [Story] label maps task to specific user story for traceability
 - Each user story should be independently completable and testable
 - Verify tests fail before implementing
-- Verify content remains directly publishable; no internal notes in `edito/`
+- Verify content remains directly publishable; no internal notes in authoritative public content sources
 - Verify security/privacy/dependency constraints before delivery
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
