@@ -29,8 +29,7 @@ const isSecurityAccessVisual = pageSlug === "produit/securite" && block.heading 
 const visualPanel = isSecurityAccessVisual ? { label: "Capture d'écran du compte zzzbre", src: accountScreenshot.src } : block.visual ?? visualFromList(block.lists);
 const listsToRender = visualPanel ? block.lists.filter((list) => list.label !== "Encadré visuel") : block.lists;
 const supportDocumentationLink = isSupportDocumentation ? firstListLink(block.lists) : undefined;
-const homeShortcutList = pageSlug === "" ? block.lists.find((list) => list.label === "Liste") : undefined;
-const regularLists = homeShortcutList ? listsToRender.filter((list) => list !== homeShortcutList) : listsToRender;
+const regularLists = pageSlug === "" ? listsToRender.filter((list) => list.label !== "Liste") : listsToRender;
 const headingClass = block.heading
   ? `content-block--${block.heading
       .toLowerCase()
@@ -70,22 +69,6 @@ function firstListLink(lists: DataList[]): LinkItem | undefined {
     }
   }
   return undefined;
-}
-
-function linkCards(list: DataList): Card[] {
-  return list.items
-    .map((item) => {
-      const value = typeof item === "object" && "value" in item ? item.value : item;
-      if (typeof value !== "object") return undefined;
-      return {
-        title: value.label,
-        href: value.href,
-        fields: [],
-        lists: [],
-        sourcePath: value.sourcePath,
-      };
-    })
-    .filter(Boolean) as Card[];
 }
 
 function visualFromList(lists: DataList[]): VisualAsset | undefined {
@@ -140,13 +123,17 @@ function legalActionLink(label: string, href: string): string {
   return `<a class="cta-link cta-link--secondary legal-action-link" href="${href}">${label}</a>`;
 }
 
+function inlineLegalContactLink(label: string, href: string): string {
+  return `<a class="legal-inline-link" href="${href}">${label}</a>`;
+}
+
 function renderBlockText(text: string): string {
   const html = renderInlineMarkdown(text, block.sourcePath);
   if (pageSlug !== "legal") return html;
 
   return html.replace(
     /(^|[\s(>])([A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,})(?=($|[\s).,<]))/gi,
-    (_match, prefix, email) => `${prefix}${legalActionLink(email, `mailto:${email}`)}`,
+    (_match, prefix, email) => `${prefix}${inlineLegalContactLink(email, `mailto:${email}`)}`,
   );
 }
 
@@ -172,13 +159,6 @@ function freeAccessCards(): Card[] {
       <div class="card-grid card-grid--three">
         {freeAccessCards().map((card) => <EditorialCard card={card} />)}
       </div>
-      {
-        block.ctas.length > 0 && (
-          <div class="cta-row">
-            {block.ctas.map((cta) => <CtaLink cta={cta} variant="secondary" />)}
-          </div>
-        )
-      }
     </section>
   )
 }
@@ -239,16 +219,8 @@ function freeAccessCards(): Card[] {
       }
 
       {
-        homeShortcutList && (
-          <div class="card-grid card-grid--shortcuts">
-            {linkCards(homeShortcutList).map((card) => <EditorialCard card={card} />)}
-          </div>
-        )
-      }
-
-      {
         visualPanel && (
-          <article class="visual-panel">
+          <article class:list={["visual-panel", isSecurityAccessVisual && "visual-panel--unframed"]}>
             {!isSecurityAccessVisual && <h3>{visualPanel.label}</h3>}
             {(isSecurityAccessVisual || canRenderAsset(visualPanel.src)) && <img src={visualPanel.src} alt={visualPanel.label} />}
             {!isSecurityAccessVisual && visualPanel.description && <p>{visualPanel.description}</p>}

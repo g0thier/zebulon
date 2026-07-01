@@ -287,6 +287,12 @@ h3 {
   margin-top: 1rem;
 }
 
+.visual-panel--unframed {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
 .visual-panel img,
 .hero__visual img {
   display: block;
@@ -311,6 +317,12 @@ h3 {
   height: auto;
   border: 1px solid var(--line);
   background: var(--panel);
+}
+
+.product-screenshot--unframed img,
+.visual-panel--unframed img {
+  border: 0;
+  background: transparent;
 }
 
 .product-screenshot--home {
@@ -438,6 +450,10 @@ dd {
 .legal-action-link {
   margin: 0.15rem 0.2rem 0.15rem 0;
   vertical-align: middle;
+}
+
+.legal-inline-link {
+  overflow-wrap: anywhere;
 }
 
 .field-heading {

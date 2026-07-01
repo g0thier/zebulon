@@ -18,10 +18,10 @@
 
 **Purpose**: Confirm the active feature scope, renderer touchpoints, and validation surfaces before editing code.
 
-- [ ] T001 Review feature scope and quality gates in specs/004-corrections-cosmetiques/spec.md, specs/004-corrections-cosmetiques/plan.md, and specs/004-corrections-cosmetiques/quickstart.md
-- [ ] T002 [P] Review homepage and security screenshot rendering in src/pages/index.astro and src/components/content/ContentBlock.astro
-- [ ] T003 [P] Review homepage shortcuts, pricing CTA, and legal text-link rendering branches in src/components/content/ContentBlock.astro, src/components/content/DataList.astro, and src/components/ui/CtaLink.astro
-- [ ] T004 [P] Confirm local assets and dependency constraints in src/assets/Capture.png, src/assets/Comptes.png, package.json, and src/styles/global.css
+- [X] T001 Review feature scope and quality gates in specs/004-corrections-cosmetiques/spec.md, specs/004-corrections-cosmetiques/plan.md, and specs/004-corrections-cosmetiques/quickstart.md
+- [X] T002 [P] Review homepage and security screenshot rendering in src/pages/index.astro and src/components/content/ContentBlock.astro
+- [X] T003 [P] Review homepage shortcuts, pricing CTA, and legal text-link rendering branches in src/components/content/ContentBlock.astro, src/components/content/DataList.astro, and src/components/ui/CtaLink.astro
+- [X] T004 [P] Confirm local assets and dependency constraints in src/assets/Capture.png, src/assets/Comptes.png, package.json, and src/styles/global.css
 
 ---
 
@@ -31,10 +31,10 @@
 
 **⚠️ CRITICAL**: No user story work should begin until this phase is complete.
 
-- [ ] T005 Define the unframed screenshot rendering approach in src/pages/index.astro, src/components/content/ContentBlock.astro, and src/styles/global.css
-- [ ] T006 Define the homepage shortcut suppression and pricing lead-CTA removal approach in src/components/content/ContentBlock.astro and src/pages/index.astro
-- [ ] T007 Define the inline legal contact-link rendering approach for cited legal paragraphs in src/components/content/ContentBlock.astro
-- [ ] T008 Define the shared spacing and overflow rules needed for screenshot, shortcut, pricing, and legal-link changes in src/styles/global.css
+- [X] T005 Define the unframed screenshot rendering approach in src/pages/index.astro, src/components/content/ContentBlock.astro, and src/styles/global.css
+- [X] T006 Define the homepage shortcut suppression and pricing lead-CTA removal approach in src/components/content/ContentBlock.astro and src/pages/index.astro
+- [X] T007 Define the inline legal contact-link rendering approach for cited legal paragraphs in src/components/content/ContentBlock.astro
+- [X] T008 Define the shared spacing and overflow rules needed for screenshot, shortcut, pricing, and legal-link changes in src/styles/global.css
 
 **Checkpoint**: Foundation ready; user story work can begin.
 
@@ -48,10 +48,10 @@
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Remove the extra framed presentation around the homepage product screenshot in src/pages/index.astro and src/styles/global.css
-- [ ] T010 [US1] Remove the extra framed presentation around the security account screenshot in src/components/content/ContentBlock.astro and src/styles/global.css
-- [ ] T011 [US1] Preserve screenshot alt text, surrounding section order, and non-visual explanatory content in src/pages/index.astro and src/components/content/ContentBlock.astro
-- [ ] T012 [US1] Validate `/` and `/produit/securite` against specs/004-corrections-cosmetiques/quickstart.md
+- [X] T009 [US1] Remove the extra framed presentation around the homepage product screenshot in src/pages/index.astro and src/styles/global.css
+- [X] T010 [US1] Remove the extra framed presentation around the security account screenshot in src/components/content/ContentBlock.astro and src/styles/global.css
+- [X] T011 [US1] Preserve screenshot alt text, surrounding section order, and non-visual explanatory content in src/pages/index.astro and src/components/content/ContentBlock.astro
+- [X] T012 [US1] Validate `/` and `/produit/securite` against specs/004-corrections-cosmetiques/quickstart.md
 
 **Checkpoint**: User Story 1 is independently shippable as the MVP cosmetic pass.
 
@@ -65,10 +65,10 @@
 
 ### Implementation for User Story 2
 
-- [ ] T013 [US2] Suppress the homepage shortcut card grid generated from the "Liste" block in src/components/content/ContentBlock.astro
-- [ ] T014 [US2] Remove only the `Creer un compte` CTA row above "Offres beta" in src/components/content/ContentBlock.astro
-- [ ] T015 [US2] Adjust homepage and pricing spacing so the removed shortcut cards and CTA do not leave empty containers in src/styles/global.css
-- [ ] T016 [US2] Validate `/` and `/tarifs` against specs/004-corrections-cosmetiques/quickstart.md
+- [X] T013 [US2] Suppress the homepage shortcut card grid generated from the "Liste" block in src/components/content/ContentBlock.astro
+- [X] T014 [US2] Remove only the `Creer un compte` CTA row above "Offres beta" in src/components/content/ContentBlock.astro
+- [X] T015 [US2] Adjust homepage and pricing spacing so the removed shortcut cards and CTA do not leave empty containers in src/styles/global.css
+- [X] T016 [US2] Validate `/` and `/tarifs` against specs/004-corrections-cosmetiques/quickstart.md
 
 **Checkpoint**: User Story 2 is independently testable on homepage and pricing flows.
 
@@ -82,10 +82,10 @@
 
 ### Implementation for User Story 3
 
-- [ ] T017 [US3] Replace button-like rendering for cited legal paragraph contact references with inline text-link rendering in src/components/content/ContentBlock.astro
-- [ ] T018 [US3] Preserve exact `mailto:` behavior and legal paragraph wording while removing CTA-style markup in src/components/content/ContentBlock.astro
-- [ ] T019 [US3] Add inline legal-link spacing and overflow handling for long email values in src/styles/global.css
-- [ ] T020 [US3] Validate `/legal` against specs/004-corrections-cosmetiques/quickstart.md
+- [X] T017 [US3] Replace button-like rendering for cited legal paragraph contact references with inline text-link rendering in src/components/content/ContentBlock.astro
+- [X] T018 [US3] Preserve exact `mailto:` behavior and legal paragraph wording while removing CTA-style markup in src/components/content/ContentBlock.astro
+- [X] T019 [US3] Add inline legal-link spacing and overflow handling for long email values in src/styles/global.css
+- [X] T020 [US3] Validate `/legal` against specs/004-corrections-cosmetiques/quickstart.md
 
 **Checkpoint**: User Story 3 is independently functional and readable as a legal-document correction.
 
@@ -95,10 +95,10 @@
 
 **Purpose**: Final validation and cleanup across the feature.
 
-- [ ] T021 [P] Run source checks from specs/004-corrections-cosmetiques/quickstart.md with `rg -n "Capture.png|Comptes.png" src` and `rg -n "Lire la page securite|Consulter les tarifs|Voir les cas d'usage|Decouvrir les fonctionnalites" src edito`
-- [ ] T022 Run `npm run build` from package.json
-- [ ] T023 Run desktop and small-screen manual checks for `/`, `/produit/securite`, `/tarifs`, and `/legal` using specs/004-corrections-cosmetiques/quickstart.md
-- [ ] T024 Review changed Astro and CSS files against specs/004-corrections-cosmetiques/plan.md for source traceability, no dependency drift, and no third-party script introduction
+- [X] T021 [P] Run source checks from specs/004-corrections-cosmetiques/quickstart.md with `rg -n "Capture.png|Comptes.png" src` and `rg -n "Lire la page securite|Consulter les tarifs|Voir les cas d'usage|Decouvrir les fonctionnalites" src edito`
+- [X] T022 Run `npm run build` from package.json
+- [X] T023 Run desktop and small-screen manual checks for `/`, `/produit/securite`, `/tarifs`, and `/legal` using specs/004-corrections-cosmetiques/quickstart.md
+- [X] T024 Review changed Astro and CSS files against specs/004-corrections-cosmetiques/plan.md for source traceability, no dependency drift, and no third-party script introduction
 
 ---
 
