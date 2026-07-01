@@ -20,7 +20,7 @@ Templates requiring updates:
 Runtime guidance reviewed:
 - ✅ README.md
 - ✅ AGENTS.md
-- ✅ edito/AGENTS.md
+- ✅ AGENTS.md
 - ✅ CONTRIBUTING.md
 - ✅ SECURITY.md
 Follow-up TODOs:
@@ -32,13 +32,14 @@ Follow-up TODOs:
 ## Core Principles
 
 ### I. Publishable Editorial Source of Truth
-All content under `edito/` MUST be final, user-facing, and directly publishable on
-zzzbre surfaces. Contributors MUST preserve the website structure in
-`edito/structure.md`, keep navigation and layout copy consistent with
-`edito/layout/`, and avoid internal notes, positioning labels, meta commentary,
-or placeholder copy in publishable content. Rationale: this repository is the
-editorial source of truth for zzzbre.com, so ambiguity here becomes ambiguity in
-the public product experience.
+All content under `src/content/editorial/` MUST be final, user-facing, and
+directly publishable on zzzbre surfaces. Contributors MUST preserve the website
+structure documented in `src/content/editorial/structure/site-structure.md`,
+keep navigation and layout copy consistent with
+`src/content/editorial/layout/`, and avoid internal notes, positioning labels,
+meta commentary, or placeholder copy in publishable content. Rationale: this
+repository stores the public editorial source of truth for zzzbre.com, so
+ambiguity here becomes ambiguity in the product experience.
 
 ### II. Astro-First Website Implementation
 Website behavior MUST be implemented with Astro project conventions before adding
@@ -78,11 +79,11 @@ real trust and privacy risk.
 
 ## Editorial and Technical Constraints
 
-Content changes MUST update the authoritative Markdown files in `edito/` before
-or alongside generated website changes. French-language editorial content MUST
-remain consistent in tone, terminology, and link targets across related pages.
-Public-facing copy MUST use final titles, paragraphs, labels, CTAs, and links,
-not implementation notes.
+Content changes MUST update the authoritative Markdown files in
+`src/content/editorial/` before or alongside generated website changes.
+French-language editorial content MUST remain consistent in tone, terminology,
+and link targets across related pages. Public-facing copy MUST use final
+titles, paragraphs, labels, CTAs, and links, not implementation notes.
 
 Astro changes MUST fit the current source layout (`src/pages`, `src/layouts`,
 `src/components`, `src/assets`, and `public`) unless the implementation plan

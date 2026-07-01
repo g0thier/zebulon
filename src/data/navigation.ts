@@ -1,8 +1,8 @@
 import { resolveEditorialHref, sourceHref, type Cta, type LinkItem, type NavigationGroup } from "./source-map";
 
-const headerSource = "edito/layout/1 Header.md";
-const footerSource = "edito/layout/2 Footer.md";
-const sidebarSource = "edito/layout/3 Sidebar.md";
+const headerSource = "src/content/editorial/layout/header.md";
+const footerSource = "src/content/editorial/layout/footer.md";
+const sidebarSource = "src/content/editorial/layout/sidebar.md";
 
 function link(label: string, rawHref: string, sourcePath: string): LinkItem {
   return {
@@ -14,7 +14,7 @@ function link(label: string, rawHref: string, sourcePath: string): LinkItem {
 
 export const brandLink = {
   label: "zzzbre",
-  href: sourceHref("edito/contenu/index.md"),
+  href: sourceHref("src/content/editorial/home/index.md"),
   sourcePath: headerSource,
 };
 
@@ -37,10 +37,10 @@ export const headerNavigation: NavigationGroup[] = [
     type: "accordion",
     sourcePath: headerSource,
     items: [
-      link("Fonctionnalités", "../contenu/Produit/1%20Fonctionnalités.md", headerSource),
-      link("Intégrations", "../contenu/Produit/2%20Intégrations.md", headerSource),
-      link("API", "../contenu/Produit/3%20API.md", headerSource),
-      link("Sécurité", "../contenu/Produit/4%20Sécurité.md", headerSource),
+      link("Fonctionnalités", "../pages/Produit/1%20Fonctionnalités.md", headerSource),
+      link("Intégrations", "../pages/Produit/2%20Intégrations.md", headerSource),
+      link("API", "../pages/Produit/3%20API.md", headerSource),
+      link("Sécurité", "../pages/Produit/4%20Sécurité.md", headerSource),
     ],
   },
   {
@@ -48,9 +48,9 @@ export const headerNavigation: NavigationGroup[] = [
     type: "accordion",
     sourcePath: headerSource,
     items: [
-      link("PME", "../contenu/Cas%20d'usage/1%20PME.md", headerSource),
-      link("Grandes entreprises", "../contenu/Cas%20d'usage/2%20Grandes%20entreprises.md", headerSource),
-      link("Secteurs", "../contenu/Cas%20d'usage/3%20Secteurs.md", headerSource),
+      link("PME", "../pages/Cas%20d'usage/1%20PME.md", headerSource),
+      link("Grandes entreprises", "../pages/Cas%20d'usage/2%20Grandes%20entreprises.md", headerSource),
+      link("Secteurs", "../pages/Cas%20d'usage/3%20Secteurs.md", headerSource),
     ],
   },
   {
@@ -64,10 +64,10 @@ export const headerNavigation: NavigationGroup[] = [
     type: "accordion",
     sourcePath: headerSource,
     items: [
-      link("Blog", "../contenu/Ressources/1%20Blog.md", headerSource),
-      link("Guides", "../contenu/Ressources/2%20Guides.md", headerSource),
-      link("Webinaires", "../contenu/Ressources/3%20Webinaires.md", headerSource),
-      link("Documentation", "../contenu/Ressources/4%20Documentation.md", headerSource),
+      link("Blog", "../pages/Ressources/1%20Blog.md", headerSource),
+      link("Guides", "../pages/Ressources/2%20Guides.md", headerSource),
+      link("Webinaires", "../pages/Ressources/3%20Webinaires.md", headerSource),
+      link("Documentation", "../pages/Ressources/4%20Documentation.md", headerSource),
     ],
   },
   {
@@ -81,9 +81,9 @@ export const headerNavigation: NavigationGroup[] = [
     type: "accordion",
     sourcePath: headerSource,
     items: [
-      link("Équipe", "../contenu/À%20propos/1%20Équipe.md", headerSource),
-      link("Carrières", "../contenu/À%20propos/2%20Carrières.md", headerSource),
-      link("Presse", "../contenu/À%20propos/3%20Presse.md", headerSource),
+      link("Équipe", "../pages/À%20propos/1%20Équipe.md", headerSource),
+      link("Carrières", "../pages/À%20propos/2%20Carrières.md", headerSource),
+      link("Presse", "../pages/À%20propos/3%20Presse.md", headerSource),
     ],
   },
   {
@@ -115,15 +115,15 @@ export const footerColumns: NavigationGroup[] = [
     type: "column",
     sourcePath: footerSource,
     items: [
-      link("Accueil", "../contenu/index.md", footerSource),
-      link("Fonctionnalités", "../contenu/Produit/1%20Fonctionnalités.md", footerSource),
-      link("Intégrations", "../contenu/Produit/2%20Intégrations.md", footerSource),
-      link("API", "../contenu/Produit/3%20API.md", footerSource),
-      link("Sécurité", "../contenu/Produit/4%20Sécurité.md", footerSource),
-      link("PME", "../contenu/Cas%20d'usage/1%20PME.md", footerSource),
-      link("Grandes entreprises", "../contenu/Cas%20d'usage/2%20Grandes%20entreprises.md", footerSource),
-      link("Secteurs", "../contenu/Cas%20d'usage/3%20Secteurs.md", footerSource),
-      link("Tarifs", "../contenu/Tarifs/Tarifs.md", footerSource),
+      link("Accueil", "../home/index.md", footerSource),
+      link("Fonctionnalités", "../pages/Produit/1%20Fonctionnalités.md", footerSource),
+      link("Intégrations", "../pages/Produit/2%20Intégrations.md", footerSource),
+      link("API", "../pages/Produit/3%20API.md", footerSource),
+      link("Sécurité", "../pages/Produit/4%20Sécurité.md", footerSource),
+      link("PME", "../pages/Cas%20d'usage/1%20PME.md", footerSource),
+      link("Grandes entreprises", "../pages/Cas%20d'usage/2%20Grandes%20entreprises.md", footerSource),
+      link("Secteurs", "../pages/Cas%20d'usage/3%20Secteurs.md", footerSource),
+      link("Tarifs", "../pages/Tarifs/Tarifs.md", footerSource),
     ],
   },
   {
@@ -131,15 +131,15 @@ export const footerColumns: NavigationGroup[] = [
     type: "column",
     sourcePath: footerSource,
     items: [
-      link("Blog", "../contenu/Ressources/1%20Blog.md", footerSource),
-      link("Pilotage PME", "../contenu/Ressources/Blog/Categories/1%20Pilotage%20PME.md", footerSource),
-      link("Leadership et engagement", "../contenu/Ressources/Blog/Categories/2%20Leadership%20et%20engagement.md", footerSource),
-      link("Ateliers et décision", "../contenu/Ressources/Blog/Categories/3%20Ateliers%20et%20decision.md", footerSource),
-      link("Indicateurs et tableaux de bord", "../contenu/Ressources/Blog/Categories/4%20Indicateurs%20et%20tableaux%20de%20bord.md", footerSource),
-      link("IA appliquée au management", "../contenu/Ressources/Blog/Categories/5%20IA%20appliquee%20au%20management.md", footerSource),
-      link("Guides", "../contenu/Ressources/2%20Guides.md", footerSource),
-      link("Webinaires", "../contenu/Ressources/3%20Webinaires.md", footerSource),
-      link("Documentation", "../contenu/Ressources/4%20Documentation.md", footerSource),
+      link("Blog", "../pages/Ressources/1%20Blog.md", footerSource),
+      link("Pilotage PME", "../blog/categories/1%20Pilotage%20PME.md", footerSource),
+      link("Leadership et engagement", "../blog/categories/2%20Leadership%20et%20engagement.md", footerSource),
+      link("Ateliers et décision", "../blog/categories/3%20Ateliers%20et%20decision.md", footerSource),
+      link("Indicateurs et tableaux de bord", "../blog/categories/4%20Indicateurs%20et%20tableaux%20de%20bord.md", footerSource),
+      link("IA appliquée au management", "../blog/categories/5%20IA%20appliquee%20au%20management.md", footerSource),
+      link("Guides", "../pages/Ressources/2%20Guides.md", footerSource),
+      link("Webinaires", "../pages/Ressources/3%20Webinaires.md", footerSource),
+      link("Documentation", "../pages/Ressources/4%20Documentation.md", footerSource),
     ],
   },
   {
@@ -147,13 +147,13 @@ export const footerColumns: NavigationGroup[] = [
     type: "column",
     sourcePath: footerSource,
     items: [
-      link("Études de cas", "../contenu/Clients/Études%20de%20cas.md", footerSource),
-      link("Équipe", "../contenu/À%20propos/1%20Équipe.md", footerSource),
-      link("Carrières", "../contenu/À%20propos/2%20Carrières.md", footerSource),
-      link("Presse", "../contenu/À%20propos/3%20Presse.md", footerSource),
-      link("Support", "../contenu/Support/Support.md", footerSource),
-      link("Contact", "../contenu/Contact/Contact.md", footerSource),
-      link("Légal", "../contenu/Légal/Légal.md", footerSource),
+      link("Études de cas", "../pages/Clients/Études%20de%20cas.md", footerSource),
+      link("Équipe", "../pages/À%20propos/1%20Équipe.md", footerSource),
+      link("Carrières", "../pages/À%20propos/2%20Carrières.md", footerSource),
+      link("Presse", "../pages/À%20propos/3%20Presse.md", footerSource),
+      link("Support", "../pages/Support/Support.md", footerSource),
+      link("Contact", "../pages/Contact/Contact.md", footerSource),
+      link("Légal", "../pages/Légal/Légal.md", footerSource),
     ],
   },
 ];
@@ -175,8 +175,8 @@ export const sidebarSections: NavigationGroup[] = [
     sourcePath: sidebarSource,
     items: [
       { label: "Créer un compte", href: "https://zzzbre.com/login", sourcePath: sidebarSource },
-      link("Consulter les tarifs", "../contenu/Tarifs/Tarifs.md", sidebarSource),
-      link("Consulter la documentation", "../contenu/Ressources/4%20Documentation.md", sidebarSource),
+      link("Consulter les tarifs", "../pages/Tarifs/Tarifs.md", sidebarSource),
+      link("Consulter la documentation", "../pages/Ressources/4%20Documentation.md", sidebarSource),
     ],
   },
   {
@@ -193,10 +193,10 @@ export const sidebarSections: NavigationGroup[] = [
     type: "sidebar-section",
     sourcePath: sidebarSource,
     items: [
-      link("Fonctionnalités", "../contenu/Produit/1%20Fonctionnalités.md", sidebarSource),
-      link("Cas d'usage PME", "../contenu/Cas%20d'usage/1%20PME.md", sidebarSource),
-      link("Tarifs", "../contenu/Tarifs/Tarifs.md", sidebarSource),
-      link("Contact", "../contenu/Contact/Contact.md", sidebarSource),
+      link("Fonctionnalités", "../pages/Produit/1%20Fonctionnalités.md", sidebarSource),
+      link("Cas d'usage PME", "../pages/Cas%20d'usage/1%20PME.md", sidebarSource),
+      link("Tarifs", "../pages/Tarifs/Tarifs.md", sidebarSource),
+      link("Contact", "../pages/Contact/Contact.md", sidebarSource),
     ],
   },
 ];

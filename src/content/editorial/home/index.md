@@ -12,10 +12,10 @@
   - Suivre les décisions et les actions
 
 - Liste :
-  - Lien : [Découvrir les fonctionnalités](Produit/1%20Fonctionnalités.md)
-  - Lien : [Voir les cas d’usage](Cas%20d'usage/1%20PME.md)
-  - Lien : [Consulter les tarifs](Tarifs/Tarifs.md)
-  - Lien : [Lire la page sécurité](Produit/4%20Sécurité.md)
+  - Lien : [Découvrir les fonctionnalités](../pages/Produit/1%20Fonctionnalités.md)
+  - Lien : [Voir les cas d’usage](../pages/Cas%20d'usage/1%20PME.md)
+  - Lien : [Consulter les tarifs](../pages/Tarifs/Tarifs.md)
+  - Lien : [Lire la page sécurité](../pages/Produit/4%20Sécurité.md)
 
 ### Produit
 
@@ -24,16 +24,16 @@
 - cards :
   - Fonctionnalités
     - Texte : Comprendre les modules disponibles en beta, la vision data driven management et la roadmap produit.
-    - Lien : [Fonctionnalités](Produit/1%20Fonctionnalités.md)
+    - Lien : [Fonctionnalités](../pages/Produit/1%20Fonctionnalités.md)
   - Sécurité
     - Texte : Voir comment zzzbre encadre les accès, les rôles, les permissions et les données de pilotage.
-    - Lien : [Sécurité](Produit/4%20Sécurité.md)
+    - Lien : [Sécurité](../pages/Produit/4%20Sécurité.md)
   - Intégrations
     - Texte : Découvrir les connexions en développement pour limiter la double saisie et relier zzzbre aux outils existants.
-    - Lien : [Intégrations](Produit/2%20Intégrations.md)
+    - Lien : [Intégrations](../pages/Produit/2%20Intégrations.md)
   - API
     - Texte : Explorer les usages prévus pour exploiter les données de pilotage dans vos dashboards, analyses et outils internes.
-    - Lien : [API](Produit/3%20API.md)
+    - Lien : [API](../pages/Produit/3%20API.md)
 
 ### Cas d'usage
 
@@ -42,13 +42,13 @@
 - cards :
   - PME
     - Texte : Structurez votre pilotage, comprenez mieux vos équipes et transformez les décisions en actions suivies.
-    - Lien : [PME](Cas%20d'usage/1%20PME.md)
+    - Lien : [PME](../pages/Cas%20d'usage/1%20PME.md)
   - Grandes entreprises
     - Texte : Testez zzzbre sur une équipe, une direction ou un périmètre pilote avant d'élargir les usages.
-    - Lien : [Grandes entreprises](Cas%20d'usage/2%20Grandes%20entreprises.md)
+    - Lien : [Grandes entreprises](../pages/Cas%20d'usage/2%20Grandes%20entreprises.md)
   - Secteurs
     - Texte : Explorez comment les usages de zzzbre s'adaptent à différents contextes métier.
-    - Lien : [Secteurs](Cas%20d'usage/3%20Secteurs.md)
+    - Lien : [Secteurs](../pages/Cas%20d'usage/3%20Secteurs.md)
 
 ### Tarifs
 
@@ -57,7 +57,7 @@
 - cards :
   - Tarifs
     - Texte : Comparer l'accès libre, les offres mensuelles beta, les quotas utilisateurs et les réponses aux questions fréquentes.
-    - Lien : [Tarifs](Tarifs/Tarifs.md)
+    - Lien : [Tarifs](../pages/Tarifs/Tarifs.md)
 
 ### Ressources
 
@@ -66,16 +66,16 @@
 - cards :
   - Blog
     - Texte : Lire des contenus pratiques sur le pilotage PME, le leadership, les ateliers, les indicateurs et l'IA appliquée au management.
-    - Lien : [Blog](Ressources/1%20Blog.md)
+    - Lien : [Blog](../pages/Ressources/1%20Blog.md)
   - Guides
     - Texte : Préparer un premier cycle de pilotage, lancer des questionnaires, organiser des ateliers et suivre les actions.
-    - Lien : [Guides](Ressources/2%20Guides.md)
+    - Lien : [Guides](../pages/Ressources/2%20Guides.md)
   - Webinaires
     - Texte : Découvrir les sessions vidéo prévues autour des quiz, ateliers et méthodes disponibles dans zzzbre.
-    - Lien : [Webinaires](Ressources/3%20Webinaires.md)
+    - Lien : [Webinaires](../pages/Ressources/3%20Webinaires.md)
   - Documentation
     - Texte : Retrouver les repères essentiels pour configurer votre espace, gérer les rôles et accompagner les collaborateurs.
-    - Lien : [Documentation](Ressources/4%20Documentation.md)
+    - Lien : [Documentation](../pages/Ressources/4%20Documentation.md)
 
 ### Clients
 
@@ -84,7 +84,7 @@
 - cards :
   - Études de cas
     - Texte : Proposer votre expérience ou découvrir comment les futurs cas client mettront en avant les usages réels de zzzbre.
-    - Lien : [Études de cas](Clients/Études%20de%20cas.md)
+    - Lien : [Études de cas](../pages/Clients/Études%20de%20cas.md)
 
 ### À propos
 
@@ -93,13 +93,13 @@
 - cards :
   - Équipe
     - Texte : Comprendre la mission, la vision produit et les principes qui guident la construction de zzzbre.
-    - Lien : [Équipe](À%20propos/1%20Équipe.md)
+    - Lien : [Équipe](../pages/À%20propos/1%20Équipe.md)
   - Carrières
     - Texte : Voir les familles de métiers qui pourront accompagner la croissance de zzzbre lorsque le recrutement sera ouvert.
-    - Lien : [Carrières](À%20propos/2%20Carrières.md)
+    - Lien : [Carrières](../pages/À%20propos/2%20Carrières.md)
   - Presse
     - Texte : Retrouver le boilerplate, les contacts presse et les éléments disponibles pour parler de zzzbre.
-    - Lien : [Presse](À%20propos/3%20Presse.md)
+    - Lien : [Presse](../pages/À%20propos/3%20Presse.md)
 
 ### Support
 
@@ -108,7 +108,7 @@
 - cards :
   - Support
     - Texte : Contacter l'équipe support et retrouver les premiers repères pour résoudre les questions liées à la plateforme.
-    - Lien : [Support](Support/Support.md)
+    - Lien : [Support](../pages/Support/Support.md)
 
 ### Contact
 
@@ -117,7 +117,7 @@
 - cards :
   - Contact
     - Texte : Retrouver les contacts utiles, l'adresse et les moyens d'échanger avec l'équipe zzzbre.
-    - Lien : [Contact](Contact/Contact.md)
+    - Lien : [Contact](../pages/Contact/Contact.md)
 
 ### Légal
 
@@ -126,7 +126,7 @@
 - cards :
   - Informations légales
     - Texte : Consulter les mentions légales, les informations relatives aux données, aux cookies, à la responsabilité et aux contacts légaux.
-    - Lien : [Informations légales](Légal/Légal.md)
+    - Lien : [Informations légales](../pages/Légal/Légal.md)
 
 ### Commencer avec zzzbre
 

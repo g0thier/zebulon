@@ -15,14 +15,14 @@
 - Texte : La première série d'articles est consacrée aux quiz Motivation disponibles dans zzzbre. Chaque article explique à quoi sert le quiz, quand l'utiliser et comment exploiter les résultats pour mieux comprendre les équipes.
 
 - articles :
-  - [Théorie X-Y](../Motivation/1%20Theorie%20X-Y.md)
-  - [Identité Pro](../Motivation/2%20Identite%20Pro.md)
-  - [Besoins de Maslow](../Motivation/3%20Besoins%20de%20Maslow.md)
-  - [Autodétermination](../Motivation/4%20Autodetermination.md)
-  - [Attentes](../Motivation/5%20Attentes.md)
-  - [Équité](../Motivation/6%20Equite.md)
-  - [Besoins acquis](../Motivation/7%20Besoins%20acquis.md)
-  - [Mimétisme](../Motivation/8%20Mimetisme.md)
+  - [Théorie X-Y](../motivation/1%20Theorie%20X-Y.md)
+  - [Identité Pro](../motivation/2%20Identite%20Pro.md)
+  - [Besoins de Maslow](../motivation/3%20Besoins%20de%20Maslow.md)
+  - [Autodétermination](../motivation/4%20Autodetermination.md)
+  - [Attentes](../motivation/5%20Attentes.md)
+  - [Équité](../motivation/6%20Equite.md)
+  - [Besoins acquis](../motivation/7%20Besoins%20acquis.md)
+  - [Mimétisme](../motivation/8%20Mimetisme.md)
 
 ### Commencer avec zzzbre
 

@@ -1,0 +1,39 @@
+---
+import CtaLink from "../components/ui/CtaLink.astro";
+import StatusBadge from "../components/ui/StatusBadge.astro";
+import { renderInlineMarkdown, type EditorialPage } from "../data/source-map";
+import SiteLayout from "./SiteLayout.astro";
+
+type Props = {
+  page: EditorialPage;
+  heroSectionLabel?: string;
+  showSectionBadge?: boolean;
+};
+
+const { page, heroSectionLabel = page.section, showSectionBadge = true } = Astro.props;
+---
+
+<SiteLayout title={page.title} description={page.intro}>
+  <section class="hero">
+    {
+      (showSectionBadge || page.status) && (
+        <div class="hero__badges">
+          {showSectionBadge && <StatusBadge label={heroSectionLabel} variant="section" />}
+          <StatusBadge label={page.status} />
+        </div>
+      )
+    }
+    <h1>{page.title}</h1>
+    {page.subtitle && <p class="hero__intro">{page.subtitle}</p>}
+    {page.intro && <p set:html={renderInlineMarkdown(page.intro, page.sourcePath)} />}
+    {
+      page.ctas.length > 0 && (
+        <div class="hero__actions">
+          {page.ctas.map((cta) => <CtaLink cta={cta} />)}
+        </div>
+      )
+    }
+  </section>
+
+  <slot />
+</SiteLayout>

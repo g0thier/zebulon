@@ -1,9 +1,10 @@
-import { existsSync, readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 
 export type SourceType = "structure" | "content" | "layout";
 
 export type SourceTrace = {
+  sourceKey: string;
   sourcePath: string;
   sourceLabel?: string;
   sourceLineHint?: string;
@@ -12,6 +13,7 @@ export type SourceTrace = {
 export type LinkItem = {
   label: string;
   href: string;
+  sourceKey?: string;
   sourcePath: string;
 };
 
@@ -56,6 +58,7 @@ export type Card = {
   cta?: Cta;
   fields: TextField[];
   lists: DataList[];
+  sourceKey?: string;
   sourcePath: string;
 };
 
@@ -69,12 +72,13 @@ export type ContentBlock = {
   ctas: Cta[];
   visual?: VisualAsset;
   sourceLabel?: string;
+  sourceKey?: string;
   sourcePath: string;
 };
 
 export type EditorialPage = {
+  id: string;
   slug: string;
-  sourcePath: string;
   section: string;
   title: string;
   subtitle?: string;
@@ -84,12 +88,13 @@ export type EditorialPage = {
   ctas: Cta[];
   relatedLinks: LinkItem[];
   visual?: VisualAsset;
+  sourceKey: string;
+  sourcePath: string;
 };
 
 export type Article = {
   id: string;
   slug: string;
-  sourcePath: string;
   heading: string;
   title: string;
   subtitle: string;
@@ -99,6 +104,9 @@ export type Article = {
   series?: string;
   sections: ContentBlock[];
   cta?: Cta;
+  parentCategorySlug: string;
+  sourceKey: string;
+  sourcePath: string;
 };
 
 export type NavigationGroup = {
@@ -106,10 +114,12 @@ export type NavigationGroup = {
   type: "link" | "accordion" | "column" | "sidebar-section";
   href?: string;
   items?: LinkItem[];
+  sourceKey?: string;
   sourcePath: string;
 };
 
 export type EditorialSource = {
+  sourceKey: string;
   sourcePath: string;
   sourceType: SourceType;
   title: string;
@@ -130,73 +140,262 @@ type ParsedMarkdown = {
   visual?: VisualAsset;
 };
 
-type RouteSource = {
+export type RouteSource = {
+  sourceKey: string;
   sourcePath: string;
   slug: string;
   section: string;
 };
 
+export type ArticleSource = {
+  sourceKey: string;
+  sourcePath: string;
+  slug: string;
+  category: string;
+  series: string;
+  parentCategorySlug: string;
+};
+
 const root = process.cwd();
+const contentRoot = "src/content/editorial";
+
+export const homeSourcePath = `${contentRoot}/home/index.md`;
+export const structureSourcePath = `${contentRoot}/structure/site-structure.md`;
+export const layoutSourcePaths = [
+  `${contentRoot}/layout/header.md`,
+  `${contentRoot}/layout/footer.md`,
+  `${contentRoot}/layout/sidebar.md`,
+] as const;
 
 export const routeSources: RouteSource[] = [
-  { sourcePath: "edito/contenu/Produit/1 Fonctionnalités.md", slug: "produit/fonctionnalites", section: "Produit" },
-  { sourcePath: "edito/contenu/Produit/2 Intégrations.md", slug: "produit/integrations", section: "Produit" },
-  { sourcePath: "edito/contenu/Produit/3 API.md", slug: "produit/api", section: "Produit" },
-  { sourcePath: "edito/contenu/Produit/4 Sécurité.md", slug: "produit/securite", section: "Produit" },
-  { sourcePath: "edito/contenu/Cas d'usage/1 PME.md", slug: "cas-d-usage/pme", section: "Cas d'usage" },
-  { sourcePath: "edito/contenu/Cas d'usage/2 Grandes entreprises.md", slug: "cas-d-usage/grandes-entreprises", section: "Cas d'usage" },
-  { sourcePath: "edito/contenu/Cas d'usage/3 Secteurs.md", slug: "cas-d-usage/secteurs", section: "Cas d'usage" },
-  { sourcePath: "edito/contenu/Tarifs/Tarifs.md", slug: "tarifs", section: "Tarifs" },
-  { sourcePath: "edito/contenu/Ressources/1 Blog.md", slug: "ressources/blog", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/2 Guides.md", slug: "ressources/guides", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/3 Webinaires.md", slug: "ressources/webinaires", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/4 Documentation.md", slug: "ressources/documentation", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/Blog/Categories/1 Pilotage PME.md", slug: "ressources/blog/categories/pilotage-pme", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/Blog/Categories/2 Leadership et engagement.md", slug: "ressources/blog/categories/leadership-et-engagement", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/Blog/Categories/3 Ateliers et decision.md", slug: "ressources/blog/categories/ateliers-et-decision", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/Blog/Categories/4 Indicateurs et tableaux de bord.md", slug: "ressources/blog/categories/indicateurs-et-tableaux-de-bord", section: "Ressources" },
-  { sourcePath: "edito/contenu/Ressources/Blog/Categories/5 IA appliquee au management.md", slug: "ressources/blog/categories/ia-appliquee-au-management", section: "Ressources" },
-  { sourcePath: "edito/contenu/Clients/Études de cas.md", slug: "clients/etudes-de-cas", section: "Clients" },
-  { sourcePath: "edito/contenu/À propos/1 Équipe.md", slug: "a-propos/equipe", section: "À propos" },
-  { sourcePath: "edito/contenu/À propos/2 Carrières.md", slug: "a-propos/carrieres", section: "À propos" },
-  { sourcePath: "edito/contenu/À propos/3 Presse.md", slug: "a-propos/presse", section: "À propos" },
-  { sourcePath: "edito/contenu/Support/Support.md", slug: "support", section: "Support" },
-  { sourcePath: "edito/contenu/Contact/Contact.md", slug: "contact", section: "Contact" },
-  { sourcePath: "edito/contenu/Légal/Légal.md", slug: "legal", section: "Légal" },
+  {
+    sourceKey: "page-produit-fonctionnalites",
+    sourcePath: `${contentRoot}/pages/Produit/1 Fonctionnalités.md`,
+    slug: "produit/fonctionnalites",
+    section: "Produit",
+  },
+  {
+    sourceKey: "page-produit-integrations",
+    sourcePath: `${contentRoot}/pages/Produit/2 Intégrations.md`,
+    slug: "produit/integrations",
+    section: "Produit",
+  },
+  {
+    sourceKey: "page-produit-api",
+    sourcePath: `${contentRoot}/pages/Produit/3 API.md`,
+    slug: "produit/api",
+    section: "Produit",
+  },
+  {
+    sourceKey: "page-produit-securite",
+    sourcePath: `${contentRoot}/pages/Produit/4 Sécurité.md`,
+    slug: "produit/securite",
+    section: "Produit",
+  },
+  {
+    sourceKey: "page-cas-usage-pme",
+    sourcePath: `${contentRoot}/pages/Cas d'usage/1 PME.md`,
+    slug: "cas-d-usage/pme",
+    section: "Cas d'usage",
+  },
+  {
+    sourceKey: "page-cas-usage-grandes-entreprises",
+    sourcePath: `${contentRoot}/pages/Cas d'usage/2 Grandes entreprises.md`,
+    slug: "cas-d-usage/grandes-entreprises",
+    section: "Cas d'usage",
+  },
+  {
+    sourceKey: "page-cas-usage-secteurs",
+    sourcePath: `${contentRoot}/pages/Cas d'usage/3 Secteurs.md`,
+    slug: "cas-d-usage/secteurs",
+    section: "Cas d'usage",
+  },
+  {
+    sourceKey: "page-tarifs",
+    sourcePath: `${contentRoot}/pages/Tarifs/Tarifs.md`,
+    slug: "tarifs",
+    section: "Tarifs",
+  },
+  {
+    sourceKey: "page-ressources-blog",
+    sourcePath: `${contentRoot}/pages/Ressources/1 Blog.md`,
+    slug: "ressources/blog",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-ressources-guides",
+    sourcePath: `${contentRoot}/pages/Ressources/2 Guides.md`,
+    slug: "ressources/guides",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-ressources-webinaires",
+    sourcePath: `${contentRoot}/pages/Ressources/3 Webinaires.md`,
+    slug: "ressources/webinaires",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-ressources-documentation",
+    sourcePath: `${contentRoot}/pages/Ressources/4 Documentation.md`,
+    slug: "ressources/documentation",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-blog-categorie-pilotage-pme",
+    sourcePath: `${contentRoot}/blog/categories/1 Pilotage PME.md`,
+    slug: "ressources/blog/categories/pilotage-pme",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-blog-categorie-leadership-engagement",
+    sourcePath: `${contentRoot}/blog/categories/2 Leadership et engagement.md`,
+    slug: "ressources/blog/categories/leadership-et-engagement",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-blog-categorie-ateliers-decision",
+    sourcePath: `${contentRoot}/blog/categories/3 Ateliers et decision.md`,
+    slug: "ressources/blog/categories/ateliers-et-decision",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-blog-categorie-indicateurs",
+    sourcePath: `${contentRoot}/blog/categories/4 Indicateurs et tableaux de bord.md`,
+    slug: "ressources/blog/categories/indicateurs-et-tableaux-de-bord",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-blog-categorie-ia",
+    sourcePath: `${contentRoot}/blog/categories/5 IA appliquee au management.md`,
+    slug: "ressources/blog/categories/ia-appliquee-au-management",
+    section: "Ressources",
+  },
+  {
+    sourceKey: "page-clients-etudes-de-cas",
+    sourcePath: `${contentRoot}/pages/Clients/Études de cas.md`,
+    slug: "clients/etudes-de-cas",
+    section: "Clients",
+  },
+  {
+    sourceKey: "page-a-propos-equipe",
+    sourcePath: `${contentRoot}/pages/À propos/1 Équipe.md`,
+    slug: "a-propos/equipe",
+    section: "À propos",
+  },
+  {
+    sourceKey: "page-a-propos-carrieres",
+    sourcePath: `${contentRoot}/pages/À propos/2 Carrières.md`,
+    slug: "a-propos/carrieres",
+    section: "À propos",
+  },
+  {
+    sourceKey: "page-a-propos-presse",
+    sourcePath: `${contentRoot}/pages/À propos/3 Presse.md`,
+    slug: "a-propos/presse",
+    section: "À propos",
+  },
+  {
+    sourceKey: "page-support",
+    sourcePath: `${contentRoot}/pages/Support/Support.md`,
+    slug: "support",
+    section: "Support",
+  },
+  {
+    sourceKey: "page-contact",
+    sourcePath: `${contentRoot}/pages/Contact/Contact.md`,
+    slug: "contact",
+    section: "Contact",
+  },
+  {
+    sourceKey: "page-legal",
+    sourcePath: `${contentRoot}/pages/Légal/Légal.md`,
+    slug: "legal",
+    section: "Légal",
+  },
 ];
 
-export const homeSourcePath = "edito/contenu/index.md";
-export const structureSourcePath = "edito/structure.md";
-export const layoutSourcePaths = [
-  "edito/layout/1 Header.md",
-  "edito/layout/2 Footer.md",
-  "edito/layout/3 Sidebar.md",
+const articleSources: ArticleSource[] = [
+  {
+    sourceKey: "article-theorie-x-y",
+    sourcePath: `${contentRoot}/blog/motivation/1 Theorie X-Y.md`,
+    slug: "theorie-x-y",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-identite-pro",
+    sourcePath: `${contentRoot}/blog/motivation/2 Identite Pro.md`,
+    slug: "identite-pro",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-besoins-de-maslow",
+    sourcePath: `${contentRoot}/blog/motivation/3 Besoins de Maslow.md`,
+    slug: "besoins-de-maslow",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-autodetermination",
+    sourcePath: `${contentRoot}/blog/motivation/4 Autodetermination.md`,
+    slug: "autodetermination",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-attentes",
+    sourcePath: `${contentRoot}/blog/motivation/5 Attentes.md`,
+    slug: "attentes",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-equite",
+    sourcePath: `${contentRoot}/blog/motivation/6 Equite.md`,
+    slug: "equite",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-besoins-acquis",
+    sourcePath: `${contentRoot}/blog/motivation/7 Besoins acquis.md`,
+    slug: "besoins-acquis",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
+  {
+    sourceKey: "article-mimetisme",
+    sourcePath: `${contentRoot}/blog/motivation/8 Mimetisme.md`,
+    slug: "mimetisme",
+    category: "Motivation",
+    series: "Motivation",
+    parentCategorySlug: "ressources/blog/categories/leadership-et-engagement",
+  },
 ];
 
-export const articleSourceSlugs: Record<string, string> = {
-  "edito/contenu/Ressources/Blog/Motivation/1 Theorie X-Y.md": "theorie-x-y",
-  "edito/contenu/Ressources/Blog/Motivation/2 Identite Pro.md": "identite-pro",
-  "edito/contenu/Ressources/Blog/Motivation/3 Besoins de Maslow.md": "besoins-de-maslow",
-  "edito/contenu/Ressources/Blog/Motivation/4 Autodetermination.md": "autodetermination",
-  "edito/contenu/Ressources/Blog/Motivation/5 Attentes.md": "attentes",
-  "edito/contenu/Ressources/Blog/Motivation/6 Equite.md": "equite",
-  "edito/contenu/Ressources/Blog/Motivation/7 Besoins acquis.md": "besoins-acquis",
-  "edito/contenu/Ressources/Blog/Motivation/8 Mimetisme.md": "mimetisme",
-};
+export const articleSourceSlugs: Record<string, string> = Object.fromEntries(
+  articleSources.map((entry) => [entry.sourcePath, entry.slug] as const),
+);
 
 export const sourcePathToHref = new Map<string, string>([
   [homeSourcePath, "/"],
   ...routeSources.map((entry) => [entry.sourcePath, `/${entry.slug}`] as const),
-  ...Object.entries(articleSourceSlugs).map(
-    ([sourcePath, slug]) => [sourcePath, `/ressources/blog/motivation/${slug}`] as const,
-  ),
+  ...articleSources.map((entry) => [entry.sourcePath, `/ressources/blog/motivation/${entry.slug}`] as const),
 ]);
 
 export const authoritativeSourcePaths = [
   structureSourcePath,
   homeSourcePath,
   ...routeSources.map((entry) => entry.sourcePath),
-  ...Object.keys(articleSourceSlugs),
+  ...articleSources.map((entry) => entry.sourcePath),
   ...layoutSourcePaths,
 ];
 
@@ -206,8 +405,14 @@ export function readSource(sourcePath: string): string {
 
 export function createSourceRegistry(): EditorialSource[] {
   return authoritativeSourcePaths.map((sourcePath) => ({
+    sourceKey: sourceKeyForSourcePath(sourcePath),
     sourcePath,
-    sourceType: sourcePath === structureSourcePath ? "structure" : sourcePath.startsWith("edito/layout/") ? "layout" : "content",
+    sourceType:
+      sourcePath === structureSourcePath
+        ? "structure"
+        : sourcePath.includes("/layout/")
+          ? "layout"
+          : "content",
     title: path.basename(sourcePath, ".md").replace(/^\d+\s+/, ""),
     rawMarkdown: readSource(sourcePath),
   }));
@@ -215,23 +420,84 @@ export function createSourceRegistry(): EditorialSource[] {
 
 export const sourceRegistry = createSourceRegistry();
 
+export function sourceKeyForSourcePath(sourcePath: string): string {
+  if (sourcePath === homeSourcePath) return "home";
+  if (sourcePath === structureSourcePath) return "site-structure";
+
+  const route = routeSources.find((entry) => entry.sourcePath === sourcePath);
+  if (route) return route.sourceKey;
+
+  const article = articleSources.find((entry) => entry.sourcePath === sourcePath);
+  if (article) return article.sourceKey;
+
+  if (sourcePath === layoutSourcePaths[0]) return "layout-header";
+  if (sourcePath === layoutSourcePaths[1]) return "layout-footer";
+  if (sourcePath === layoutSourcePaths[2]) return "layout-sidebar";
+
+  return path.basename(sourcePath, ".md").replace(/^\d+\s+/, "");
+}
+
 export function sourceHref(sourcePath: string): string {
   return sourcePathToHref.get(sourcePath) ?? "#";
+}
+
+export function getRouteSources(): RouteSource[] {
+  return routeSources;
+}
+
+export function getArticleSources(): ArticleSource[] {
+  return articleSources;
+}
+
+export function getDuplicateRouteHrefs(): string[] {
+  const hrefCounts = new Map<string, number>();
+  const hrefs = [
+    "/",
+    ...routeSources.map((entry) => `/${entry.slug}`),
+    ...articleSources.map((entry) => `/ressources/blog/motivation/${entry.slug}`),
+  ];
+
+  for (const href of hrefs) {
+    hrefCounts.set(href, (hrefCounts.get(href) ?? 0) + 1);
+  }
+
+  return [...hrefCounts.entries()].filter(([, count]) => count > 1).map(([href]) => href);
+}
+
+export function getBrokenInternalLinks(): Array<{ sourcePath: string; href: string }> {
+  const issues: Array<{ sourcePath: string; href: string }> = [];
+
+  for (const source of sourceRegistry) {
+    const matches = [...source.rawMarkdown.matchAll(/\[[^\]]+\]\(([^)]+)\)/g)];
+    for (const match of matches) {
+      const href = cleanValue(match[1]);
+      if (!href || /^(https?:|mailto:|#|\/)/.test(href)) continue;
+
+      const resolved = resolveEditorialHref(href, source.sourcePath);
+      if (!resolved.startsWith("/")) {
+        issues.push({ sourcePath: source.sourcePath, href });
+      }
+    }
+  }
+
+  return issues;
+}
+
+function canonicalizeRelativeSourcePath(rawHref: string, fromSourcePath: string): string | undefined {
+  const decodedHref = decodeURIComponent(rawHref);
+  const currentNormalized = path.normalize(path.join(path.dirname(fromSourcePath), decodedHref)).replaceAll("\\", "/");
+  if (sourcePathToHref.has(currentNormalized)) return currentNormalized;
+
+  return undefined;
 }
 
 export function resolveEditorialHref(rawHref: string, fromSourcePath: string): string {
   if (/^(https?:|mailto:|#|\/)/.test(rawHref)) return rawHref;
 
-  const baseDir = path.dirname(fromSourcePath);
-  const decodedHref = decodeURIComponent(rawHref);
-  const normalized = path.normalize(path.join(baseDir, decodedHref)).replaceAll("\\", "/");
-  const withoutLeading = normalized.replace(/^(\.\.\/)+/, "edito/");
+  const resolvedSourcePath = canonicalizeRelativeSourcePath(rawHref, fromSourcePath);
+  if (resolvedSourcePath) return sourceHref(resolvedSourcePath);
 
-  if (sourcePathToHref.has(withoutLeading)) return sourceHref(withoutLeading);
-  if (sourcePathToHref.has(normalized)) return sourceHref(normalized);
-
-  const contentRelative = normalized.replace(/^edito\/layout\/\.\.\/contenu\//, "edito/contenu/");
-  return sourcePathToHref.get(contentRelative) ?? rawHref;
+  return rawHref;
 }
 
 export function parseMarkdownLink(value: string, sourcePath: string): LinkItem | undefined {
@@ -240,6 +506,7 @@ export function parseMarkdownLink(value: string, sourcePath: string): LinkItem |
   return {
     label: cleanValue(match[1]),
     href: resolveEditorialHref(match[2], sourcePath),
+    sourceKey: sourceKeyForSourcePath(sourcePath),
     sourcePath,
   };
 }
@@ -258,6 +525,7 @@ export function ctaFromValue(value: string, sourcePath: string, kind?: Cta["kind
   return {
     label: email,
     href: `mailto:${email}`,
+    sourceKey: sourceKeyForSourcePath(sourcePath),
     sourcePath,
     kind: inferCtaKind(value, `mailto:${email}`),
   };
@@ -285,8 +553,8 @@ export function renderInlineMarkdown(value: string, sourcePath?: string): string
 export function parseEditorialPage(sourcePath: string, slug: string, section: string): EditorialPage {
   const parsed = parseEditorialMarkdown(sourcePath);
   return {
+    id: slug || "home",
     slug,
-    sourcePath,
     section,
     title: parsed.title ?? parsed.heading ?? section,
     subtitle: parsed.subtitle,
@@ -296,6 +564,8 @@ export function parseEditorialPage(sourcePath: string, slug: string, section: st
     ctas: parsed.ctas,
     relatedLinks: parsed.relatedLinks,
     visual: parsed.visual,
+    sourceKey: sourceKeyForSourcePath(sourcePath),
+    sourcePath,
   };
 }
 
@@ -305,32 +575,31 @@ export function parseHomePage(): EditorialPage {
 
 export function parseArticle(sourcePath: string): Article {
   const parsed = parseEditorialMarkdown(sourcePath);
-  const slug = articleSourceSlugs[sourcePath];
+  const source = articleSources.find((entry) => entry.sourcePath === sourcePath);
+  if (!source) {
+    throw new Error(`Unknown article source path: ${sourcePath}`);
+  }
+
   return {
-    id: slug,
-    slug,
-    sourcePath,
-    heading: parsed.heading ?? parsed.title ?? slug,
-    title: parsed.title ?? parsed.heading ?? slug,
+    id: source.slug,
+    slug: source.slug,
+    heading: parsed.heading ?? parsed.title ?? source.slug,
+    title: parsed.title ?? parsed.heading ?? source.slug,
     subtitle: parsed.subtitle ?? "",
     status: parsed.status ?? "",
     questionCount: parsed.questionCount ?? 0,
-    category: parsed.category ?? "Motivation",
-    series: "Motivation",
+    category: parsed.category ?? source.category,
+    series: source.series,
     sections: parsed.blocks,
     cta: parsed.ctas[0],
+    parentCategorySlug: source.parentCategorySlug,
+    sourceKey: source.sourceKey,
+    sourcePath,
   };
 }
 
 export function listArticleSourcePaths(): string[] {
-  const motivationDir = path.join(root, "edito/contenu/Ressources/Blog/Motivation");
-  if (!existsSync(motivationDir)) return Object.keys(articleSourceSlugs);
-
-  return readdirSync(motivationDir)
-    .filter((file) => file.endsWith(".md"))
-    .sort((a, b) => a.localeCompare(b, "fr", { numeric: true }))
-    .map((file) => `edito/contenu/Ressources/Blog/Motivation/${file}`)
-    .filter((sourcePath) => sourcePath in articleSourceSlugs);
+  return articleSources.map((entry) => entry.sourcePath);
 }
 
 function parseEditorialMarkdown(sourcePath: string): ParsedMarkdown {
@@ -352,6 +621,7 @@ function parseEditorialMarkdown(sourcePath: string): ParsedMarkdown {
         lists: [],
         cards: [],
         ctas: [],
+        sourceKey: sourceKeyForSourcePath(sourcePath),
         sourcePath,
       };
       parsed.blocks.push(current);
@@ -417,6 +687,7 @@ function parseEditorialMarkdown(sourcePath: string): ParsedMarkdown {
           title: cleanValue(content),
           fields: [],
           lists: [],
+          sourceKey: sourceKeyForSourcePath(sourcePath),
           sourcePath,
         };
         current.cards.push(currentCard);
@@ -630,8 +901,8 @@ function resolveAssetHref(rawHref: string, sourcePath: string): string {
   if (/^(https?:|\/)/.test(rawHref)) return rawHref;
   if (!rawHref.includes("/")) return `/${rawHref}`;
 
-  const baseDir = path.dirname(sourcePath);
-  return `/${path.normalize(path.join(baseDir, rawHref)).replaceAll("\\", "/")}`;
+  const resolved = path.normalize(path.join(path.dirname(sourcePath), rawHref)).replaceAll("\\", "/");
+  return `/${resolved.replace(/^src\/content\/editorial\//, "")}`;
 }
 
 function listDepth(indent: number): number {

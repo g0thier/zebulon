@@ -267,3 +267,18 @@ dynamic route file for clearer ownership and validation.
   [quickstart.md](./quickstart.md).
 - **Security/privacy impact**: PASS. The design introduces no new external
   dependency, no data handling change, and no additional attack surface.
+
+## Implementation Validation Notes
+
+- `npm run build` passed after the migrated content was wired into
+  `src/content/editorial/`.
+- `npm run build` passed again after deleting the legacy editorial folder.
+- Astro background server validation passed with `astro dev --background` and
+  `astro dev status`.
+- Static output now includes the 8 Motivation article routes under
+  `/ressources/blog/motivation/*`.
+- Runtime reference audits passed for `src/`; no legacy alias pattern remains
+  in the app source tree.
+- Manual browser-based visual review of representative routes was not run during
+  this implementation session. Residual risk is limited to presentation issues
+  that do not surface in static generation or HTML inspection.

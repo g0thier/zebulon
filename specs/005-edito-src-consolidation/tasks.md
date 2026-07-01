@@ -18,10 +18,10 @@
 
 **Purpose**: Create the target structure and shared shells needed by the migration
 
-- [ ] T001 Create the migrated content directory structure under `src/content/editorial/home/`, `src/content/editorial/pages/`, `src/content/editorial/blog/categories/`, `src/content/editorial/blog/motivation/`, `src/content/editorial/layout/`, and `src/content/editorial/structure/`
-- [ ] T002 Update `src/content.config.ts` to declare collection/loading entry points for migrated pages, articles, layout records, and site structure records
-- [ ] T003 [P] Create `src/layouts/EditorialPageLayout.astro` and `src/layouts/BlogArticleLayout.astro` from the layout strategy in `specs/005-edito-src-consolidation/plan.md`
-- [ ] T004 [P] Create `src/pages/ressources/blog/motivation/[slug].astro` as the dedicated dynamic route shell for Motivation articles
+- [X] T001 Create the migrated content directory structure under `src/content/editorial/home/`, `src/content/editorial/pages/`, `src/content/editorial/blog/categories/`, `src/content/editorial/blog/motivation/`, `src/content/editorial/layout/`, and `src/content/editorial/structure/`
+- [X] T002 Update `src/content.config.ts` to declare collection/loading entry points for migrated pages, articles, layout records, and site structure records
+- [X] T003 [P] Create `src/layouts/EditorialPageLayout.astro` and `src/layouts/BlogArticleLayout.astro` from the layout strategy in `specs/005-edito-src-consolidation/plan.md`
+- [X] T004 [P] Create `src/pages/ressources/blog/motivation/[slug].astro` as the dedicated dynamic route shell for Motivation articles
 
 ---
 
@@ -31,11 +31,11 @@
 
 **⚠️ CRITICAL**: No user story work can begin until this phase is complete
 
-- [ ] T005 Refactor `src/data/source-map.ts` to load migrated `src/content/editorial/**` records and expose source-key-based page, article, layout, and route parsers
-- [ ] T006 [P] Refactor `src/data/editorial-pages.ts` to assemble page entries, article entries, and route records from migrated content collections
-- [ ] T007 [P] Refactor `src/data/navigation.ts` to build header, footer, and sidebar data from migrated layout and structure records
-- [ ] T008 Update `src/pages/index.astro` and `src/pages/[...slug].astro` to consume the new shared page/article access layer from `src/data/editorial-pages.ts`
-- [ ] T009 Add build-time slug and internal-link validation helpers in `src/data/source-map.ts` and `src/data/navigation.ts` for later route and parity audits
+- [X] T005 Refactor `src/data/source-map.ts` to load migrated `src/content/editorial/**` records and expose source-key-based page, article, layout, and route parsers
+- [X] T006 [P] Refactor `src/data/editorial-pages.ts` to assemble page entries, article entries, and route records from migrated content collections
+- [X] T007 [P] Refactor `src/data/navigation.ts` to build header, footer, and sidebar data from migrated layout and structure records
+- [X] T008 Update `src/pages/index.astro` and `src/pages/[...slug].astro` to consume the new shared page/article access layer from `src/data/editorial-pages.ts`
+- [X] T009 Add build-time slug and internal-link validation helpers in `src/data/source-map.ts` and `src/data/navigation.ts` for later route and parity audits
 
 **Checkpoint**: Migrated content can be loaded from `src/` and consumed by routes without relying on the old loader shape
 
@@ -49,15 +49,15 @@
 
 ### Implementation for User Story 1
 
-- [ ] T010 [P] [US1] Migrate homepage and general page markdown from `edito/contenu/index.md` and `edito/contenu/{Produit,Cas d'usage,Tarifs,Ressources,Clients,À propos,Support,Contact,Légal}` into `src/content/editorial/home/index.md` and `src/content/editorial/pages/**`
-- [ ] T011 [P] [US1] Migrate shared layout and structure markdown from `edito/layout/1 Header.md`, `edito/layout/2 Footer.md`, `edito/layout/3 Sidebar.md`, and `edito/structure.md` into `src/content/editorial/layout/header.md`, `src/content/editorial/layout/footer.md`, `src/content/editorial/layout/sidebar.md`, and `src/content/editorial/structure/site-structure.md`
-- [ ] T012 [P] [US1] Migrate blog category and Motivation article markdown from `edito/contenu/Ressources/Blog/**` into `src/content/editorial/blog/categories/**` and `src/content/editorial/blog/motivation/**`
-- [ ] T013 [US1] Update `src/components/layout/SiteHeader.astro`, `src/components/layout/SiteFooter.astro`, and `src/components/layout/Sidebar.astro` to render migrated shared navigation and contact content
-- [ ] T014 [US1] Update `src/layouts/SiteLayout.astro` and `src/layouts/EditorialPageLayout.astro` to preserve hero/body composition for migrated homepage, page, and category records
-- [ ] T015 [US1] Update `src/pages/index.astro` and `src/pages/[...slug].astro` to serve all existing homepage, page, and blog category routes from `src/content/editorial/`
-- [ ] T016 [US1] Update `src/layouts/BlogArticleLayout.astro` and `src/pages/ressources/blog/motivation/[slug].astro` to render Motivation articles with stable slugs and parent-category links
-- [ ] T017 [US1] Align `src/components/content/ContentBlock.astro`, `src/components/content/DataList.astro`, `src/components/content/EditorialCard.astro`, `src/components/ui/CtaLink.astro`, and `src/components/ui/StatusBadge.astro` with migrated content block, card, and CTA data
-- [ ] T018 [US1] Validate public parity with `npm run build` and the representative route and navigation checks in `specs/005-edito-src-consolidation/quickstart.md`
+- [X] T010 [P] [US1] Migrate homepage and general page markdown from `edito/contenu/index.md` and `edito/contenu/{Produit,Cas d'usage,Tarifs,Ressources,Clients,À propos,Support,Contact,Légal}` into `src/content/editorial/home/index.md` and `src/content/editorial/pages/**`
+- [X] T011 [P] [US1] Migrate shared layout and structure markdown from `edito/layout/1 Header.md`, `edito/layout/2 Footer.md`, `edito/layout/3 Sidebar.md`, and `edito/structure.md` into `src/content/editorial/layout/header.md`, `src/content/editorial/layout/footer.md`, `src/content/editorial/layout/sidebar.md`, and `src/content/editorial/structure/site-structure.md`
+- [X] T012 [P] [US1] Migrate blog category and Motivation article markdown from `edito/contenu/Ressources/Blog/**` into `src/content/editorial/blog/categories/**` and `src/content/editorial/blog/motivation/**`
+- [X] T013 [US1] Update `src/components/layout/SiteHeader.astro`, `src/components/layout/SiteFooter.astro`, and `src/components/layout/Sidebar.astro` to render migrated shared navigation and contact content
+- [X] T014 [US1] Update `src/layouts/SiteLayout.astro` and `src/layouts/EditorialPageLayout.astro` to preserve hero/body composition for migrated homepage, page, and category records
+- [X] T015 [US1] Update `src/pages/index.astro` and `src/pages/[...slug].astro` to serve all existing homepage, page, and blog category routes from `src/content/editorial/`
+- [X] T016 [US1] Update `src/layouts/BlogArticleLayout.astro` and `src/pages/ressources/blog/motivation/[slug].astro` to render Motivation articles with stable slugs and parent-category links
+- [X] T017 [US1] Align `src/components/content/ContentBlock.astro`, `src/components/content/DataList.astro`, `src/components/content/EditorialCard.astro`, `src/components/ui/CtaLink.astro`, and `src/components/ui/StatusBadge.astro` with migrated content block, card, and CTA data
+- [X] T018 [US1] Validate public parity with `npm run build` and the representative route and navigation checks in `specs/005-edito-src-consolidation/quickstart.md`
 
 **Checkpoint**: The public site renders from `src/content/editorial/` with stable slugs, working navigation, and functioning Motivation article routes
 
@@ -71,11 +71,11 @@
 
 ### Implementation for User Story 2
 
-- [ ] T019 [P] [US2] Replace remaining runtime `sourcePath` assumptions with stable content keys and slugs in `src/data/source-map.ts` and `src/data/editorial-pages.ts`
-- [ ] T020 [P] [US2] Normalize migrated internal link resolution and asset resolution in `src/data/source-map.ts` and `src/content.config.ts`
-- [ ] T021 [US2] Simplify shared navigation assembly around migrated layout records in `src/data/navigation.ts`, `src/components/layout/SiteHeader.astro`, `src/components/layout/SiteFooter.astro`, and `src/components/layout/Sidebar.astro`
-- [ ] T022 [US2] Update contributor guidance in `AGENTS.md` and `.specify/memory/constitution.md` so `src/content/editorial/` replaces `edito/` as the editorial source of truth
-- [ ] T023 [US2] Validate maintainability by applying representative edits in `src/content/editorial/home/index.md`, `src/content/editorial/layout/header.md`, and `src/content/editorial/blog/motivation/1 Theorie X-Y.md`, then rerunning `npm run build`
+- [X] T019 [P] [US2] Replace remaining runtime `sourcePath` assumptions with stable content keys and slugs in `src/data/source-map.ts` and `src/data/editorial-pages.ts`
+- [X] T020 [P] [US2] Normalize migrated internal link resolution and asset resolution in `src/data/source-map.ts` and `src/content.config.ts`
+- [X] T021 [US2] Simplify shared navigation assembly around migrated layout records in `src/data/navigation.ts`, `src/components/layout/SiteHeader.astro`, `src/components/layout/SiteFooter.astro`, and `src/components/layout/Sidebar.astro`
+- [X] T022 [US2] Update contributor guidance in `AGENTS.md` and `.specify/memory/constitution.md` so `src/content/editorial/` replaces `edito/` as the editorial source of truth
+- [X] T023 [US2] Validate maintainability by applying representative edits in `src/content/editorial/home/index.md`, `src/content/editorial/layout/header.md`, and `src/content/editorial/blog/motivation/1 Theorie X-Y.md`, then rerunning `npm run build`
 
 **Checkpoint**: A maintainer can update representative content directly in `src/content/editorial/` and the project guidance points to the new source of truth
 
@@ -89,10 +89,10 @@
 
 ### Implementation for User Story 3
 
-- [ ] T024 [P] [US3] Remove legacy compatibility branches from `src/data/source-map.ts`, `src/data/editorial-pages.ts`, `src/data/navigation.ts`, and `src/content.config.ts` once `src/content/editorial/` is authoritative
-- [ ] T025 [US3] Delete the legacy source tree under `edito/` after migrated-content parity passes
-- [ ] T026 [US3] Sweep remaining `edito/` references in `AGENTS.md`, `.specify/memory/constitution.md`, `src/data/source-map.ts`, and `specs/005-edito-src-consolidation/quickstart.md` so no runtime or governance dependency remains
-- [ ] T027 [US3] Run deletion-readiness validation with `npm run build`, `astro dev --background`, `astro dev status`, representative route checks, and `rg -n "edito/" src` using `specs/005-edito-src-consolidation/quickstart.md`
+- [X] T024 [P] [US3] Remove legacy compatibility branches from `src/data/source-map.ts`, `src/data/editorial-pages.ts`, `src/data/navigation.ts`, and `src/content.config.ts` once `src/content/editorial/` is authoritative
+- [X] T025 [US3] Delete the legacy source tree under `edito/` after migrated-content parity passes
+- [X] T026 [US3] Sweep remaining `edito/` references in `AGENTS.md`, `.specify/memory/constitution.md`, `src/data/source-map.ts`, and `specs/005-edito-src-consolidation/quickstart.md` so no runtime or governance dependency remains
+- [X] T027 [US3] Run deletion-readiness validation with `npm run build`, `astro dev --background`, `astro dev status`, representative route checks, and `rg -n "edito/" src` using `specs/005-edito-src-consolidation/quickstart.md`
 
 **Checkpoint**: `edito/` is gone, the site still builds and runs, and no runtime app code depends on the legacy folder
 
@@ -102,8 +102,8 @@
 
 **Purpose**: Finish cleanup and capture final validation evidence across all stories
 
-- [ ] T028 [P] Clean up obsolete route branches, migration comments, and style leftovers in `src/pages/index.astro`, `src/pages/[...slug].astro`, `src/pages/ressources/blog/motivation/[slug].astro`, and `src/styles/global.css`
-- [ ] T029 Run the full end-to-end validation checklist in `specs/005-edito-src-consolidation/quickstart.md` and record any skipped gate or residual risk in `specs/005-edito-src-consolidation/plan.md`
+- [X] T028 [P] Clean up obsolete route branches, migration comments, and style leftovers in `src/pages/index.astro`, `src/pages/[...slug].astro`, `src/pages/ressources/blog/motivation/[slug].astro`, and `src/styles/global.css`
+- [X] T029 Run the full end-to-end validation checklist in `specs/005-edito-src-consolidation/quickstart.md` and record any skipped gate or residual risk in `specs/005-edito-src-consolidation/plan.md`
 
 ---
 

@@ -5,11 +5,11 @@
 Créez un compte pour explorer les premiers modules beta, préparer un premier usage et voir comment zzzbre peut aider votre équipe à mieux piloter.
 
 - [Créer un compte](https://zzzbre.com/login)
-- [Consulter les tarifs](../contenu/Tarifs/Tarifs.md)
+- [Consulter les tarifs](../pages/Tarifs/Tarifs.md)
 
 ### Besoin d'un repère ?
 
-- [Consulter la documentation](../contenu/Ressources/4%20Documentation.md)
+- [Consulter la documentation](../pages/Ressources/4%20Documentation.md)
 
 ### Parler à l'équipe
 
@@ -20,7 +20,7 @@ Créez un compte pour explorer les premiers modules beta, préparer un premier u
 
 ### Liens rapides
 
-- [Fonctionnalités](../contenu/Produit/1%20Fonctionnalités.md)
-- [Cas d'usage PME](../contenu/Cas%20d'usage/1%20PME.md)
-- [Tarifs](../contenu/Tarifs/Tarifs.md)
-- [Contact](../contenu/Contact/Contact.md)
+- [Fonctionnalités](../pages/Produit/1%20Fonctionnalités.md)
+- [Cas d'usage PME](../pages/Cas%20d'usage/1%20PME.md)
+- [Tarifs](../pages/Tarifs/Tarifs.md)
+- [Contact](../pages/Contact/Contact.md)

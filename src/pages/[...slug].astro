@@ -1,10 +1,8 @@
 ---
 import ContentBlock from "../components/content/ContentBlock.astro";
-import CtaLink from "../components/ui/CtaLink.astro";
-import StatusBadge from "../components/ui/StatusBadge.astro";
 import { editorialPages, motivationArticleLinks } from "../data/editorial-pages";
-import { renderInlineMarkdown, type Card, type ContentBlock as ContentBlockType, type EditorialPage } from "../data/source-map";
-import SiteLayout from "../layouts/SiteLayout.astro";
+import { type Card, type ContentBlock as ContentBlockType, type EditorialPage } from "../data/source-map";
+import EditorialPageLayout from "../layouts/EditorialPageLayout.astro";
 
 export function getStaticPaths() {
   return editorialPages.map((page) => ({
@@ -119,24 +117,7 @@ function groupContactBlocks(blocks: ContentBlockType[], page: EditorialPage): Co
 }
 ---
 
-<SiteLayout title={page.title} description={page.intro}>
-  <section class="hero">
-    <div class="hero__badges">
-      <StatusBadge label={heroSectionLabel} variant="section" />
-      <StatusBadge label={page.status} />
-    </div>
-    <h1>{page.title}</h1>
-    {page.subtitle && <p class="hero__intro">{page.subtitle}</p>}
-    {page.intro && <p set:html={renderInlineMarkdown(page.intro, page.sourcePath)} />}
-    {
-      page.ctas.length > 0 && (
-        <div class="hero__actions">
-          {page.ctas.map((cta) => <CtaLink cta={cta} />)}
-        </div>
-      )
-    }
-  </section>
-
+<EditorialPageLayout page={page} heroSectionLabel={heroSectionLabel}>
   {renderedBlocks.map((block, index) => <ContentBlock block={block} pageSlug={page.slug} blockIndex={index} />)}
 
   {
@@ -153,4 +134,4 @@ function groupContactBlocks(blocks: ContentBlockType[], page: EditorialPage): Co
       </section>
     )
   }
-</SiteLayout>
+</EditorialPageLayout>

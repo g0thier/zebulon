@@ -1,0 +1,29 @@
+---
+import CtaLink from "../components/ui/CtaLink.astro";
+import StatusBadge from "../components/ui/StatusBadge.astro";
+import type { Article } from "../data/source-map";
+import SiteLayout from "./SiteLayout.astro";
+
+type Props = {
+  article: Article;
+};
+
+const { article } = Astro.props;
+---
+
+<SiteLayout title={article.title} description={article.subtitle}>
+  <article>
+    <section class="hero">
+      <div class="hero__badges">
+        <StatusBadge label={article.category} variant="section" />
+        <StatusBadge label={article.status} />
+      </div>
+      <h1>{article.title}</h1>
+      {article.subtitle && <p class="hero__intro">{article.subtitle}</p>}
+      {article.questionCount > 0 && <p>{article.questionCount} questions</p>}
+      {article.cta && <div class="hero__actions"><CtaLink cta={article.cta} /></div>}
+    </section>
+
+    <slot />
+  </article>
+</SiteLayout>

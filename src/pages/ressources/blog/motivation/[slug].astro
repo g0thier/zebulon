@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 import ContentBlock from "../../../../components/content/ContentBlock.astro";
 import CtaLink from "../../../../components/ui/CtaLink.astro";
-import StatusBadge from "../../../../components/ui/StatusBadge.astro";
-import { renderInlineMarkdown, type Article } from "../../../../data/source-map";
-import SiteLayout from "../../../../layouts/SiteLayout.astro";
+import { getPageBySlug } from "../../../../data/editorial-pages";
+import type { Article } from "../../../../data/source-map";
+import BlogArticleLayout from "../../../../layouts/BlogArticleLayout.astro";
 
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
@@ -19,28 +19,24 @@ type Props = {
 };
 
 const { article } = Astro.props;
+const parentCategory = getPageBySlug(article.parentCategorySlug);
 ---
 
-<SiteLayout title={article.title} description={article.subtitle}>
-  <article>
-    <section class="hero">
-      <p class="eyebrow">{article.category}</p>
-      <StatusBadge label={article.status} />
-      <h1>{article.title}</h1>
-      {article.subtitle && <p class="hero__intro">{article.subtitle}</p>}
-      {article.questionCount > 0 && <p>{article.questionCount} questions</p>}
-      {article.cta && <CtaLink cta={article.cta} />}
+<BlogArticleLayout article={article}>
+  {parentCategory && (
+    <section class="content-block">
+      <p><a href={`/${parentCategory.slug}`}>Retour à {parentCategory.title}</a></p>
     </section>
+  )}
 
-    {article.sections.map((block) => <ContentBlock block={block} />)}
+  {article.sections.map((block) => <ContentBlock block={block} pageSlug={`ressources/blog/motivation/${article.slug}`} />)}
 
-    {
-      article.cta && (
-        <section class="content-block">
-          <h2>Commencer</h2>
-          <CtaLink cta={article.cta} />
-        </section>
-      )
-    }
-  </article>
-</SiteLayout>
+  {
+    article.cta && (
+      <section class="content-block">
+        <h2>Commencer</h2>
+        <CtaLink cta={article.cta} />
+      </section>
+    )
+  }
+</BlogArticleLayout>

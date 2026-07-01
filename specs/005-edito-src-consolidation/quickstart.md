@@ -3,8 +3,8 @@
 ## Goal
 
 Verify that the migrated Astro site reads all public editorial content from
-`src/`, preserves public routes, and supports dynamic Motivation article pages
-without relying on `edito/`.
+`src/content/editorial/`, preserves public routes, and supports dynamic
+Motivation article pages without relying on a separate legacy editorial folder.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ npm run build
 Expected outcome:
 
 - The Astro build succeeds.
-- No build step tries to read missing files from `edito/`.
+- No build step tries to read from a removed legacy editorial folder.
 - Static output includes page routes and Motivation article routes.
 
 ## 2. Development Validation
@@ -38,7 +38,7 @@ astro dev status
 Expected outcome:
 
 - The server starts successfully.
-- No startup error references `edito/`.
+- No startup error references a removed legacy editorial source.
 
 ## 3. Representative Route Checks
 
@@ -80,19 +80,18 @@ Expected outcome:
 Run:
 
 ```bash
-rg -n "edito/" src
+rg -n "legacySourcePath|currentToLegacy|legacyContentRoot|legacySourceToCurrent" src
 ```
 
 Expected outcome:
 
-- No runtime app file in `src/` depends on `edito/`.
-- Any remaining `edito/` mentions are limited to historical specs or migration
-  notes outside the runtime app surface.
+- No runtime app file in `src/` depends on legacy alias helpers or an external
+  editorial source.
 
 ## 6. Deletion Readiness Check
 
-After the route and audit checks pass, verify that deleting `edito/` does not
-change the build result or route availability.
+After the route and audit checks pass, verify that deleting the former legacy
+editorial folder does not change the build result or route availability.
 
 Expected outcome:
 
