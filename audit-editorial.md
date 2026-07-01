@@ -75,9 +75,9 @@ Sections recommandées pour `index.md` :
 - Contact et Support : contacts utiles et orientation simple.
 - Légal : base éditoriale prudente à faire valider juridiquement.
 
-## Contenus à créer ou compléter dans l'accueil
+## Sections ajoutées ou à finaliser dans l'accueil
 
-- Section Produit avec cards ou liens vers :
+- Section Produit avec cards vers :
   - Fonctionnalités ;
   - Sécurité ;
   - Intégrations ;
@@ -86,12 +86,21 @@ Sections recommandées pour `index.md` :
   - PME ;
   - Grandes entreprises ;
   - Secteurs.
+- Section Tarifs avec lien vers :
+  - Tarifs.
 - Section Ressources avec liens vers :
   - Blog ;
   - Guides ;
   - Webinaires ;
   - Documentation.
-- CTA final qui répète `Créer un compte` et propose `contact@zzzbre.com` pour les besoins spécifiques.
+- Section Clients avec lien vers :
+  - Études de cas.
+- Section À propos avec cards vers :
+  - Équipe ;
+  - Carrières ;
+  - Presse.
+- Sections Support, Contact et Légal avec liens vers les pages dédiées.
+- À finaliser ensuite : CTA final qui répète `Créer un compte` et propose `contact@zzzbre.com` pour les besoins spécifiques.
 
 ## Manques ou confirmations nécessaires
 
@@ -100,7 +109,7 @@ Sections recommandées pour `index.md` :
 - Preuves client : aucun témoignage, chiffre, logo client ou cas validé n'est disponible. Ne pas inventer de preuve.
 - Légal : `contenu/Légal/Légal.md` doit être validé juridiquement avant usage comme document contractuel définitif.
 - Astro : aucun `package.json`, `astro.config.*` ou dossier `src/` n'a été trouvé dans le repo. La future intégration devra créer la structure technique.
-- Navigation : il faut décider quels liens apparaissent dans le header, le footer et les sections de l'accueil.
+- Navigation : les sections de l'accueil pointent maintenant vers les principales pages front ; il reste à décider quels liens apparaissent dans le header et le footer Astro.
 
 ## Risques éditoriaux
 
@@ -115,20 +124,19 @@ Sections recommandées pour `index.md` :
 
 - Construire le site comme un ensemble de pages front, pas comme une page unique.
 - Garder `index.md` court et orienté navigation.
-- Transformer les sections de l'accueil en composants Astro simples : Hero, Benefits, ProductLinks, UseCaseCards, PricingLink, ResourceLinks, FinalCTA, Footer.
+- Transformer les sections de l'accueil en composants Astro simples : Hero, Benefits, ProductLinks, UseCaseCards, PricingLink, ResourceLinks, ClientLink, AboutLinks, SupportLink, ContactLink, LegalLink, FinalCTA, Footer.
 - Garder les pages longues pour les routes dédiées : Produit, Cas d'usage, Tarifs, Sécurité, Ressources, Contact, Support et Légal.
 - Utiliser les fichiers Markdown comme source éditoriale, puis définir une convention de liens et d'assets pour Astro.
 - Prévoir un lien clair vers la page Légal, avec mention interne que la validation juridique reste nécessaire.
 
 ## Conclusion actionnable
 
-Le contenu éditorial est suffisant pour démarrer un site vitrine Astro multi-pages. La priorité est maintenant de renforcer `contenu/index.md` comme hub d'accueil, en ajoutant progressivement des sections de navigation vers les pages existantes.
+Le contenu éditorial est suffisant pour démarrer un site vitrine Astro multi-pages. `contenu/index.md` joue maintenant le rôle de hub d'accueil et oriente vers les principales pages front existantes.
 
 Ordre recommandé :
 
-1. Ajouter une section Cas d'usage sur `index.md`.
-2. Ajouter une section Produit sur `index.md`.
-3. Ajouter une section Ressources sur `index.md`.
-4. Ajouter un CTA final et des liens pratiques vers Contact, Support, Sécurité et Légal.
-5. Valider ou produire le visuel hero.
-6. Vérifier les assets produit avant intégration Astro.
+1. Ajouter un CTA final clair avec `Créer un compte` et `contact@zzzbre.com`.
+2. Décider les liens du header et du footer Astro.
+3. Valider ou produire le visuel hero.
+4. Vérifier les assets produit avant intégration Astro.
+5. Relire les textes de cards au moment de la création des composants Astro.
