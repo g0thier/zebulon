@@ -24,7 +24,7 @@ Point important : aucun projet Astro n'est présent dans le repo à ce stade. Ce
 
 `index.md` ne doit pas devenir une page longue qui absorbe les contenus des autres pages. Il doit rester lisible en première intention et faire pointer vers les bonnes destinations.
 
-Sections recommandées pour `index.md` :
+Sections actuelles et recommandées pour `index.md` :
 
 1. Hero
    - Titre, sous-titre, accroche, CTA `Créer un compte`, visuel produit.
@@ -38,25 +38,44 @@ Sections recommandées pour `index.md` :
 
 3. Produit
    - Texte court pour orienter vers Fonctionnalités, Sécurité, Intégrations et API.
+   - Statut : ajouté.
    - Objectif : aider le visiteur à comprendre ce que zzzbre permet aujourd'hui et ce qui est en développement.
 
 4. Cas d'usage
    - Texte court : découvrir comment zzzbre aide selon le contexte d'entreprise.
    - Cards vers PME, Grandes entreprises et Secteurs.
+   - Statut : ajouté.
    - Objectif : ne pas tout expliquer sur l'accueil, mais envoyer vers les pages dédiées.
 
 5. Tarifs
    - Résumé court ou lien vers la page Tarifs.
+   - Statut : ajouté.
    - Objectif : rendre l'accès aux offres visible sans répéter toute la FAQ.
 
 6. Ressources
    - Liens vers Blog, Guides, Webinaires et Documentation.
+   - Statut : ajouté.
    - Objectif : montrer que le site a une profondeur éditoriale.
 
-7. Contact et réassurance
+7. Clients
+   - Lien vers Études de cas.
+   - Statut : ajouté.
+   - Objectif : préparer les futurs retours d'expérience sans inventer de preuve client.
+
+8. À propos
+   - Liens vers Équipe, Carrières et Presse.
+   - Statut : ajouté.
+   - Objectif : donner du contexte sur le projet, la vision et les informations corporate.
+
+9. Support, Contact et Légal
+   - Liens vers les pages dédiées.
+   - Statut : ajouté.
+   - Objectif : orienter les demandes pratiques et les informations de confiance.
+
+10. CTA final
    - CTA final `Créer un compte`.
    - Contact alternatif pour les besoins spécifiques.
-   - Liens Support, Sécurité et Légal.
+   - Statut : à ajouter.
 
 ## Pages front déjà prêtes
 
@@ -75,7 +94,7 @@ Sections recommandées pour `index.md` :
 - Contact et Support : contacts utiles et orientation simple.
 - Légal : base éditoriale prudente à faire valider juridiquement.
 
-## Sections ajoutées ou à finaliser dans l'accueil
+## Sections ajoutées dans l'accueil
 
 - Section Produit avec cards vers :
   - Fonctionnalités ;
@@ -100,7 +119,8 @@ Sections recommandées pour `index.md` :
   - Carrières ;
   - Presse.
 - Sections Support, Contact et Légal avec liens vers les pages dédiées.
-- À finaliser ensuite : CTA final qui répète `Créer un compte` et propose `contact@zzzbre.com` pour les besoins spécifiques.
+
+À finaliser ensuite : CTA final qui répète `Créer un compte` et propose `contact@zzzbre.com` pour les besoins spécifiques.
 
 ## Manques ou confirmations nécessaires
 
@@ -109,7 +129,7 @@ Sections recommandées pour `index.md` :
 - Preuves client : aucun témoignage, chiffre, logo client ou cas validé n'est disponible. Ne pas inventer de preuve.
 - Légal : `contenu/Légal/Légal.md` doit être validé juridiquement avant usage comme document contractuel définitif.
 - Astro : aucun `package.json`, `astro.config.*` ou dossier `src/` n'a été trouvé dans le repo. La future intégration devra créer la structure technique.
-- Navigation : les sections de l'accueil pointent maintenant vers les principales pages front ; il reste à décider quels liens apparaissent dans le header et le footer Astro.
+- Navigation : `structure.md` décrit maintenant l'accueil comme hub de navigation ; il reste à décider quels liens apparaissent dans le header et le footer Astro.
 
 ## Risques éditoriaux
 

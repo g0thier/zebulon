@@ -19,7 +19,7 @@
 
 ### Produit
 
-- Texte : Découvrez les premiers modules de zzzbre, les garanties disponibles et les développements prévus pour connecter progressivement votre pilotage aux données de l'entreprise.
+- Texte : Découvrez les premiers modules de zzzbre et les développements prévus pour connecter progressivement votre pilotage aux données de l'entreprise.
 
 - cards :
   - Fonctionnalités

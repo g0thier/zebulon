@@ -15,6 +15,20 @@ Accueil
 │
 ├── Ressources
 │   ├── Blog
+│   │   ├── Pilotage PME
+│   │   ├── Leadership et engagement
+│   │   │   └── Série Motivation
+│   │   │       ├── Théorie X-Y
+│   │   │       ├── Identité Pro
+│   │   │       ├── Besoins de Maslow
+│   │   │       ├── Autodétermination
+│   │   │       ├── Attentes
+│   │   │       ├── Équité
+│   │   │       ├── Besoins acquis
+│   │   │       └── Mimétisme
+│   │   ├── Ateliers et décision
+│   │   ├── Indicateurs et tableaux de bord
+│   │   └── IA appliquée au management
 │   ├── Guides
 │   ├── Webinaires
 │   └── Documentation
