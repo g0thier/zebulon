@@ -1,14 +1,160 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/webinaires");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Webinaires"
+  description="Les vidéos zzzbre expliqueront pas à pas comment choisir le bon format, préparer une session, animer les échanges et transformer les résultats en actions concrètes."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Webinaires</h1>
+    <p class="hero__intro">Des sessions vidéo arrivent pour vous aider à utiliser les quiz, les ateliers et les méthodes de pilotage disponibles dans zzzbre.</p>
+    <p>Les vidéos zzzbre expliqueront pas à pas comment choisir le bon format, préparer une session, animer les échanges et transformer les résultats en actions concrètes.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--sessions-video-a-venir">
+    <h2>Sessions vidéo à venir</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Quiz Motivation</h3>
+    </div>
+    <p>Comprendre comment lancer une session de quiz Motivation, interpréter les réponses avec prudence et utiliser les résultats pour ouvrir un échange utile avec l&#039;équipe.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Paper Brain</h3>
+    </div>
+    <p>Apprendre à générer beaucoup d&#039;idées en peu de temps, limiter les prises de parole dominantes et favoriser l&#039;intelligence collective.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>On continue, arrête, tente</h3>
+    </div>
+    <p>Organiser un retour d&#039;expérience simple pour identifier ce qu&#039;il faut conserver, arrêter ou tester dans une équipe.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Défectuologie</h3>
+    </div>
+    <p>Partir des problèmes concrets, identifier les irritants et faire émerger rapidement des solutions utiles.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Speed Boat</h3>
+    </div>
+    <p>Visualiser une situation complexe, faire émerger les freins réels et transformer le diagnostic collectif en actions.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Matrice croisée</h3>
+    </div>
+    <p>Stimuler la créativité par combinaison d&#039;idées, sortir des schémas classiques et transformer des idées en concepts.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Mind Mapping</h3>
+    </div>
+    <p>Structurer visuellement un sujet, explorer plusieurs pistes et organiser les idées issues d&#039;un travail collectif.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Six chapeaux de Bono</h3>
+    </div>
+    <p>Structurer la réflexion collective, explorer un sujet sous plusieurs angles et faciliter une prise de décision plus équilibrée.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Design Thinking</h3>
+    </div>
+    <p>Comprendre les besoins réels des utilisateurs, prototyper rapidement et réduire les risques en testant tôt les idées.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>World Café</h3>
+    </div>
+    <p>Faire travailler de grands groupes, croiser les points de vue et transformer les échanges en pistes d&#039;action concrètes.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    <dt>Bouton</dt>
+    <dd>Demander en priorité</dd>
+    </dl>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--demander-une-video-en-priorite">
+    <h2>Demander une vidéo en priorité</h2>
+    <p>Vous voulez qu&#039;une vidéo soit produite en premier pour votre équipe ? Indiquez-nous la session qui vous intéresse et le contexte dans lequel vous souhaitez l&#039;utiliser.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>Vous pouvez aussi explorer directement la plateforme et tester les premiers quiz et ateliers disponibles.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

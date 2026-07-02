@@ -1,14 +1,67 @@
 ---
 import HeroSection from "../components/pages/HeroSection.astro";
 import SharedPageSections from "../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../data/site-pages";
 import PageLayout from "../layouts/PageLayout.astro";
-
-const page = getStaticPage("/support");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Besoin d&#39;aide sur zzzbre ?"
+  description="zzzbre est en beta. Si vous rencontrez un problème ou si vous avez besoin d'un repère pour utiliser la plateforme, contactez-nous avec le plus de contexte possible."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Support</span>
+    </div>
+    <h1>Besoin d&#39;aide sur zzzbre ?</h1>
+    <p class="hero__intro">Le support zzzbre vous aide à résoudre les questions liées à l&#39;accès, aux invitations, à la configuration, aux questionnaires, aux ateliers, aux données et à la sécurité.</p>
+    <p>zzzbre est en beta. Si vous rencontrez un problème ou si vous avez besoin d&#039;un repère pour utiliser la plateforme, contactez-nous avec le plus de contexte possible.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--list content-block--quand-contacter-le-support">
+    <h2>Quand contacter le support ?</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Connexion ou accès au compte.</span>
+    </li>
+    <li>
+    <span>Invitation d&#039;équipe ou ajout de collaborateurs.</span>
+    </li>
+    <li>
+    <span>Configuration de l&#039;espace, des rôles ou des permissions.</span>
+    </li>
+    <li>
+    <span>Lancement ou suivi d&#039;un questionnaire.</span>
+    </li>
+    <li>
+    <span>Préparation, participation ou suivi d&#039;un atelier.</span>
+    </li>
+    <li>
+    <span>Question sur les données, les accès ou la sécurité.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--contact-support">
+    <h2>Contact support</h2>
+    <p>Pour toute demande d&#039;aide, écrivez-nous à l&#039;adresse support.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:support@zzzbre.com">support@zzzbre.com</a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--documentation">
+    <h2>Documentation</h2>
+    <p>Avant de nous contacter, vous pouvez consulter la documentation pour retrouver les repères essentiels sur la plateforme, les rôles, les questionnaires, les ateliers et les actions.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="/ressources/documentation">Consulter la documentation</a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--creer-un-compte">
+    <h2>Créer un compte</h2>
+    <p>Vous pouvez aussi créer un compte pour explorer la plateforme et tester les premiers usages disponibles.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

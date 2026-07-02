@@ -55,6 +55,10 @@ __screenshots__/
 .firebase/
 .runtimeconfig.json
 
+# Temporary files
+*.tmp
+*.swp
+
 # System files
 .DS_Store
 Thumbs.db

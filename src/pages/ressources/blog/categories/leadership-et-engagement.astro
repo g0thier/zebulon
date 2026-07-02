@@ -3,7 +3,7 @@ import ArticleSummaryCard from "../../../../components/pages/ArticleSummaryCard.
 import { getArticleSummaries } from "../../../../data/blog-articles";
 import PageLayout from "../../../../layouts/PageLayout.astro";
 
-const articles = getArticleSummaries();
+const articles = await getArticleSummaries();
 ---
 
 <PageLayout

@@ -85,3 +85,6 @@ Expected outcome:
 - No dedicated agent-context update script exists in `.specify/scripts/bash/`
   for this repository state, so there is no extra post-plan automation step to
   run here.
+- Final authoritative public owners after consolidation:
+  - static routes live in `src/pages/**/*.astro`
+  - Motivation article entries live in `src/content/blog/motivation/*.md`

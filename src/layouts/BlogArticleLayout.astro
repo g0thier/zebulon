@@ -11,17 +11,17 @@ type Props = {
 const { article } = Astro.props;
 ---
 
-<SiteLayout title={article.title} description={article.subtitle}>
+<SiteLayout title={article.data.title} description={article.data.subtitle}>
   <article>
     <section class="hero">
       <div class="hero__badges">
-        <StatusBadge label={article.category} variant="section" />
-        <StatusBadge label={article.status} />
+        <StatusBadge label={article.data.category} variant="section" />
+        <StatusBadge label={article.data.status} />
       </div>
-      <h1>{article.title}</h1>
-      {article.subtitle && <p class="hero__intro">{article.subtitle}</p>}
-      {article.questionCount > 0 && <p>{article.questionCount} questions</p>}
-      {article.cta && <div class="hero__actions"><CtaLink cta={article.cta} /></div>}
+      <h1>{article.data.title}</h1>
+      {article.data.subtitle && <p class="hero__intro">{article.data.subtitle}</p>}
+      {article.data.questionCount > 0 && <p>{article.data.questionCount} questions</p>}
+      {article.data.cta && <div class="hero__actions"><CtaLink cta={article.data.cta} /></div>}
     </section>
 
     <slot />

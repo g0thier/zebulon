@@ -1,14 +1,48 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/a-propos/presse");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Presse"
+  description="zzzbre est un SaaS destiné aux dirigeants et membres de direction qui veulent transformer les concepts MBA, la recherche académique et les méthodes de management en outils concrets d'analyse, de décision et de pilotage."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">À propos</span>
+    </div>
+    <h1>Presse</h1>
+    <p class="hero__intro">Retrouvez les informations essentielles pour parler de zzzbre et de sa vision du pilotage stratégique par la donnée.</p>
+    <p>zzzbre est un SaaS destiné aux dirigeants et membres de direction qui veulent transformer les concepts MBA, la recherche académique et les méthodes de management en outils concrets d&#039;analyse, de décision et de pilotage.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--a-propos-de-zzzbre">
+    <h2>À propos de zzzbre</h2>
+    <p>zzzbre aide les entreprises à mieux structurer leur pilotage stratégique avec la donnée. La plateforme transforme progressivement les concepts de stratégie, management, RH, innovation, gouvernance, data et IA en outils utilisables au quotidien.</p>
+    <p>Le projet a été initié en 2026 par Gauthier Rammault avec une ambition : rendre les méthodes de pilotage plus accessibles, plus actionnables et plus utiles aux dirigeants comme aux équipes.</p>
+    </section>
+    <section class="content-block content-block--text content-block--boilerplate">
+    <h2>Boilerplate</h2>
+    <p>zzzbre est un SaaS de pilotage stratégique par la donnée, conçu pour les dirigeants et membres de direction. La plateforme transforme les concepts étudiés en MBA, la recherche académique et les méthodes de management en outils concrets pour analyser, décider, aligner les équipes et suivre l&#039;exécution.</p>
+    </section>
+    <section class="content-block content-block--text content-block--ressources-presse">
+    <h2>Ressources presse</h2>
+    <p>Des éléments presse peuvent être partagés selon les besoins : logo, captures produit, présentation courte, visuels et éléments de contexte sur le projet. Contactez-nous pour recevoir les éléments disponibles.</p>
+    </section>
+    <section class="content-block content-block--text content-block--contact-presse">
+    <h2>Contact presse</h2>
+    <p>Pour une demande presse, une interview, un article ou une précision sur le projet, contactez-nous à l&#039;adresse dédiée.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:press@zzzbre.com">press@zzzbre.com</a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--demandes-generales">
+    <h2>Demandes générales</h2>
+    <p>Pour les demandes qui ne concernent pas la presse, vous pouvez contacter l&#039;équipe zzzbre.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

@@ -1,9 +1,3 @@
----
-type Props = {
-  html: string;
-};
-
-const { html } = Astro.props;
----
-
-<section class="hero" set:html={html} />
+<section class="hero">
+  <slot />
+</section>

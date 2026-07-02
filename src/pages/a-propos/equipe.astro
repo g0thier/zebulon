@@ -1,14 +1,103 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/a-propos/equipe");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Une équipe fondatrice engagée sur le pilotage des entreprises"
+  description="Le projet avance avec une conviction simple : les méthodes de management doivent devenir plus concrètes, plus accessibles et plus faciles à relier aux décisions du quotidien."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">À propos</span>
+    </div>
+    <h1>Une équipe fondatrice engagée sur le pilotage des entreprises</h1>
+    <p class="hero__intro">zzzbre est construit pour aider les entreprises à mieux piloter avec plus de clarté, des données utiles et des pratiques de leadership plus partagées.</p>
+    <p>Le projet avance avec une conviction simple : les méthodes de management doivent devenir plus concrètes, plus accessibles et plus faciles à relier aux décisions du quotidien.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block">
+    <h2>L&#39;Équipe</h2>
+    <article class="editorial-card editorial-card--feature">
+    <div class="editorial-card__header">
+    <span class="editorial-card__badge">Fondateur</span>
+    </div>
+    <p>Gauthier Rammault porte la vision produit, la conception de la plateforme, le pilotage technique et le développement des premiers usages de zzzbre.</p>
+    <p>Son rôle consiste à transformer les concepts de management, de stratégie, de RH, d&#039;innovation et de data driven management en outils utilisables par les dirigeants, leaders et équipes.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Définir la vision produit et les priorités de développement.</span>
+    </li>
+    <li>
+    <span>Concevoir les premiers modules disponibles en beta.</span>
+    </li>
+    <li>
+    <span>Piloter la construction technique de la plateforme.</span>
+    </li>
+    <li>
+    <span>Tester les usages avec les premières équipes.</span>
+    </li>
+    <li>
+    <span>Échanger avec les utilisateurs pour améliorer le produit.</span>
+    </li>
+    </ul>
+    </div>
+    </article>
+    </section>
+    <section class="content-block content-block--list content-block--pourquoi-zzzbre">
+    <h2>Pourquoi zzzbre</h2>
+    <p>zzzbre est né d&#039;un besoin clair : aider les entreprises à mieux structurer leur pilotage sans empiler les outils, les réunions ou les tableaux de bord inutilisés.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Simplifier la manière de clarifier les priorités.</span>
+    </li>
+    <li>
+    <span>Rendre les méthodes de management plus concrètes.</span>
+    </li>
+    <li>
+    <span>Relier les données, les décisions et les actions.</span>
+    </li>
+    <li>
+    <span>Donner plus de place aux retours collaborateurs.</span>
+    </li>
+    <li>
+    <span>Aider les équipes à contribuer avec plus de clarté.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--ce-qui-guide-le-projet">
+    <h2>Ce qui guide le projet</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Clarté : rendre les sujets complexes plus lisibles.</span>
+    </li>
+    <li>
+    <span>Simplicité : créer des outils faciles à comprendre et à utiliser.</span>
+    </li>
+    <li>
+    <span>Confiance : protéger les accès, les données et les usages.</span>
+    </li>
+    <li>
+    <span>Exécution : relier les idées et décisions à des actions concrètes.</span>
+    </li>
+    <li>
+    <span>Leadership contemporain : aider les entreprises à faire émerger plus de leaders, pas seulement plus de reporting.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--decouvrir-zzzbre">
+    <h2>Découvrir zzzbre</h2>
+    <p>Vous pouvez créer un compte pour explorer la plateforme ou nous contacter pour échanger sur votre contexte.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

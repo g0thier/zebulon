@@ -1,14 +1,128 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/a-propos/carrieres");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Carrières"
+  description="Cette page présente les métiers qui pourraient accompagner la croissance de zzzbre. Ils ne correspondent pas à des postes ouverts aujourd'hui, mais donnent une idée des expertises qui feront vivre le produit demain."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">À propos</span>
+    <span class="status-badge status-badge--status">Aucun poste ouvert pour le moment</span>
+    </div>
+    <h1>Carrières</h1>
+    <p class="hero__intro">zzzbre est en beta. L&#39;équipe se construit progressivement autour d&#39;une ambition : rendre le pilotage stratégique par la donnée plus accessible aux entreprises.</p>
+    <p>Cette page présente les métiers qui pourraient accompagner la croissance de zzzbre. Ils ne correspondent pas à des postes ouverts aujourd&#039;hui, mais donnent une idée des expertises qui feront vivre le produit demain.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--pourquoi-rejoindre-zzzbre">
+    <h2>Pourquoi rejoindre zzzbre</h2>
+    <p>zzzbre construit une plateforme de data driven management pour aider les dirigeants et membres de direction à analyser, décider, aligner les équipes et suivre l&#039;exécution.</p>
+    <p>Le projet avance avec une culture de sobriété, de créativité, de collaboration et d&#039;innovation. L&#039;objectif est de créer des outils utiles, compréhensibles et durables plutôt que d&#039;empiler des fonctionnalités sans usage réel.</p>
+    </section>
+    <section class="content-block content-block--text content-block--produit-design-et-contenu">
+    <h2>Produit, design et contenu</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Illustrateur</h3>
+    </div>
+    <p>Que ce soit pour réaliser des variantes de Marcel, notre mascotte présente sur la boutique, dans le site et l&#039;application ; ou pour réaliser des images pour alimenter nos modules. Vous aurez besoin de maitriser la suite <a href="https://www.adobe.com">Adobe</a> ou <a href="https://affinity.serif.com">Affinity</a>, avoir un bon coup de crayon et un grain de folie pour donner vie à notre concept.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>UI/UX Designer</h3>
+    </div>
+    <dl>
+    <dt>Si vous avez toujours rêvé de créer le plus gros design system de la planète, vous avez tapé à la bonne porte. Notre plateforme est déclinée en 3 parties imbriquées</dt>
+    <dd>site vitrine, plateforme et mobile, avec une interface commune. Nous avons besoin que vous sachiez décliner vos créations <a href="https://www.figma.com">Figma</a> en <a href="https://storybook.js.org">Storybook</a> avec <a href="https://stenciljs.com">Stencil</a> et <a href="https://tailwindcss.com">Tailwind</a>.</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Webmaster rédacteur</h3>
+    </div>
+    <p>Pour attirer le chaland et les agents, nous avons besoin de vos qualités rédactionnelles sur notre site vitrine et notre futur blog. À l&#039;aise avec <a href="https://astro.build">Astro</a> pour rédiger un texte compatible SEO, vous pourriez exercer votre art entre quelques balises <a href="https://developer.mozilla.org/fr/docs/Web/HTML">HTML</a> ou autre formatage <a href="https://www.markdownguide.org">Markdown</a> pour parler de business, de framework, de modèles et de deep learning.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--engineering-et-plateforme">
+    <h2>Engineering et plateforme</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Full Stack React</h3>
+    </div>
+    <p>Notre plateforme destinée aux leaders est développée avec <a href="https://react.dev">React</a>. Les composants de l&#039;interface utilisateur sont créés avec <a href="https://stenciljs.com">Stencil</a> et <a href="https://ionicframework.com">Ionic</a>. Les fonctions backend sont développées en <a href="https://nodejs.org">Node.js</a> et déployées sur <a href="https://firebase.google.com">Firebase</a>, qui assure également l&#039;hébergement, l&#039;authentification ainsi que la gestion de la <a href="https://firebase.google.com/products/realtime-database">Realtime Database</a>.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Full Stack Angular</h3>
+    </div>
+    <p>Notre application mobile destinée aux collaborateurs est développée avec <a href="https://angular.dev">Angular</a>. Les composants de l&#039;interface utilisateur sont créés avec <a href="https://stenciljs.com">Stencil</a> et <a href="https://ionicframework.com">Ionic</a>. Les fonctions backend sont développées en <a href="https://nodejs.org">Node.js</a> et déployées sur <a href="https://firebase.google.com">Firebase</a>, qui assure également l&#039;hébergement, l&#039;authentification ainsi que la gestion de la <a href="https://firebase.google.com/products/realtime-database">Realtime Database</a>.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>DevOps</h3>
+    </div>
+    <p>Notre monorepository <a href="https://nx.dev">Nx</a> regroupe des projets <a href="https://astro.build">Astro</a>, <a href="https://react.dev">React</a>, <a href="https://angular.dev">Angular</a>, <a href="https://stenciljs.com">Stencil</a> et <a href="https://nodejs.org">Node.js</a>. Vous ferez en sorte que tout ce petit monde fonctionne comme une horloge. Vous maîtrisez les pipelines CI/CD, <a href="https://www.docker.com">Docker</a>, <a href="https://github.com/features/actions">GitHub Actions</a>, <a href="https://firebase.google.com">Firebase</a>, les environnements de préproduction et de production, ainsi que l&#039;automatisation des déploiements.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>QA Engineer</h3>
+    </div>
+    <p>Chez nous, la qualité ne se résume pas à cliquer partout avant une mise en production. Vous serez garant de la fiabilité de la plateforme, de l&#039;application mobile et de nos API. Vous concevez une stratégie de tests automatisés, des campagnes de tests fonctionnels et de régression, et accompagnez l&#039;équipe dans l&#039;amélioration continue.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--data-ia-et-securite">
+    <h2>Data, IA et sécurité</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>AI Engineer</h3>
+    </div>
+    <p>Responsable de nos modèles et de nos outils internes, vous avez déjà jeté un oeil à <a href="https://github.com/soda-inria/tabicl">TabICLv2</a> et ambitionnez de l&#039;utiliser. Vous connaissez les classiques <a href="https://scikit-learn.org">Scikit-learn</a>, <a href="https://fastapi.tiangolo.com">FastAPI</a> et <a href="https://streamlit.io">Streamlit</a>. Vous savez mettre en production, fine tuner et concevoir un RAG entre deux scraps.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>White Hat</h3>
+    </div>
+    <p>Vous avez pensé à ce que nous n&#039;avons pas vu, pas réfléchi, pas implémenté. Votre mission si vous l&#039;acceptez est de veiller à la sécurité informatique et mettre en place les formations internes pour contrer le social engineering des membres de l&#039;équipe. Vous aurez aussi la joie de concevoir les premiers bug bounty et CTF car nous adorons les easter eggs.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--go-to-market">
+    <h2>Go-to-market</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Business Developer</h3>
+    </div>
+    <p>Notre ambition est grande, il ne manque plus que vous pour la partager. Vous êtes chargé de présenter notre solution, développer notre portefeuille de clients et nouer des partenariats durables. À l&#039;aise en prospection comme en démonstration, vous savez convaincre sans survendre et faire grandir l&#039;entreprise avec nous.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--support-et-customer-success">
+    <h2>Support et customer success</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Support &amp; Customer Success</h3>
+    </div>
+    <p>Vous êtes le premier contact de nos leaders et de leurs collaborateurs. Vous les accompagnez dans la découverte de la plateforme, répondez à leurs questions et remontez leurs retours afin d&#039;améliorer continuellement nos produits. Organisé, pédagogue et à l&#039;écoute, vous aimez résoudre les problèmes avec le sourire.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--decouvrir-le-produit">
+    <h2>Découvrir le produit</h2>
+    <p>Le meilleur moyen de comprendre les futurs métiers autour de zzzbre reste de découvrir les premiers usages disponibles.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

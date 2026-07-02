@@ -1,14 +1,114 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/documentation");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Documentation"
+  description="La documentation zzzbre aide les administrateurs, leaders et collaborateurs à utiliser la plateforme avec plus de clarté : rôles, accès, questionnaires, ateliers, plans d'action et sécurité."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Documentation</h1>
+    <p class="hero__intro">Retrouvez les repères essentiels pour comprendre zzzbre, configurer votre espace et accompagner vos équipes dans les premiers usages.</p>
+    <p>La documentation zzzbre aide les administrateurs, leaders et collaborateurs à utiliser la plateforme avec plus de clarté : rôles, accès, questionnaires, ateliers, plans d&#039;action et sécurité.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--documentation-plateforme">
+    <h2>Documentation plateforme</h2>
+    <p>Cette partie aide les administrateurs et leaders à organiser l&#039;espace zzzbre, structurer les usages et garder une lecture claire des droits, des données et des actions.</p>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Démarrer avec zzzbre</h3>
+    </div>
+    <p>Créer son espace, comprendre les premiers écrans et choisir un premier usage à tester.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Gérer les rôles et permissions</h3>
+    </div>
+    <p>Comprendre les rôles owner, administrateur, leader et collaborateur, puis ajuster les accès selon les responsabilités.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Utiliser les questionnaires</h3>
+    </div>
+    <p>Lancer un questionnaire, comprendre son objectif et exploiter les réponses avec prudence.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Préparer et suivre un atelier</h3>
+    </div>
+    <p>Cadrer un atelier, inviter les bonnes personnes, collecter les idées et transformer les échanges en décisions.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Suivre les plans d&#39;action</h3>
+    </div>
+    <p>Relier les décisions à des actions visibles, suivre l&#039;avancement et garder une trace du pilotage.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Sécurité et accès</h3>
+    </div>
+    <p>Appliquer les bonnes pratiques de gestion des accès, de confidentialité et de vérification régulière des droits.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--documentation-collaborateur-mobile">
+    <h2>Documentation collaborateur (mobile)</h2>
+    <p>Cette partie aide les collaborateurs à participer simplement aux usages zzzbre : répondre, contribuer, comprendre leur rôle et suivre les actions qui les concernent.</p>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Se connecter</h3>
+    </div>
+    <p>Accéder à son espace, retrouver son profil et comprendre les informations visibles.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Répondre à un questionnaire</h3>
+    </div>
+    <p>Participer à une session, comprendre le cadre du questionnaire et répondre de manière utile.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Participer à un atelier</h3>
+    </div>
+    <p>Contribuer à une réflexion collective, partager des idées et suivre les décisions prises.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Suivre ses actions</h3>
+    </div>
+    <p>Identifier les actions qui vous concernent et garder de la visibilité sur leur avancement.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Comprendre ses accès</h3>
+    </div>
+    <p>Savoir quelles pages, secteurs ou usages sont accessibles selon votre rôle dans l&#039;entreprise.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--besoin-d-aide">
+    <h2>Besoin d&#39;aide ?</h2>
+    <p>Une question sur la plateforme, les accès, les questionnaires ou les ateliers ? Contactez le support zzzbre.</p>
+    <dl>
+    <dt>Support</dt>
+    <dd>support@zzzbre.com</dd>
+    </dl>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>Vous pouvez créer un compte, explorer la plateforme et choisir un premier usage à tester avec votre équipe.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

@@ -1,14 +1,156 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/cas-d-usage/secteurs");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Une solution adaptée à votre réalité terrain"
+  description="Les secteurs cités ici sont des exemples d'adaptation. zzzbre n'est pas une solution verticale figée : la plateforme vise à rendre les méthodes de management, les retours collaborateurs et les données de pilotage plus actionnables, quel que soit le contexte."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Cas d&#39;usage</span>
+    </div>
+    <h1>Une solution adaptée à votre réalité terrain</h1>
+    <p class="hero__intro">Chaque secteur a ses contraintes, ses rythmes et ses indicateurs. zzzbre aide à structurer le pilotage sans perdre le lien avec le terrain, les équipes et les décisions à prendre.</p>
+    <p>Les secteurs cités ici sont des exemples d&#039;adaptation. zzzbre n&#039;est pas une solution verticale figée : la plateforme vise à rendre les méthodes de management, les retours collaborateurs et les données de pilotage plus actionnables, quel que soit le contexte.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--une-base-commune-des-usages-differents">
+    <h2>Une base commune, des usages différents</h2>
+    <p>Une entreprise de conseil, un réseau retail, une usine, une startup ou un organisme de formation ne pilotent pas les mêmes sujets au quotidien. Pourtant, les besoins de fond se rejoignent souvent : comprendre ce qui se passe dans les équipes, faire émerger les bons signaux, structurer les décisions et suivre les actions dans le temps.</p>
+    <p>zzzbre permet d&#039;aborder ces enjeux avec une logique de data driven management : collecter des retours utiles, organiser les informations, soutenir les leaders et transformer les échanges en décisions plus concrètes.</p>
+    </section>
+    <section class="content-block content-block--list content-block--services-et-conseil">
+    <h2>Services et conseil</h2>
+    <p>Dans les services et le conseil, la valeur repose fortement sur l&#039;expertise, la qualité de la relation client et la capacité des équipes à apprendre vite.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Organiser des ateliers pour cadrer une mission, un problème client ou une amélioration interne.</span>
+    </li>
+    <li>
+    <span>Suivre les plans d&#039;action issus des retours d&#039;équipe ou des échanges client.</span>
+    </li>
+    <li>
+    <span>Comprendre la motivation, la charge ressentie et la cohésion des consultants ou équipes projet.</span>
+    </li>
+    <li>
+    <span>Faire émerger des leaders capables d&#039;animer des sujets transverses.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--retail-et-reseaux-multi-sites">
+    <h2>Retail et réseaux multi-sites</h2>
+    <p>Dans le retail ou les réseaux multi-sites, le pilotage dépend beaucoup de la qualité des remontées terrain et de la capacité à aligner plusieurs points de vente, équipes ou responsables locaux.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Faire remonter les signaux terrain depuis les sites ou équipes locales.</span>
+    </li>
+    <li>
+    <span>Identifier les priorités communes sans effacer les réalités propres à chaque site.</span>
+    </li>
+    <li>
+    <span>Suivre la motivation, le bien-être et la cohésion dans des équipes distribuées.</span>
+    </li>
+    <li>
+    <span>Structurer les actions à mener après un atelier, un questionnaire ou une décision réseau.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--industrie-et-operations">
+    <h2>Industrie et opérations</h2>
+    <p>Dans l&#039;industrie et les opérations, les enjeux portent souvent sur la coordination, l&#039;amélioration continue, la sécurité organisationnelle, les irritants terrain et la performance collective.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Recueillir les retours des équipes opérationnelles sur les irritants, blocages ou pistes d&#039;amélioration.</span>
+    </li>
+    <li>
+    <span>Structurer des ateliers d&#039;amélioration continue ou d&#039;innovation terrain.</span>
+    </li>
+    <li>
+    <span>Relier les décisions prises aux actions suivies dans le temps.</span>
+    </li>
+    <li>
+    <span>Compléter les indicateurs opérationnels avec des données humaines : motivation, cohésion, compréhension des priorités.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--startups-et-scale-ups">
+    <h2>Startups et scale-ups</h2>
+    <p>Dans une startup ou une scale-up, le rythme est rapide. Les priorités changent vite, les responsabilités évoluent et le leadership doit se distribuer sans créer de confusion.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Clarifier les priorités lorsque l&#039;équipe grandit ou change de phase.</span>
+    </li>
+    <li>
+    <span>Maintenir l&#039;alignement entre fondateurs, leaders et collaborateurs.</span>
+    </li>
+    <li>
+    <span>Comprendre les signaux de motivation, d&#039;engagement et de fatigue.</span>
+    </li>
+    <li>
+    <span>Transformer les idées et retours internes en décisions et plans d&#039;action.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--associations-et-organismes-de-formation">
+    <h2>Associations et organismes de formation</h2>
+    <p>Les associations et organismes de formation doivent souvent animer des publics variés, coordonner des équipes mixtes et suivre des projets collectifs avec des ressources limitées.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Utiliser des questionnaires pour comprendre les attentes, besoins ou ressentis des participants, membres ou équipes.</span>
+    </li>
+    <li>
+    <span>Structurer des ateliers collectifs autour d&#039;un projet, d&#039;un programme ou d&#039;une amélioration.</span>
+    </li>
+    <li>
+    <span>Suivre les actions décidées après une session, une réunion ou un cycle d&#039;accompagnement.</span>
+    </li>
+    <li>
+    <span>Donner aux leaders de projet un cadre pour animer et piloter plus simplement.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--ce-que-les-secteurs-ont-en-commun">
+    <h2>Ce que les secteurs ont en commun</h2>
+    <p>Les contextes changent, mais le pilotage repose souvent sur les mêmes fondations : des collaborateurs qui comprennent le projet, des leaders capables d&#039;animer, des données utiles pour décider et des actions suivies avec clarté.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Motivation et bien-être : comprendre ce qui aide ou freine les équipes.</span>
+    </li>
+    <li>
+    <span>Leadership : donner un cadre aux personnes qui font avancer les sujets.</span>
+    </li>
+    <li>
+    <span>Données de pilotage : transformer les retours et ateliers en signaux exploitables.</span>
+    </li>
+    <li>
+    <span>Décisions : mieux structurer les choix, les priorités et les arbitrages.</span>
+    </li>
+    <li>
+    <span>Plans d&#039;action : relier les décisions à une exécution visible et suivie.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--parlons-de-votre-contexte-metier">
+    <h2>Parlons de votre contexte métier</h2>
+    <p>Votre secteur a ses propres contraintes, ses cycles et ses mots. Si vous souhaitez voir comment zzzbre peut s&#039;adapter à votre réalité terrain, contactez-nous pour cadrer un premier usage.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

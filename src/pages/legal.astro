@@ -1,14 +1,121 @@
 ---
 import HeroSection from "../components/pages/HeroSection.astro";
 import SharedPageSections from "../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../data/site-pages";
 import PageLayout from "../layouts/PageLayout.astro";
-
-const page = getStaticPage("/legal");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Informations légales"
+  description="Cette page présente les informations légales relatives au site zzzbre et à l'utilisation de la plateforme. zzzbre est un service SaaS en beta, basé en Suisse, destiné à aider les entreprises à structurer leur pilotage, leurs questionnaires, leurs ateliers et leurs actions."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Légal</span>
+    </div>
+    <h1>Informations légales</h1>
+    <p class="hero__intro">Mentions légales, conditions d&#39;utilisation, confidentialité et repères applicables à zzzbre.</p>
+    <p>Cette page présente les informations légales relatives au site zzzbre et à l&#039;utilisation de la plateforme. zzzbre est un service SaaS en beta, basé en Suisse, destiné à aider les entreprises à structurer leur pilotage, leurs questionnaires, leurs ateliers et leurs actions.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--mentions-legales">
+    <h2>Mentions légales</h2>
+    <p>Les informations administratives détaillées de zzzbre, notamment la forme juridique, le numéro d&#039;identification d&#039;entreprise ou toute autre information légale complémentaire, seront indiquées lorsque leur publication sera confirmée. Aucune information juridique non vérifiée n&#039;est affichée sur cette page.</p>
+    <p>Pour toute demande relative au site, à la plateforme, aux contenus publiés ou aux informations légales, vous pouvez contacter zzzbre à l&#039;adresse <a class="legal-inline-link" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>.</p>
+    <dl>
+    <dt>Éditeur</dt>
+    <dd class="framed-link--action">zzzbre</dd>
+    <dt>Adresse</dt>
+    <dd class="framed-link--action">Zzzbre, Pépinière Nomades, Rte des Acacias 24, 1227 Genève, Suisse</dd>
+    <dt>Contact légal</dt>
+    <dd class="framed-link framed-link--action">
+    <a class="cta-link cta-link--secondary legal-action-link" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </dd>
+    </dl>
+    <div class="data-list data-list--site">
+    <h2>Site</h2>
+    <ul>
+    <li>
+    <a class="cta-link cta-link--secondary legal-action-link" href="https://zzzbre.com">https://zzzbre.com</a>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--acces-au-site-et-a-la-plateforme">
+    <h2>Accès au site et à la plateforme</h2>
+    <p>Le site zzzbre présente le service, ses premiers usages, ses offres beta, ses ressources et ses moyens de contact. Certaines parties de la plateforme peuvent nécessiter la création d&#039;un compte, une invitation ou un accès autorisé.</p>
+    <p>L&#039;utilisateur s&#039;engage à fournir des informations exactes lors de la création ou de l&#039;utilisation de son compte, à préserver la confidentialité de ses identifiants et à signaler tout accès non autorisé ou tout incident de sécurité à <a class="legal-inline-link" href="mailto:support@zzzbre.com">support@zzzbre.com</a>.</p>
+    <p>zzzbre peut faire évoluer, suspendre ou limiter certains accès lorsque cela est nécessaire pour maintenir la sécurité, corriger un problème technique, prévenir un usage abusif ou faire évoluer la beta.</p>
+    </section>
+    <section class="content-block content-block--text content-block--conditions-d-utilisation">
+    <h2>Conditions d&#39;utilisation</h2>
+    <p>L&#039;utilisation de zzzbre doit rester conforme à l&#039;objectif du service : soutenir le pilotage, la coordination, la compréhension des équipes, les questionnaires, les ateliers, les décisions et le suivi des actions dans un cadre professionnel.</p>
+    <p>Il est interdit d&#039;utiliser zzzbre pour publier, transmettre ou stocker des contenus illicites, discriminatoires, diffamatoires, trompeurs, portant atteinte aux droits de tiers ou incompatibles avec un usage professionnel normal.</p>
+    <p>Chaque organisation utilisatrice est responsable des informations qu&#039;elle saisit dans la plateforme, des personnes qu&#039;elle invite, des rôles qu&#039;elle attribue et de l&#039;usage des données accessibles dans son espace.</p>
+    <p>Les administrateurs et leaders doivent veiller à attribuer des accès cohérents avec les responsabilités des utilisateurs et à retirer les accès qui ne sont plus nécessaires.</p>
+    </section>
+    <section class="content-block content-block--text content-block--offres-abonnements-et-beta">
+    <h2>Offres, abonnements et beta</h2>
+    <p>zzzbre est actuellement proposé en beta. Les fonctionnalités, offres, prix, quotas, rôles, modules et modalités d&#039;accès peuvent évoluer avec le développement du produit, les retours utilisateurs et les besoins opérationnels.</p>
+    <p>Les informations commerciales publiées sur le site sont fournies à titre indicatif au moment de leur affichage. Les conditions applicables à une offre, un abonnement, un accès spécifique ou un accompagnement sont celles communiquées lors de la souscription, de la création de compte ou de l&#039;échange avec l&#039;équipe zzzbre.</p>
+    <p>Lorsqu&#039;un abonnement ou une prestation payante est proposé, les informations essentielles relatives au prix, à la durée, au périmètre inclus, aux modalités de paiement et aux éventuelles conditions particulières doivent être précisées avant validation.</p>
+    <p>Les demandes d&#039;adaptation, de déploiement d&#039;équipe, d&#039;accompagnement ou de besoin spécifique peuvent être adressées à <a class="legal-inline-link" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>.</p>
+    </section>
+    <section class="content-block content-block--text content-block--donnees-personnelles-et-confidentialite">
+    <h2>Données personnelles et confidentialité</h2>
+    <p>zzzbre accorde une attention particulière aux données liées aux comptes, aux organisations, aux équipes, aux rôles, aux questionnaires, aux ateliers, aux actions, aux accès et aux échanges avec le support.</p>
+    <p>Les données collectées ou traitées servent notamment à créer et gérer les comptes, fournir l&#039;accès à la plateforme, organiser les espaces d&#039;équipe, permettre l&#039;utilisation des fonctionnalités, assurer le support, améliorer le service, sécuriser les accès et communiquer avec les utilisateurs.</p>
+    <p>Les données peuvent comprendre des informations d&#039;identification, des informations professionnelles, des paramètres d&#039;accès, des contenus saisis dans la plateforme, des réponses à des questionnaires, des contributions à des ateliers, des actions suivies, des informations techniques de connexion et des échanges avec zzzbre.</p>
+    <p>Les données doivent être utilisées dans un cadre clair, limité aux usages prévus et cohérent avec les droits configurés dans la plateforme. zzzbre ne demande pas aux utilisateurs de saisir des données sensibles qui ne seraient pas nécessaires à l&#039;usage professionnel du service.</p>
+    <p>Les utilisateurs et organisations restent responsables de vérifier que les informations qu&#039;ils ajoutent dans la plateforme sont pertinentes, proportionnées et conformes à leurs propres obligations internes et légales.</p>
+    <p>Les données personnelles sont traitées selon le droit suisse applicable, notamment la Loi fédérale sur la protection des données. Lorsque d&#039;autres règles sont applicables à une organisation utilisatrice, celle-ci doit s&#039;assurer que son usage de zzzbre respecte également ces exigences.</p>
+    <p>Pour toute demande concernant l&#039;accès, la correction, la suppression, la limitation ou toute autre question liée aux données personnelles, contactez zzzbre à <a class="legal-inline-link" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>.</p>
+    </section>
+    <section class="content-block content-block--text content-block--securite-et-acces">
+    <h2>Sécurité et accès</h2>
+    <p>zzzbre met en place des mesures organisationnelles et techniques destinées à protéger les accès, limiter les usages non autorisés et préserver la confidentialité des informations traitées dans la plateforme.</p>
+    <p>La sécurité repose aussi sur les pratiques des utilisateurs et des organisations : choix de mots de passe robustes, protection des identifiants, vérification régulière des accès, attribution prudente des rôles et signalement rapide des incidents.</p>
+    <p>Aucune plateforme ne peut garantir une sécurité absolue. zzzbre s&#039;engage à faire évoluer ses pratiques de sécurité avec le produit, les risques identifiés et les besoins des utilisateurs.</p>
+    <p>Toute question liée à un accès, une permission, une anomalie ou un incident de sécurité peut être envoyée à <a class="legal-inline-link" href="mailto:support@zzzbre.com">support@zzzbre.com</a>.</p>
+    </section>
+    <section class="content-block content-block--text content-block--cookies">
+    <h2>Cookies</h2>
+    <p>Le site et la plateforme peuvent utiliser des cookies ou technologies similaires pour assurer le fonctionnement du service, maintenir une session, sécuriser les accès, mémoriser certaines préférences, améliorer l&#039;expérience utilisateur ou mesurer certains usages.</p>
+    <p>Les cookies strictement nécessaires permettent au site ou à la plateforme de fonctionner correctement. D&#039;autres technologies, par exemple de mesure d&#039;audience ou d&#039;amélioration du service, peuvent être utilisées lorsque leur usage est pertinent et présenté de manière claire.</p>
+    <p>Lorsque des préférences ou un consentement sont nécessaires, les choix disponibles sont présentés à l&#039;utilisateur. Les paramètres du navigateur peuvent également permettre de limiter ou supprimer certains cookies, avec un impact possible sur le fonctionnement du service.</p>
+    </section>
+    <section class="content-block content-block--text content-block--propriete-intellectuelle">
+    <h2>Propriété intellectuelle</h2>
+    <p>Les contenus, textes, noms, éléments visuels, interfaces, structures, méthodes, ressources et éléments de marque présentés sur le site ou dans la plateforme appartiennent à zzzbre ou à leurs titulaires respectifs, sauf mention contraire.</p>
+    <p>Toute reproduction, diffusion, adaptation ou réutilisation non autorisée des contenus de zzzbre est interdite, sauf accord écrit préalable ou usage expressément permis par le site.</p>
+    <p>L&#039;utilisation de zzzbre ne transfère aucun droit de propriété intellectuelle sur le service, la marque, les contenus, les méthodes, les interfaces ou les éléments techniques de la plateforme.</p>
+    </section>
+    <section class="content-block content-block--text content-block--responsabilite">
+    <h2>Responsabilité</h2>
+    <p>zzzbre met en oeuvre des efforts raisonnables pour fournir des informations utiles, maintenir le service disponible et faire évoluer la plateforme avec sérieux. Toutefois, le site et la plateforme peuvent contenir des informations en cours de mise à jour, des fonctionnalités beta ou des éléments susceptibles d&#039;évoluer.</p>
+    <p>Les contenus publiés sur le site ne constituent pas un conseil juridique, fiscal, financier, RH ou organisationnel. Ils doivent être compris comme des informations générales et des repères d&#039;utilisation.</p>
+    <p>zzzbre ne peut pas être tenu responsable des décisions prises par une organisation à partir des données, questionnaires, ateliers, tableaux de bord, recommandations, contenus ou actions suivies dans la plateforme. Chaque organisation reste responsable de ses choix de gestion, de pilotage et d&#039;accompagnement des équipes.</p>
+    <p>zzzbre peut contenir des liens vers des sites ou services tiers. zzzbre n&#039;est pas responsable du contenu, de la disponibilité, de la sécurité ou des pratiques de confidentialité de ces services externes.</p>
+    </section>
+    <section class="content-block content-block--text content-block--contact-legal">
+    <h2>Contact légal</h2>
+    <p>Pour toute question concernant les informations légales, l&#039;utilisation de la plateforme, les offres, la confidentialité, les cookies, les données personnelles ou les demandes liées au droit applicable, contactez zzzbre.</p>
+    <dl>
+    <dt>Contact légal</dt>
+    <dd class="framed-link framed-link--action">
+    <a class="cta-link cta-link--secondary legal-action-link" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </dd>
+    <dt>Support</dt>
+    <dd class="framed-link framed-link--action">
+    <a class="cta-link cta-link--secondary legal-action-link" href="mailto:support@zzzbre.com">support@zzzbre.com</a>
+    </dd>
+    <dt>Adresse</dt>
+    <dd class="framed-link--action">Zzzbre, Pépinière Nomades, Rte des Acacias 24, 1227 Genève, Suisse</dd>
+    </dl>
+    </section>
+    <section class="content-block content-block--text content-block--mise-a-jour-des-informations">
+    <h2>Mise à jour des informations</h2>
+    <p>Les informations légales peuvent évoluer avec le produit, les offres, les fonctionnalités, l&#039;organisation de zzzbre et les obligations applicables. Cette page sera mise à jour lorsque des précisions ou adaptations seront nécessaires.</p>
+    <p>La présente page constitue une base d&#039;information légale pour le site et la beta de zzzbre. Elle devra être complétée ou validée juridiquement avant toute utilisation comme document contractuel définitif.</p>
+    </section>
+  </SharedPageSections>
 </PageLayout>

@@ -1,14 +1,91 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/produit/integrations");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Intégrations"
+  description="Les intégrations permettront de limiter la double saisie, d'importer plus facilement vos collaborateurs et de préparer les usages BI, reporting et analyse de pilotage."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Produit</span>
+    <span class="status-badge status-badge--status">En développement</span>
+    </div>
+    <h1>Intégrations</h1>
+    <p class="hero__intro">Connecter progressivement zzzbre aux données et outils déjà utilisés par votre entreprise.</p>
+    <p>Les intégrations permettront de limiter la double saisie, d&#039;importer plus facilement vos collaborateurs et de préparer les usages BI, reporting et analyse de pilotage.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--list content-block--pourquoi-les-integrations-comptent">
+    <h2>Pourquoi les intégrations comptent</h2>
+    <p>Une plateforme de data driven management doit pouvoir s&#039;appuyer sur les données déjà présentes dans l&#039;entreprise. L&#039;objectif de zzzbre est de connecter progressivement les outils existants pour faciliter le pilotage, sans forcer les équipes à tout ressaisir.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Importer les données utiles au démarrage.</span>
+    </li>
+    <li>
+    <span>Synchroniser les listes de collaborateurs.</span>
+    </li>
+    <li>
+    <span>Relier les données de pilotage à des outils de reporting.</span>
+    </li>
+    <li>
+    <span>Préparer l&#039;analyse dans des outils BI déjà utilisés par l&#039;entreprise.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--en-developpement">
+    <h2>En développement</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Import simple</h3>
+    </div>
+    <p>Importer ou synchroniser des listes de collaborateurs depuis Excel.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Connexions BI</h3>
+    </div>
+    <p>Préparer des connexions avec Tableau, Alteryx, Power BI et d&#039;autres outils d&#039;analyse.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Synchronisations futures</h3>
+    </div>
+    <p>Connecter progressivement les données de pilotage avec les outils déjà présents dans l&#039;entreprise.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--cas-d-usage-prevus">
+    <h2>Cas d&#39;usage prévus</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Importer une liste de collaborateurs pour préparer un espace de travail.</span>
+    </li>
+    <li>
+    <span>Relier un dashboard existant à des données de pilotage zzzbre.</span>
+    </li>
+    <li>
+    <span>Exporter ou exploiter les données issues des questionnaires, ateliers et plans d&#039;action.</span>
+    </li>
+    <li>
+    <span>Préparer des analyses croisées entre engagement, leadership, priorités et exécution.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--demander-une-integration">
+    <h2>Demander une intégration</h2>
+    <p>Les intégrations sont en développement. Si vous avez un outil prioritaire à connecter à zzzbre, contactez-nous pour nous expliquer votre besoin.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

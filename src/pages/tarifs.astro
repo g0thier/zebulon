@@ -1,14 +1,186 @@
 ---
 import HeroSection from "../components/pages/HeroSection.astro";
 import SharedPageSections from "../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../data/site-pages";
 import PageLayout from "../layouts/PageLayout.astro";
-
-const page = getStaticPage("/tarifs");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Tarifs"
+  description="Choisissez l'offre adaptée à votre premier usage, puis faites évoluer votre accès avec votre équipe et vos besoins de pilotage."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Tarifs</span>
+    </div>
+    <h1>Tarifs</h1>
+    <p class="hero__intro">Des offres claires pour explorer zzzbre, tester les premiers modules beta et commencer à piloter avec votre équipe.</p>
+    <p>Choisissez l&#039;offre adaptée à votre premier usage, puis faites évoluer votre accès avec votre équipe et vos besoins de pilotage.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--panel">
+    <div class="feature-panel">
+    <h2>Accès libre</h2>
+    <p>Explorer zzzbre</p>
+    <p>L&#039;accès libre permet de découvrir la plateforme, comprendre son fonctionnement et préparer un premier usage avant d&#039;inviter une équipe.</p>
+    </div>
+    <div class="card-grid card-grid--three">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Prix</h3>
+    </div>
+    <p>Accès libre</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Limite</h3>
+    </div>
+    <p>Cet accès sert à explorer zzzbre. Pour travailler avec des collaborateurs ou déployer un usage d&#039;équipe, choisissez une offre beta.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Utilisateurs inclus</h3>
+    </div>
+    <p>1 owner</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--offres-beta">
+    <h2>Offres beta</h2>
+    <p>Les offres ci-dessous accompagnent la beta de zzzbre. Les prix sont mensuels et pourront évoluer avec l&#039;enrichissement de la plateforme.</p>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <span class="editorial-card__badge">Hello</span>
+    <h3>Offre de lancement</h3>
+    <p class="editorial-card__price">24,99€ / mois</p>
+    </div>
+    <p>Pack découverte pour tester zzzbre avec une première petite équipe.</p>
+    <dl>
+    <dt>Usage recommandé</dt>
+    <dd>explorer les premiers modules beta avec quelques collaborateurs et poser les bases d&#039;un premier cycle de pilotage.</dd>
+    </dl>
+    <div class="data-list data-list--utilisateurs-inclus">
+    <h3>Utilisateurs inclus</h3>
+    <ul>
+    <li class="data-list__item--depth-1">
+    <span>1 administrateur</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>0 leader</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>3 collaborateurs</span>
+    </li>
+    </ul>
+    </div>
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <span class="editorial-card__badge">Recommandé</span>
+    <h3>Freelance</h3>
+    <p class="editorial-card__price">99€ / mois</p>
+    </div>
+    <p>Le début du succès pour structurer un pilotage plus régulier.</p>
+    <dl>
+    <dt>Usage recommandé</dt>
+    <dd>travailler avec une équipe élargie, collecter plus de retours et installer une première routine de data driven management.</dd>
+    </dl>
+    <div class="data-list data-list--utilisateurs-inclus">
+    <h3>Utilisateurs inclus</h3>
+    <ul>
+    <li class="data-list__item--depth-1">
+    <span>1 administrateur</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>0 leader</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>8 collaborateurs</span>
+    </li>
+    </ul>
+    </div>
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <span class="editorial-card__badge">Startup</span>
+    <h3>Startup</h3>
+    <p class="editorial-card__price">299€ / mois</p>
+    </div>
+    <p>Le pilotage indispensable pour une équipe qui grandit.</p>
+    <dl>
+    <dt>Usage recommandé</dt>
+    <dd>déployer zzzbre auprès de plusieurs leaders, structurer les contributions d&#039;équipe et suivre davantage de sujets de pilotage.</dd>
+    </dl>
+    <div class="data-list data-list--utilisateurs-inclus">
+    <h3>Utilisateurs inclus</h3>
+    <ul>
+    <li class="data-list__item--depth-1">
+    <span>1 administrateur</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>2 leaders</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>30 collaborateurs</span>
+    </li>
+    </ul>
+    </div>
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--besoins-specifiques">
+    <h2>Besoins spécifiques</h2>
+    <p>Vous avez besoin de plus d&#039;utilisateurs, d&#039;un accompagnement particulier ou d&#039;un cadre adapté à votre organisation ? Contactez-nous à contact@zzzbre.com.</p>
+    </section>
+    <section class="content-block content-block--cards content-block--faq">
+    <h2>FAQ</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Puis-je explorer zzzbre librement ?</h3>
+    </div>
+    <p>Oui. Un accès libre avec 1 owner permet d&#039;explorer zzzbre et de comprendre le fonctionnement de la plateforme.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>L&#39;accès libre permet-il de déployer zzzbre avec une équipe ?</h3>
+    </div>
+    <p>Non. L&#039;accès libre sert à explorer la plateforme. Pour inviter des collaborateurs ou organiser un usage d&#039;équipe, il faut choisir une offre beta.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Les prix sont-ils mensuels ?</h3>
+    </div>
+    <p>Oui. Les offres de lancement, Freelance et Startup sont affichées en prix mensuels.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Puis-je changer de plan ?</h3>
+    </div>
+    <p>Oui. L&#039;objectif est de pouvoir commencer simplement, puis faire évoluer l&#039;offre lorsque votre usage ou la taille de votre équipe progresse.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Que comprennent les utilisateurs inclus ?</h3>
+    </div>
+    <p>Chaque offre précise le nombre d&#039;administrateurs, de leaders et de collaborateurs inclus. Ces rôles servent à organiser l&#039;accès à la plateforme selon les responsabilités de chacun.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Est-il possible d&#39;avoir un accompagnement ?</h3>
+    </div>
+    <p>Oui. Pour un besoin d&#039;accompagnement, de mise en place ou de cadrage spécifique, vous pouvez écrire à contact@zzzbre.com.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Les tarifs peuvent-ils évoluer ?</h3>
+    </div>
+    <p>Oui. zzzbre est en beta : les offres et les tarifs peuvent évoluer avec les fonctionnalités, les retours utilisateurs et les nouveaux usages de la plateforme.</p>
+    </article>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

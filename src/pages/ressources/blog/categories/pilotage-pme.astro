@@ -1,14 +1,31 @@
 ---
 import HeroSection from "../../../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../../../data/site-pages";
 import PageLayout from "../../../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/blog/categories/pilotage-pme");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Pilotage PME"
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Pilotage PME</h1>
+    <p class="hero__intro">Des contenus pour aider les dirigeants de PME à clarifier les priorités, écouter le terrain et suivre les décisions sans complexifier l&#39;organisation.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--mieux-piloter-avec-peu-de-complexite">
+    <h2>Mieux piloter avec peu de complexité</h2>
+    <p>Dans une PME, le pilotage doit rester concret. L&#039;enjeu n&#039;est pas d&#039;ajouter des couches de reporting, mais de mieux comprendre ce qui se passe, de décider plus clairement et de suivre les actions qui comptent vraiment.</p>
+    <p>Ici, les contenus aident à lancer des cycles de pilotage simples, choisir un premier périmètre, faire remonter les signaux utiles et transformer les échanges en décisions suivies.</p>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>zzzbre permet de tester progressivement des pratiques de pilotage plus claires, plus collectives et plus data driven.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

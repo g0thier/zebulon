@@ -1,14 +1,31 @@
 ---
 import HeroSection from "../../../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../../../data/site-pages";
 import PageLayout from "../../../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/blog/categories/indicateurs-et-tableaux-de-bord");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Indicateurs et tableaux de bord"
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Indicateurs et tableaux de bord</h1>
+    <p class="hero__intro">Des contenus pour choisir les bons indicateurs, éviter la surcharge de reporting et relier les KPI aux priorités de l&#39;entreprise.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--mesurer-ce-qui-aide-vraiment-a-decider">
+    <h2>Mesurer ce qui aide vraiment à décider</h2>
+    <p>Un bon indicateur doit aider à comprendre, décider ou agir. Trop d&#039;indicateurs peuvent brouiller le pilotage, surtout lorsqu&#039;ils ne sont pas reliés aux priorités réelles de l&#039;entreprise.</p>
+    <p>Ici, les contenus aident à choisir quelques indicateurs utiles, relier les KPI aux priorités de l&#039;équipe et combiner données humaines et données opérationnelles.</p>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>zzzbre aide à relier les données de pilotage, les retours collaborateurs, les décisions et les plans d&#039;action.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

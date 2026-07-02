@@ -1,11 +1,13 @@
 ---
-import ContentBlock from "../../../../components/content/ContentBlock.astro";
-import { articleEntries, type Article } from "../../../../data/blog-articles";
+import { render } from "astro:content";
+import { getMotivationArticles, type Article } from "../../../../data/blog-articles";
 import BlogArticleLayout from "../../../../layouts/BlogArticleLayout.astro";
 
 export async function getStaticPaths() {
-  return articleEntries.map((article) => ({
-    params: { slug: article.slug },
+  const articles = await getMotivationArticles();
+
+  return articles.map((article) => ({
+    params: { slug: article.id },
     props: { article },
   }));
 }
@@ -15,14 +17,17 @@ type Props = {
 };
 
 const { article } = Astro.props;
+const { Content } = await render(article);
 ---
 
 <BlogArticleLayout article={article}>
-  {article.parentCategoryPath && (
+  {article.data.parentCategoryPath && (
     <section class="content-block">
-      <p><a href={article.parentCategoryPath}>Retour à la catégorie</a></p>
+      <p><a href={article.data.parentCategoryPath}>Retour à la catégorie</a></p>
     </section>
   )}
 
-  {article.sections.map((block) => <ContentBlock block={block} pageSlug={`ressources/blog/motivation/${article.slug}`} />)}
+  <section class="content-block article-body">
+    <Content />
+  </section>
 </BlogArticleLayout>

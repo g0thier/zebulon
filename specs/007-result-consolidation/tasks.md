@@ -18,9 +18,9 @@
 
 **Purpose**: Create the working audit trail and implementation checklist for the consolidation
 
-- [ ] T001 Create the consolidation audit workspace in `specs/007-result-consolidation/ownership-audit.md`
-- [ ] T002 Inventory current public-route owners and transitional inputs in `specs/007-result-consolidation/ownership-audit.md` using `src/pages/`, `src/data/site-pages.ts`, `src/data/blog-articles.ts`, and `src/content.config.ts`
-- [ ] T003 Capture the required quality gates and representative validation surfaces from `specs/007-result-consolidation/quickstart.md` in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T001 Create the consolidation audit workspace in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T002 Inventory current public-route owners and transitional inputs in `specs/007-result-consolidation/ownership-audit.md` using `src/pages/`, `src/data/site-pages.ts`, `src/data/blog-articles.ts`, and `src/content.config.ts`
+- [X] T003 Capture the required quality gates and representative validation surfaces from `specs/007-result-consolidation/quickstart.md` in `specs/007-result-consolidation/ownership-audit.md`
 
 ---
 
@@ -30,9 +30,9 @@
 
 **⚠️ CRITICAL**: No user story work should begin until this phase is complete
 
-- [ ] T004 Define the final Motivation collection schema in `src/content.config.ts` and the shared article field contract in `src/data/blog-articles.ts`
-- [ ] T005 Refactor `src/data/blog-articles.ts` so public consumers no longer depend on `readFileSync` or `src/pages/ressources/blog/motivation/*.md`
-- [ ] T006 Establish the Astro-native static page composition pattern in `src/layouts/PageLayout.astro`, `src/components/pages/HeroSection.astro`, and `src/components/pages/SharedPageSections.astro`
+- [X] T004 Define the final Motivation collection schema in `src/content.config.ts` and the shared article field contract in `src/data/blog-articles.ts`
+- [X] T005 Refactor `src/data/blog-articles.ts` so public consumers no longer depend on `readFileSync` or `src/pages/ressources/blog/motivation/*.md`
+- [X] T006 Establish the Astro-native static page composition pattern in `src/layouts/PageLayout.astro`, `src/components/pages/HeroSection.astro`, and `src/components/pages/SharedPageSections.astro`
 
 **Checkpoint**: Content collection and page composition foundations are ready
 
@@ -44,13 +44,13 @@
 
 **Independent Test**: A maintainer can identify the source for `/`, `/produit/fonctionnalites`, `/ressources/blog`, `/ressources/blog/categories/leadership-et-engagement`, and `/ressources/blog/motivation/autodetermination` without traversing old transitional paths
 
-- [ ] T007 [P] [US1] Move `src/pages/ressources/blog/motivation/attentes.md`, `src/pages/ressources/blog/motivation/autodetermination.md`, `src/pages/ressources/blog/motivation/besoins-acquis.md`, `src/pages/ressources/blog/motivation/besoins-de-maslow.md`, `src/pages/ressources/blog/motivation/equite.md`, `src/pages/ressources/blog/motivation/identite-pro.md`, `src/pages/ressources/blog/motivation/mimetisme.md`, and `src/pages/ressources/blog/motivation/theorie-x-y.md` into `src/content/blog/motivation/`
-- [ ] T008 [US1] Update `src/pages/ressources/blog/motivation/[slug].astro` to build static paths and render article content from the collection-backed API in `src/data/blog-articles.ts`
-- [ ] T009 [P] [US1] Update `src/pages/ressources/blog/index.astro` and `src/pages/ressources/blog/categories/leadership-et-engagement.astro` to consume collection-backed article summaries from `src/data/blog-articles.ts`
-- [ ] T010 [P] [US1] Convert `src/pages/index.astro` from `getStaticPage("/")` to explicit Astro markup using `src/layouts/PageLayout.astro`, `src/components/content/EditorialCard.astro`, and `src/assets/Capture.png`
-- [ ] T011 [P] [US1] Convert `src/pages/produit/fonctionnalites.astro` from `getStaticPage("/produit/fonctionnalites")` to explicit Astro markup using `src/layouts/PageLayout.astro` and `src/components/content/`
-- [ ] T012 [US1] Record the authoritative owners for `/`, `/produit/fonctionnalites`, `/ressources/blog`, `/ressources/blog/categories/leadership-et-engagement`, and `/ressources/blog/motivation/[slug]` in `specs/007-result-consolidation/ownership-audit.md`
-- [ ] T013 [US1] Run the representative source-discovery check from `specs/007-result-consolidation/quickstart.md` and capture the evidence in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T007 [P] [US1] Move `src/pages/ressources/blog/motivation/attentes.md`, `src/pages/ressources/blog/motivation/autodetermination.md`, `src/pages/ressources/blog/motivation/besoins-acquis.md`, `src/pages/ressources/blog/motivation/besoins-de-maslow.md`, `src/pages/ressources/blog/motivation/equite.md`, `src/pages/ressources/blog/motivation/identite-pro.md`, `src/pages/ressources/blog/motivation/mimetisme.md`, and `src/pages/ressources/blog/motivation/theorie-x-y.md` into `src/content/blog/motivation/`
+- [X] T008 [US1] Update `src/pages/ressources/blog/motivation/[slug].astro` to build static paths and render article content from the collection-backed API in `src/data/blog-articles.ts`
+- [X] T009 [P] [US1] Update `src/pages/ressources/blog/index.astro` and `src/pages/ressources/blog/categories/leadership-et-engagement.astro` to consume collection-backed article summaries from `src/data/blog-articles.ts`
+- [X] T010 [P] [US1] Convert `src/pages/index.astro` from `getStaticPage("/")` to explicit Astro markup using `src/layouts/PageLayout.astro`, `src/components/content/EditorialCard.astro`, and `src/assets/Capture.png`
+- [X] T011 [P] [US1] Convert `src/pages/produit/fonctionnalites.astro` from `getStaticPage("/produit/fonctionnalites")` to explicit Astro markup using `src/layouts/PageLayout.astro` and `src/components/content/`
+- [X] T012 [US1] Record the authoritative owners for `/`, `/produit/fonctionnalites`, `/ressources/blog`, `/ressources/blog/categories/leadership-et-engagement`, and `/ressources/blog/motivation/[slug]` in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T013 [US1] Run the representative source-discovery check from `specs/007-result-consolidation/quickstart.md` and capture the evidence in `specs/007-result-consolidation/ownership-audit.md`
 
 **Checkpoint**: Representative public surfaces have one clear source of truth and can be audited independently
 
@@ -62,13 +62,13 @@
 
 **Independent Test**: An audit of active public routes and shared content shows no old Markdown-under-`src/pages` source and no remaining `site-pages.ts` page-body ownership for consolidated routes
 
-- [ ] T014 [P] [US2] Convert `src/pages/tarifs.astro`, `src/pages/support.astro`, `src/pages/contact.astro`, `src/pages/legal.astro`, and `src/pages/clients/etudes-de-cas.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
-- [ ] T015 [P] [US2] Convert `src/pages/a-propos/carrieres.astro`, `src/pages/a-propos/equipe.astro`, `src/pages/a-propos/presse.astro`, `src/pages/cas-d-usage/grandes-entreprises.astro`, `src/pages/cas-d-usage/pme.astro`, and `src/pages/cas-d-usage/secteurs.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
-- [ ] T016 [P] [US2] Convert `src/pages/produit/api.astro`, `src/pages/produit/integrations.astro`, `src/pages/produit/securite.astro`, `src/pages/ressources/guides.astro`, `src/pages/ressources/webinaires.astro`, and `src/pages/ressources/documentation.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
-- [ ] T017 [P] [US2] Convert `src/pages/ressources/blog/categories/pilotage-pme.astro`, `src/pages/ressources/blog/categories/ateliers-et-decision.astro`, `src/pages/ressources/blog/categories/indicateurs-et-tableaux-de-bord.astro`, and `src/pages/ressources/blog/categories/ia-appliquee-au-management.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
-- [ ] T018 [US2] Remove obsolete static page registry code from `src/data/site-pages.ts` and drop any remaining raw-HTML rendering dependency from `src/components/pages/HeroSection.astro` and `src/components/pages/SharedPageSections.astro`
-- [ ] T019 [US2] Delete the transitional Markdown route files under `src/pages/ressources/blog/motivation/` and close the retired-path findings in `specs/007-result-consolidation/ownership-audit.md`
-- [ ] T020 [US2] Run the ownership audit commands from `specs/007-result-consolidation/quickstart.md` and record zero active transitional sources in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T014 [P] [US2] Convert `src/pages/tarifs.astro`, `src/pages/support.astro`, `src/pages/contact.astro`, `src/pages/legal.astro`, and `src/pages/clients/etudes-de-cas.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
+- [X] T015 [P] [US2] Convert `src/pages/a-propos/carrieres.astro`, `src/pages/a-propos/equipe.astro`, `src/pages/a-propos/presse.astro`, `src/pages/cas-d-usage/grandes-entreprises.astro`, `src/pages/cas-d-usage/pme.astro`, and `src/pages/cas-d-usage/secteurs.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
+- [X] T016 [P] [US2] Convert `src/pages/produit/api.astro`, `src/pages/produit/integrations.astro`, `src/pages/produit/securite.astro`, `src/pages/ressources/guides.astro`, `src/pages/ressources/webinaires.astro`, and `src/pages/ressources/documentation.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
+- [X] T017 [P] [US2] Convert `src/pages/ressources/blog/categories/pilotage-pme.astro`, `src/pages/ressources/blog/categories/ateliers-et-decision.astro`, `src/pages/ressources/blog/categories/indicateurs-et-tableaux-de-bord.astro`, and `src/pages/ressources/blog/categories/ia-appliquee-au-management.astro` to explicit Astro markup instead of `src/data/site-pages.ts`
+- [X] T018 [US2] Remove obsolete static page registry code from `src/data/site-pages.ts` and drop any remaining raw-HTML rendering dependency from `src/components/pages/HeroSection.astro` and `src/components/pages/SharedPageSections.astro`
+- [X] T019 [US2] Delete the transitional Markdown route files under `src/pages/ressources/blog/motivation/` and close the retired-path findings in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T020 [US2] Run the ownership audit commands from `specs/007-result-consolidation/quickstart.md` and record zero active transitional sources in `specs/007-result-consolidation/ownership-audit.md`
 
 **Checkpoint**: Transitional public content sources are removed from the live rendering path
 
@@ -80,11 +80,11 @@
 
 **Independent Test**: The representative visitor journey across home, product, blog, category, and Motivation article pages still works with valid content and useful navigation
 
-- [ ] T021 [P] [US3] Reconcile shared navigation and CTA references in `src/data/site-shell.ts` with the converted public route files under `src/pages/`
-- [ ] T022 [P] [US3] Verify Motivation parent-category and discovery links in `src/pages/ressources/blog/motivation/[slug].astro`, `src/pages/ressources/blog/index.astro`, and `src/pages/ressources/blog/categories/leadership-et-engagement.astro`
-- [ ] T023 [P] [US3] Adjust supporting presentation components and styles in `src/components/pages/ArticleSummaryCard.astro`, `src/components/content/ContentBlock.astro`, `src/components/content/DataList.astro`, `src/components/content/EditorialCard.astro`, `src/layouts/BlogArticleLayout.astro`, and `src/styles/global.css` to preserve route layout, card rendering, and CTA behavior after the ownership migration
-- [ ] T024 [US3] Run the representative visitor-path validation from `specs/007-result-consolidation/quickstart.md` and record the results in `specs/007-result-consolidation/ownership-audit.md`
-- [ ] T025 [US3] Run `npm run build` and record the final quality-gate result plus any residual risk in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T021 [P] [US3] Reconcile shared navigation and CTA references in `src/data/site-shell.ts` with the converted public route files under `src/pages/`
+- [X] T022 [P] [US3] Verify Motivation parent-category and discovery links in `src/pages/ressources/blog/motivation/[slug].astro`, `src/pages/ressources/blog/index.astro`, and `src/pages/ressources/blog/categories/leadership-et-engagement.astro`
+- [X] T023 [P] [US3] Adjust supporting presentation components and styles in `src/components/pages/ArticleSummaryCard.astro`, `src/components/content/ContentBlock.astro`, `src/components/content/DataList.astro`, `src/components/content/EditorialCard.astro`, `src/layouts/BlogArticleLayout.astro`, and `src/styles/global.css` to preserve route layout, card rendering, and CTA behavior after the ownership migration
+- [X] T024 [US3] Run the representative visitor-path validation from `specs/007-result-consolidation/quickstart.md` and record the results in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T025 [US3] Run `npm run build` and record the final quality-gate result plus any residual risk in `specs/007-result-consolidation/ownership-audit.md`
 
 **Checkpoint**: Public experience remains coherent after consolidation
 
@@ -94,9 +94,9 @@
 
 **Purpose**: Finish cleanup, guidance, and final validation across all stories
 
-- [ ] T026 [P] Remove unused exports and helper paths from `src/data/blog-articles.ts`, `src/content.config.ts`, `src/components/pages/HeroSection.astro`, `src/components/pages/SharedPageSections.astro`, and `src/data/site-pages.ts` after the migration settles
-- [ ] T027 [P] Update contributor guidance in `AGENTS.md` and validation notes in `specs/007-result-consolidation/quickstart.md` if the final ownership workflow changed during implementation
-- [ ] T028 Complete the end-to-end quickstart validation in `specs/007-result-consolidation/quickstart.md` and finalize the evidence in `specs/007-result-consolidation/ownership-audit.md`
+- [X] T026 [P] Remove unused exports and helper paths from `src/data/blog-articles.ts`, `src/content.config.ts`, `src/components/pages/HeroSection.astro`, `src/components/pages/SharedPageSections.astro`, and `src/data/site-pages.ts` after the migration settles
+- [X] T027 [P] Update contributor guidance in `AGENTS.md` and validation notes in `specs/007-result-consolidation/quickstart.md` if the final ownership workflow changed during implementation
+- [X] T028 Complete the end-to-end quickstart validation in `specs/007-result-consolidation/quickstart.md` and finalize the evidence in `specs/007-result-consolidation/ownership-audit.md`
 
 ---
 

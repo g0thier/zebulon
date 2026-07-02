@@ -1,14 +1,31 @@
 ---
 import HeroSection from "../../../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../../../data/site-pages";
 import PageLayout from "../../../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/blog/categories/ateliers-et-decision");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Ateliers et décision"
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Ateliers et décision</h1>
+    <p class="hero__intro">Des contenus pour préparer des ateliers utiles, faire émerger des idées et transformer les échanges en décisions suivies.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--transformer-les-echanges-en-actions">
+    <h2>Transformer les échanges en actions</h2>
+    <p>Un atelier utile ne se limite pas à produire des idées. Il doit aider l&#039;équipe à cadrer un sujet, partager les bonnes informations, prioriser et décider de la suite.</p>
+    <p>Ici, les contenus aident à préparer les ateliers, animer les contributions, prioriser sans perdre les idées utiles et relier les décisions à des plans d&#039;action visibles.</p>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>zzzbre permet de cadrer les ateliers, collecter les contributions et suivre les actions qui en ressortent.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

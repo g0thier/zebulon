@@ -1,14 +1,495 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/produit/fonctionnalites");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Fonctionnalités"
+  description="zzzbre transforme progressivement les concepts étudiés en MBA en outils de pilotage pour décider, aligner les équipes et suivre l'exécution."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Produit</span>
+    </div>
+    <h1>Fonctionnalités</h1>
+    <p class="hero__intro">Une plateforme de data driven management pour dirigeants et leaders.</p>
+    <p>zzzbre transforme progressivement les concepts étudiés en MBA en outils de pilotage pour décider, aligner les équipes et suivre l&#039;exécution.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--intro-continuation">
+    <p>La plateforme vise à couvrir les grands domaines du management d&#039;entreprise : stratégie, finance, RH, opérations, innovation, gouvernance, marketing, data et IA. Les modules disponibles aujourd&#039;hui sont les premiers points d&#039;entrée de cette vision.</p>
+    </section>
+    <section class="content-block content-block--text content-block--disponible-en-beta">
+    <h2>Disponible en beta</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Innovation &amp; Créativité</h3>
+    </div>
+    <p>9 types d&#039;ateliers pour réfléchir, concevoir et résoudre les problèmes avec vos équipes.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Motivation</h3>
+    </div>
+    <p>8 questionnaires pour mieux connaître vos équipes, les motiver et booster la cohésion. Une application rien que pour les collaborateurs.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--pour-les-dirigeants">
+    <h2>Pour les dirigeants</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Mieux structurer les décisions à partir de méthodes de management reconnues.</span>
+    </li>
+    <li>
+    <span>Rendre les concepts étudiés en MBA plus actionnables au quotidien.</span>
+    </li>
+    <li>
+    <span>Aligner les équipes autour des priorités, des indicateurs et des plans d&#039;action.</span>
+    </li>
+    <li>
+    <span>Suivre l&#039;exécution avec plus de clarté, sans multiplier les outils.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--notre-roadmap">
+    <h2>Notre Roadmap</h2>
+    <p>Les intitulés ci-dessous représentent les domaines que zzzbre ambitionne de transformer progressivement en modules, diagnostics, tableaux de bord, parcours ou outils d&#039;aide à la décision.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Stratégie, pilotage et gouvernance</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Leadership</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Tenue de Réunion</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Analyse stratégique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Méthodologie</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Business Model Canvas</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Méthodologie stratégique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Diagnostique Stratégique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Scénario Stratégique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Mise en oeuvre</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Gouvernance &amp; Juridique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Système de gouvernance</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Structure des instance de gouvernance</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Décisions</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Identification des risques</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Adoption de statut légal</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Environnement économique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Croissance économique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Relations interorganisationnelles</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Introduction à la RSE</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Mis en oeuvre, actions et indicateurs</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Moyens de communications</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Pilotage et tableaux de bord</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Pilotage stratégique et opérationnel</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Indicateurs KPI</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Tableaux de bord et plans d&#039;action</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Tableau de bord et pilotage</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Déclinaison des objectifs stratégiques</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Construction du système de pilotage</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Animation et ajustement des plans d&#039;action</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Jeu de Simulation Stratégique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Diagnostic stratégique</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Prise de décision en environnement concurrentiel</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Validation financière des choix</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Mise en œuvre stratégique</span>
+    </li>
+    <li>
+    <span>Finance, performance et contrôle de gestion</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Analyse Financière</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Compte de résultat</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Bilan</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Comptabilité générale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Comptabilité analytique</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Finance d&#039;entreprise</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Finance)</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Comptabilité générale)</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Diagnostique financier)</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Performance économique)</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Ensembles des KPIs</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Contrôle de gestion</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Outils de Ctrl</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Analyse de Performance</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Tableau de bord</span>
+    </li>
+    <li>
+    <span>RH, management et conduite du changement</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Management et gestion des ressources humaines</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Déploiement de la fonction RH</span>
+    </li>
+    <li class="data-list__item--depth-3">
+    <span>Droit</span>
+    </li>
+    <li class="data-list__item--depth-3">
+    <span>Dialogue social</span>
+    </li>
+    <li class="data-list__item--depth-3">
+    <span>Outils de pilotage</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Gestion des compétences</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Motivantes pour les salariés</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Conduite du changement</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Les Fondamentaux d’un &quot;Langage Managérial Commun&quot;</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Positionnement Manageriale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Methodologie de mise en place du changement</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Structurer et planifier)</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Mobiliser et accompagner les acteurs)</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>(Piloter et ancrer durablement)</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Management et performance RH</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Vision fonction et métier</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Cartographie des activités, risques et contrôles</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Mise en place des objectifs et mesures des actions</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>MPMO</span>
+    </li>
+    <li>
+    <span>Innovation, marketing et développement commercial</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Innovation et créativité</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Méthodologie de l’innovation</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Outils de créativité</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Management de l&#039;innovation</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Approches disruptives d&#039;innovation</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Innovation orientée utilisateur</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Marketing remix</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Comportements consommateurs</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Marketing mix à l’ère digitale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Marque, valeur et distribution</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Marketing opérationnel et digital</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Démarche marketing client</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Marketing opérationnel</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Communication digitale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Indicateurs de performance marketing</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Développement commercial</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Stratégie de développement commercial</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Organisation commerciale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Plan d’activité commerciale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Suivi de la performance commerciale</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Plan d&#039;action commercial</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Diagnostic commercial</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Élaboration du PAC</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Animation commerciale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Suivi et évaluation des actions</span>
+    </li>
+    <li>
+    <span>Opérations, achats et supply chain</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Management des Achats</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Stratégie d’achat</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Pilotage de la performance</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Gérer la relation fournisseur appel d’offre</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Management des opérations et de la chaîne logistique globale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Supply chain</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Pilotage des flux adaptés</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Planification des achats et fournisseurs</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Gestion de stock</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Management Lean</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Optimisation des processus, amélioration continue</span>
+    </li>
+    <li>
+    <span>Data, BI, IA et transformation digitale</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Transformation digitale</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Enjeux de la digitalisation</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Business models digitaux</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Culture de l’innovation</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Data et nouveaux usages</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Data Management</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Collecte et structuration des données</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Qualité et exploitation des données</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Pilotage par la donnée</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>AI</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Fondamentaux de l’intelligence artificielle</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>IA générative et usages professionnels</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Éthique, biais et fiabilité</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Utilisation responsable de l’IA</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Business Intelligence</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Principes de la Business Intelligence</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Analyse et visualisation des données</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Création de dashboards</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Outils BI</span>
+    </li>
+    <li>
+    <span>Entrepreneuriat, blockchain et nouveaux modèles</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Entrepreneuriat</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Création d’entreprise</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Business model et business plan</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Innovation et Design Thinking</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Intrapreneuriat et repreneuriat</span>
+    </li>
+    <li class="data-list__item--depth-1">
+    <span>Blockchain</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Principes de la blockchain</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Cryptomonnaies et tokens</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Finance décentralisée</span>
+    </li>
+    <li class="data-list__item--depth-2">
+    <span>Usages, risques et perspectives</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--demander-une-fonctionnalite">
+    <h2>Demander une fonctionnalité</h2>
+    <p>zzzbre est en beta. Les premiers modules sont disponibles, et la roadmap s&#039;enrichit progressivement autour du data driven management.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

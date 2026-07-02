@@ -1,14 +1,217 @@
 ---
 import HeroSection from "../components/pages/HeroSection.astro";
 import SharedPageSections from "../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../data/site-pages";
 import PageLayout from "../layouts/PageLayout.astro";
 import productScreenshot from "../assets/Capture.png";
-const page = getStaticPage("/");
-const replacements = { "__PRODUCT_SCREENSHOT__": productScreenshot.src };
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="zzzbre, l’outil des leaders pour piloter avec la donnée."
+  description="Pensé pour les PME qui veulent mieux coordonner leurs équipes sans multiplier les outils."
+>
+  <HeroSection>
+    <h1>zzzbre, l’outil des leaders pour piloter avec la donnée.</h1>
+    <p class="hero__intro">La plateforme tout-en-un pour piloter la stratégie, coordonner et suivre les équipes.</p>
+    <p>Pensé pour les PME qui veulent mieux coordonner leurs équipes sans multiplier les outils.</p>
+    <div class="hero__actions">
+    <a class="cta-link cta-link--primary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+  </HeroSection>
+  <SharedPageSections>
+    <figure class="product-screenshot product-screenshot--home product-screenshot--unframed">
+    <img src={productScreenshot.src} alt="Capture d'écran du produit zzzbre">
+    </figure>
+    <section class="content-block content-block--list">
+    <div class="data-list data-list--benefices">
+    <h2>Bénéfices</h2>
+    <ul>
+    <li>
+    <span>Clarifier les priorités</span>
+    </li>
+    <li>
+    <span>Aligner les équipes</span>
+    </li>
+    <li>
+    <span>Suivre les décisions et les actions</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--produit">
+    <h2>Produit</h2>
+    <p>Découvrez les premiers modules de zzzbre et les développements prévus pour connecter progressivement votre pilotage aux données de l&#039;entreprise.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/produit/fonctionnalites">
+    <div class="editorial-card__header">
+    <h3>Fonctionnalités</h3>
+    </div>
+    <p>Comprendre les modules disponibles en beta, la vision data driven management et la roadmap produit.</p>
+    </a>
+    <a class="editorial-card" href="/produit/securite">
+    <div class="editorial-card__header">
+    <h3>Sécurité</h3>
+    </div>
+    <p>Voir comment zzzbre encadre les accès, les rôles, les permissions et les données de pilotage.</p>
+    </a>
+    <a class="editorial-card" href="/produit/integrations">
+    <div class="editorial-card__header">
+    <h3>Intégrations</h3>
+    </div>
+    <p>Découvrir les connexions en développement pour limiter la double saisie et relier zzzbre aux outils existants.</p>
+    </a>
+    <a class="editorial-card" href="/produit/api">
+    <div class="editorial-card__header">
+    <h3>API</h3>
+    </div>
+    <p>Explorer les usages prévus pour exploiter les données de pilotage dans vos dashboards, analyses et outils internes.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--cas-d-usage">
+    <h2>Cas d&#39;usage</h2>
+    <p>Découvrez comment zzzbre peut vous aider selon votre contexte d&#039;entreprise.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/cas-d-usage/pme">
+    <div class="editorial-card__header">
+    <h3>PME</h3>
+    </div>
+    <p>Structurez votre pilotage, comprenez mieux vos équipes et transformez les décisions en actions suivies.</p>
+    </a>
+    <a class="editorial-card" href="/cas-d-usage/grandes-entreprises">
+    <div class="editorial-card__header">
+    <h3>Grandes entreprises</h3>
+    </div>
+    <p>Testez zzzbre sur une équipe, une direction ou un périmètre pilote avant d&#039;élargir les usages.</p>
+    </a>
+    <a class="editorial-card" href="/cas-d-usage/secteurs">
+    <div class="editorial-card__header">
+    <h3>Secteurs</h3>
+    </div>
+    <p>Explorez comment les usages de zzzbre s&#039;adaptent à différents contextes métier.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--tarifs">
+    <h2>Tarifs</h2>
+    <p>Consultez les offres beta pour explorer zzzbre, tester les premiers modules et commencer à piloter avec votre équipe.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/tarifs">
+    <div class="editorial-card__header">
+    <h3>Tarifs</h3>
+    </div>
+    <p>Comparer l&#039;accès libre, les offres mensuelles beta, les quotas utilisateurs et les réponses aux questions fréquentes.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--ressources">
+    <h2>Ressources</h2>
+    <p>Retrouvez les contenus utiles pour comprendre zzzbre, progresser dans vos pratiques de pilotage et accompagner les premiers usages.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/ressources/blog">
+    <div class="editorial-card__header">
+    <h3>Blog</h3>
+    </div>
+    <p>Lire des contenus pratiques sur le pilotage PME, le leadership, les ateliers, les indicateurs et l&#039;IA appliquée au management.</p>
+    </a>
+    <a class="editorial-card" href="/ressources/guides">
+    <div class="editorial-card__header">
+    <h3>Guides</h3>
+    </div>
+    <p>Préparer un premier cycle de pilotage, lancer des questionnaires, organiser des ateliers et suivre les actions.</p>
+    </a>
+    <a class="editorial-card" href="/ressources/webinaires">
+    <div class="editorial-card__header">
+    <h3>Webinaires</h3>
+    </div>
+    <p>Découvrir les sessions vidéo prévues autour des quiz, ateliers et méthodes disponibles dans zzzbre.</p>
+    </a>
+    <a class="editorial-card" href="/ressources/documentation">
+    <div class="editorial-card__header">
+    <h3>Documentation</h3>
+    </div>
+    <p>Retrouver les repères essentiels pour configurer votre espace, gérer les rôles et accompagner les collaborateurs.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--clients">
+    <h2>Clients</h2>
+    <p>Les retours d&#039;expérience zzzbre seront publiés uniquement lorsqu&#039;ils seront réels, validés et utiles aux autres entreprises.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/clients/etudes-de-cas">
+    <div class="editorial-card__header">
+    <h3>Études de cas</h3>
+    </div>
+    <p>Proposer votre expérience ou découvrir comment les futurs cas client mettront en avant les usages réels de zzzbre.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--a-propos">
+    <h2>À propos</h2>
+    <p>Découvrez le projet zzzbre, sa vision du pilotage par la donnée et les informations utiles pour suivre son développement.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/a-propos/equipe">
+    <div class="editorial-card__header">
+    <h3>Équipe</h3>
+    </div>
+    <p>Comprendre la mission, la vision produit et les principes qui guident la construction de zzzbre.</p>
+    </a>
+    <a class="editorial-card" href="/a-propos/carrieres">
+    <div class="editorial-card__header">
+    <h3>Carrières</h3>
+    </div>
+    <p>Voir les familles de métiers qui pourront accompagner la croissance de zzzbre lorsque le recrutement sera ouvert.</p>
+    </a>
+    <a class="editorial-card" href="/a-propos/presse">
+    <div class="editorial-card__header">
+    <h3>Presse</h3>
+    </div>
+    <p>Retrouver le boilerplate, les contacts presse et les éléments disponibles pour parler de zzzbre.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--support">
+    <h2>Support</h2>
+    <p>Besoin d&#039;aide sur un accès, une invitation, une configuration, un questionnaire, un atelier ou une question de sécurité ?</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/support">
+    <div class="editorial-card__header">
+    <h3>Support</h3>
+    </div>
+    <p>Contacter l&#039;équipe support et retrouver les premiers repères pour résoudre les questions liées à la plateforme.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--contact">
+    <h2>Contact</h2>
+    <p>Échangez avec zzzbre pour une question produit, un besoin d&#039;accompagnement, une demande entreprise ou un partenariat.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/contact">
+    <div class="editorial-card__header">
+    <h3>Contact</h3>
+    </div>
+    <p>Retrouver les contacts utiles, l&#039;adresse et les moyens d&#039;échanger avec l&#039;équipe zzzbre.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--legal">
+    <h2>Légal</h2>
+    <p>Retrouvez les informations légales, les repères de confidentialité, les conditions d&#039;utilisation et les contacts associés.</p>
+    <div class="card-grid">
+    <a class="editorial-card" href="/legal">
+    <div class="editorial-card__header">
+    <h3>Informations légales</h3>
+    </div>
+    <p>Consulter les mentions légales, les informations relatives aux données, aux cookies, à la responsabilité et aux contacts légaux.</p>
+    </a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>Vous pouvez créer un compte pour explorer zzzbre, ou nous contacter si vous souhaitez échanger sur un besoin d&#039;équipe, d&#039;accompagnement ou de déploiement.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

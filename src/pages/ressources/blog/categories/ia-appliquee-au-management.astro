@@ -1,14 +1,31 @@
 ---
 import HeroSection from "../../../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../../../data/site-pages";
 import PageLayout from "../../../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/blog/categories/ia-appliquee-au-management");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="IA appliquée au management"
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>IA appliquée au management</h1>
+    <p class="hero__intro">Des contenus pour comprendre comment l&#39;IA peut soutenir le pilotage d&#39;entreprise sans remplacer le jugement humain.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--utiliser-l-ia-avec-discernement">
+    <h2>Utiliser l&#39;IA avec discernement</h2>
+    <p>L&#039;IA peut aider à analyser, synthétiser et repérer des signaux. Mais dans le management, elle doit rester au service de la décision humaine, du contexte et de la responsabilité des leaders.</p>
+    <p>Ici, les contenus abordent les usages possibles de l&#039;IA dans le data driven management : lecture des signaux, aide à la priorisation, synthèse des retours et préparation de décisions plus éclairées.</p>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>zzzbre construit progressivement une plateforme de data driven management où les données, les méthodes et l&#039;IA doivent aider les équipes à mieux décider.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

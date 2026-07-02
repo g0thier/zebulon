@@ -1,14 +1,73 @@
 ---
 import HeroSection from "../components/pages/HeroSection.astro";
 import SharedPageSections from "../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../data/site-pages";
 import PageLayout from "../layouts/PageLayout.astro";
-
-const page = getStaticPage("/contact");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Parlons de votre pilotage"
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Contact</span>
+    </div>
+    <h1>Parlons de votre pilotage</h1>
+    <p class="hero__intro">Une question sur zzzbre, la beta, votre équipe ou votre premier usage ? Écrivez-nous, nous vous répondrons simplement.</p>
+    <div class="hero__actions">
+    <a class="cta-link cta-link--primary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--contact content-block--nous-contacter">
+    <h2>Nous contacter</h2>
+    <p>Contactez-nous pour toute question liée au produit, à la beta, à un besoin d&#039;accompagnement ou à un usage spécifique dans votre organisation.</p>
+    <div class="data-list data-list--motifs-de-contact">
+    <h3>Motifs de contact</h3>
+    <ul>
+    <li>
+    <span>Question sur la beta.</span>
+    </li>
+    <li>
+    <span>Besoin d&#039;accompagnement pour démarrer.</span>
+    </li>
+    <li>
+    <span>Demande entreprise ou équipe plus large.</span>
+    </li>
+    <li>
+    <span>Partenariat.</span>
+    </li>
+    <li>
+    <span>Question sur le data driven management.</span>
+    </li>
+    </ul>
+    </div>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--adresse">
+    <h2>Adresse</h2>
+    <p>Zzzbre, Pépinière Nomades</p>
+    <p>Rte des Acacias 24</p>
+    <p>1227 Genève</p>
+    </section>
+    <section class="content-block content-block--text content-block--contacts-utiles">
+    <h2>Contacts utiles</h2>
+    <dl>
+    <dt>Contact général</dt>
+    <dd>contact@zzzbre.com</dd>
+    <dt>Support</dt>
+    <dd>support@zzzbre.com</dd>
+    <dt>Presse</dt>
+    <dd>press@zzzbre.com</dd>
+    </dl>
+    </section>
+    <section class="content-block content-block--text content-block--pret-a-decouvrir-zzzbre">
+    <h2>Prêt à découvrir zzzbre ?</h2>
+    <p>Vous pouvez nous écrire si vous avez une question, ou créer un compte pour explorer zzzbre dès maintenant.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

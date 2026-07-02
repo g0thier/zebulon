@@ -1,14 +1,175 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/cas-d-usage/pme");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Construisez une entreprise pilotée par la donnée et portée par ses équipes"
+  description="Une entreprise performante commence par des équipes qui se sentent bien, comprennent le projet collectif et veulent le faire réussir."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Cas d&#39;usage</span>
+    </div>
+    <h1>Construisez une entreprise pilotée par la donnée et portée par ses équipes</h1>
+    <p class="hero__intro">zzzbre aide les PME à mieux comprendre ce qui motive leurs collaborateurs, à faire émerger des leaders et à transformer les méthodes de management en outils de pilotage.</p>
+    <p>Une entreprise performante commence par des équipes qui se sentent bien, comprennent le projet collectif et veulent le faire réussir.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--une-autre-vision-du-pilotage">
+    <h2>Une autre vision du pilotage</h2>
+    <p>Le data driven management ne consiste pas seulement à suivre des indicateurs financiers ou des tableaux de bord. Pour une PME, il s&#039;agit aussi de comprendre ce qui se passe dans l&#039;entreprise : les motivations, le bien-être, l&#039;engagement, les idées, les tensions, les priorités et la capacité des équipes à avancer ensemble.</p>
+    <p>zzzbre part d&#039;une conviction simple : la base d&#039;une entreprise solide, ce sont des collaborateurs qui se sentent bien dans l&#039;entreprise, qui comprennent pourquoi ils contribuent et qui ont envie que le projet fonctionne.</p>
+    </section>
+    <section class="content-block content-block--list content-block--adopter-les-bonnes-pratiques-de-leadership">
+    <h2>Adopter les bonnes pratiques de leadership</h2>
+    <p>zzzbre aide l&#039;entreprise à installer des pratiques de leadership contemporain : écouter le terrain, partager les informations utiles, responsabiliser les équipes et donner aux leaders un cadre pour décider avec méthode.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Développer des leaders capables de comprendre les enjeux et d&#039;entraîner les autres.</span>
+    </li>
+    <li>
+    <span>Donner plus de place aux retours collaborateurs dans les décisions.</span>
+    </li>
+    <li>
+    <span>S&#039;appuyer sur des données humaines et opérationnelles pour comprendre avant d&#039;agir.</span>
+    </li>
+    <li>
+    <span>Partager des méthodes communes pour décider, prioriser et suivre.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--comment-fonctionne-une-plateforme-de-data-driven-management">
+    <h2>Comment fonctionne une plateforme de data driven management</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Écouter : collecter des données sur la motivation, le bien-être, la cohésion et les besoins des équipes.</span>
+    </li>
+    <li>
+    <span>Comprendre : transformer les retours collaborateurs en signaux lisibles pour l&#039;entreprise.</span>
+    </li>
+    <li>
+    <span>Structurer : utiliser des méthodes issues du management, de la stratégie, des RH, de l&#039;innovation ou de la data pour cadrer les sujets.</span>
+    </li>
+    <li>
+    <span>Décider : aider les leaders à prioriser avec plus de recul.</span>
+    </li>
+    <li>
+    <span>Agir : relier les décisions à des plans d&#039;action et suivre leur avancement.</span>
+    </li>
+    <li>
+    <span>Apprendre : améliorer progressivement le pilotage à partir des données collectées.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--les-premiers-usages-en-beta">
+    <h2>Les premiers usages en beta</h2>
+    <p>Les premiers modules de zzzbre permettent de démarrer par la dimension humaine et collective du pilotage.</p>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Questionnaires motivation et bien-être</h3>
+    </div>
+    <p>Comprendre ce qui motive les collaborateurs, ce qui les freine, ce qui les engage et ce qui peut améliorer leur expérience dans l&#039;entreprise.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Questionnaires cohésion</h3>
+    </div>
+    <p>Identifier comment les équipes travaillent ensemble, où la collaboration fonctionne et où elle peut être renforcée.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Ateliers d&#39;innovation et de créativité</h3>
+    </div>
+    <p>Donner un cadre aux idées, faire participer les équipes et transformer les contributions en pistes concrètes.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Application collaborateur</h3>
+    </div>
+    <p>Offrir aux collaborateurs un espace dédié pour répondre, participer et contribuer à la dynamique de l&#039;entreprise.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--ce-que-cela-change-pour-une-pme">
+    <h2>Ce que cela change pour une PME</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Les décisions ne reposent plus seulement sur l&#039;intuition ou les réunions informelles.</span>
+    </li>
+    <li>
+    <span>Les collaborateurs deviennent une source active de données, d&#039;idées et de signaux utiles.</span>
+    </li>
+    <li>
+    <span>Les leaders disposent d&#039;un cadre pour animer, comprendre et faire avancer.</span>
+    </li>
+    <li>
+    <span>Les méthodes de management deviennent plus concrètes, plus partagées et plus faciles à suivre.</span>
+    </li>
+    <li>
+    <span>Le pilotage combine mieux performance, engagement et exécution.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--exemple-de-cycle-de-pilotage">
+    <h2>Exemple de cycle de pilotage</h2>
+    <p>Une PME peut commencer avec un cycle simple centré sur les équipes, puis élargir progressivement vers d&#039;autres domaines de pilotage.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Mesurer la motivation, le bien-être et la cohésion avec un questionnaire court.</span>
+    </li>
+    <li>
+    <span>Identifier les signaux importants : points forts, tensions, envies, incompréhensions, opportunités.</span>
+    </li>
+    <li>
+    <span>Organiser un atelier pour transformer ces signaux en sujets de travail.</span>
+    </li>
+    <li>
+    <span>Faire émerger des leaders sur les sujets prioritaires.</span>
+    </li>
+    <li>
+    <span>Définir des actions, les suivre et apprendre du cycle suivant.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--resultats-attendus">
+    <h2>Résultats attendus</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Des collaborateurs mieux écoutés et plus impliqués.</span>
+    </li>
+    <li>
+    <span>Des leaders plus visibles dans l&#039;organisation.</span>
+    </li>
+    <li>
+    <span>Une meilleure compréhension des motivations et du bien-être dans l&#039;entreprise.</span>
+    </li>
+    <li>
+    <span>Des décisions plus connectées au terrain.</span>
+    </li>
+    <li>
+    <span>Une culture de pilotage plus collective, plus humaine et plus data driven.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>Commencez par comprendre vos équipes, puis construisez progressivement une entreprise mieux pilotée, avec plus de leaders et moins de management à l&#039;ancienne.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

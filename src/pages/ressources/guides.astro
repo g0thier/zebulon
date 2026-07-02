@@ -1,14 +1,108 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/ressources/guides");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Guides"
+  description="Les guides zzzbre accompagnent l'usage progressif de la plateforme : premier cycle de pilotage, ateliers, questionnaires, indicateurs, actions, leadership et sécurité. Certains contenus seront enrichis au fil de la beta."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Ressources</span>
+    </div>
+    <h1>Guides</h1>
+    <p class="hero__intro">Des contenus pratiques pour aider les dirigeants, leaders et équipes à démarrer avec zzzbre, structurer leur pilotage et faire progresser leurs pratiques de management.</p>
+    <p>Les guides zzzbre accompagnent l&#039;usage progressif de la plateforme : premier cycle de pilotage, ateliers, questionnaires, indicateurs, actions, leadership et sécurité. Certains contenus seront enrichis au fil de la beta.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--pour-apprendre-a-piloter-plus-simplement">
+    <h2>Pour apprendre à piloter plus simplement</h2>
+    <p>zzzbre vise à rendre les méthodes de management et les principes de data driven management plus concrets. Les guides servent à passer de l&#039;intention à la pratique : comprendre une équipe, cadrer un sujet, décider avec plus de clarté et suivre les actions dans le temps.</p>
+    <p>Cette page rassemble les guides prioritaires pour découvrir la plateforme et installer progressivement de meilleures habitudes de pilotage.</p>
+    </section>
+    <section class="content-block content-block--text content-block--guides-a-venir">
+    <h2>Guides à venir</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Lancer son premier cycle de pilotage en 30 jours</h3>
+    </div>
+    <p>Guide prioritaire pour PME. Définir un premier périmètre, écouter les équipes, organiser un atelier, choisir quelques priorités et suivre les premières actions.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>En préparation</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Bien démarrer avec zzzbre</h3>
+    </div>
+    <p>Configurer son espace, inviter les bonnes personnes, comprendre les rôles et poser les bases d&#039;un pilotage simple.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>Beta</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Suivre l&#39;engagement des équipes</h3>
+    </div>
+    <p>Utiliser les questionnaires pour mieux comprendre la motivation, le bien-être, la cohésion et les besoins du terrain.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>Beta</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Préparer un atelier utile</h3>
+    </div>
+    <p>Cadrer un atelier, faire émerger des idées, prioriser les contributions et transformer les échanges en actions concrètes.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>En préparation</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Mettre en place vos indicateurs</h3>
+    </div>
+    <p>Définir les bons KPI, structurer les tableaux de bord et relier les indicateurs aux priorités réelles de l&#039;entreprise.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Organiser le pilotage au quotidien</h3>
+    </div>
+    <p>Installer un rythme de suivi clair avec les bons rôles, les bonnes responsabilités et des actions tracées.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    </dl>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Sécuriser l&#39;usage de la plateforme</h3>
+    </div>
+    <p>Adopter les bonnes pratiques pour gérer les accès, les permissions et la confidentialité des données de pilotage.</p>
+    <dl>
+    <dt>Statut</dt>
+    <dd>À venir</dd>
+    </dl>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--commencer-avec-zzzbre">
+    <h2>Commencer avec zzzbre</h2>
+    <p>Vous pouvez commencer simplement : créer un espace, inviter les premières personnes concernées et choisir un premier usage à tester pendant la beta.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="https://zzzbre.com/login">Créer un compte</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

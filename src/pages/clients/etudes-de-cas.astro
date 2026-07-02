@@ -1,14 +1,72 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/clients/etudes-de-cas");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Partagez votre expérience zzzbre"
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Étude de cas</span>
+    </div>
+    <h1>Partagez votre expérience zzzbre</h1>
+    <p class="hero__intro">Les entreprises qui utilisent zzzbre pourront bientôt présenter ici leur manière de piloter, d&#39;impliquer leurs équipes et de transformer leurs pratiques de management.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--text content-block--partagez-votre-experience-zzzbre">
+    <h2>Partagez votre expérience zzzbre</h2>
+    <p>Vous utilisez zzzbre pour mieux comprendre vos équipes, organiser des ateliers, faire émerger des leaders ou structurer vos plans d&#039;action ? Votre retour peut aider d&#039;autres entreprises à se projeter.</p>
+    <p>L&#039;objectif est de donner de la visibilité aux organisations qui expérimentent de nouvelles pratiques de pilotage, de leadership et de data driven management.</p>
+    </section>
+    <section class="content-block content-block--list content-block--ce-que-nous-aimerions-mettre-en-avant">
+    <h2>Ce que nous aimerions mettre en avant</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Votre contexte : secteur, taille d&#039;équipe, organisation, enjeux de départ.</span>
+    </li>
+    <li>
+    <span>Votre usage de zzzbre : questionnaires, ateliers, retours collaborateurs, suivi d&#039;actions ou pilotage.</span>
+    </li>
+    <li>
+    <span>Vos apprentissages : ce que l&#039;équipe a compris, changé ou clarifié.</span>
+    </li>
+    <li>
+    <span>Votre progression : pratiques adoptées, décisions mieux structurées, leadership plus distribué.</span>
+    </li>
+    <li>
+    <span>Votre vision : ce que vous voulez améliorer dans la suite.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--pourquoi-participer">
+    <h2>Pourquoi participer</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Mettre en avant votre entreprise et son approche du management.</span>
+    </li>
+    <li>
+    <span>Montrer vos initiatives autour du leadership, du bien-être, de l&#039;engagement ou de la transformation.</span>
+    </li>
+    <li>
+    <span>Partager un retour utile avec d&#039;autres dirigeants, leaders et équipes.</span>
+    </li>
+    <li>
+    <span>Valoriser les personnes qui font évoluer les pratiques en interne.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--comment-proposer-votre-retour-d-experience">
+    <h2>Comment proposer votre retour d&#39;expérience</h2>
+    <p>Contactez-nous avec quelques lignes sur votre contexte, votre usage de zzzbre et ce que vous aimeriez partager. Nous reviendrons vers vous pour cadrer un format simple, fidèle à votre expérience et validé avant publication.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

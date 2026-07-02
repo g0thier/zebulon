@@ -1,14 +1,123 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/produit/api");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="API"
+  description="L'API zzzbre permettra aux équipes data, développeurs et partenaires d'exploiter les données de pilotage dans leurs dashboards, analyses et automatisations."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Produit</span>
+    <span class="status-badge status-badge--status">En développement</span>
+    </div>
+    <h1>API</h1>
+    <p class="hero__intro">Préparer l&#39;exploitation des données de pilotage dans vos outils internes.</p>
+    <p>L&#039;API zzzbre permettra aux équipes data, développeurs et partenaires d&#039;exploiter les données de pilotage dans leurs dashboards, analyses et automatisations.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--list content-block--exploiter-vos-donnees-de-pilotage">
+    <h2>Exploiter vos données de pilotage</h2>
+    <p>Les usages zzzbre génèrent progressivement des données utiles pour comprendre l&#039;entreprise : retours collaborateurs, motivation, bien-être, leadership, ateliers, priorités, décisions et plans d&#039;action. L&#039;API doit permettre d&#039;exploiter ces données dans vos outils internes, sans les sortir du cadre d&#039;accès défini dans la plateforme.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Visualiser les données de pilotage dans un dashboard interne.</span>
+    </li>
+    <li>
+    <span>Croiser engagement, leadership, priorités et exécution.</span>
+    </li>
+    <li>
+    <span>Alimenter des analyses BI ou des rapports de direction.</span>
+    </li>
+    <li>
+    <span>Connecter zzzbre à des outils métier déjà utilisés par l&#039;entreprise.</span>
+    </li>
+    <li>
+    <span>Préparer des automatisations autour du reporting ou de l&#039;export.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--en-developpement">
+    <h2>En développement</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Connexion avec tokens</h3>
+    </div>
+    <p>Préparer un accès API contrôlé par tokens.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Accès aux données de pilotage</h3>
+    </div>
+    <p>Récupérer les données accessibles selon les droits, rôles et périmètres configurés.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Export analytique</h3>
+    </div>
+    <p>Faciliter l&#039;exploitation des données dans des outils de reporting, BI ou analyse interne.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Automatisations futures</h3>
+    </div>
+    <p>Connecter progressivement zzzbre à des workflows internes ou outils partenaires.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--securite-des-acces-api">
+    <h2>Sécurité des accès API</h2>
+    <p>L&#039;accès API devra rester cohérent avec la gestion des droits de la plateforme. L&#039;objectif n&#039;est pas d&#039;ouvrir toutes les données sans contrôle, mais de permettre une exploitation encadrée selon les rôles et périmètres définis dans zzzbre.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Accès par tokens.</span>
+    </li>
+    <li>
+    <span>Permissions liées aux droits configurés dans la plateforme.</span>
+    </li>
+    <li>
+    <span>Données accessibles selon les rôles, pages, secteurs ou périmètres autorisés.</span>
+    </li>
+    <li>
+    <span>Cohérence avec les règles d&#039;accès décrites dans la page Sécurité.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--exemples-d-usage">
+    <h2>Exemples d&#39;usage</h2>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Alimenter un dashboard interne de pilotage.</span>
+    </li>
+    <li>
+    <span>Préparer un reporting BI à partir des données zzzbre.</span>
+    </li>
+    <li>
+    <span>Exporter des données analytiques pour un comité de pilotage.</span>
+    </li>
+    <li>
+    <span>Automatiser un flux entre zzzbre et un outil métier.</span>
+    </li>
+    <li>
+    <span>Synchroniser certaines données avec un environnement data existant.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--nous-contacter-pour-l-api">
+    <h2>Nous contacter pour l&#39;API</h2>
+    <p>L&#039;API est en développement. Si vous avez un besoin d&#039;intégration, de reporting ou d&#039;exploitation de données, contactez-nous pour nous aider à prioriser les bons usages.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

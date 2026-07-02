@@ -1,14 +1,156 @@
 ---
 import HeroSection from "../../components/pages/HeroSection.astro";
 import SharedPageSections from "../../components/pages/SharedPageSections.astro";
-import { getStaticPage } from "../../data/site-pages";
 import PageLayout from "../../layouts/PageLayout.astro";
-
-const page = getStaticPage("/cas-d-usage/grandes-entreprises");
-const replacements = {};
 ---
 
-<PageLayout title={page.title} description={page.description}>
-  <HeroSection html={page.heroHtml} />
-  <SharedPageSections html={page.bodyHtml} replacements={replacements} />
+<PageLayout
+  title="Alignez vos équipes à grande échelle"
+  description="Pour une grande organisation, zzzbre peut être testé progressivement sur une équipe, une direction ou un périmètre pilote avant d'envisager un déploiement plus large."
+>
+  <HeroSection>
+    <div class="hero__badges">
+    <span class="status-badge status-badge--section">Cas d&#39;usage</span>
+    <span class="status-badge status-badge--status">Approche pilote recommandée</span>
+    </div>
+    <h1>Alignez vos équipes à grande échelle</h1>
+    <p class="hero__intro">Harmonisez les pratiques de pilotage, structurez les accès et faites circuler les bonnes données entre directions, leaders et équipes.</p>
+    <p>Pour une grande organisation, zzzbre peut être testé progressivement sur une équipe, une direction ou un périmètre pilote avant d&#039;envisager un déploiement plus large.</p>
+  </HeroSection>
+  <SharedPageSections>
+    <section class="content-block content-block--list content-block--le-defi-des-organisations-multi-equipes">
+    <h2>Le défi des organisations multi-équipes</h2>
+    <p>Dans une grande entreprise, le pilotage se complexifie vite : plusieurs sites, BU, directions, régions, niveaux de décision et outils coexistent. Les pratiques peuvent devenir hétérogènes, les indicateurs se dispersent et les équipes ne partagent pas toujours la même lecture des priorités.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Des pratiques de pilotage différentes selon les équipes ou directions.</span>
+    </li>
+    <li>
+    <span>Des indicateurs dispersés entre plusieurs outils.</span>
+    </li>
+    <li>
+    <span>Des silos entre sites, BU, directions ou régions.</span>
+    </li>
+    <li>
+    <span>Des difficultés à faire remonter les signaux terrain.</span>
+    </li>
+    <li>
+    <span>Un besoin de gouvernance claire autour des accès, des données et des responsabilités.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--un-cadre-commun-de-pilotage">
+    <h2>Un cadre commun de pilotage</h2>
+    <p>zzzbre propose un cadre commun pour structurer le pilotage sans effacer les spécificités de chaque équipe. L&#039;objectif est de donner aux leaders un langage partagé, des données exploitables et des méthodes communes pour décider, prioriser et suivre.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Harmoniser les pratiques sans imposer un fonctionnement uniforme partout.</span>
+    </li>
+    <li>
+    <span>Donner aux leaders un cadre commun pour animer leurs périmètres.</span>
+    </li>
+    <li>
+    <span>Relier les retours collaborateurs, les priorités, les décisions et les plans d&#039;action.</span>
+    </li>
+    <li>
+    <span>Faire circuler les données utiles entre les bons niveaux de décision.</span>
+    </li>
+    <li>
+    <span>Installer progressivement une culture de data driven management.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--deployer-progressivement">
+    <h2>Déployer progressivement</h2>
+    <p>zzzbre est en beta. Pour une grande organisation, l&#039;approche recommandée consiste à démarrer par un périmètre pilote : une équipe, une direction, un site ou une population de leaders.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Choisir un périmètre pilote clair.</span>
+    </li>
+    <li>
+    <span>Identifier les leaders et collaborateurs concernés.</span>
+    </li>
+    <li>
+    <span>Définir les premiers usages : questionnaires, ateliers, pilotage des actions ou données d&#039;équipe.</span>
+    </li>
+    <li>
+    <span>Observer les retours avant d&#039;élargir à d&#039;autres équipes.</span>
+    </li>
+    <li>
+    <span>Construire progressivement un cadre commun de pilotage.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--list content-block--gouvernance-acces-et-donnees">
+    <h2>Gouvernance, accès et données</h2>
+    <p>Les grandes organisations ont besoin d&#039;une gestion claire des accès. zzzbre prévoit une logique granulaire pour organiser les rôles, les périmètres, les pages et les secteurs accessibles selon les responsabilités de chacun.</p>
+    <div class="data-list data-list--liste">
+    <ul>
+    <li>
+    <span>Administrateurs pour piloter l&#039;espace, les droits et la capacité d&#039;abonnement.</span>
+    </li>
+    <li>
+    <span>Leaders pour accéder aux pages et secteurs liés à leur rôle.</span>
+    </li>
+    <li>
+    <span>Collaborateurs pour participer aux usages qui les concernent.</span>
+    </li>
+    <li>
+    <span>Données accessibles selon les droits et périmètres configurés.</span>
+    </li>
+    <li>
+    <span>Possibilité de structurer les usages par équipe, direction, site, BU ou région.</span>
+    </li>
+    </ul>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--premiers-cas-d-usage">
+    <h2>Premiers cas d&#39;usage</h2>
+    <div class="card-grid">
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Baromètre motivation et bien-être</h3>
+    </div>
+    <p>Mesurer les signaux humains à l&#039;échelle d&#039;une équipe ou d&#039;un périmètre pilote.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Leadership distribué</h3>
+    </div>
+    <p>Identifier et accompagner des leaders capables de relayer les priorités et d&#039;animer leur périmètre.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Ateliers multi-équipes</h3>
+    </div>
+    <p>Faire émerger des idées, prioriser des sujets et structurer les décisions entre plusieurs parties prenantes.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Pilotage des actions</h3>
+    </div>
+    <p>Suivre les décisions et actions issues des questionnaires, ateliers ou comités internes.</p>
+    </article>
+    <article class="editorial-card">
+    <div class="editorial-card__header">
+    <h3>Données de pilotage</h3>
+    </div>
+    <p>Préparer une exploitation progressive des données pour le reporting, la BI ou les outils internes.</p>
+    </article>
+    </div>
+    </section>
+    <section class="content-block content-block--text content-block--nous-contacter">
+    <h2>Nous contacter</h2>
+    <p>Vous souhaitez tester zzzbre sur une équipe pilote, une direction ou un périmètre spécifique ? Contactez-nous pour cadrer le bon premier usage.</p>
+    <div class="cta-row">
+    <a class="cta-link cta-link--secondary" href="mailto:contact@zzzbre.com">contact@zzzbre.com</a>
+    </div>
+    </section>
+  </SharedPageSections>
 </PageLayout>

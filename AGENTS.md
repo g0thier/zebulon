@@ -8,6 +8,12 @@ astro dev --background
 
 Manage the background server with `astro dev stop`, `astro dev status`, and `astro dev logs`.
 
+## Content Ownership
+
+- Keep static public page copy in the owning `.astro` route under `src/pages/`.
+- Keep Motivation article source files in `src/content/blog/motivation/`.
+- Do not add non-route Markdown files under `src/pages/`.
+
 ## Documentation
 
 Full documentation: https://docs.astro.build
