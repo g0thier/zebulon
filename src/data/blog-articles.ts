@@ -80,14 +80,14 @@ export type ArticleSummary = {
 };
 
 const articleSources = [
-  { slug: "theorie-x-y", heading: "Theorie X-Y", sourcePath: "src/content/blog/motivation/theorie-x-y.md" },
-  { slug: "identite-pro", heading: "Identite Pro", sourcePath: "src/content/blog/motivation/identite-pro.md" },
-  { slug: "besoins-de-maslow", heading: "Besoins de Maslow", sourcePath: "src/content/blog/motivation/besoins-de-maslow.md" },
-  { slug: "autodetermination", heading: "Autodetermination", sourcePath: "src/content/blog/motivation/autodetermination.md" },
-  { slug: "attentes", heading: "Attentes", sourcePath: "src/content/blog/motivation/attentes.md" },
-  { slug: "equite", heading: "Equite", sourcePath: "src/content/blog/motivation/equite.md" },
-  { slug: "besoins-acquis", heading: "Besoins acquis", sourcePath: "src/content/blog/motivation/besoins-acquis.md" },
-  { slug: "mimetisme", heading: "Mimetisme", sourcePath: "src/content/blog/motivation/mimetisme.md" },
+  { slug: "theorie-x-y", heading: "Theorie X-Y", sourcePath: "src/pages/ressources/blog/motivation/theorie-x-y.md" },
+  { slug: "identite-pro", heading: "Identite Pro", sourcePath: "src/pages/ressources/blog/motivation/identite-pro.md" },
+  { slug: "besoins-de-maslow", heading: "Besoins de Maslow", sourcePath: "src/pages/ressources/blog/motivation/besoins-de-maslow.md" },
+  { slug: "autodetermination", heading: "Autodetermination", sourcePath: "src/pages/ressources/blog/motivation/autodetermination.md" },
+  { slug: "attentes", heading: "Attentes", sourcePath: "src/pages/ressources/blog/motivation/attentes.md" },
+  { slug: "equite", heading: "Equite", sourcePath: "src/pages/ressources/blog/motivation/equite.md" },
+  { slug: "besoins-acquis", heading: "Besoins acquis", sourcePath: "src/pages/ressources/blog/motivation/besoins-acquis.md" },
+  { slug: "mimetisme", heading: "Mimetisme", sourcePath: "src/pages/ressources/blog/motivation/mimetisme.md" },
 ] as const;
 
 export const motivationCategoryPath = "/ressources/blog/categories/leadership-et-engagement";
